@@ -2,12 +2,13 @@ import { cn } from '@/lib/utils'
 
 interface GradientBlobProps {
   className?: string
-  tone?: 'violet' | 'acid' | 'mixed'
+  tone?: 'violet' | 'acid' | 'mint' | 'mixed'
 }
 
 const tones: Record<NonNullable<GradientBlobProps['tone']>, string> = {
   violet: 'from-violet via-violet-deep to-transparent',
   acid: 'from-acid via-mint to-transparent',
+  mint: 'from-mint via-violet to-transparent',
   mixed: 'from-violet via-acid to-transparent',
 }
 

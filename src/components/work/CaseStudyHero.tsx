@@ -17,7 +17,7 @@ export function CaseStudyHero({ project }: { project: Project }) {
   return (
     <section className="relative overflow-hidden px-6 pb-16 pt-32 sm:px-10 sm:pt-40">
       <NoiseOverlay />
-      <GradientBlob tone={project.accent === 'violet' ? 'violet' : project.accent === 'acid' ? 'acid' : 'mint'} className="left-[-10%] top-0 h-[420px] w-[420px]" />
+      <GradientBlob tone={project.accent} className="left-[-10%] top-0 h-[420px] w-[420px]" />
 
       <div className="relative mx-auto flex max-w-6xl flex-col gap-10">
         <Reveal>

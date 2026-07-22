@@ -39,11 +39,13 @@ function useMagnetic(strength = 18) {
   return { ref, offset, onMouseMove, onMouseLeave }
 }
 
+type ConflictingHandlers = 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart' | 'onAnimationEnd'
+
 type ButtonProps = {
   variant?: Variant
   children: ReactNode
   className?: string
-} & ButtonHTMLAttributes<HTMLButtonElement>
+} & Omit<ButtonHTMLAttributes<HTMLButtonElement>, ConflictingHandlers>
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ variant = 'primary', children, className, ...props }, forwardedRef) => {
@@ -79,7 +81,7 @@ type LinkButtonProps = {
   variant?: Variant
   children: ReactNode
   className?: string
-} & AnchorHTMLAttributes<HTMLAnchorElement>
+} & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, ConflictingHandlers>
 
 export const LinkButton = forwardRef<HTMLAnchorElement, LinkButtonProps>(
   ({ variant = 'primary', children, className, href = '', target, ...props }, forwardedRef) => {
