@@ -1,0 +1,114 @@
+@import 'tailwindcss';
+
+@import '@fontsource-variable/bricolage-grotesque';
+@import '@fontsource-variable/inter';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
+
+@theme {
+  /* Brand palette */
+  --color-ink: #0b0b10;
+  --color-ink-soft: #101018;
+  --color-surface: #14141c;
+  --color-surface-raised: #1c1c27;
+  --color-violet: #7c5cff;
+  --color-violet-deep: #4c2fcc;
+  --color-violet-tint: #a78bfa;
+  --color-acid: #a6ff4d;
+  --color-mint: #4ade80;
+  --color-fg: #f4f3f7;
+  --color-fg-muted: #9c9aae;
+  --color-line: rgba(244, 243, 247, 0.1);
+
+  /* Type */
+  --font-display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-sans: 'Inter Variable', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Motion */
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Container */
+  --breakpoint-3xl: 1920px;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    background: var(--color-ink);
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-ink);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.02;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  ::selection {
+    background: var(--color-violet);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-acid);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-violet-tint);
+  }
+
+  .text-gradient {
+    background: linear-gradient(120deg, var(--color-violet-tint), var(--color-acid));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
