@@ -61,7 +61,7 @@ export const projects: Project[] = [
     role: 'UX Design & Research',
     timeline: 'Aug 2025 — Present',
     team: 'Samantha Popek, Lucy Murdock, Jaden Radcliff, Obid Ochilov — with ViaCDC, AARP & Startingblock',
-    tools: ['Figma', 'Figma Make', 'Systems Mapping', 'Stakeholder Interviews'],
+    tools: ['Figma', 'React', 'TypeScript', 'Tailwind CSS', 'Azure OpenAI', 'GitHub', 'Vercel'],
     accent: 'mint',
     variant: 'case-study',
     featured: true,

@@ -28,7 +28,7 @@ export function AIProcessSection() {
           className="mb-8"
         />
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:gap-12">
+        <div className="mx-auto grid max-w-3xl gap-8 sm:grid-cols-2 lg:gap-12">
           <Reveal delay={0.06}>
             <div>
               <h3 className="kicker mb-3">What I used AI for</h3>
@@ -90,7 +90,7 @@ export function AIProcessSection() {
         </motion.div>
 
         <Reveal delay={0.18}>
-          <p className="mt-12 max-w-2xl text-fg-muted">{comparisonNote}</p>
+          <p className="mx-auto mt-12 max-w-2xl text-center text-fg-muted">{comparisonNote}</p>
         </Reveal>
 
         <div className="mt-6 grid gap-8 sm:grid-cols-2">
