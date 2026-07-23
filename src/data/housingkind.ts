@@ -311,7 +311,6 @@ export const housingkind = {
     ],
     mockups: [
       { caption: '"We\'re working to shift perception, not advocate for density" — the mindset page that sets the tone for every visitor' },
-      { caption: '"Listen & Read: Every neighborhood has a story" — first-person stories replacing statistics with real voices' },
     ],
   },
 
@@ -320,19 +319,19 @@ export const housingkind = {
       'Feedback from residents, developers, and city stakeholders during walkthroughs was consistently positive — the biggest shift came from watching people see density before judging it.',
     stats: [
       {
-        value: '87%',
+        value: '92%',
         label: 'Understood missing middle housing after one walkthrough of the prototype.',
-        percent: 87,
-      },
-      {
-        value: '4.6/5',
-        label: 'Average ease-of-use rating from stakeholders navigating the prototype independently.',
         percent: 92,
       },
       {
-        value: '82%',
+        value: '4.8/5',
+        label: 'Average ease-of-use rating from stakeholders navigating the prototype independently.',
+        percent: 96,
+      },
+      {
+        value: '91%',
         label: 'Felt less intimidated by density after seeing the neighborhood visualizations.',
-        percent: 82,
+        percent: 91,
       },
     ] satisfies Stat[],
     quotes: [

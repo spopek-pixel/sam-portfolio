@@ -57,7 +57,7 @@ export const projects: Project[] = [
   {
     slug: 'housingkind',
     title: 'Housingkind',
-    tagline: 'Making invisible housing policy visible — and winning Best UX at Transcend.',
+    tagline: 'Making invisible housing policy visible.',
     description:
       'Housingkind is a community-focused platform that combines interactive visualization and AI to make gentle density more approachable and easier to understand.',
     category: ['Research', 'Product'],

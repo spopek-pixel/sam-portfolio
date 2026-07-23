@@ -6,7 +6,6 @@ import { LinkButton } from '@/components/ui/Button'
 import { Tag } from '@/components/ui/Tag'
 import { GradientBlob, NoiseOverlay } from '@/components/ui/GradientBlob'
 import { ProjectVisual } from '@/components/ui/ProjectVisual'
-import { cn } from '@/lib/utils'
 
 export function CaseStudyHero({ project }: { project: Project }) {
   const meta = [
@@ -38,13 +37,14 @@ export function CaseStudyHero({ project }: { project: Project }) {
               </div>
             </Reveal>
             <Reveal delay={0.08}>
-              <h1
-                className={cn(
-                  'text-[clamp(2.25rem,5.5vw,4rem)]',
-                  project.slug === 'housingkind' && 'text-gradient',
+              <h1 className="text-[clamp(2.25rem,5.5vw,4rem)]">
+                {project.slug === 'housingkind' ? (
+                  <>
+                    Housing<span className="text-gradient">kind</span>
+                  </>
+                ) : (
+                  project.title
                 )}
-              >
-                {project.title}
               </h1>
             </Reveal>
             <Reveal delay={0.16}>
