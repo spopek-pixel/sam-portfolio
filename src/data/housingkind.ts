@@ -241,6 +241,7 @@ export const housingkind = {
   buildingIt: {
     intro:
       "I didn't stop at the prototype — I'm building Housingkind as a real, working product, bringing the Figma design into responsive, production code.",
+    why: 'Great product design doesn’t stop in Figma. I wanted to better understand the entire product lifecycle — from research and design to development and deployment — so I challenged myself to build Housingkind using React, TypeScript, and Azure OpenAI. The experience has made me a stronger designer, collaborator, and problem solver.',
     stack: [
       { name: 'React', body: 'Componentized UI mirroring the Figma design system' },
       { name: 'TypeScript', body: 'Typed data models for projects, stories, and resources' },

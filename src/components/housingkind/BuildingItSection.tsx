@@ -17,17 +17,20 @@ const stackIcons: (IconType | typeof Smartphone)[] = [
 ]
 
 export function BuildingItSection() {
-  const { intro, stack, pipeline, screenshotCaption } = housingkind.buildingIt
+  const { intro, why, stack, pipeline, screenshotCaption } = housingkind.buildingIt
 
   return (
     <section className="px-6 py-10 sm:px-14 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading
-          kicker="Beyond the prototype"
-          title="Designed it. Then built it."
-          description={intro}
-          className="mb-8"
-        />
+        <div className="mb-10 grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-12">
+          <SectionHeading kicker="Beyond the prototype" title="Designed it. Then built it." description={intro} />
+          <Reveal delay={0.1} className="h-full">
+            <aside className="relative flex h-full flex-col justify-center rounded-2xl rounded-bl-none border border-acid/30 bg-acid/5 p-6 lg:p-8">
+              <span className="kicker mb-3 text-acid">Why I built it</span>
+              <p className="text-sm leading-relaxed text-fg-muted sm:text-base">{why}</p>
+            </aside>
+          </Reveal>
+        </div>
 
         <Reveal delay={0.08}>
           <figure className="mx-auto mb-10 max-w-3xl">
