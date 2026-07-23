@@ -46,7 +46,7 @@ export function WhatIBring() {
               What I <span className="text-gradient">bring.</span>
             </>
           }
-          description="I move fluidly between research, design, and code — just as comfortable pairing with engineers and PMs on a team as I am owning a screen solo. On group projects like Housingkind, that range means I can prototype an idea, defend it to stakeholders, and help ship the fix myself when that's faster than filing a ticket."
+          description="I'm endlessly curious — the kind of person who picks up a new tool or skill because I want to understand it, not because a job description asked me to. That's why I taught myself to code, why I got into AI tooling early, and why I'm rarely doing the same thing twice. I move fluidly between research, design, and code, and I'm just as comfortable learning fast on my own as I am pairing closely with engineers and PMs on a team."
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

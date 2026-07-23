@@ -5,7 +5,7 @@ import { Reveal } from '@/components/ui/Reveal'
 import { GradientBlob, NoiseOverlay } from '@/components/ui/GradientBlob'
 import { usePrefersReducedMotion } from '@/hooks/useReducedMotion'
 
-const EMAIL = 'hello@sampopek.com'
+const EMAIL = 'sampopekk@gmail.com'
 
 export function ContactHero() {
   const [copied, setCopied] = useState(false)

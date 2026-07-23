@@ -93,7 +93,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: reducedMotion ? 0 : [0, 8, 0] }}
         transition={{ opacity: { delay: 1, duration: 0.6 }, y: { repeat: reducedMotion ? 0 : Infinity, duration: 2, ease: 'easeInOut' } }}
-        className="relative z-10 mx-auto mt-4 flex w-fit items-center gap-2 font-mono text-xs uppercase tracking-widest text-fg-muted"
+        className="absolute inset-x-0 bottom-6 z-10 mx-auto flex w-fit items-center gap-2 font-mono text-xs uppercase tracking-widest text-fg-muted sm:bottom-10"
       >
         <ArrowDown size={14} /> Scroll
       </motion.div>

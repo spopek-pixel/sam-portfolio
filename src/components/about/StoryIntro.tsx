@@ -9,7 +9,7 @@ export function StoryIntro() {
       <NoiseOverlay />
       <GradientBlob tone="mixed" className="right-[-10%] top-0 h-[420px] w-[420px]" />
 
-      <div className="relative mx-auto flex max-w-6xl flex-col gap-14 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
+      <div className="relative mx-auto flex max-w-6xl flex-col gap-14 lg:flex-row lg:items-center lg:justify-center lg:gap-16">
         <div className="flex max-w-2xl flex-col gap-8">
           <Reveal>
             <span className="kicker">How it started</span>
@@ -29,8 +29,8 @@ export function StoryIntro() {
           </Reveal>
         </div>
 
-        <div className="mx-auto flex w-[260px] shrink-0 flex-col items-center gap-4 sm:w-[320px] lg:mx-0 lg:items-start">
-          <div className="relative h-[300px] w-full sm:h-[380px]">
+        <div className="mx-auto flex w-[300px] shrink-0 flex-col items-center gap-4 sm:w-[380px] lg:mx-0 lg:w-[440px] lg:items-start">
+          <div className="relative h-[340px] w-full sm:h-[440px] lg:h-[500px]">
             <Reveal delay={0.24} className="absolute left-0 top-0 z-10 w-[64%]">
               <div className="-rotate-6 overflow-hidden rounded-2xl border border-line shadow-[0_25px_50px_rgba(0,0,0,0.5)] transition-transform duration-300 hover:rotate-0">
                 <img

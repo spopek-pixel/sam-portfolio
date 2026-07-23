@@ -2,8 +2,8 @@ import { ArrowUpRight } from 'lucide-react'
 import { Reveal } from '@/components/ui/Reveal'
 
 const socials = [
-  { label: 'Email', href: 'mailto:hello@sampopek.com' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/' },
+  { label: 'Email', href: 'mailto:sampopekk@gmail.com' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/samantha-popek/' },
   { label: 'Resume', href: '/resume.pdf' },
 ]
 
@@ -20,10 +20,10 @@ export function Footer() {
               </h3>
             </div>
             <a
-              href="mailto:hello@sampopek.com"
+              href="mailto:sampopekk@gmail.com"
               className="group flex items-center gap-2 whitespace-nowrap font-mono text-sm uppercase tracking-wider text-fg-muted transition-colors hover:text-fg"
             >
-              hello@sampopek.com
+              sampopekk@gmail.com
               <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>
           </div>

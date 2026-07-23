@@ -2,7 +2,7 @@ import { ArrowUpRight } from 'lucide-react'
 import { Reveal } from '@/components/ui/Reveal'
 
 const links = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/', external: true },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/samantha-popek/', external: true },
   { label: 'Résumé (PDF)', href: '/resume.pdf', external: true },
   { label: 'View my work', href: '/work', external: false },
 ]
