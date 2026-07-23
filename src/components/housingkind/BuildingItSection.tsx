@@ -1,10 +1,10 @@
-import { ArrowRight, MonitorSmartphone, Smartphone } from 'lucide-react'
+import { ArrowRight, Smartphone } from 'lucide-react'
 import { SiClaudecode, SiGithub, SiReact, SiTailwindcss, SiTypescript, SiVercel } from 'react-icons/si'
 import type { IconType } from 'react-icons'
 import { housingkind } from '@/data/housingkind'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
-import { ArtifactPlaceholder } from './ArtifactPlaceholder'
+import houseVideo from '@/assets/images/projects/housingkind/house-video.mp4'
 
 const stackIcons: (IconType | typeof Smartphone)[] = [
   SiReact,
@@ -28,6 +28,23 @@ export function BuildingItSection() {
           description={intro}
           className="mb-8"
         />
+
+        <Reveal delay={0.08}>
+          <figure className="mx-auto mb-10 max-w-3xl">
+            <div className="overflow-hidden rounded-2xl border border-line bg-surface/60">
+              <video
+                src={houseVideo}
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-label="Screen recording of the Housingkind website"
+                className="h-auto w-full"
+              />
+            </div>
+            <figcaption className="mt-3 text-center text-sm text-fg-muted">{screenshotCaption}</figcaption>
+          </figure>
+        </Reveal>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {stack.map((tech, index) => {
@@ -66,12 +83,6 @@ export function BuildingItSection() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.24}>
-          <figure className="mx-auto mt-10 max-w-3xl">
-            <ArtifactPlaceholder label="Housingkind production build screenshot" icon={MonitorSmartphone} className="aspect-[16/9] w-full" />
-            <figcaption className="mt-3 text-sm text-fg-muted">{screenshotCaption}</figcaption>
-          </figure>
-        </Reveal>
       </div>
     </section>
   )

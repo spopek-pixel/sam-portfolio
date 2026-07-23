@@ -1,5 +1,4 @@
 import { Bot, Brain, Cloud, MessagesSquare, PenTool, Telescope } from 'lucide-react'
-import { motion } from 'framer-motion'
 import { housingkind } from '@/data/housingkind'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
@@ -49,11 +48,7 @@ export function BuildingWithAI() {
               />
               <GradientBlob tone="acid" className="-bottom-10 -right-8 h-[180px] w-[180px] opacity-20" />
 
-              <motion.div
-                className="relative"
-                animate={reducedMotion ? undefined : { y: [0, -7, 0] }}
-                transition={reducedMotion ? undefined : { duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-              >
+              <div className="relative">
                 <div className="overflow-hidden rounded-2xl border border-violet-tint/30 bg-surface/60 shadow-[0_0_45px_rgba(124,92,255,0.28)]">
                   <video
                     src={chatBotVideo}
@@ -75,7 +70,7 @@ export function BuildingWithAI() {
                   </span>
                   <span className="font-mono text-[10px] uppercase tracking-wider text-fg-muted">Live demo</span>
                 </div>
-              </motion.div>
+              </div>
 
               <figcaption className="relative mt-4 text-center text-xs text-fg-muted">{chatCaption}</figcaption>
             </figure>
