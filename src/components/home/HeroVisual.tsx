@@ -11,24 +11,48 @@ import houseLap from '@/assets/images/projects/housingkind/house-lap.png'
 const steps = ['Research', 'Define', 'Design', 'Build']
 
 function PhotoWithProcess({ className }: { className?: string }) {
+  const reducedMotion = usePrefersReducedMotion()
+
   return (
-    <div className={cn('relative overflow-hidden rounded-3xl border border-line', className)}>
-      <img
-        src={samPhoto}
-        alt="Samantha Popek"
-        className="aspect-[4/3] w-full object-cover object-top"
-        loading="eager"
-      />
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/70 to-transparent pt-8">
-        <div className="flex items-center justify-center gap-1 px-2 py-2.5 font-mono text-[9px] uppercase tracking-wider text-fg-muted">
-          {steps.map((step, index) => (
-            <span key={step} className="flex items-center gap-1">
-              <span className={index === steps.length - 1 ? 'text-acid' : undefined}>{step}</span>
-              {index < steps.length - 1 && <ArrowRight size={8} className="shrink-0 opacity-60" />}
-            </span>
-          ))}
+    <div className={cn('relative', className)}>
+      <div className="overflow-hidden rounded-3xl border border-line">
+        <img
+          src={samPhoto}
+          alt="Samantha Popek"
+          className="aspect-[4/3] w-full rounded-3xl object-cover object-top"
+          loading="eager"
+        />
+        <div className="absolute inset-x-0 bottom-0 rounded-b-3xl bg-gradient-to-t from-ink via-ink/70 to-transparent pt-8">
+          <div className="flex items-center justify-center gap-1 px-2 py-2.5 font-mono text-[9px] uppercase tracking-wider text-fg-muted">
+            {steps.map((step, index) => (
+              <span key={step} className="flex items-center gap-1">
+                <span className={index === steps.length - 1 ? 'text-acid' : undefined}>{step}</span>
+                {index < steps.length - 1 && <ArrowRight size={8} className="shrink-0 opacity-60" />}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
+
+      <motion.div
+        initial={reducedMotion ? false : { opacity: 0, scale: 0.5, y: 8 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ delay: 0.9, duration: 0.45, ease: [0.34, 1.56, 0.64, 1] }}
+        className="absolute -left-4 -top-4 z-10 flex items-center gap-1.5 rounded-2xl rounded-bl-none border border-line bg-surface-raised px-3.5 py-2 shadow-[0_10px_30px_rgba(0,0,0,0.45)]"
+      >
+        <motion.span
+          aria-hidden
+          animate={reducedMotion ? undefined : { rotate: [0, 16, -7, 16, -4, 12, 0] }}
+          transition={
+            reducedMotion ? undefined : { delay: 1.4, duration: 1.4, repeat: Infinity, repeatDelay: 2.6, ease: 'easeInOut' }
+          }
+          style={{ originX: 0.7, originY: 0.75 }}
+          className="text-lg leading-none"
+        >
+          👋
+        </motion.span>
+        <span className="text-sm font-medium">Hi, I'm Sam!</span>
+      </motion.div>
     </div>
   )
 }
@@ -99,7 +123,7 @@ export function HeroVisual() {
 
         <motion.div
           style={{ x: photoX, y: photoY }}
-          className="absolute right-0 top-0 z-20 w-[58%] shadow-[0_30px_60px_rgba(0,0,0,0.5)]"
+          className="absolute right-0 top-0 z-20 w-[58%] rounded-3xl shadow-[0_30px_60px_rgba(0,0,0,0.5)]"
         >
           <PhotoWithProcess />
         </motion.div>
