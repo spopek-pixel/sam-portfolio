@@ -5,7 +5,7 @@ import { GradientBlob } from '@/components/ui/GradientBlob'
 
 export function AboutTeaser() {
   return (
-    <section className="relative overflow-hidden px-6 py-24 sm:px-10 sm:py-32">
+    <section className="relative overflow-hidden px-6 py-16 sm:px-10 sm:py-20">
       <GradientBlob tone="violet" className="left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2" />
       <div className="relative mx-auto max-w-4xl text-center">
         <Reveal>

@@ -8,7 +8,7 @@ export function FeaturedWork() {
   const featured = projects.filter((project) => project.featured)
 
   return (
-    <section id="work" className="px-6 py-24 sm:px-10 sm:py-32">
+    <section id="work" className="px-6 py-10 sm:px-14 sm:py-16">
       <div className="mx-auto flex max-w-6xl flex-col gap-14">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading

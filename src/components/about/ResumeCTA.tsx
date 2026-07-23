@@ -4,7 +4,7 @@ import { Reveal } from '@/components/ui/Reveal'
 
 export function ResumeCTA() {
   return (
-    <section className="px-6 py-20 sm:px-10 sm:py-28">
+    <section className="px-6 py-10 sm:px-14 sm:py-16">
       <Reveal>
         <div className="mx-auto flex max-w-4xl flex-col items-start justify-between gap-8 rounded-3xl border border-line bg-surface/60 p-10 sm:flex-row sm:items-center sm:p-14">
           <div>

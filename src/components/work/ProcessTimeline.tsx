@@ -1,35 +1,50 @@
-import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { Sparkles } from 'lucide-react'
 import type { ProcessStep } from '@/data/projects'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
 
 export function ProcessTimeline({ steps }: { steps: ProcessStep[] }) {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({ target: containerRef, offset: ['start 0.8', 'end 0.4'] })
-  const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1])
-
   return (
-    <section className="px-6 py-20 sm:px-10 sm:py-28">
-      <div className="mx-auto max-w-4xl">
-        <SectionHeading kicker="The process" title="How it came together." className="mb-14" />
+    <section className="px-6 py-10 sm:px-14 sm:py-16">
+      <div className="mx-auto max-w-6xl">
+        <SectionHeading kicker="The process" title="How it came together." className="mb-12" />
 
-        <div ref={containerRef} className="relative flex flex-col gap-12 pl-10">
-          <div className="absolute left-[7px] top-2 bottom-2 w-px bg-line" />
-          <motion.div
-            style={{ scaleY }}
-            className="absolute left-[7px] top-2 bottom-2 w-px origin-top bg-gradient-to-b from-violet-tint to-acid"
-          />
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {steps.map((step, index) => {
+            const status = step.status ?? 'done'
+            return (
+              <Reveal key={step.title} delay={(index % 3) * 0.06}>
+                <div className="flex h-full flex-col gap-4 rounded-2xl border border-line bg-surface/60 p-6">
+                  <div className="flex items-center justify-between">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-mint/15 font-mono text-xs text-mint">
+                      {index + 1}
+                    </span>
+                    <span
+                      className={
+                        status === 'in-progress'
+                          ? 'font-mono text-[10px] uppercase tracking-wider text-acid'
+                          : 'font-mono text-[10px] uppercase tracking-wider text-fg-muted'
+                      }
+                    >
+                      {status === 'in-progress' ? 'In progress' : 'Done'}
+                    </span>
+                  </div>
 
-          {steps.map((step, index) => (
-            <Reveal key={step.title} delay={index * 0.05}>
-              <div className="relative">
-                <span className="absolute -left-10 top-1 h-3.5 w-3.5 rounded-full border-2 border-acid bg-ink" />
-                <h3 className="text-xl sm:text-2xl">{step.title}</h3>
-                <p className="mt-2 text-fg-muted">{step.body}</p>
-              </div>
-            </Reveal>
-          ))}
+                  <div>
+                    <h3 className="text-lg font-medium">{step.title}</h3>
+                    <p className="mt-2 text-sm text-fg-muted">{step.body}</p>
+                  </div>
+
+                  {step.aiNote && (
+                    <div className="mt-auto flex gap-2 rounded-xl bg-violet/10 p-3">
+                      <Sparkles size={16} className="mt-0.5 shrink-0 text-violet-tint" />
+                      <p className="text-sm text-fg-muted">{step.aiNote}</p>
+                    </div>
+                  )}
+                </div>
+              </Reveal>
+            )
+          })}
         </div>
       </div>
     </section>

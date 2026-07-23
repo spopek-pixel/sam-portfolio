@@ -17,7 +17,7 @@ const photos = [
 
 export function PhotoCollage() {
   return (
-    <section className="px-6 py-20 sm:px-10 sm:py-28">
+    <section className="px-6 py-10 sm:px-14 sm:py-16">
       <div className="mx-auto max-w-5xl">
         <SectionHeading kicker="Off the clock" title="Life outside Figma." className="mb-12" />
         <div className="grid gap-6 sm:grid-cols-3">

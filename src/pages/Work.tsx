@@ -14,7 +14,7 @@ export default function Work() {
   const visible = filter === 'All' ? projects : projects.filter((project) => project.category.includes(filter))
 
   return (
-    <div className="relative px-6 pb-24 pt-36 sm:px-10">
+    <div className="relative px-6 pb-16 pt-32 sm:px-10 sm:pb-20 sm:pt-36">
       <GradientBlob tone="mixed" className="right-[-10%] top-10 h-[380px] w-[380px]" />
       <div className="relative mx-auto flex max-w-6xl flex-col gap-14">
         <SectionHeading

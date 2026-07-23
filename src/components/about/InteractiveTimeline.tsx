@@ -37,7 +37,7 @@ export function InteractiveTimeline() {
   const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1])
 
   return (
-    <section className="px-6 py-20 sm:px-10 sm:py-28">
+    <section className="px-6 py-10 sm:px-14 sm:py-16">
       <div className="mx-auto max-w-4xl">
         <SectionHeading kicker="The timeline" title="Every stop on the way here." className="mb-14" />
 

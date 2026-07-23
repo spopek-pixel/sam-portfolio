@@ -10,7 +10,7 @@ const stats = [
 
 export function TestimonialSpotlight() {
   return (
-    <section className="px-6 py-24 sm:px-10 sm:py-32">
+    <section className="px-6 py-16 sm:px-10 sm:py-20">
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.3fr_1fr] lg:items-center">
         <Reveal>
           <div className="flex flex-col gap-6 rounded-3xl border border-line bg-surface/60 p-8 sm:p-10">

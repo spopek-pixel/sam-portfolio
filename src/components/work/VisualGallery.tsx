@@ -5,7 +5,7 @@ import { Reveal } from '@/components/ui/Reveal'
 
 export function VisualGallery({ project }: { project: Project }) {
   return (
-    <section className="px-6 py-20 sm:px-10 sm:py-28">
+    <section className="px-6 py-10 sm:px-14 sm:py-16">
       <div className="mx-auto flex max-w-6xl flex-col gap-14">
         <SectionHeading kicker="The campaigns" title="Four briefs, four solutions." />
         <div className="grid gap-6 sm:grid-cols-2">

@@ -2,14 +2,14 @@ import { Reveal } from '@/components/ui/Reveal'
 
 export function ProblemSection({ problem, research }: { problem: string; research: string[] }) {
   return (
-    <section className="px-6 py-20 sm:px-10 sm:py-28">
-      <div className="mx-auto flex max-w-4xl flex-col gap-12">
-        <div className="flex flex-col gap-5">
+    <section className="px-6 py-10 sm:px-14 sm:py-16">
+      <div className="mx-auto flex max-w-6xl flex-col gap-12">
+        <div className="flex flex-col gap-4">
           <Reveal>
-            <span className="kicker">The problem</span>
+            <span className="kicker">The challenge</span>
           </Reveal>
           <Reveal delay={0.08}>
-            <p className="text-3xl leading-snug text-fg-muted sm:text-4xl md:text-5xl">{problem}</p>
+            <p className="max-w-2xl text-lg leading-relaxed text-fg-muted sm:text-xl">{problem}</p>
           </Reveal>
         </div>
 

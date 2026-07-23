@@ -40,7 +40,7 @@ export function MockupGallery({ images, title }: { images: string[]; title: stri
   if (images.length === 0) return null
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden py-20 sm:py-28">
+    <section ref={sectionRef} className="relative overflow-hidden py-14 sm:py-20">
       <div className="px-6 sm:px-10">
         <SectionHeading kicker="A closer look" title="Inside the interface." className="mx-auto mb-12 max-w-6xl" />
       </div>

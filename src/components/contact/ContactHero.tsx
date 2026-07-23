@@ -35,7 +35,7 @@ export function ContactHero() {
   }
 
   return (
-    <section className="relative flex min-h-[80svh] flex-col justify-center overflow-hidden px-6 pb-16 pt-32 sm:px-10">
+    <section className="relative flex min-h-[80svh] flex-col justify-center overflow-hidden px-6 pb-10 pt-32 sm:px-10 sm:pb-12">
       <NoiseOverlay />
       <GradientBlob tone="mixed" className="left-1/2 top-1/3 h-[460px] w-[460px] -translate-x-1/2" />
 

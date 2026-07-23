@@ -6,8 +6,8 @@ export function KeyDecisions({ decisions }: { decisions: string[] }) {
   if (decisions.length === 0) return null
 
   return (
-    <section className="px-6 py-20 sm:px-10 sm:py-28">
-      <div className="mx-auto max-w-4xl">
+    <section className="px-6 py-10 sm:px-14 sm:py-16">
+      <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="Key decisions" title="Choices that mattered." className="mb-12" />
         <div className="grid gap-4 sm:grid-cols-2">
           {decisions.map((decision, index) => (
