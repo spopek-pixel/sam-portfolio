@@ -13,6 +13,9 @@ const photos = [
   { keyword: 'volleyball', caption: 'Intramural volleyball', rotate: '-rotate-2' },
   { keyword: 'sorority', caption: 'Alpha Gamma Delta', rotate: 'rotate-1' },
   { keyword: 'football', caption: 'Hoosier football season', rotate: '-rotate-1' },
+  { keyword: '3d-print', caption: '3D printing my own designs', rotate: 'rotate-2' },
+  { keyword: 'laser-cut', caption: 'Laser cutting a dinosaur (yes, really)', rotate: '-rotate-2' },
+  { keyword: 'making', caption: 'Experimenting with new tools & skills', rotate: 'rotate-1' },
 ]
 
 export function PhotoCollage() {

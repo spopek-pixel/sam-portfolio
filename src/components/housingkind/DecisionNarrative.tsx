@@ -38,11 +38,11 @@ export function DecisionNarrative() {
 
           <Reveal delay={0.12} className="h-full">
             <figure className="flex h-full flex-col">
-              <div className="min-h-0 flex-1 overflow-hidden rounded-2xl">
+              <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden rounded-2xl bg-ink">
                 <img
                   src={housingAboutMockup}
                   alt={mockup.caption}
-                  className="h-full w-full object-cover object-[50%_35%]"
+                  className="max-h-full max-w-full object-contain"
                   loading="lazy"
                 />
               </div>

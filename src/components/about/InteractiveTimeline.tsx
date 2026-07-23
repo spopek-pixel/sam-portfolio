@@ -15,6 +15,11 @@ const entries = [
     body: 'My mom pushed ambitious school projects over easy ones. Creativity became the default setting, not the exception.',
   },
   {
+    year: 'Middle school',
+    title: 'Rearranging HUDs before I knew the word "UX"',
+    body: "I was the kid tweaking inventory menus and HUD layouts before I'd even beaten the tutorial. I didn't have language for it yet, but I already noticed when a screen made a game feel effortless — and when it made me want to throw the controller. That gap is basically still my whole job.",
+  },
+  {
     year: 'Teenage years',
     title: 'The family tech support',
     body: 'As a first-generation kid, I became the one who helped parents and grandparents navigate technology. My first real look at the accessibility gap.',

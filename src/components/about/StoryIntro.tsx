@@ -18,7 +18,9 @@ export function StoryIntro() {
         <Reveal delay={0.16}>
           <p className="max-w-2xl text-lg text-fg-muted sm:text-xl">
             I was a bit of a computer kid before I knew that meant anything — and as a first-generation kid, I became my
-            family's tech support long before I had a job title for it.
+            family's tech support long before I had a job title for it. I spent an unreasonable number of hours as a
+            teenager rearranging game menus and settings screens for no reason anyone asked me to. Looking back, that
+            was the first time I cared about how something felt to use — design just gave it a name.
           </p>
         </Reveal>
       </div>

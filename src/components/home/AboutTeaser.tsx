@@ -13,8 +13,8 @@ export function AboutTeaser() {
         </Reveal>
         <Reveal delay={0.1}>
           <p className="mt-6 text-3xl leading-snug sm:text-4xl md:text-5xl">
-            I won my school's typing competition at 96 words per minute. I've been translating between
-            people and technology ever since.
+            I grew up redesigning game menus in my head before I knew "UX" was a job. Now I just do it
+            for a living.
           </p>
         </Reveal>
         <Reveal delay={0.2}>
