@@ -256,11 +256,11 @@ export const housingkind = {
 
   aiExperience: {
     intro:
-      'Housingkind doesn’t just use AI in the design process — AI is part of the product. A built-in assistant helps residents understand housing without reading policy documents.',
+      'Housingkind doesn’t just use AI in the design process — AI is part of the product. A built-in assistant, running on Microsoft’s Azure AI cloud platform, helps residents understand housing without reading policy documents.',
     cards: [
       {
         title: 'Azure OpenAI integration',
-        body: 'The assistant runs on Microsoft Azure OpenAI, wired directly into the Housingkind front-end.',
+        body: 'Built on Microsoft’s Azure AI cloud platform, calling an Azure OpenAI large language model (LLM) directly from the Housingkind front-end.',
       },
       {
         title: 'AI chatbot experience',
@@ -275,15 +275,15 @@ export const housingkind = {
         body: 'System prompts tuned to answer in approachable, neutral housing language — informative, never preachy.',
       },
       {
-        title: 'Context-aware responses',
-        body: 'Answers grounded in Housingkind’s own content, so guidance stays relevant to what’s on screen.',
+        title: 'Context-aware responses (RAG)',
+        body: 'Retrieval-augmented generation grounds every answer in Housingkind’s own content, so guidance stays accurate and on-topic.',
       },
       {
         title: 'Future AI vision',
         body: 'Toward personalized street visualizations and scenario simulation — ask “what would a duplex look like here?” and see it.',
       },
     ],
-    chatCaption: 'The in-product AI assistant answering a resident’s question.',
+    chatCaption: 'The in-product AI assistant answering a resident’s question in real time.',
   },
 
   keyFeatures: [
