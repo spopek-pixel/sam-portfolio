@@ -2,7 +2,7 @@ import { Award } from 'lucide-react'
 import { housingkind } from '@/data/housingkind'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
-import transcendGroupPhoto from '@/assets/images/projects/housingkind/transcend_group.png'
+import transcendGroupPhoto from '@/assets/images/projects/housingkind/transcend_group.jpg'
 
 export function Recognition() {
   const { body, photoCaption } = housingkind.recognition

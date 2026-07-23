@@ -10,7 +10,7 @@ function findImage(keyword: string) {
 }
 
 const photos = [
-  { keyword: 'volleyball', caption: 'Intramural volleyball', rotate: '-rotate-2' },
+  { keyword: 'vball', caption: 'Intramural volleyball', rotate: '-rotate-2' },
   { keyword: 'sorority', caption: 'Alpha Gamma Delta', rotate: 'rotate-1' },
   { keyword: 'football', caption: 'Hoosier football season', rotate: '-rotate-1' },
   { keyword: '3d-print', caption: '3D printing my own designs', rotate: 'rotate-2' },

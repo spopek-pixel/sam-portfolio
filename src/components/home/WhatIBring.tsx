@@ -46,7 +46,7 @@ export function WhatIBring() {
               What I <span className="text-gradient">bring.</span>
             </>
           }
-          description="Most designers hand off a file. I hand off a working, accessible interface — because I build it myself."
+          description="I move fluidly between research, design, and code — just as comfortable pairing with engineers and PMs on a team as I am owning a screen solo. On group projects like Housingkind, that range means I can prototype an idea, defend it to stakeholders, and help ship the fix myself when that's faster than filing a ticket."
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -3,7 +3,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
 
 export function ProjectOutcomes() {
-  const { synthesis, infoCards, quote, stats, usersGained } = housingkind.outcomes
+  const { synthesis, infoCards, quote, usersGained } = housingkind.outcomes
 
   return (
     <section className="px-6 py-10 sm:px-14 sm:py-16">
@@ -27,17 +27,6 @@ export function ProjectOutcomes() {
             <cite className="mt-3 block text-sm not-italic text-fg-muted">{quote.attribution}</cite>
           </blockquote>
         </Reveal>
-
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {stats.map((stat, index) => (
-            <Reveal key={stat.label} delay={0.1 + index * 0.06}>
-              <div className="flex items-center gap-4 rounded-2xl border border-line p-5">
-                <span className="font-display text-3xl text-gradient">{stat.value}</span>
-                <span className="text-sm text-fg-muted">{stat.label}</span>
-              </div>
-            </Reveal>
-          ))}
-        </div>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
           {usersGained.map((item, index) => (

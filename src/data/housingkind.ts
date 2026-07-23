@@ -359,10 +359,6 @@ export const housingkind = {
       quote: 'People fear what they cannot see.',
       attribution: 'David Gordon, Accessible Housing Developer — key insight from stakeholder interviews',
     } satisfies Quote,
-    stats: [
-      { value: '[XX]%', label: 'Felt the platform reduced housing confusion' },
-      { value: '[XX]%', label: 'Said visuals shifted their perception of density' },
-    ] satisfies Stat[],
     usersGained: [
       'A way to see density before judging it',
       'Plain-language answers to policy questions',

@@ -38,7 +38,7 @@ export function ProjectCard({ project, index, size = 'regular' }: ProjectCardPro
   }
 
   return (
-    <Link to={`/work/${project.slug}`} aria-label={`View ${project.title} case study`}>
+    <Link to={`/work/${project.slug}`} aria-label={`View ${project.title} case study`} className="block h-full">
       <motion.article
         ref={ref}
         onMouseMove={handleMouseMove}
@@ -48,15 +48,15 @@ export function ProjectCard({ project, index, size = 'regular' }: ProjectCardPro
         viewport={{ once: true, margin: '-10% 0px' }}
         transition={{ duration: 0.7, delay: (index % 3) * 0.08, ease: [0.16, 1, 0.3, 1] }}
         style={{ rotateX: springRotateX, rotateY: springRotateY, y: lift, perspective: 1000 }}
-        className="group relative flex flex-col gap-5 rounded-3xl border border-line bg-surface/60 p-5 transition-colors hover:border-violet-tint/60"
+        className="group relative flex h-full flex-col gap-5 rounded-3xl border border-line bg-surface/60 p-5 transition-colors hover:border-violet-tint/60"
       >
         <ProjectVisual
           image={project.images[0]}
           title={project.title}
           accent={project.accent}
-          className={cn('aspect-[4/3] w-full', size === 'large' && 'aspect-[16/10]')}
+          className={cn('aspect-[4/3] w-full shrink-0', size === 'large' && 'aspect-[16/10]')}
         />
-        <div className="flex items-start justify-between gap-4">
+        <div className="flex flex-1 items-start justify-between gap-4">
           <div className="flex flex-col gap-2">
             <div className="flex flex-wrap gap-2">
               {project.category.map((cat) => (

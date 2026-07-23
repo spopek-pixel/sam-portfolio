@@ -1,13 +1,6 @@
 import { Quote } from 'lucide-react'
 import { SectionHeading } from '@/components/ui/SectionHeading'
-import { Reveal } from '@/components/ui/Reveal'
-
-const stats = [
-  { value: '5', label: 'Case studies shipped' },
-  { value: '15+', label: 'Stakeholder interviews, Housingkind' },
-  { value: '1', label: 'Best UX award, Transcend' },
-  { value: '3', label: 'Real client partnerships' },
-]
+import { cn } from '@/lib/utils'
 
 const testimonials = [
   {
@@ -47,7 +40,7 @@ export function TestimonialSpotlight() {
 
   return (
     <section className="py-16 sm:py-20">
-      <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 sm:px-10">
+      <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <SectionHeading
           kicker="Kind words"
           title={
@@ -56,29 +49,26 @@ export function TestimonialSpotlight() {
             </>
           }
         />
-
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {stats.map((stat, index) => (
-            <Reveal key={stat.label} delay={index * 0.08}>
-              <div className="flex h-full flex-col gap-2 rounded-3xl border border-line p-6">
-                <span className="font-display text-4xl text-gradient sm:text-5xl">{stat.value}</span>
-                <span className="text-sm text-fg-muted">{stat.label}</span>
-              </div>
-            </Reveal>
-          ))}
-        </div>
       </div>
 
-      <div className="mt-12 overflow-hidden border-y border-line py-8">
+      <div className="relative mt-12 overflow-hidden border-y border-line py-10">
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-ink to-transparent sm:w-40" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-ink to-transparent sm:w-40" />
+
         <div className="flex w-max animate-[marquee_50s_linear_infinite] gap-6 [animation-play-state:running] hover:[animation-play-state:paused] motion-reduce:animate-none">
           {doubled.map((testimonial, index) => (
             <div
               key={`${testimonial.name}-${index}`}
-              className="flex w-[340px] shrink-0 flex-col gap-4 rounded-3xl border border-line bg-surface/60 p-6"
+              className={cn(
+                'flex w-[360px] shrink-0 flex-col gap-5 rounded-3xl border p-7 shadow-[0_20px_50px_rgba(0,0,0,0.35)]',
+                index % 2 === 0
+                  ? 'border-violet-tint/30 bg-gradient-to-br from-violet/10 via-surface to-surface'
+                  : 'border-acid/30 bg-gradient-to-br from-acid/10 via-surface to-surface',
+              )}
             >
-              <Quote className="text-violet-tint" size={24} />
-              <p className="text-sm leading-relaxed text-fg-muted">{testimonial.quote}</p>
-              <div>
+              <Quote className={index % 2 === 0 ? 'text-violet-tint' : 'text-acid'} size={30} />
+              <p className="font-display text-lg leading-snug text-fg sm:text-xl">{testimonial.quote}</p>
+              <div className="mt-auto">
                 <p className="text-sm font-medium">{testimonial.name}</p>
                 <p className="text-xs text-fg-muted">{testimonial.role}</p>
               </div>
