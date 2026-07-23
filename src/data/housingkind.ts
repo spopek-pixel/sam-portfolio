@@ -280,7 +280,7 @@ export const housingkind = {
       },
       {
         title: 'Future AI vision',
-        body: 'Toward personalized street visualizations and scenario simulation — ask “what would a duplex look like here?” and see it.',
+        body: 'Toward personalized street visualizations and scenario simulation — ask “How does Housingkind help communities?” and get an answer grounded in your own neighborhood.',
       },
     ],
     chatCaption: 'The in-product AI assistant answering a resident’s question in real time.',

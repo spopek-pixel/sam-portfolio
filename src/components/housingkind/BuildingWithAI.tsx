@@ -14,8 +14,8 @@ export function BuildingWithAI() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="Building with AI" title="AI is part of the product." description={intro} className="mb-8" />
 
-        <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr] lg:items-stretch lg:gap-8">
-          <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-[1.6fr_1fr] lg:items-center lg:gap-10">
+          <div className="grid gap-3 sm:grid-cols-2">
             {cards.map((card, index) => {
               const Icon = cardIcons[index]
               const isVision = index === cards.length - 1
@@ -24,22 +24,22 @@ export function BuildingWithAI() {
                   <div
                     className={
                       isVision
-                        ? 'flex h-full flex-col gap-2.5 rounded-2xl border border-violet-tint/40 bg-violet/10 p-5'
-                        : 'flex h-full flex-col gap-2.5 rounded-2xl border border-line bg-surface/60 p-5'
+                        ? 'flex h-full flex-col gap-2 rounded-2xl border border-violet-tint/40 bg-violet/10 p-4'
+                        : 'flex h-full flex-col gap-2 rounded-2xl border border-line bg-surface/60 p-4'
                     }
                   >
-                    <Icon size={20} className={isVision ? 'text-violet-tint' : 'text-acid'} />
+                    <Icon size={18} className={isVision ? 'text-violet-tint' : 'text-acid'} />
                     <h3 className="text-sm font-medium">{card.title}</h3>
-                    <p className="text-sm text-fg-muted">{card.body}</p>
+                    <p className="text-xs leading-relaxed text-fg-muted">{card.body}</p>
                   </div>
                 </Reveal>
               )
             })}
           </div>
 
-          <Reveal delay={0.15} className="h-full">
-            <figure className="flex h-full flex-col">
-              <div className="min-h-0 flex-1 overflow-hidden rounded-2xl border border-line bg-surface/60">
+          <Reveal delay={0.15}>
+            <figure className="mx-auto w-full max-w-[300px]">
+              <div className="overflow-hidden rounded-2xl border border-line bg-surface/60">
                 <video
                   src={chatBotVideo}
                   autoPlay
@@ -47,10 +47,10 @@ export function BuildingWithAI() {
                   loop
                   playsInline
                   aria-label="Screen recording of the Housingkind AI chat assistant"
-                  className="h-full w-full object-cover"
+                  className="h-auto w-full"
                 />
               </div>
-              <figcaption className="mt-3 shrink-0 text-sm text-fg-muted">{chatCaption}</figcaption>
+              <figcaption className="mt-3 text-center text-xs text-fg-muted">{chatCaption}</figcaption>
             </figure>
           </Reveal>
         </div>
