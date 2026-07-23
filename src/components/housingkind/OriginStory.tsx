@@ -11,7 +11,7 @@ export function OriginStory() {
           <span className="kicker">Where it started</span>
         </Reveal>
 
-        <div className="mt-6 grid gap-10 lg:grid-cols-2 lg:items-start">
+        <div className="mt-6 grid gap-10 lg:grid-cols-2 lg:items-stretch">
           <div className="flex flex-col gap-4">
             {body.map((paragraph, index) => (
               <Reveal key={paragraph} delay={0.06 + index * 0.06}>
@@ -20,8 +20,8 @@ export function OriginStory() {
             ))}
           </div>
 
-          <Reveal delay={0.2}>
-            <blockquote className="rounded-2xl border-l-4 border-acid bg-surface/60 p-6 lg:p-8">
+          <Reveal delay={0.2} className="h-full">
+            <blockquote className="flex h-full flex-col justify-center rounded-2xl border-l-4 border-acid bg-surface/60 p-6 lg:p-8">
               <p className="font-display text-xl leading-snug sm:text-2xl">"{hmw}"</p>
               <cite className="mt-3 block font-mono text-xs uppercase not-italic tracking-wider text-fg-muted">
                 {hmwAttribution}
