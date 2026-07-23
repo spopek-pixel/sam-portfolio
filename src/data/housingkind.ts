@@ -44,6 +44,38 @@ export const housingkind = {
     ],
   },
 
+  productStrategy: {
+    steps: [
+      {
+        label: 'Problem',
+        body: 'Communities support affordability and walkability in theory, but resist the housing that delivers them — because they can’t picture it on their own street.',
+      },
+      {
+        label: 'Solution',
+        body: 'A visualization platform that shows how missing middle housing actually fits into real neighborhoods, in plain language.',
+      },
+      {
+        label: 'Outcome',
+        body: 'A working product presented to developers, city alders, and advocates — and Best UX Design at the Transcend Competition.',
+      },
+    ],
+    goals: [
+      { title: 'Increase understanding', body: 'Turn abstract housing policy into visuals people can react to.' },
+      { title: 'Reduce misconceptions', body: 'Meet fear of density with real examples instead of statistics.' },
+      { title: 'Approachable education', body: 'Plain language and friendly visuals over planning jargon.' },
+      { title: 'Encourage exploration', body: 'Let people try scenarios instead of reading about them.' },
+    ],
+  },
+
+  designProcess: [
+    { title: 'Research', body: '15+ stakeholder interviews and field visits across Milwaukee.' },
+    { title: 'Ideation', body: 'Systems mapping, personas, and early concept exploration.' },
+    { title: 'Wireframes', body: 'Low-fidelity structure for the core visualize-and-learn flows.' },
+    { title: 'Prototyping', body: 'High-fidelity Figma prototype, accelerated with Figma Make.' },
+    { title: 'Testing', body: 'Stakeholder walkthroughs and usability sessions on the prototype.' },
+    { title: 'Development', body: 'Built for real in React + TypeScript and deployed on Vercel.' },
+  ],
+
   originStory: {
     body: [
       "This project began in my Advanced Design Thinking for Transformation course, part of a year-long master's program project exploring challenges and opportunities within the housing crisis.",
@@ -127,6 +159,11 @@ export const housingkind = {
       { name: 'Josefin Sans', usage: 'Page headings, section headers' },
       { name: 'Lato', usage: 'Body copy, UI text' },
     ],
+    system: [
+      { title: 'Components', body: 'Reusable cards, accordions, and section patterns keep every page consistent.' },
+      { title: 'Accessibility', body: 'Readable contrast, keyboard-friendly controls, and descriptive labels throughout.' },
+      { title: 'Responsive design', body: 'One layout system that adapts cleanly from phone to desktop.' },
+    ],
   },
 
   aiProcess: {
@@ -203,22 +240,60 @@ export const housingkind = {
 
   buildingIt: {
     intro:
-      "Alongside the academic project, I've been personally extending Housingkind into a working front-end build — bringing the prototype from Figma into real, responsive code.",
-    features: [
+      "I didn't stop at the prototype — I'm building Housingkind as a real, working product, bringing the Figma design into responsive, production code.",
+    stack: [
+      { name: 'React', body: 'Componentized UI mirroring the Figma design system' },
+      { name: 'TypeScript', body: 'Typed data models for projects, stories, and resources' },
+      { name: 'Tailwind CSS', body: 'A utility-driven styling system for consistent spacing and theming' },
+      { name: 'Responsive build', body: 'Every page designed and coded mobile-first' },
+      { name: 'GitHub', body: 'Version-controlled development with a clean commit history' },
+      { name: 'Claude Code', body: 'AI pair-programming to move faster from design to working code' },
+      { name: 'Vercel', body: 'Continuous deployment — every push ships to a live URL' },
+    ],
+    pipeline: ['Figma design', 'React + TypeScript', 'GitHub', 'Claude Code', 'Vercel deploy'],
+    screenshotCaption: 'The Housingkind front-end running in the browser — designed and developed by me.',
+  },
+
+  aiExperience: {
+    intro:
+      'Housingkind doesn’t just use AI in the design process — AI is part of the product. A built-in assistant helps residents understand housing without reading policy documents.',
+    cards: [
       {
-        title: 'React + TypeScript',
-        body: 'Rebuilding the core experience as a typed, componentized React app instead of a static prototype.',
+        title: 'Azure OpenAI integration',
+        body: 'The assistant runs on Microsoft Azure OpenAI, wired directly into the Housingkind front-end.',
       },
       {
-        title: 'Hand-written CSS',
-        body: 'Translating the Figma design system into real, responsive styles.',
+        title: 'AI chatbot experience',
+        body: 'Residents ask plain-language questions about proposals instead of parsing zoning and policy text.',
       },
       {
-        title: 'Azure AI chatbot',
-        body: 'Prototyping a Microsoft Azure AI–powered chatbot so residents can ask plain-language questions about a proposal instead of parsing policy text.',
+        title: 'Conversational interactions',
+        body: 'Follow-up questions keep the dialogue natural, so learning feels like a conversation, not a search.',
+      },
+      {
+        title: 'Prompt engineering',
+        body: 'System prompts tuned to answer in approachable, neutral housing language — informative, never preachy.',
+      },
+      {
+        title: 'Context-aware responses',
+        body: 'Answers grounded in Housingkind’s own content, so guidance stays relevant to what’s on screen.',
+      },
+      {
+        title: 'Future AI vision',
+        body: 'Toward personalized street visualizations and scenario simulation — ask “what would a duplex look like here?” and see it.',
       },
     ],
+    chatCaption: 'The in-product AI assistant answering a resident’s question.',
   },
+
+  keyFeatures: [
+    { title: 'AI Chat Assistant', body: 'Plain-language answers to housing questions, powered by Azure OpenAI.' },
+    { title: 'Interactive Street Visualizations', body: 'See how missing middle housing fits into a real street.' },
+    { title: 'Neighborhood Stories', body: 'First-person stories and podcasts from people living near gentle density.' },
+    { title: 'Myths vs. Facts', body: 'Common fears about density, answered with evidence side by side.' },
+    { title: 'Resource Library', body: 'Glossaries, FAQs, and guides that make housing terms approachable.' },
+    { title: 'Responsive Experience', body: 'A full experience on any device, from council chamber to couch.' },
+  ],
 
   decisionNarrative: {
     body: [
@@ -271,13 +346,47 @@ export const housingkind = {
       { value: '[XX]%', label: 'Felt the platform reduced housing confusion' },
       { value: '[XX]%', label: 'Said visuals shifted their perception of density' },
     ] satisfies Stat[],
+    usersGained: [
+      'A way to see density before judging it',
+      'Plain-language answers to policy questions',
+      'Confidence to take part in local housing conversations',
+    ],
   },
 
   reflection: {
-    paragraphs: [
-      "As this project came together, I've been reflecting on how much this process shaped my understanding of design. Working on a complex, real-world issue like the housing crisis pushed me to think beyond just the interface and consider systems, stakeholders, and the impact of design decisions.",
-      "I've learned the importance of grounding design in research and real conversations, especially when dealing with topics that involve community trust and differing perspectives. This project also challenged me to simplify complex ideas and make them more accessible through visualization and interaction.",
-      'Throughout the project, I also explored how AI-powered tools such as Figma Make can support the design process — leveraging AI for rapid concept generation and iteration let me explore multiple interface directions more efficiently, evaluate ideas quickly, and focus more time on refining solutions based on research and feedback.',
+    groups: [
+      {
+        title: 'Lessons learned',
+        items: [
+          'Design goes beyond the interface — systems, stakeholders, and trust shape every decision',
+          'Grounding decisions in research and real conversations beats designing from assumptions',
+          'AI speeds up exploration, but judgment decides what ships',
+        ],
+      },
+      {
+        title: "What I'd improve",
+        items: [
+          'Test earlier with residents outside the program, not just stakeholders',
+          'Replace placeholder metrics with measured outcomes from structured testing',
+          'Simplify the first-time experience so no one needs a walkthrough',
+        ],
+      },
+      {
+        title: 'Future opportunities',
+        items: [
+          'Deepen the AI assistant with neighborhood-specific context',
+          'Partner rollout with ViaCDC and community organizations',
+          'Street-level 3D and AR visualization of proposed housing',
+        ],
+      },
+      {
+        title: 'Next steps',
+        items: [
+          'Finish the current round of usability testing',
+          'Ship the remaining pages of the production build',
+          'Publish a public beta with partner feedback loops',
+        ],
+      },
     ],
     highlight:
       "Successful design is not just about creating interfaces — it's about using the right tools, research, and processes to help people better understand complex challenges and make informed decisions.",

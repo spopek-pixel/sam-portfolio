@@ -3,12 +3,12 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
 
 export function ProjectOutcomes() {
-  const { synthesis, infoCards, quote, stats } = housingkind.outcomes
+  const { synthesis, infoCards, quote, stats, usersGained } = housingkind.outcomes
 
   return (
     <section className="px-6 py-10 sm:px-14 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading kicker="The outcome" title="Project outcomes." description={synthesis} className="mb-8 max-w-3xl" />
+        <SectionHeading kicker="Impact" title="What it changed." description={synthesis} className="mb-8 max-w-3xl" />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {infoCards.map((card, index) => (
@@ -34,6 +34,17 @@ export function ProjectOutcomes() {
               <div className="flex items-center gap-4 rounded-2xl border border-line p-5">
                 <span className="font-display text-3xl text-gradient">{stat.value}</span>
                 <span className="text-sm text-fg-muted">{stat.label}</span>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          {usersGained.map((item, index) => (
+            <Reveal key={item} delay={0.16 + index * 0.05} className="h-full">
+              <div className="flex h-full items-start gap-3 rounded-2xl bg-surface/60 p-5">
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-acid" />
+                <p className="text-sm text-fg-muted">{item}</p>
               </div>
             </Reveal>
           ))}

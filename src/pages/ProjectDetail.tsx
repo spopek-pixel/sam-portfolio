@@ -1,6 +1,5 @@
 import { Navigate, useParams } from 'react-router-dom'
 import { getAdjacentProject, getProject } from '@/data/projects'
-import { housingkind } from '@/data/housingkind'
 import { CaseStudyHero } from '@/components/work/CaseStudyHero'
 import { ProblemSection } from '@/components/work/ProblemSection'
 import { ProcessTimeline } from '@/components/work/ProcessTimeline'
@@ -11,7 +10,10 @@ import { MockupGallery } from '@/components/work/MockupGallery'
 import { VisualGallery } from '@/components/work/VisualGallery'
 import { NextProjectNav } from '@/components/work/NextProjectNav'
 import { Deliverables } from '@/components/work/Deliverables'
-import { AtAGlance } from '@/components/housingkind/AtAGlance'
+import { ProductStrategy } from '@/components/housingkind/ProductStrategy'
+import { DesignProcessFlow } from '@/components/housingkind/DesignProcessFlow'
+import { BuildingWithAI } from '@/components/housingkind/BuildingWithAI'
+import { KeyFeatures } from '@/components/housingkind/KeyFeatures'
 import { OriginStory } from '@/components/housingkind/OriginStory'
 import { ResearchMethods } from '@/components/housingkind/ResearchMethods'
 import { FieldResearch } from '@/components/housingkind/FieldResearch'
@@ -38,8 +40,8 @@ export default function ProjectDetail() {
     return (
       <div>
         <CaseStudyHero project={project} />
-        <AtAGlance />
-        <ProcessTimeline steps={housingkind.processRoadmap} />
+        <ProductStrategy />
+        <DesignProcessFlow />
         <OriginStory />
         <ResearchMethods />
         <FieldResearch />
@@ -48,6 +50,8 @@ export default function ProjectDetail() {
         <BrandShowcase />
         <AIProcessSection />
         <BuildingItSection />
+        <BuildingWithAI />
+        <KeyFeatures />
         <DecisionNarrative />
         <TestingFeedback />
         <Recognition />

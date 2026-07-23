@@ -1,11 +1,14 @@
+import { Accessibility, Component, MonitorSmartphone } from 'lucide-react'
 import { housingkind } from '@/data/housingkind'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import brandLockups from '@/assets/images/projects/housingkind/Housingkind-Brand-Identity.png'
 import brandKit from '@/assets/images/projects/housingkind/Housingkind-Brand-Identity- Kit.png'
 
+const systemIcons = [Component, Accessibility, MonitorSmartphone]
+
 export function BrandShowcase() {
-  const { body, colors, typography } = housingkind.branding
+  const { body, colors, typography, system } = housingkind.branding
 
   return (
     <section className="px-6 py-10 sm:px-14 sm:py-16">
@@ -69,6 +72,21 @@ export function BrandShowcase() {
               </div>
             </div>
           </Reveal>
+        </div>
+
+        <div className="mt-6 grid gap-6 sm:grid-cols-3">
+          {system.map((item, index) => {
+            const Icon = systemIcons[index]
+            return (
+              <Reveal key={item.title} delay={0.2 + index * 0.06} className="h-full">
+                <div className="flex h-full flex-col gap-2.5 rounded-2xl border border-line bg-surface/60 p-6">
+                  <Icon size={20} className="text-violet-tint" />
+                  <h3 className="text-sm font-medium">{item.title}</h3>
+                  <p className="text-sm text-fg-muted">{item.body}</p>
+                </div>
+              </Reveal>
+            )
+          })}
         </div>
       </div>
     </section>
