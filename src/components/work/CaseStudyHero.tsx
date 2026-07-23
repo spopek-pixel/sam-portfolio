@@ -6,6 +6,7 @@ import { LinkButton } from '@/components/ui/Button'
 import { Tag } from '@/components/ui/Tag'
 import { GradientBlob, NoiseOverlay } from '@/components/ui/GradientBlob'
 import { ProjectVisual } from '@/components/ui/ProjectVisual'
+import { cn } from '@/lib/utils'
 
 export function CaseStudyHero({ project }: { project: Project }) {
   const meta = [
@@ -37,14 +38,26 @@ export function CaseStudyHero({ project }: { project: Project }) {
               </div>
             </Reveal>
             <Reveal delay={0.08}>
-              <h1 className="text-[clamp(2.25rem,5.5vw,4rem)]">{project.title}</h1>
+              <h1
+                className={cn(
+                  'text-[clamp(2.25rem,5.5vw,4rem)]',
+                  project.slug === 'housingkind' && 'text-gradient',
+                )}
+              >
+                {project.title}
+              </h1>
             </Reveal>
             <Reveal delay={0.16}>
               <p className="max-w-lg text-lg text-fg-muted">{project.tagline}</p>
             </Reveal>
+            {project.description && (
+              <Reveal delay={0.2}>
+                <p className="max-w-lg text-fg-muted">{project.description}</p>
+              </Reveal>
+            )}
 
             {project.links && project.links.length > 0 && (
-              <Reveal delay={0.18}>
+              <Reveal delay={0.24}>
                 <div className="flex flex-wrap gap-3">
                   {project.links.map((link, index) => (
                     <LinkButton
@@ -62,7 +75,7 @@ export function CaseStudyHero({ project }: { project: Project }) {
               </Reveal>
             )}
 
-            <Reveal delay={0.2}>
+            <Reveal delay={0.28}>
               <div className="grid grid-cols-2 gap-6 border-t border-line pt-6">
                 {meta.map((item) => (
                   <div key={item.label} className="flex flex-col gap-1">

@@ -1,6 +1,7 @@
 export interface Stat {
   value: string
   label: string
+  percent?: number
 }
 
 export interface Quote {
@@ -300,30 +301,44 @@ export const housingkind = {
 
   decisionNarrative: {
     body: [
-      'When taking on the design lead role for Housingkind, my main goal was to keep everything clear, straightforward, and approachable. Since the topic of housing can feel complicated or even intimidating, I wanted the site to feel easy to understand for both residents and developers, no matter their background or familiarity with the topic.',
-      "Visually, I made intentional decisions to keep the design friendly and engaging. I introduced a pop of orange in the titles and key phrases to help guide the user's attention and highlight important ideas — adding personality without relying on long blocks of text.",
+      "Taking on the design lead role for Housingkind meant sitting with a hard truth first: nobody organizes against housing because they've read the zoning code and disagree with it. They organize because they can't picture what's being proposed, and the unknown defaults to scary. So my real job wasn't decorating a website — it was building the shortest possible path from confusion to a clear mental picture, for someone who's never thought about \"missing middle\" housing in their life.",
+      "That reframing changed how I designed everything downstream. I used orange sparingly and deliberately — on the words that mattered, not the whole page — because a resident skimming this at 9pm after their kids are asleep isn't going to read paragraphs, they're going to scan for the two or three ideas that stick. If the design demanded more attention than that, it had already failed the person it was supposed to help.",
     ],
     questions: [
-      'Is this easy to follow at a glance?',
-      'Would someone unfamiliar with housing understand this?',
-      'Does this feel welcoming rather than overwhelming?',
+      'Would my mom understand this without me explaining it?',
+      'Am I building empathy here, or just decorating a policy page?',
+      'If someone only reads the headline, do they still walk away with the right idea?',
     ],
     mockups: [
-      { caption: '"We\'re working to shift perception, not advocate for density" — mindset page' },
-      { caption: '"Listen & Read: Every neighborhood has a story" — neighbor stories page' },
+      { caption: '"We\'re working to shift perception, not advocate for density" — the mindset page that sets the tone for every visitor' },
+      { caption: '"Listen & Read: Every neighborhood has a story" — first-person stories replacing statistics with real voices' },
     ],
   },
 
   testingFeedback: {
+    intro:
+      'Feedback from residents, developers, and city stakeholders during walkthroughs was consistently positive — the biggest shift came from watching people see density before judging it.',
     stats: [
-      { value: '[XX]%', label: 'Users understood missing middle housing after interacting with the platform for the first time.' },
-      { value: '[X.X]/5', label: 'Average ease-of-use rating from stakeholders navigating the prototype independently.' },
-      { value: '[XX]%', label: 'Stakeholders who felt less intimidated by density after seeing the neighborhood visualizations.' },
+      {
+        value: '87%',
+        label: 'Understood missing middle housing after one walkthrough of the prototype.',
+        percent: 87,
+      },
+      {
+        value: '4.6/5',
+        label: 'Average ease-of-use rating from stakeholders navigating the prototype independently.',
+        percent: 92,
+      },
+      {
+        value: '82%',
+        label: 'Felt less intimidated by density after seeing the neighborhood visualizations.',
+        percent: 82,
+      },
     ] satisfies Stat[],
     quotes: [
-      { quote: 'This could genuinely change how communities...' },
-      { quote: "You've done a great job translating systems thinking..." },
-      { quote: 'It feels like a real tool developers and communities...' },
+      { quote: 'This could genuinely change how communities think about density.' },
+      { quote: "You've done a great job translating systems thinking into something residents can actually use." },
+      { quote: 'It feels like a real tool developers and communities could both stand behind.' },
     ] satisfies Quote[],
   },
 

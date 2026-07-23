@@ -41,7 +41,11 @@ export function WhatIBring() {
       <div className="mx-auto flex max-w-6xl flex-col gap-14">
         <SectionHeading
           kicker="Why hire me"
-          title="What I bring."
+          title={
+            <>
+              What I <span className="text-gradient">bring.</span>
+            </>
+          }
           description="Most designers hand off a file. I hand off a working, accessible interface — because I build it myself."
         />
 

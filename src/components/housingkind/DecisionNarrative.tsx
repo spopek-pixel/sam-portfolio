@@ -1,8 +1,13 @@
-import { HelpCircle, MonitorSmartphone } from 'lucide-react'
+import { HelpCircle } from 'lucide-react'
 import { housingkind } from '@/data/housingkind'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
-import { ArtifactPlaceholder } from './ArtifactPlaceholder'
+import { cn } from '@/lib/utils'
+import housingAboutMockup from '@/assets/images/projects/housingkind/housing_about.png'
+import figmaAfter from '@/assets/images/projects/housingkind/figma_after.png'
+
+const mockupImages = [housingAboutMockup, figmaAfter]
+const mockupImageClasses = ['aspect-[4/3] object-cover', 'aspect-[7/8] object-cover object-top']
 
 export function DecisionNarrative() {
   const { body, questions, mockups } = housingkind.decisionNarrative
@@ -39,7 +44,14 @@ export function DecisionNarrative() {
             {mockups.map((mockup, index) => (
               <Reveal key={mockup.caption} delay={0.1 + index * 0.08}>
                 <figure>
-                  <ArtifactPlaceholder label={`Mockup ${index + 1}`} icon={MonitorSmartphone} className="aspect-[4/3] w-full" />
+                  <div className="overflow-hidden rounded-2xl border border-line bg-surface/60">
+                    <img
+                      src={mockupImages[index]}
+                      alt={mockup.caption}
+                      className={cn('w-full', mockupImageClasses[index])}
+                      loading="lazy"
+                    />
+                  </div>
                   <figcaption className="mt-2 text-sm text-fg-muted">{mockup.caption}</figcaption>
                 </figure>
               </Reveal>

@@ -15,6 +15,7 @@ export interface Project {
   slug: string
   title: string
   tagline: string
+  description?: string
   category: Category[]
   role: string
   timeline: string
@@ -57,8 +58,10 @@ export const projects: Project[] = [
     slug: 'housingkind',
     title: 'Housingkind',
     tagline: 'Making invisible housing policy visible — and winning Best UX at Transcend.',
+    description:
+      'Housingkind is a community-focused platform that combines interactive visualization and AI to make gentle density more approachable and easier to understand.',
     category: ['Research', 'Product'],
-    role: 'UX Design & Research',
+    role: 'Product Designer & Design Engineer',
     timeline: 'Aug 2025 — Present',
     team: 'Samantha Popek, Lucy Murdock, Jaden Radcliff, Obid Ochilov — with ViaCDC, AARP & Startingblock',
     tools: ['Figma', 'React', 'TypeScript', 'Tailwind CSS', 'Azure OpenAI', 'GitHub', 'Vercel'],

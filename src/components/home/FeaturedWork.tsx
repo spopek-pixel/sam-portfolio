@@ -13,7 +13,11 @@ export function FeaturedWork() {
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
             kicker="Selected work"
-            title="Case studies, not just screens."
+            title={
+              <>
+                Case studies, not just <span className="text-gradient">screens.</span>
+              </>
+            }
             description="Three projects that show the full arc — research, decisions, and the interface that came out of them."
           />
           <Reveal delay={0.1}>
