@@ -1,23 +1,23 @@
-import { Compass, ListChecks, MapPinOff, MonitorSmartphone } from 'lucide-react'
+import { Compass, ListChecks, MapPinOff } from 'lucide-react'
 import { dragonfly } from '@/data/dragonfly'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
-import { ArtifactPlaceholder } from '@/components/housingkind/ArtifactPlaceholder'
+import currentApp from '@/assets/images/projects/dragonfly-yoga/dragonfly_current.png'
 
 const icons = [MapPinOff, ListChecks, Compass]
 
 export function Challenge() {
-  const { intro, painPoints, supporting, currentApp } = dragonfly.challenge
+  const { intro, painPoints, supporting, currentApp: currentAppCaption } = dragonfly.challenge
 
   return (
     <section className="px-6 py-14 sm:px-10 sm:py-20">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="The challenge" title="Where the old app fell apart." description={intro} className="mb-10" />
 
         <Reveal>
-          <figure className="mx-auto mb-10 max-w-2xl">
-            <ArtifactPlaceholder label="Current Dragonfly app" icon={MonitorSmartphone} className="aspect-[16/10] w-full" />
-            <figcaption className="mt-3 text-center text-sm text-fg-muted">{currentApp}</figcaption>
+          <figure className="mx-auto mb-10 max-w-2xl overflow-hidden rounded-2xl border border-line">
+            <img src={currentApp} alt="The current Dragonfly Hot Yoga digital presence" className="w-full" loading="lazy" />
+            <figcaption className="bg-surface/60 px-4 py-3 text-center text-sm text-fg-muted">{currentAppCaption}</figcaption>
           </figure>
         </Reveal>
 

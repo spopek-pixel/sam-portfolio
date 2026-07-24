@@ -22,10 +22,10 @@ export function DesignSystemShowcase() {
               </div>
             ))}
             <div className="flex flex-1 flex-col justify-center gap-1 border-l border-line pl-6">
-              <p className="font-display text-2xl">Aa Bricolage Grotesque</p>
-              <p className="text-sm text-fg-muted">Headings — warmed by color rather than a new typeface</p>
-              <p className="mt-2 text-lg">Aa Inter</p>
-              <p className="text-sm text-fg-muted">Body copy and UI text</p>
+              <p className="font-display text-2xl">Aa</p>
+              <p className="text-sm text-fg-muted">Raleway — headings in the live app</p>
+              <p className="mt-2 text-lg">Aa</p>
+              <p className="text-sm text-fg-muted">Open Sans — body copy and UI text</p>
             </div>
           </div>
         </Reveal>

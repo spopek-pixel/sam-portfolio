@@ -36,6 +36,7 @@ import { DesignGoals } from '@/components/dragonfly/DesignGoals'
 import { IdeationProcess } from '@/components/dragonfly/IdeationProcess'
 import { FinalExperience } from '@/components/dragonfly/FinalExperience'
 import { DesignSystemShowcase } from '@/components/dragonfly/DesignSystemShowcase'
+import { OnboardingCarousel } from '@/components/dragonfly/OnboardingCarousel'
 import { PrototypeShowcase } from '@/components/dragonfly/PrototypeShowcase'
 import { ImpactSection } from '@/components/dragonfly/ImpactSection'
 import { DragonflyReflection } from '@/components/dragonfly/DragonflyReflection'
@@ -86,6 +87,7 @@ export default function ProjectDetail() {
           <IdeationProcess />
           <FinalExperience />
           <DesignSystemShowcase />
+          <OnboardingCarousel />
           <PrototypeShowcase />
           <ImpactSection />
           <DragonflyReflection />

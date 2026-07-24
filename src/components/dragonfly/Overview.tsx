@@ -6,7 +6,7 @@ export function Overview() {
 
   return (
     <section className="px-6 py-14 sm:px-10 sm:py-20">
-      <div className="mx-auto flex max-w-5xl flex-col gap-10 lg:flex-row lg:items-center lg:gap-16">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 lg:flex-row lg:items-center lg:gap-16">
         <Reveal className="lg:flex-1">
           <span className="kicker">Overview</span>
           <p className="mt-4 text-lg leading-relaxed text-fg-muted sm:text-xl">{intro}</p>

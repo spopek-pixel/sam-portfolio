@@ -4,6 +4,15 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import { ArtifactPlaceholder } from '@/components/housingkind/ArtifactPlaceholder'
 import { cn } from '@/lib/utils'
+import brainstormBoard from '@/assets/images/projects/dragonfly-yoga/brainstorm_dragon.jpg'
+import storyboardImg from '@/assets/images/projects/dragonfly-yoga/storyboard.png'
+import taskFlow1 from '@/assets/images/projects/dragonfly-yoga/task1.png'
+import taskFlow2 from '@/assets/images/projects/dragonfly-yoga/task2.png'
+import taskFlow3 from '@/assets/images/projects/dragonfly-yoga/task3.png'
+import wireframeImg from '@/assets/images/projects/dragonfly-yoga/wireframe.png'
+import aiFigmaDesign from '@/assets/images/projects/dragonfly-yoga/ai_figma_design.png'
+
+const taskFlowImages = [taskFlow1, taskFlow2, taskFlow3]
 
 function StageHeader({ index, icon: Icon, title, body }: { index: number; icon: typeof StickyNote; title: string; body: string }) {
   return (
@@ -34,11 +43,9 @@ export function IdeationProcess() {
           <Reveal>
             <div>
               <StageHeader index={1} icon={StickyNote} title={earlyIdeation.title} body={earlyIdeation.body} />
-              <ArtifactPlaceholder
-                label="Miro board — 5 themes, 25 ideas"
-                icon={StickyNote}
-                className="aspect-[21/9] w-full"
-              />
+              <div className="overflow-hidden rounded-2xl border border-line">
+                <img src={brainstormBoard} alt="Miro brainstorm board — 5 themes, 25 ideas" className="w-full" loading="lazy" />
+              </div>
             </div>
           </Reveal>
 
@@ -56,14 +63,22 @@ export function IdeationProcess() {
           <Reveal delay={0.1}>
             <div>
               <StageHeader index={3} icon={Route} title={storyboard.title} body={storyboard.body} />
-              <ArtifactPlaceholder label="Storyboard" icon={Route} className="aspect-[21/9] w-full" />
+              <div className="overflow-hidden rounded-2xl border border-line">
+                <img src={storyboardImg} alt="Storyboard — Feeling ready for hot yoga" className="w-full" loading="lazy" />
+              </div>
             </div>
           </Reveal>
 
           <Reveal delay={0.14}>
             <div>
               <StageHeader index={4} icon={Waypoints} title={taskFlows.title} body={taskFlows.body} />
-              <ArtifactPlaceholder label="Task flows — FigJam" icon={Waypoints} className="aspect-[2/1] w-full" />
+              <div className="grid gap-4 sm:grid-cols-3">
+                {taskFlowImages.map((img, i) => (
+                  <div key={i} className="overflow-hidden rounded-2xl border border-line bg-surface/60">
+                    <img src={img} alt={`Task flow ${i + 1}`} className="w-full" loading="lazy" />
+                  </div>
+                ))}
+              </div>
             </div>
           </Reveal>
 
@@ -81,14 +96,18 @@ export function IdeationProcess() {
           <Reveal delay={0.22}>
             <div>
               <StageHeader index={6} icon={LayoutTemplate} title={wireframe.title} body={wireframe.body} />
-              <ArtifactPlaceholder label="Wireframe" icon={LayoutTemplate} className="mx-auto aspect-[3/4] w-full max-w-xs" />
+              <div className="overflow-hidden rounded-2xl border border-line bg-surface/60">
+                <img src={wireframeImg} alt="Wireframe kit — Dragonfly Hot Yoga" className="w-full" loading="lazy" />
+              </div>
             </div>
           </Reveal>
 
           <Reveal delay={0.26}>
             <div className={cn('rounded-2xl border border-violet-tint/30 bg-violet/5 p-6')}>
               <StageHeader index={7} icon={Bot} title={aiDesign.title} body={aiDesign.body} />
-              <ArtifactPlaceholder label="AI-assisted design — Figma" icon={Bot} className="aspect-[16/10] w-full" />
+              <div className="overflow-hidden rounded-2xl border border-line">
+                <img src={aiFigmaDesign} alt="AI-assisted design exploration in Figma" className="w-full" loading="lazy" />
+              </div>
             </div>
           </Reveal>
         </div>

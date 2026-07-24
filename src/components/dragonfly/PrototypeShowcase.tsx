@@ -9,14 +9,14 @@ export function PrototypeShowcase() {
 
   return (
     <section className="px-6 py-14 sm:px-10 sm:py-20">
-      <div className="mx-auto max-w-4xl">
-        <SectionHeading kicker="Prototype" title="See it in motion." description={body} className="mb-10" />
+      <div className="mx-auto max-w-6xl">
+        <SectionHeading kicker="Prototype" title="See it in motion." description={body} className="mb-10 max-w-2xl" />
 
         <Reveal>
           <ArtifactPlaceholder
             label="Interactive prototype preview"
             icon={MonitorSmartphone}
-            className="aspect-[16/10] w-full"
+            className="mx-auto aspect-[16/10] w-full max-w-4xl"
           />
         </Reveal>
 

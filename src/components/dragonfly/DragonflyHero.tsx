@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Smartphone } from 'lucide-react'
+import { ArrowLeft } from 'lucide-react'
 import type { Project } from '@/data/projects'
 import { dragonfly } from '@/data/dragonfly'
 import { Reveal } from '@/components/ui/Reveal'
 import { GradientBlob, NoiseOverlay } from '@/components/ui/GradientBlob'
-import { ArtifactPlaceholder } from '@/components/housingkind/ArtifactPlaceholder'
 import { usePrefersReducedMotion } from '@/hooks/useReducedMotion'
+import dragonHomeCase from '@/assets/images/projects/dragonfly-yoga/dragon-home-case.png'
 
 export function DragonflyHero({ project }: { project: Project }) {
   const { description } = dragonfly.hero
@@ -62,21 +62,13 @@ export function DragonflyHero({ project }: { project: Project }) {
           </div>
 
           <Reveal delay={0.26}>
-            <div className="mx-auto w-[240px] sm:w-[280px]">
-              <motion.div
-                animate={reducedMotion ? undefined : { y: [0, -12, 0], rotate: [-2, 1.5, -2] }}
-                transition={reducedMotion ? undefined : { duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-                className="overflow-hidden rounded-[2.5rem] border-[6px] border-surface-raised bg-surface-raised shadow-[0_35px_70px_rgba(0,0,0,0.5)]"
-              >
-                <ArtifactPlaceholder
-                  image={undefined}
-                  label="App mockup"
-                  icon={Smartphone}
-                  className="aspect-[9/19.5] w-full rounded-[2rem]"
-                  bgClassName="bg-surface-raised"
-                />
-              </motion.div>
-            </div>
+            <motion.img
+              src={dragonHomeCase}
+              alt="Dragonfly Hot Yoga app screens — welcome, home feed, and booking confirmation"
+              animate={reducedMotion ? undefined : { y: [0, -12, 0] }}
+              transition={reducedMotion ? undefined : { duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+              className="mx-auto w-full max-w-md drop-shadow-[0_35px_60px_rgba(0,0,0,0.55)]"
+            />
           </Reveal>
         </div>
       </div>

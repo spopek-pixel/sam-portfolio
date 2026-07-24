@@ -12,7 +12,7 @@ export const dragonfly = {
 
   challenge: {
     intro: 'The existing app created friction at nearly every step of the booking journey.',
-    currentApp: 'The current Dragonfly Hot Yoga booking app — the starting point for this redesign.',
+    currentApp: 'Dragonfly Hot Yoga\'s current on-demand and booking experience — the starting point for this redesign.',
     painPoints: [
       {
         title: 'Information access',
@@ -87,7 +87,7 @@ export const dragonfly = {
     },
     taskFlows: {
       title: 'Task flows',
-      body: 'Five core task flows mapped in FigJam: onboarding, booking a recommended class, handling a full class, managing an existing booking, and exploring something new.',
+      body: 'Mapped the core task flows by hand before touching Figma: onboarding & personalization, booking a class, and managing an existing booking.',
     },
     sketches: {
       title: 'Screen sketches',
@@ -130,14 +130,32 @@ export const dragonfly = {
     },
   ],
 
+  onboarding: {
+    intro:
+      'This is where the visual system does its heaviest lifting — nine screens carrying a new member from a cold open to a personalized home feed, using warm illustration, a confident color palette, and copy that sounds like a person instead of a form.',
+    captions: [
+      'Welcome — the first brand moment a new member sees.',
+      'Intro — "Learning to Relax," setting the emotional tone before any sign-up friction.',
+      'Intro — "Your Healthy," building toward the habit, not just the class.',
+      'Intro — "Your Yoga," finding a pace instead of a pressure.',
+      'Sign-up — email, Facebook, or Google, kept to one clear decision.',
+      'Account setup — connecting an email without making it feel like paperwork.',
+      'Location — choosing a home studio in two taps.',
+      'Personalization — "What\'s your goal?" the first input the recommendation engine actually uses.',
+      'Personalization — experience level, so day one never feels like a guru\'s class.',
+    ],
+  },
+
   designSystem: {
     intro:
       'The direction for this redesign: minimal and clean, reflecting yoga\'s relaxing nature rather than fighting it. Soft color, generous whitespace, and consistent placement everywhere the app asks something of the user.',
     colors: [
-      { name: 'Blush', hex: '#C98A82' },
-      { name: 'Sage', hex: '#93A87C' },
-      { name: 'Cream', hex: '#FBF4EF' },
-      { name: 'Charcoal', hex: '#3B322D' },
+      { name: 'Sunset Orange', hex: '#F47B2C' },
+      { name: 'Espresso Brown', hex: '#713720' },
+      { name: 'Black', hex: '#000000' },
+      { name: 'White', hex: '#FFFFFF' },
+      { name: 'Amber Gold', hex: '#DD9933' },
+      { name: 'Stone Gray', hex: '#6D6D6D' },
     ],
     principles: [
       { title: 'Components', body: 'A small, reusable set of cards, pills, and steps — consistent across every flow.' },

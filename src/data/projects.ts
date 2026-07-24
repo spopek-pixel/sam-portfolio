@@ -196,7 +196,7 @@ export const projects: Project[] = [
       'The result is a high-fidelity prototype spanning onboarding, booking, and full-class flows, built mobile-first to match how members actually use it — in short sessions, between other things. Next: usability testing with real Dragonfly members, and refining the recommendation engine\'s explainability before it ever touches production data.',
     reflection:
       "The biggest shift in my own thinking: reducing uncertainty turned out to matter as much as reducing clicks. A member who feels confident walking into a beginner class is a retention outcome, not just a nicety. AI was most useful here as a sparring partner for the thinking — pressure-testing assumptions — not as a shortcut past doing the thinking myself.",
-    images: imagesFor('dragonfly-yoga'),
+    images: imagesFor('dragonfly-yoga', 'dragon-case.png', ['dragon-home-case.png']),
   },
   {
     slug: 'iusafe',
