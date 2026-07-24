@@ -1,4 +1,4 @@
-import { Bot, LayoutTemplate, Lightbulb, PenTool, Route, Sparkles, StickyNote, Waypoints } from 'lucide-react'
+import { Bot, LayoutTemplate, Lightbulb, MessageCircleQuestion, PenTool, Route, Sparkles, StickyNote, Waypoints } from 'lucide-react'
 import { dragonfly } from '@/data/dragonfly'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
@@ -39,6 +39,22 @@ function Takeaway({ children }: { children: string }) {
   )
 }
 
+function WhyBubble({ children }: { children: string }) {
+  return (
+    <div className="relative mt-5 max-w-md rounded-2xl rounded-bl-none border border-violet-tint/25 bg-violet/5 p-4">
+      <p className="flex items-start gap-2 text-sm leading-relaxed text-fg-muted">
+        <MessageCircleQuestion size={16} className="mt-0.5 shrink-0 text-violet-tint" />
+        <span>
+          <span className="font-medium text-fg">Why? </span>
+          {children}
+        </span>
+      </p>
+      <span className="absolute -bottom-2 left-1 h-2.5 w-2.5 rounded-full border border-violet-tint/25 bg-ink" />
+      <span className="absolute -bottom-4 -left-0.5 h-1.5 w-1.5 rounded-full border border-violet-tint/25 bg-ink" />
+    </div>
+  )
+}
+
 export function IdeationProcess() {
   const { earlyIdeation, conceptExploration, storyboard, taskFlows, sketches, wireframe, aiDesign } = dragonfly.ideationProcess
 
@@ -55,13 +71,26 @@ export function IdeationProcess() {
                 <StageHeader index={1} icon={StickyNote} title={earlyIdeation.title} />
                 <p className="text-sm leading-relaxed text-fg-muted">{earlyIdeation.body}</p>
               </div>
-              <div className="overflow-hidden rounded-2xl border border-line">
-                <img
-                  src={brainstormBoard}
-                  alt="Miro brainstorm board — 5 themes, 25 ideas"
-                  className="aspect-[4/3] w-full object-cover"
-                  loading="lazy"
-                />
+              <div>
+                <div className="overflow-hidden rounded-2xl border border-line">
+                  <img
+                    src={brainstormBoard}
+                    alt="Miro brainstorm board — 5 themes, 25 ideas"
+                    className="aspect-[4/3] w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <span className="rounded-full border border-line px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-fg-muted">
+                    5 themes
+                  </span>
+                  <span className="rounded-full border border-line px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-fg-muted">
+                    25 ideas
+                  </span>
+                  <span className="rounded-full border border-line px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-fg-muted">
+                    3 concepts moved forward
+                  </span>
+                </div>
               </div>
             </div>
           </Reveal>
@@ -102,15 +131,15 @@ export function IdeationProcess() {
             </div>
           </Reveal>
 
-          {/* 3. Storyboard — small image, narrative text */}
+          {/* 3. Storyboard — tilted artifact treatment, less "boring" */}
           <Reveal delay={0.1}>
-            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-10">
+            <div className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-10">
               <div>
                 <StageHeader index={3} icon={Route} title={storyboard.title} />
                 <p className="text-sm leading-relaxed text-fg-muted">{storyboard.body}</p>
                 <Takeaway>{storyboard.takeaway}</Takeaway>
               </div>
-              <div className="overflow-hidden rounded-2xl border border-line">
+              <div className="overflow-hidden rounded-2xl border border-line shadow-[0_25px_50px_rgba(0,0,0,0.4)] transition-transform duration-300 hover:rotate-0 lg:-rotate-2">
                 <img src={storyboardImg} alt="Storyboard — Feeling ready for hot yoga" className="w-full" loading="lazy" />
               </div>
             </div>
@@ -129,33 +158,32 @@ export function IdeationProcess() {
             </div>
           </Reveal>
 
-          {/* 5. Screen sketches — side by side, uniform size, no cropping */}
+          {/* 5. Screen sketches — side by side, uniform, filled, rounded */}
           <Reveal delay={0.18}>
             <div>
               <StageHeader index={5} icon={PenTool} title={sketches.title} />
               <p className="mb-5 text-sm leading-relaxed text-fg-muted">{sketches.body}</p>
               <div className="grid gap-4 sm:grid-cols-3">
                 {sketchImages.map((img, i) => (
-                  <div key={i} className="overflow-hidden rounded-2xl border border-line bg-surface/60">
-                    <img
-                      src={img}
-                      alt={`Screen sketch ${i + 1}`}
-                      className="aspect-[3/2] w-full object-contain p-2"
-                      loading="lazy"
-                    />
-                  </div>
+                  <img
+                    key={i}
+                    src={img}
+                    alt={`Screen sketch ${i + 1}`}
+                    className="aspect-[3/2] w-full rounded-2xl border border-line object-cover"
+                    loading="lazy"
+                  />
                 ))}
               </div>
             </div>
           </Reveal>
 
-          {/* 6. Wireframe — small image, narrative text */}
+          {/* 6. Wireframe — small image, narrative text, why bubble */}
           <Reveal delay={0.22}>
             <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-10">
               <div>
                 <StageHeader index={6} icon={LayoutTemplate} title={wireframe.title} />
                 <p className="text-sm leading-relaxed text-fg-muted">{wireframe.body}</p>
-                <Takeaway>{wireframe.takeaway}</Takeaway>
+                <WhyBubble>{wireframe.why}</WhyBubble>
               </div>
               <div className="overflow-hidden rounded-2xl border border-line bg-surface/60">
                 <img src={wireframeImg} alt="Wireframe kit — Dragonfly Hot Yoga" className="w-full" loading="lazy" />
@@ -163,24 +191,14 @@ export function IdeationProcess() {
             </div>
           </Reveal>
 
-          {/* 7. AI-assisted design — modern two-column treatment */}
+          {/* 7. AI-assisted design — full-width narrative, large image, why bubble */}
           <Reveal delay={0.26}>
-            <div className="grid gap-6 rounded-2xl border border-violet-tint/30 bg-violet/5 p-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-10">
-              <div>
-                <StageHeader index={7} icon={Bot} title={aiDesign.title} />
-                <p className="text-sm leading-relaxed text-fg-muted">{aiDesign.body}</p>
-                <p className="mt-4 flex items-start gap-2 text-sm leading-relaxed text-violet-tint">
-                  <Sparkles size={16} className="mt-0.5 shrink-0" />
-                  {aiDesign.takeaway}
-                </p>
-              </div>
-              <div className="overflow-hidden rounded-2xl border border-line">
-                <img
-                  src={aiFigmaDesign}
-                  alt="AI-assisted design exploration in Figma"
-                  className="w-full"
-                  loading="lazy"
-                />
+            <div className="rounded-2xl border border-violet-tint/30 bg-violet/5 p-6 sm:p-8">
+              <StageHeader index={7} icon={Bot} title={aiDesign.title} />
+              <p className="max-w-3xl text-sm leading-relaxed text-fg-muted">{aiDesign.body}</p>
+              <WhyBubble>{aiDesign.why}</WhyBubble>
+              <div className="mx-auto mt-8 max-w-2xl overflow-hidden rounded-2xl border border-line">
+                <img src={aiFigmaDesign} alt="AI-assisted design exploration in Figma" className="w-full" loading="lazy" />
               </div>
             </div>
           </Reveal>

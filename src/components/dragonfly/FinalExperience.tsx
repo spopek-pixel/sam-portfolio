@@ -1,10 +1,11 @@
-import { Bot, CalendarCheck, CalendarClock, ListRestart, UserRound, Waypoints } from 'lucide-react'
+import { CalendarCheck, CalendarClock, ListRestart, UserRound, Waypoints } from 'lucide-react'
 import { dragonfly } from '@/data/dragonfly'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import { ArtifactPlaceholder } from '@/components/housingkind/ArtifactPlaceholder'
+import aiFigmaDesign from '@/assets/images/projects/dragonfly-yoga/ai_figma_design.png'
 
-const icons = [Waypoints, CalendarCheck, Bot, ListRestart, CalendarClock, UserRound]
+const icons = [Waypoints, CalendarCheck, null, ListRestart, CalendarClock, UserRound]
 
 export function FinalExperience() {
   const features = dragonfly.finalExperience
@@ -20,7 +21,18 @@ export function FinalExperience() {
             return (
               <Reveal key={feature.title} delay={index * 0.06} className="h-full">
                 <div className="flex h-full flex-col gap-4 rounded-2xl border border-line bg-surface/60 p-5">
-                  <ArtifactPlaceholder label={`${feature.title} screen`} icon={Icon} className="aspect-[4/3] w-full" />
+                  {Icon ? (
+                    <ArtifactPlaceholder label={`${feature.title} screen`} icon={Icon} className="aspect-[4/3] w-full" />
+                  ) : (
+                    <div className="overflow-hidden rounded-2xl border border-line">
+                      <img
+                        src={aiFigmaDesign}
+                        alt="AI-powered class recommendations screens"
+                        className="aspect-[4/3] w-full object-cover object-top"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
                   <div className="flex flex-col gap-1.5">
                     <h3 className="font-medium">{feature.title}</h3>
                     <p className="text-sm text-fg-muted">{feature.body}</p>

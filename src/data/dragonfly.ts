@@ -6,8 +6,7 @@ export const dragonfly = {
 
   overview: {
     intro: [
-      'This redesign focuses on improving the overall user experience by making the app more modern, easy to navigate, and personalized. I specifically looked at how users book classes, set preferences, and handle situations like when a class is full. The goal was to simplify these flows and reduce friction, while also creating a more engaging and supportive experience for users.',
-      "Throughout this project, I've also used AI tools like ChatGPT and Claude as part of my process — as a thinking partner during ideation, a way to pressure-test design decisions, and a project management tool to help me scope priorities and stay organized as the project evolved. Since this is still an ongoing project, I plan to continue refining the design, building out the AI-powered recommendation feature in the prototype, and eventually move into usability testing.",
+      "This redesign makes Dragonfly's booking experience modern, personalized, and easy to navigate — simplifying how members book, set preferences, and handle a full class. Claude and ChatGPT were thinking partners throughout. It's still ongoing: next is the AI recommendation prototype, then usability testing.",
     ],
     hmw: 'How might we help Dragonfly members and newcomers easily explore, book, and manage classes so they feel motivated to maintain a consistent yoga practice?',
   },
@@ -99,13 +98,13 @@ export const dragonfly = {
     },
     wireframe: {
       title: 'Wireframe',
-      body: 'Low-fidelity, on purpose. This stage was about experimenting with layout options, testing whether the navigation actually held up across ten-plus screens, and refining interaction patterns — confirmation states, tab structure, card hierarchy — before a single color decision got made. Grayscale kept feedback sessions focused on whether a flow made sense, not whether someone liked the shade of orange on a button.',
-      takeaway: 'Every navigation decision got tested here, in gray boxes, before it got a chance to hide behind good color choices.',
+      body: 'Low-fidelity, on purpose. This stage was about experimenting with layout options, testing whether the navigation actually held up across ten-plus screens, and refining interaction patterns — confirmation states, tab structure, card hierarchy — before a single color decision got made.',
+      why: 'Grayscale kept feedback sessions focused on whether a flow made sense, not whether someone liked the shade of orange on a button.',
     },
     aiDesign: {
-      title: 'AI-assisted design in Figma',
-      body: 'I used AI tooling inside Figma to rapidly generate layout variations for the booking and recommendation screens — a faster way to see five directions instead of sketching each by hand. I evaluated every output against the research, kept what worked, and rebuilt what didn\'t. AI compressed the exploration phase; it didn\'t make the decisions.',
-      takeaway: 'AI got me from zero to five directions in an afternoon. Deciding which one was right — that part was still mine.',
+      title: 'AI-powered feature: Smart class recommendations',
+      body: 'To bring the AI feature to life, I designed two key screens. On the home screen, an "AI picks for you" badge and a "Why these?" link sit alongside the Suggested for You section, with the top recommendation including a short reasoning line, "Because you\'ve booked Core Flow 4 times this month," so the suggestion feels personal rather than generic. Tapping "Why these?" leads to a dedicated Suggested for You page, where a banner explains the logic in plain language and each class card shows a match percentage alongside a specific reason, such as "Matches your strength goals" or "Good for recovery day."',
+      why: 'AI-driven suggestions can feel arbitrary if users don\'t understand why they\'re being shown. Surfacing the reasoning builds trust and gives members a clearer sense of control over their experience.',
     },
   },
 
