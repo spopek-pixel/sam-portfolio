@@ -15,11 +15,12 @@ export const dragonfly = {
       'The existing Dragonfly experience is a video-on-demand site bolted onto a booking flow — not a product built around how members actually decide to show up. It\'s the experience I set out to replace.',
     currentApp: 'Dragonfly Hot Yoga\'s current on-demand and booking experience — the starting point for this redesign.',
     supporting: [
-      'Outdated interface that felt unfriendly to use',
-      'An overly complicated class-booking process',
-      'Poorly organized information hierarchy',
-      'No personalization — no saved preferences, no favorite instructors',
-      'A hard dead end whenever a class reached capacity',
+      'The app interface feels outdated and not very user-friendly',
+      'Booking a class is more complicated than it should be',
+      'Important information is not clearly organized or easy to find',
+      'The app lacks personalization (no easy way to set preferences for classes or instructors)',
+      'When classes are full, the experience feels like a dead end',
+      'Users are not guided toward alternative options or next steps',
     ],
   },
 
@@ -30,16 +31,19 @@ export const dragonfly = {
         number: '01',
         title: 'Quick access to class information',
         body: 'Users want to quickly see class schedules, availability, and instructor information on their phones.',
+        icon: 'Smartphone',
       },
       {
         number: '02',
         title: 'A confusing booking experience',
         body: 'Booking, cancellations, and class reminders can feel confusing or inconvenient with the current experience.',
+        icon: 'CalendarX2',
       },
       {
         number: '03',
         title: 'Onboarding for new members',
         body: 'New members need an easy way to explore class types, membership options, and beginner-friendly sessions.',
+        icon: 'UserPlus',
       },
     ],
   },
@@ -55,7 +59,9 @@ export const dragonfly = {
   ideationProcess: {
     earlyIdeation: {
       title: 'Early ideation',
-      body: 'I didn\'t start with screens — I started with a Miro board and a wide net. Five thematic directions (personalization, booking, onboarding, notifications, engagement) and twenty-five individual ideas, so I was reacting to a spread of possibilities instead of anchoring on the first idea that felt right.',
+      body: 'I didn\'t start with screens — I started with a Miro board and a wide net. Five thematic directions (personalization, booking, onboarding, notifications, engagement) and twenty-five individual ideas, so I was reacting to a spread of possibilities instead of anchoring on the first idea that felt right. Some of these ideas were obvious wins I already suspected mattered. Others — an AI chatbot for schedule questions, health-app integrations, group booking — were deliberately ambitious, included so I\'d have to justify cutting them rather than never considering them at all.',
+      takeaway:
+        'Casting a wide net first meant the concepts that survived weren\'t just the first idea I liked — they were the ones that held up against twenty-four others.',
     },
     conceptExploration: {
       title: 'Concept exploration',
@@ -80,7 +86,8 @@ export const dragonfly = {
     },
     storyboard: {
       title: 'Storyboard',
-      body: 'Before I sketched a single screen, I storyboarded the emotional arc of a first-time visitor — from "am I ready for this?" to walking out the door feeling capable. The anxiety starts well before the booking screen ever loads, which meant the interface had a job to do long before onboarding.',
+      body: 'Before I sketched a single screen, I storyboarded the emotional arc of a first-time visitor — from "am I ready for this?" to walking out the door feeling capable. Eight panels trace a member through doubt, checking the app for reassurance, finding beginner-specific guidance, and finally attending class. The anxiety starts well before the booking screen ever loads, which meant the interface had a job to do long before onboarding: reduce the stakes of showing up at all, not just make booking faster.',
+      takeaway: 'The interface had a job to do before onboarding even started: lower the emotional stakes of showing up.',
     },
     taskFlows: {
       title: 'Task flows',
@@ -92,11 +99,13 @@ export const dragonfly = {
     },
     wireframe: {
       title: 'Wireframe',
-      body: 'Low-fidelity, on purpose. This stage was about experimenting with layout options, testing whether the navigation actually held up across five+ screens, and refining interaction patterns — confirmation states, tab structure, card hierarchy — before a single color decision got made.',
+      body: 'Low-fidelity, on purpose. This stage was about experimenting with layout options, testing whether the navigation actually held up across ten-plus screens, and refining interaction patterns — confirmation states, tab structure, card hierarchy — before a single color decision got made. Grayscale kept feedback sessions focused on whether a flow made sense, not whether someone liked the shade of orange on a button.',
+      takeaway: 'Every navigation decision got tested here, in gray boxes, before it got a chance to hide behind good color choices.',
     },
     aiDesign: {
       title: 'AI-assisted design in Figma',
       body: 'I used AI tooling inside Figma to rapidly generate layout variations for the booking and recommendation screens — a faster way to see five directions instead of sketching each by hand. I evaluated every output against the research, kept what worked, and rebuilt what didn\'t. AI compressed the exploration phase; it didn\'t make the decisions.',
+      takeaway: 'AI got me from zero to five directions in an afternoon. Deciding which one was right — that part was still mine.',
     },
   },
 

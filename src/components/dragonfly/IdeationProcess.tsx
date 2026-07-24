@@ -1,4 +1,4 @@
-import { Bot, LayoutTemplate, Lightbulb, PenTool, Route, StickyNote, Waypoints } from 'lucide-react'
+import { Bot, LayoutTemplate, Lightbulb, PenTool, Route, Sparkles, StickyNote, Waypoints } from 'lucide-react'
 import { dragonfly } from '@/data/dragonfly'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
@@ -30,6 +30,15 @@ function StageHeader({ index, icon: Icon, title }: { index: number; icon: typeof
   )
 }
 
+function Takeaway({ children }: { children: string }) {
+  return (
+    <p className="mt-4 flex items-start gap-2 rounded-xl border border-violet-tint/25 bg-violet/5 p-4 text-sm leading-relaxed text-fg-muted">
+      <Sparkles size={16} className="mt-0.5 shrink-0 text-violet-tint" />
+      {children}
+    </p>
+  )
+}
+
 export function IdeationProcess() {
   const { earlyIdeation, conceptExploration, storyboard, taskFlows, sketches, wireframe, aiDesign } = dragonfly.ideationProcess
 
@@ -41,10 +50,11 @@ export function IdeationProcess() {
         <div className="flex flex-col gap-10">
           {/* 1. Early ideation */}
           <Reveal>
-            <div className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-10">
+            <div className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-start lg:gap-10">
               <div>
                 <StageHeader index={1} icon={StickyNote} title={earlyIdeation.title} />
                 <p className="text-sm leading-relaxed text-fg-muted">{earlyIdeation.body}</p>
+                <Takeaway>{earlyIdeation.takeaway}</Takeaway>
               </div>
               <div className="overflow-hidden rounded-2xl border border-line">
                 <img
@@ -87,10 +97,11 @@ export function IdeationProcess() {
 
           {/* 3. Storyboard — small image, narrative text */}
           <Reveal delay={0.1}>
-            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-10">
+            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-10">
               <div>
                 <StageHeader index={3} icon={Route} title={storyboard.title} />
                 <p className="text-sm leading-relaxed text-fg-muted">{storyboard.body}</p>
+                <Takeaway>{storyboard.takeaway}</Takeaway>
               </div>
               <div className="overflow-hidden rounded-2xl border border-line">
                 <img src={storyboardImg} alt="Storyboard — Feeling ready for hot yoga" className="w-full" loading="lazy" />
@@ -111,7 +122,7 @@ export function IdeationProcess() {
             </div>
           </Reveal>
 
-          {/* 5. Screen sketches — side by side, fill containers */}
+          {/* 5. Screen sketches — side by side, uniform size, no cropping */}
           <Reveal delay={0.18}>
             <div>
               <StageHeader index={5} icon={PenTool} title={sketches.title} />
@@ -122,7 +133,7 @@ export function IdeationProcess() {
                     <img
                       src={img}
                       alt={`Screen sketch ${i + 1}`}
-                      className="aspect-[4/3] w-full object-cover"
+                      className="aspect-[3/2] w-full object-contain p-2"
                       loading="lazy"
                     />
                   </div>
@@ -133,10 +144,11 @@ export function IdeationProcess() {
 
           {/* 6. Wireframe — small image, narrative text */}
           <Reveal delay={0.22}>
-            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-10">
+            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-10">
               <div>
                 <StageHeader index={6} icon={LayoutTemplate} title={wireframe.title} />
                 <p className="text-sm leading-relaxed text-fg-muted">{wireframe.body}</p>
+                <Takeaway>{wireframe.takeaway}</Takeaway>
               </div>
               <div className="overflow-hidden rounded-2xl border border-line bg-surface/60">
                 <img src={wireframeImg} alt="Wireframe kit — Dragonfly Hot Yoga" className="w-full" loading="lazy" />
@@ -146,10 +158,14 @@ export function IdeationProcess() {
 
           {/* 7. AI-assisted design — modern two-column treatment */}
           <Reveal delay={0.26}>
-            <div className="grid gap-6 rounded-2xl border border-violet-tint/30 bg-violet/5 p-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-10">
+            <div className="grid gap-6 rounded-2xl border border-violet-tint/30 bg-violet/5 p-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-10">
               <div>
                 <StageHeader index={7} icon={Bot} title={aiDesign.title} />
                 <p className="text-sm leading-relaxed text-fg-muted">{aiDesign.body}</p>
+                <p className="mt-4 flex items-start gap-2 text-sm leading-relaxed text-violet-tint">
+                  <Sparkles size={16} className="mt-0.5 shrink-0" />
+                  {aiDesign.takeaway}
+                </p>
               </div>
               <div className="overflow-hidden rounded-2xl border border-line">
                 <img

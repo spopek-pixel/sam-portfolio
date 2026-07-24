@@ -35,7 +35,7 @@ export function DragonflyHero({ project }: { project: Project }) {
           </Link>
         </Reveal>
 
-        <div className="mt-8 grid gap-14 lg:grid-cols-[1fr_1.3fr] lg:items-center lg:gap-10">
+        <div className="mt-8 grid gap-14 lg:grid-cols-[1fr_1.3fr] lg:items-start lg:gap-10">
           <div className="flex flex-col gap-6">
             <Reveal delay={0.06}>
               <span className="kicker">Case study</span>

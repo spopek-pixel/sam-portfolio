@@ -1,3 +1,4 @@
+import { Check } from 'lucide-react'
 import { dragonfly } from '@/data/dragonfly'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
@@ -11,19 +12,20 @@ export function Challenge() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="The challenge" title="Where the old experience fell apart." className="mb-8" />
 
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-14">
           <div className="flex flex-col gap-6">
             <Reveal>
               <p className="text-lg leading-relaxed text-fg-muted">{intro}</p>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="flex flex-wrap gap-2.5">
+              <ul className="flex flex-col gap-3">
                 {supporting.map((item) => (
-                  <span key={item} className="rounded-full border border-line px-4 py-2 text-sm text-fg-muted">
+                  <li key={item} className="flex gap-3 text-sm text-fg-muted sm:text-base">
+                    <Check size={18} className="mt-0.5 shrink-0 text-violet-tint" />
                     {item}
-                  </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </Reveal>
           </div>
 
