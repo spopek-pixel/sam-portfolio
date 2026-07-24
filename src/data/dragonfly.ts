@@ -11,22 +11,9 @@ export const dragonfly = {
   },
 
   challenge: {
-    intro: 'The existing app created friction at nearly every step of the booking journey.',
+    intro:
+      'The existing Dragonfly experience is a video-on-demand site bolted onto a booking flow — not a product built around how members actually decide to show up. It\'s the experience I set out to replace.',
     currentApp: 'Dragonfly Hot Yoga\'s current on-demand and booking experience — the starting point for this redesign.',
-    painPoints: [
-      {
-        title: 'Information access',
-        body: 'Members needed fast, mobile access to schedules, live availability, and instructor bios — and didn\'t have it.',
-      },
-      {
-        title: 'Booking confusion',
-        body: 'Cancellations, reminders, and confirmations were the single biggest source of confusion in member support requests.',
-      },
-      {
-        title: 'Onboarding gaps',
-        body: 'New members had no clear path into class types, difficulty levels, or memberships — the app assumed familiarity a first-timer didn\'t have.',
-      },
-    ],
     supporting: [
       'Outdated interface that felt unfriendly to use',
       'An overly complicated class-booking process',
@@ -36,31 +23,25 @@ export const dragonfly = {
     ],
   },
 
-  research: {
-    cards: [
+  keyInsights: {
+    lead: 'People don\'t abandon a practice because a class was hard. They abandon it because the app made showing up feel harder than it needed to be.',
+    items: [
       {
-        title: 'User interviews',
-        body: 'Research grounded in my own experience as an active studio member, supplemented by conversations with other regulars and newcomers.',
+        number: '01',
+        title: 'Quick access to class information',
+        body: 'Users want to quickly see class schedules, availability, and instructor information on their phones.',
       },
       {
-        title: 'Landscape analysis',
-        body: 'A close read of the existing app and comparable studio booking tools to see exactly where the current experience broke down.',
+        number: '02',
+        title: 'A confusing booking experience',
+        body: 'Booking, cancellations, and class reminders can feel confusing or inconvenient with the current experience.',
       },
       {
-        title: 'Personas',
-        body: 'Built around two real tensions: the committed regular optimizing for speed, and the first-timer who needs to be told, not assumed to already know.',
-      },
-      {
-        title: 'Journey mapping',
-        body: 'Mapped the emotional arc from opening the app to walking into class — anxiety spikes well before the booking screen ever loads.',
-      },
-      {
-        title: 'Key insights',
-        body: 'Three patterns kept surfacing: information access, booking confusion, and onboarding gaps — see The Challenge above.',
+        number: '03',
+        title: 'Onboarding for new members',
+        body: 'New members need an easy way to explore class types, membership options, and beginner-friendly sessions.',
       },
     ],
-    insight:
-      'People don\'t abandon a practice because a class was hard. They abandon it because the app made showing up feel harder than it needed to be.',
   },
 
   designGoals: [
@@ -74,32 +55,48 @@ export const dragonfly = {
   ideationProcess: {
     earlyIdeation: {
       title: 'Early ideation',
-      body: 'Started broad on Miro — five different thematic directions and twenty-five individual ideas mapped out before narrowing anything down.',
+      body: 'I didn\'t start with screens — I started with a Miro board and a wide net. Five thematic directions (personalization, booking, onboarding, notifications, engagement) and twenty-five individual ideas, so I was reacting to a spread of possibilities instead of anchoring on the first idea that felt right.',
     },
     conceptExploration: {
       title: 'Concept exploration',
-      body: 'Narrowed to three directions worth prototyping further.',
-      concepts: ['Suggested for You feed', 'Smart Scheduler', 'Yoga Challenges with friends'],
+      body: 'Three directions came out of that board worth developing further. Each one solved a different problem — the work was figuring out which problem actually mattered most.',
+      concepts: [
+        {
+          name: 'Suggested for You feed',
+          status: 'Shipped',
+          body: 'Personalizes the home screen around booking history and stated goals. Became the backbone of the final AI recommendations.',
+        },
+        {
+          name: 'Smart Scheduler',
+          status: 'Shipped',
+          body: 'Availability-based suggestions and recurring bookings, built to remove manual scheduling friction. Folded into the final booking and waitlist flows.',
+        },
+        {
+          name: 'Yoga Challenges with friends',
+          status: 'Deprioritized',
+          body: 'A social layer to gamify consistency. Cut early — it was solving a different problem than the one members were actually telling me about.',
+        },
+      ],
     },
     storyboard: {
       title: 'Storyboard',
-      body: 'Storyboarded the emotional arc of a first-time visitor, from opening the app to walking through the studio door — the anxiety starts well before the booking screen loads.',
+      body: 'Before I sketched a single screen, I storyboarded the emotional arc of a first-time visitor — from "am I ready for this?" to walking out the door feeling capable. The anxiety starts well before the booking screen ever loads, which meant the interface had a job to do long before onboarding.',
     },
     taskFlows: {
       title: 'Task flows',
-      body: 'Mapped the core task flows by hand before touching Figma: onboarding & personalization, booking a class, and managing an existing booking.',
+      body: 'Mapping the core task flows by hand — onboarding & personalization, booking a class, and managing an existing booking — before touching Figma kept the early debates about structure, not visual polish.',
     },
     sketches: {
       title: 'Screen sketches',
-      body: 'Rough hand sketches of the three highest-priority screens, kept loose on purpose so early feedback stayed focused on structure, not polish.',
+      body: 'These three sketches mapped onboarding, the home feed, and the booking flow before any visual design existed. What changed most between sketch and final: the amount of choice on screen at once — early versions asked for too much, too soon, and each pass cut it down further.',
     },
     wireframe: {
       title: 'Wireframe',
-      body: 'Low-fidelity structure built to test information hierarchy and navigation before any visual design decisions entered the picture.',
+      body: 'Low-fidelity, on purpose. This stage was about experimenting with layout options, testing whether the navigation actually held up across five+ screens, and refining interaction patterns — confirmation states, tab structure, card hierarchy — before a single color decision got made.',
     },
     aiDesign: {
       title: 'AI-assisted design in Figma',
-      body: 'Used AI tooling inside Figma to rapidly generate layout variations for the booking and recommendation screens, which I then evaluated against research, modified, and refined into the final direction — AI accelerated exploration, but every decision that shipped was mine.',
+      body: 'I used AI tooling inside Figma to rapidly generate layout variations for the booking and recommendation screens — a faster way to see five directions instead of sketching each by hand. I evaluated every output against the research, kept what worked, and rebuilt what didn\'t. AI compressed the exploration phase; it didn\'t make the decisions.',
     },
   },
 

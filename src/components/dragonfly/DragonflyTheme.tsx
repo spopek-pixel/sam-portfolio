@@ -1,11 +1,11 @@
 import type { CSSProperties, ReactNode } from 'react'
 
 const theme: CSSProperties = {
-  ['--color-violet' as string]: '#E3A69D',
-  ['--color-violet-deep' as string]: '#B97D74',
-  ['--color-violet-tint' as string]: '#E8B6AE',
-  ['--color-acid' as string]: '#A8C08A',
-  ['--color-mint' as string]: '#C3D6AC',
+  ['--color-violet' as string]: '#F47B2C',
+  ['--color-violet-deep' as string]: '#B85C1E',
+  ['--color-violet-tint' as string]: '#FF9B54',
+  ['--color-acid' as string]: '#DD9933',
+  ['--color-mint' as string]: '#F0C888',
 }
 
 export function DragonflyTheme({ children }: { children: ReactNode }) {

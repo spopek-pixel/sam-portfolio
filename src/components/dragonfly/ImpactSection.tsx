@@ -14,7 +14,7 @@ export function ImpactSection() {
   const lists = { solved, benefits, stakeholderGains }
 
   return (
-    <section className="px-6 py-14 sm:px-10 sm:py-20">
+    <section className="px-6 py-10 sm:px-10 sm:py-16">
       <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="Impact" title="What this redesign is built to change." description={intro} className="mb-10 max-w-3xl" />
 

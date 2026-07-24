@@ -9,7 +9,7 @@ export function DesignSystemShowcase() {
   const { intro, colors, principles } = dragonfly.designSystem
 
   return (
-    <section className="px-6 py-14 sm:px-10 sm:py-20">
+    <section className="px-6 py-10 sm:px-10 sm:py-16">
       <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="Design system" title="A soft, consistent language." description={intro} className="mb-10 max-w-2xl" />
 

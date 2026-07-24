@@ -31,8 +31,8 @@ import { DragonflyTheme } from '@/components/dragonfly/DragonflyTheme'
 import { DragonflyHero } from '@/components/dragonfly/DragonflyHero'
 import { Overview } from '@/components/dragonfly/Overview'
 import { Challenge } from '@/components/dragonfly/Challenge'
-import { ResearchDiscovery } from '@/components/dragonfly/ResearchDiscovery'
-import { DesignGoals } from '@/components/dragonfly/DesignGoals'
+import { KeyInsights } from '@/components/dragonfly/KeyInsights'
+import { DesignPrinciplesOrbit } from '@/components/dragonfly/DesignPrinciplesOrbit'
 import { IdeationProcess } from '@/components/dragonfly/IdeationProcess'
 import { FinalExperience } from '@/components/dragonfly/FinalExperience'
 import { DesignSystemShowcase } from '@/components/dragonfly/DesignSystemShowcase'
@@ -82,8 +82,8 @@ export default function ProjectDetail() {
           <DragonflyHero project={project} />
           <Overview />
           <Challenge />
-          <ResearchDiscovery />
-          <DesignGoals />
+          <KeyInsights />
+          <DesignPrinciplesOrbit />
           <IdeationProcess />
           <FinalExperience />
           <DesignSystemShowcase />

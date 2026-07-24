@@ -10,7 +10,7 @@ export function FinalExperience() {
   const features = dragonfly.finalExperience
 
   return (
-    <section className="px-6 py-14 sm:px-10 sm:py-20">
+    <section className="px-6 py-10 sm:px-10 sm:py-16">
       <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="Final outcome" title="What the redesign actually does." className="mb-10" />
 

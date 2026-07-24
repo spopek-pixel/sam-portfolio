@@ -20,7 +20,7 @@ export function DragonflyHero({ project }: { project: Project }) {
   ]
 
   return (
-    <section className="relative overflow-hidden px-6 pb-14 pt-32 sm:px-10 sm:pb-20 sm:pt-40">
+    <section className="relative overflow-hidden px-6 pb-10 pt-32 sm:px-10 sm:pb-14 sm:pt-40">
       <NoiseOverlay />
       <GradientBlob tone="mixed" className="left-[-10%] top-10 h-[420px] w-[420px] opacity-40" />
       <GradientBlob tone="mint" className="right-[-10%] top-40 h-[360px] w-[360px] opacity-30" />
@@ -35,7 +35,7 @@ export function DragonflyHero({ project }: { project: Project }) {
           </Link>
         </Reveal>
 
-        <div className="mt-8 grid gap-14 lg:grid-cols-2 lg:items-center lg:gap-10">
+        <div className="mt-8 grid gap-14 lg:grid-cols-[1fr_1.3fr] lg:items-center lg:gap-10">
           <div className="flex flex-col gap-6">
             <Reveal delay={0.06}>
               <span className="kicker">Case study</span>
@@ -67,7 +67,7 @@ export function DragonflyHero({ project }: { project: Project }) {
               alt="Dragonfly Hot Yoga app screens — welcome, home feed, and booking confirmation"
               animate={reducedMotion ? undefined : { y: [0, -12, 0] }}
               transition={reducedMotion ? undefined : { duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-              className="mx-auto w-full max-w-md drop-shadow-[0_35px_60px_rgba(0,0,0,0.55)]"
+              className="mx-auto w-full drop-shadow-[0_35px_60px_rgba(0,0,0,0.55)]"
             />
           </Reveal>
         </div>

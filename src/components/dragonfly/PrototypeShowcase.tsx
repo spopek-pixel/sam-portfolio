@@ -8,7 +8,7 @@ export function PrototypeShowcase() {
   const { body } = dragonfly.prototype
 
   return (
-    <section className="px-6 py-14 sm:px-10 sm:py-20">
+    <section className="px-6 py-10 sm:px-10 sm:py-16">
       <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="Prototype" title="See it in motion." description={body} className="mb-10 max-w-2xl" />
 
