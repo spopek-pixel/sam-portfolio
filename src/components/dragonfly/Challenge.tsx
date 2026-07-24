@@ -8,7 +8,7 @@ export function Challenge() {
   const { intro, supporting, currentApp: currentAppCaption } = dragonfly.challenge
 
   return (
-    <section className="px-6 py-10 sm:px-10 sm:py-16">
+    <section className="px-6 py-8 sm:px-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="The challenge" title="Where the old experience fell apart." className="mb-8" />
 
@@ -29,7 +29,7 @@ export function Challenge() {
             </Reveal>
           </div>
 
-          <Reveal delay={0.16}>
+          <Reveal delay={0.16} className="lg:sticky lg:top-24">
             <figure className="overflow-hidden rounded-2xl border border-line">
               <img src={currentApp} alt="The current Dragonfly Hot Yoga digital presence" className="w-full" loading="lazy" />
               <figcaption className="bg-surface/60 px-4 py-3 text-sm text-fg-muted">{currentAppCaption}</figcaption>

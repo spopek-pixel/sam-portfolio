@@ -5,7 +5,7 @@ export function Overview() {
   const { intro, hmw } = dragonfly.overview
 
   return (
-    <section className="px-6 py-10 sm:px-10 sm:py-16">
+    <section className="px-6 py-8 sm:px-10 sm:py-12">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
         <div className="flex flex-col gap-4 lg:flex-1">
           <Reveal>

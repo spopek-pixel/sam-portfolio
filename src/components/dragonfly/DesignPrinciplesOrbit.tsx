@@ -20,7 +20,7 @@ export function DesignPrinciplesOrbit() {
   const reducedMotion = usePrefersReducedMotion()
 
   return (
-    <section className="px-6 py-10 sm:px-10 sm:py-16">
+    <section className="px-6 py-8 sm:px-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="Design principles" title="The compass behind every screen." className="mb-10" />
 

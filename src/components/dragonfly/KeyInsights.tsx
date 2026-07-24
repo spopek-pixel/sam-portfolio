@@ -10,7 +10,7 @@ export function KeyInsights() {
   const { lead, items } = dragonfly.keyInsights
 
   return (
-    <section className="px-6 py-10 sm:px-10 sm:py-16">
+    <section className="px-6 py-8 sm:px-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="What I heard" title="Three problems, everywhere I looked." className="mb-10 max-w-2xl" />
 

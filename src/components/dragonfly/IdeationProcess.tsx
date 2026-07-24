@@ -1,18 +1,24 @@
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { Bot, LayoutTemplate, Lightbulb, MessageCircleQuestion, PenTool, Route, Sparkles, StickyNote, Waypoints } from 'lucide-react'
 import { dragonfly } from '@/data/dragonfly'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
-import { ArtifactPlaceholder } from '@/components/housingkind/ArtifactPlaceholder'
+import { Lightbox } from '@/components/ui/Lightbox'
+import { ConceptRoadmap } from './ConceptRoadmap'
+import { StoryboardReveal } from './StoryboardReveal'
+import { AIFeatureShowcase } from './AIFeatureShowcase'
 import { cn } from '@/lib/utils'
 import brainstormBoard from '@/assets/images/projects/dragonfly-yoga/brainstorm_dragon.jpg'
 import storyboardImg from '@/assets/images/projects/dragonfly-yoga/storyboard.png'
-import taskFlow1 from '@/assets/images/projects/dragonfly-yoga/task1.png'
-import taskFlow2 from '@/assets/images/projects/dragonfly-yoga/task2.png'
-import taskFlow3 from '@/assets/images/projects/dragonfly-yoga/task3.png'
+import task1 from '@/assets/images/projects/dragonfly-yoga/task1.png'
+import task2 from '@/assets/images/projects/dragonfly-yoga/task2.png'
+import task3 from '@/assets/images/projects/dragonfly-yoga/task3.png'
 import wireframeImg from '@/assets/images/projects/dragonfly-yoga/wireframe.png'
-import aiFigmaDesign from '@/assets/images/projects/dragonfly-yoga/ai_figma_design.png'
+import wireframe2Img from '@/assets/images/projects/dragonfly-yoga/wireframe2.png'
 
-const sketchImages = [taskFlow1, taskFlow2, taskFlow3]
+const sketchImages = [task1, task2, task3]
+const wireframeImages = [wireframeImg, wireframe2Img]
 
 function StageHeader({ index, icon: Icon, title }: { index: number; icon: typeof StickyNote; title: string }) {
   return (
@@ -55,32 +61,76 @@ function WhyBubble({ children }: { children: string }) {
   )
 }
 
+function FramedZoomImage({ src, className }: { src: string; className?: string }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.06])
+
+  return (
+    <div ref={ref} className={cn('overflow-hidden rounded-2xl border border-line bg-surface/60 p-2', className)}>
+      <div className="overflow-hidden rounded-xl">
+        <motion.img
+          src={src}
+          alt="Miro brainstorm board — 5 themes, 25 ideas"
+          className="aspect-[4/3] w-full object-cover"
+          loading="lazy"
+          style={{ scale }}
+        />
+      </div>
+    </div>
+  )
+}
+
+function TaskFlowPlaceholder() {
+  const nodes = [
+    { x: 30, label: 'Home' },
+    { x: 130, label: 'Details' },
+    { x: 230, label: 'Confirm' },
+    { x: 330, label: 'Booked' },
+  ]
+
+  return (
+    <div className="mx-auto flex aspect-[2/1] w-full max-w-2xl flex-col items-center justify-center gap-4 rounded-2xl border border-dashed border-line bg-surface/40 p-6 text-center">
+      <svg viewBox="0 0 360 60" className="w-full max-w-sm" aria-hidden>
+        <motion.path
+          d="M30 30 H330"
+          stroke="var(--color-violet-tint)"
+          strokeOpacity={0.4}
+          strokeWidth={2}
+          strokeDasharray="6 8"
+          fill="none"
+          animate={{ strokeDashoffset: [0, -28] }}
+          transition={{ duration: 2.4, repeat: Infinity, ease: 'linear' }}
+        />
+        {nodes.map((node) => (
+          <g key={node.label}>
+            <circle cx={node.x} cy={30} r={9} fill="var(--color-ink)" stroke="var(--color-violet-tint)" strokeWidth={1.5} />
+          </g>
+        ))}
+      </svg>
+      <span className="font-mono text-[11px] uppercase tracking-wider text-fg-muted/70">
+        Full task flow diagram — coming soon
+      </span>
+    </div>
+  )
+}
+
 export function IdeationProcess() {
   const { earlyIdeation, conceptExploration, storyboard, taskFlows, sketches, wireframe, aiDesign } = dragonfly.ideationProcess
 
   return (
-    <section className="px-6 py-10 sm:px-10 sm:py-16">
+    <section className="px-6 py-8 sm:px-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading kicker="Ideation & process" title="How I got from a blank board to a plan." className="mb-12" />
+        <SectionHeading kicker="Ideation & process" title="How I got from a blank board to a plan." className="mb-10" />
 
-        <div className="flex flex-col gap-16">
-          {/* 1. Early ideation */}
+        <div className="flex flex-col gap-12">
+          {/* 1. Early ideation — smaller framed image, tight to text, scroll-zoom */}
           <Reveal>
-            <div className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-start lg:gap-10">
+            <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-6">
               <div>
                 <StageHeader index={1} icon={StickyNote} title={earlyIdeation.title} />
                 <p className="text-sm leading-relaxed text-fg-muted">{earlyIdeation.body}</p>
-              </div>
-              <div>
-                <div className="overflow-hidden rounded-2xl border border-line">
-                  <img
-                    src={brainstormBoard}
-                    alt="Miro brainstorm board — 5 themes, 25 ideas"
-                    className="aspect-[4/3] w-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="mt-3 flex flex-wrap gap-2">
+                <div className="mt-4 flex flex-wrap gap-2">
                   <span className="rounded-full border border-line px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-fg-muted">
                     5 themes
                   </span>
@@ -92,114 +142,100 @@ export function IdeationProcess() {
                   </span>
                 </div>
               </div>
+              <FramedZoomImage src={brainstormBoard} className="max-w-sm justify-self-center lg:justify-self-end" />
             </div>
           </Reveal>
 
-          {/* 2. Concept exploration — no images, full-width spacious rows */}
+          {/* 2. Concept exploration — roadmap */}
           <Reveal delay={0.05}>
             <div>
               <StageHeader index={2} icon={Lightbulb} title={conceptExploration.title} />
               <p className="mb-6 max-w-2xl text-sm leading-relaxed text-fg-muted">{conceptExploration.body}</p>
-              <div className="flex flex-col gap-4">
-                {conceptExploration.concepts.map((concept, i) => (
-                  <div
-                    key={concept.name}
-                    className="flex flex-col gap-4 rounded-2xl border border-line bg-surface/60 p-6 sm:flex-row sm:items-center sm:gap-6"
-                  >
-                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-line font-mono text-sm text-violet-tint">
-                      0{i + 1}
-                    </span>
-                    <div className="flex-1">
-                      <div className="mb-1.5 flex flex-wrap items-center gap-3">
-                        <h4 className="text-base font-medium">{concept.name}</h4>
-                        <span
-                          className={cn(
-                            'shrink-0 rounded-full px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider',
-                            concept.status === 'Shipped'
-                              ? 'bg-acid/15 text-acid'
-                              : 'bg-fg-muted/10 text-fg-muted',
-                          )}
-                        >
-                          {concept.status}
-                        </span>
-                      </div>
-                      <p className="text-sm leading-relaxed text-fg-muted">{concept.body}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <ConceptRoadmap concepts={conceptExploration.concepts} />
             </div>
           </Reveal>
 
-          {/* 3. Storyboard — tilted artifact treatment, less "boring" */}
+          {/* 3. Storyboard — larger, floating, scroll spotlight */}
           <Reveal delay={0.1}>
-            <div className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-10">
+            <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-8">
               <div>
                 <StageHeader index={3} icon={Route} title={storyboard.title} />
                 <p className="text-sm leading-relaxed text-fg-muted">{storyboard.body}</p>
                 <Takeaway>{storyboard.takeaway}</Takeaway>
               </div>
-              <div className="overflow-hidden rounded-2xl border border-line shadow-[0_25px_50px_rgba(0,0,0,0.4)] transition-transform duration-300 hover:rotate-0 lg:-rotate-2">
-                <img src={storyboardImg} alt="Storyboard — Feeling ready for hot yoga" className="w-full" loading="lazy" />
-              </div>
+              <StoryboardReveal src={storyboardImg} alt="Storyboard — Feeling ready for hot yoga" />
             </div>
           </Reveal>
 
-          {/* 4. Task flows — kept centered, awaiting one large diagram */}
+          {/* 4. Task flows — animated placeholder, or the real diagram once supplied */}
           <Reveal delay={0.14}>
             <div>
               <StageHeader index={4} icon={Waypoints} title={taskFlows.title} />
               <p className="mb-5 max-w-2xl text-sm leading-relaxed text-fg-muted">{taskFlows.body}</p>
-              <ArtifactPlaceholder
-                label="Full task flow diagram"
-                icon={Waypoints}
-                className="mx-auto aspect-[2/1] w-full max-w-2xl"
-              />
+              {taskFlows.image ? (
+                <Lightbox src={taskFlows.image} alt="Full task flow diagram" triggerClassName="mx-auto block w-full max-w-2xl">
+                  <div className="overflow-hidden rounded-2xl border border-line">
+                    <img src={taskFlows.image} alt="" className="w-full" loading="lazy" />
+                  </div>
+                </Lightbox>
+              ) : (
+                <TaskFlowPlaceholder />
+              )}
             </div>
           </Reveal>
 
-          {/* 5. Screen sketches — side by side, uniform, filled, rounded */}
+          {/* 5. Screen sketches — staggered, zoomable */}
           <Reveal delay={0.18}>
             <div>
               <StageHeader index={5} icon={PenTool} title={sketches.title} />
               <p className="mb-5 text-sm leading-relaxed text-fg-muted">{sketches.body}</p>
               <div className="grid gap-4 sm:grid-cols-3">
                 {sketchImages.map((img, i) => (
-                  <img
-                    key={i}
-                    src={img}
-                    alt={`Screen sketch ${i + 1}`}
-                    className="aspect-[3/2] w-full rounded-2xl border border-line object-cover"
-                    loading="lazy"
-                  />
+                  <Reveal key={i} delay={i * 0.08}>
+                    <Lightbox src={img} alt={`Screen sketch ${i + 1}`}>
+                      <img
+                        src={img}
+                        alt={`Screen sketch ${i + 1}`}
+                        className="aspect-[3/2] w-full rounded-2xl border border-line object-cover"
+                        loading="lazy"
+                      />
+                    </Lightbox>
+                  </Reveal>
                 ))}
               </div>
             </div>
           </Reveal>
 
-          {/* 6. Wireframe — small image, narrative text, why bubble */}
+          {/* 6. Wireframes — two-image gallery, matching sketches' weight */}
           <Reveal delay={0.22}>
-            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-10">
+            <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-8">
               <div>
                 <StageHeader index={6} icon={LayoutTemplate} title={wireframe.title} />
                 <p className="text-sm leading-relaxed text-fg-muted">{wireframe.body}</p>
                 <WhyBubble>{wireframe.why}</WhyBubble>
               </div>
-              <div className="overflow-hidden rounded-2xl border border-line bg-surface/60">
-                <img src={wireframeImg} alt="Wireframe kit — Dragonfly Hot Yoga" className="w-full" loading="lazy" />
+              <div className="grid gap-4 sm:grid-cols-2">
+                {wireframeImages.map((img, i) => (
+                  <Reveal key={i} delay={i * 0.08}>
+                    <Lightbox src={img} alt={`Wireframe kit ${i + 1} — Dragonfly Hot Yoga`}>
+                      <div className="overflow-hidden rounded-2xl border border-line bg-surface/60">
+                        <img src={img} alt={`Wireframe kit ${i + 1} — Dragonfly Hot Yoga`} className="w-full" loading="lazy" />
+                      </div>
+                    </Lightbox>
+                  </Reveal>
+                ))}
               </div>
             </div>
           </Reveal>
 
-          {/* 7. AI-assisted design — full-width narrative, large image, why bubble */}
+          {/* 7. AI-assisted design — editorial showcase, phones as the hero */}
           <Reveal delay={0.26}>
-            <div className="rounded-2xl border border-violet-tint/30 bg-violet/5 p-6 sm:p-8">
-              <StageHeader index={7} icon={Bot} title={aiDesign.title} />
-              <p className="max-w-3xl text-sm leading-relaxed text-fg-muted">{aiDesign.body}</p>
-              <WhyBubble>{aiDesign.why}</WhyBubble>
-              <div className="mx-auto mt-8 max-w-2xl overflow-hidden rounded-2xl border border-line">
-                <img src={aiFigmaDesign} alt="AI-assisted design exploration in Figma" className="w-full" loading="lazy" />
+            <div className="border-t border-line pt-12">
+              <div className="mb-2 flex items-center justify-center gap-2 text-fg-muted">
+                <Bot size={16} />
+                <span className="font-mono text-xs uppercase tracking-wider">07 — AI-assisted design</span>
               </div>
+              <AIFeatureShowcase title={aiDesign.title} body={aiDesign.body} why={aiDesign.why} />
             </div>
           </Reveal>
         </div>

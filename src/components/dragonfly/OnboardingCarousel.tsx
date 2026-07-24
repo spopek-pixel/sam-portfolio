@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { dragonfly } from '@/data/dragonfly'
 import { SectionHeading } from '@/components/ui/SectionHeading'
@@ -17,25 +17,55 @@ import onboarding8 from '@/assets/images/projects/dragonfly-yoga/onboarding9.png
 import onboarding9 from '@/assets/images/projects/dragonfly-yoga/onbarding10.png'
 
 const screens = [onboarding1, onboarding2, onboarding3, onboarding4, onboarding5, onboarding6, onboarding7, onboarding8, onboarding9]
+const AUTOPLAY_MS = 3200
 
 const arrowButtonClasses =
-  'rounded-full border border-line bg-surface/60 p-2.5 text-fg transition-colors hover:border-violet-tint hover:bg-surface-raised'
+  'z-10 rounded-full border border-line bg-surface/70 p-2.5 text-fg backdrop-blur-sm transition-colors hover:border-violet-tint hover:bg-surface-raised'
 
 export function OnboardingCarousel() {
   const { intro, captions } = dragonfly.onboarding
-  const [index, setIndex] = useState(0)
-  const [direction, setDirection] = useState(1)
+  const [active, setActive] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(true)
+  const containerRef = useRef<HTMLDivElement>(null)
   const reducedMotion = usePrefersReducedMotion()
 
-  const goTo = (next: number, dir: number) => {
-    setDirection(dir)
-    setIndex((next + screens.length) % screens.length)
-  }
-  const goPrev = () => goTo(index - 1, -1)
-  const goNext = () => goTo(index + 1, 1)
+  const scrollToIndex = useCallback((index: number) => {
+    const container = containerRef.current
+    const item = container?.children[index] as HTMLElement | undefined
+    if (!container || !item) return
+    const target = item.offsetLeft - (container.clientWidth - item.clientWidth) / 2
+    container.scrollTo({ left: target, behavior: 'smooth' })
+  }, [])
+
+  const goTo = useCallback(
+    (index: number, pause = true) => {
+      const next = (index + screens.length) % screens.length
+      setActive(next)
+      scrollToIndex(next)
+      if (pause) setIsPlaying(false)
+    },
+    [scrollToIndex],
+  )
+
+  useEffect(() => {
+    scrollToIndex(active)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  useEffect(() => {
+    if (!isPlaying || reducedMotion) return
+    const id = setInterval(() => {
+      setActive((current) => {
+        const next = (current + 1) % screens.length
+        scrollToIndex(next)
+        return next
+      })
+    }, AUTOPLAY_MS)
+    return () => clearInterval(id)
+  }, [isPlaying, reducedMotion, scrollToIndex])
 
   return (
-    <section className="px-6 py-10 sm:px-10 sm:py-16">
+    <section className="px-6 py-8 sm:px-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="Onboarding" title="Nine screens, one first impression." description={intro} className="mb-10 max-w-2xl" />
 
@@ -44,90 +74,80 @@ export function OnboardingCarousel() {
             role="region"
             aria-roledescription="carousel"
             aria-label="Onboarding screens"
-            className="mx-auto max-w-sm"
+            className="relative"
+            onMouseEnter={() => setIsPlaying(false)}
+            onMouseLeave={() => setIsPlaying(true)}
             onKeyDown={(event) => {
-              if (event.key === 'ArrowLeft') goPrev()
-              if (event.key === 'ArrowRight') goNext()
+              if (event.key === 'ArrowLeft') goTo(active - 1)
+              if (event.key === 'ArrowRight') goTo(active + 1)
             }}
           >
-            <div className="flex items-center gap-4">
-              <button
-                type="button"
-                onClick={goPrev}
-                aria-label="Previous screen"
-                className={cn(arrowButtonClasses, 'hidden shrink-0 sm:inline-flex')}
-              >
+            <div className="flex items-center gap-3 sm:gap-5">
+              <button type="button" onClick={() => goTo(active - 1)} aria-label="Previous screen" className={cn(arrowButtonClasses, 'hidden shrink-0 sm:inline-flex')}>
                 <ChevronLeft size={20} />
               </button>
 
-              <div className="min-w-0 flex-1 overflow-hidden rounded-2xl border border-line bg-surface/60">
-                <AnimatePresence mode="wait" initial={false}>
-                  <motion.div
-                    key={index}
-                    role="group"
-                    aria-roledescription="slide"
-                    aria-label={`${index + 1} of ${screens.length}`}
-                    initial={{ opacity: 0, x: reducedMotion ? 0 : direction * 48 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: reducedMotion ? 0 : direction * -48 }}
-                    transition={{ duration: reducedMotion ? 0.15 : 0.35, ease: [0.16, 1, 0.3, 1] }}
-                  >
-                    <img src={screens[index]} alt={captions[index]} className="aspect-[9/16] w-full object-cover" />
-                  </motion.div>
-                </AnimatePresence>
+              <div
+                ref={containerRef}
+                className="flex flex-1 gap-5 overflow-x-auto scroll-smooth py-6 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+                style={{ scrollSnapType: 'x mandatory' }}
+              >
+                {screens.map((screen, i) => {
+                  const distance = Math.abs(i - active)
+                  const scale = distance === 0 ? 1 : distance === 1 ? 0.82 : 0.68
+                  const opacity = distance === 0 ? 1 : distance === 1 ? 0.55 : 0.28
+                  const rotate = reducedMotion ? 0 : (i - active) * 3.5
+
+                  return (
+                    <motion.button
+                      key={i}
+                      type="button"
+                      onClick={() => goTo(i)}
+                      aria-label={`Go to screen ${i + 1}`}
+                      aria-current={i === active}
+                      animate={{ scale, opacity, rotate }}
+                      transition={{ type: 'spring', stiffness: 260, damping: 26 }}
+                      className="shrink-0 overflow-hidden rounded-[1.75rem] border border-line bg-surface/60 shadow-[0_25px_50px_rgba(0,0,0,0.4)]"
+                      style={{ scrollSnapAlign: 'center', width: 'clamp(9.5rem, 22vw, 13rem)' }}
+                    >
+                      <img src={screen} alt={captions[i]} className="aspect-[9/16] w-full object-cover" loading="lazy" />
+                    </motion.button>
+                  )
+                })}
               </div>
 
-              <button
-                type="button"
-                onClick={goNext}
-                aria-label="Next screen"
-                className={cn(arrowButtonClasses, 'hidden shrink-0 sm:inline-flex')}
-              >
+              <button type="button" onClick={() => goTo(active + 1)} aria-label="Next screen" className={cn(arrowButtonClasses, 'hidden shrink-0 sm:inline-flex')}>
                 <ChevronRight size={20} />
               </button>
             </div>
 
-            <p className="mt-4 min-h-[2.5rem] text-center text-sm text-fg-muted" aria-live="polite">
-              {captions[index]}
+            <p className="mt-2 min-h-[2.5rem] text-center text-sm text-fg-muted" aria-live="polite">
+              {captions[active]}
             </p>
 
             <div className="mt-3 flex flex-wrap items-center justify-between gap-3 sm:px-8">
               <div className="flex items-center gap-4">
-                <button
-                  type="button"
-                  onClick={goPrev}
-                  aria-label="Previous screen"
-                  className={cn(arrowButtonClasses, 'p-1.5 sm:hidden')}
-                >
+                <button type="button" onClick={() => goTo(active - 1)} aria-label="Previous screen" className={cn(arrowButtonClasses, 'p-1.5 sm:hidden')}>
                   <ChevronLeft size={16} />
                 </button>
-                <div className="flex flex-wrap items-center justify-center gap-1.5">
-                  {screens.map((_, dotIndex) => (
-                    <button
-                      key={dotIndex}
-                      type="button"
-                      onClick={() => goTo(dotIndex, dotIndex > index ? 1 : -1)}
-                      aria-label={`Go to screen ${dotIndex + 1}`}
-                      aria-current={dotIndex === index}
-                      className={cn(
-                        'h-2 w-2 rounded-full transition-colors',
-                        dotIndex === index ? 'bg-violet-tint' : 'bg-line hover:bg-fg-muted/50',
-                      )}
-                    />
-                  ))}
-                </div>
+                <span className="font-mono text-xs text-fg-muted">
+                  {active + 1} of {screens.length}
+                </span>
+                <button type="button" onClick={() => goTo(active + 1)} aria-label="Next screen" className={cn(arrowButtonClasses, 'p-1.5 sm:hidden')}>
+                  <ChevronRight size={16} />
+                </button>
               </div>
-              <span className="font-mono text-xs text-fg-muted">
-                {index + 1} of {screens.length}
-              </span>
-              <button
-                type="button"
-                onClick={goNext}
-                aria-label="Next screen"
-                className={cn(arrowButtonClasses, 'p-1.5 sm:hidden')}
-              >
-                <ChevronRight size={16} />
-              </button>
+
+              <div className="h-1 flex-1 overflow-hidden rounded-full bg-line sm:max-w-[240px]">
+                <motion.div
+                  key={`${active}-${isPlaying}`}
+                  className="h-full rounded-full bg-violet-tint"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: isPlaying && !reducedMotion ? 1 : 0.15 }}
+                  transition={isPlaying && !reducedMotion ? { duration: AUTOPLAY_MS / 1000, ease: 'linear' } : { duration: 0.3 }}
+                  style={{ transformOrigin: 'left' }}
+                />
+              </div>
             </div>
           </div>
         </Reveal>
