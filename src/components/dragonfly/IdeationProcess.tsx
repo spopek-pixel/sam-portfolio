@@ -45,16 +45,15 @@ export function IdeationProcess() {
   return (
     <section className="px-6 py-10 sm:px-10 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading kicker="Ideation & process" title="How I got from a blank board to a plan." className="mb-10" />
+        <SectionHeading kicker="Ideation & process" title="How I got from a blank board to a plan." className="mb-12" />
 
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-16">
           {/* 1. Early ideation */}
           <Reveal>
             <div className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-start lg:gap-10">
               <div>
                 <StageHeader index={1} icon={StickyNote} title={earlyIdeation.title} />
                 <p className="text-sm leading-relaxed text-fg-muted">{earlyIdeation.body}</p>
-                <Takeaway>{earlyIdeation.takeaway}</Takeaway>
               </div>
               <div className="overflow-hidden rounded-2xl border border-line">
                 <img
@@ -67,28 +66,36 @@ export function IdeationProcess() {
             </div>
           </Reveal>
 
-          {/* 2. Concept exploration — no images, compact */}
+          {/* 2. Concept exploration — no images, full-width spacious rows */}
           <Reveal delay={0.05}>
             <div>
               <StageHeader index={2} icon={Lightbulb} title={conceptExploration.title} />
-              <p className="mb-5 text-sm leading-relaxed text-fg-muted">{conceptExploration.body}</p>
-              <div className="grid gap-4 sm:grid-cols-3">
-                {conceptExploration.concepts.map((concept) => (
-                  <div key={concept.name} className="rounded-2xl border border-line bg-surface/60 p-5">
-                    <div className="mb-2 flex items-center justify-between gap-2">
-                      <h4 className="text-sm font-medium">{concept.name}</h4>
-                      <span
-                        className={cn(
-                          'shrink-0 rounded-full px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider',
-                          concept.status === 'Shipped'
-                            ? 'bg-acid/15 text-acid'
-                            : 'bg-fg-muted/10 text-fg-muted',
-                        )}
-                      >
-                        {concept.status}
-                      </span>
+              <p className="mb-6 max-w-2xl text-sm leading-relaxed text-fg-muted">{conceptExploration.body}</p>
+              <div className="flex flex-col gap-4">
+                {conceptExploration.concepts.map((concept, i) => (
+                  <div
+                    key={concept.name}
+                    className="flex flex-col gap-4 rounded-2xl border border-line bg-surface/60 p-6 sm:flex-row sm:items-center sm:gap-6"
+                  >
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-line font-mono text-sm text-violet-tint">
+                      0{i + 1}
+                    </span>
+                    <div className="flex-1">
+                      <div className="mb-1.5 flex flex-wrap items-center gap-3">
+                        <h4 className="text-base font-medium">{concept.name}</h4>
+                        <span
+                          className={cn(
+                            'shrink-0 rounded-full px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider',
+                            concept.status === 'Shipped'
+                              ? 'bg-acid/15 text-acid'
+                              : 'bg-fg-muted/10 text-fg-muted',
+                          )}
+                        >
+                          {concept.status}
+                        </span>
+                      </div>
+                      <p className="text-sm leading-relaxed text-fg-muted">{concept.body}</p>
                     </div>
-                    <p className="text-xs leading-relaxed text-fg-muted">{concept.body}</p>
                   </div>
                 ))}
               </div>

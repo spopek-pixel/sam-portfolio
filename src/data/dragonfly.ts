@@ -5,8 +5,10 @@ export const dragonfly = {
   },
 
   overview: {
-    intro:
-      "Dragonfly Hot Yoga's booking app worked fine right up until a class filled up — and then it just stopped. No waitlist, no suggested alternative, no acknowledgment that a member had even shown up looking for a spot. This is a solo UX and product redesign of that experience, built around one goal: help people build a consistent practice, not just complete a booking.",
+    intro: [
+      'This redesign focuses on improving the overall user experience by making the app more modern, easy to navigate, and personalized. I specifically looked at how users book classes, set preferences, and handle situations like when a class is full. The goal was to simplify these flows and reduce friction, while also creating a more engaging and supportive experience for users.',
+      "Throughout this project, I've also used AI tools like ChatGPT and Claude as part of my process — as a thinking partner during ideation, a way to pressure-test design decisions, and a project management tool to help me scope priorities and stay organized as the project evolved. Since this is still an ongoing project, I plan to continue refining the design, building out the AI-powered recommendation feature in the prototype, and eventually move into usability testing.",
+    ],
     hmw: 'How might we help Dragonfly members and newcomers easily explore, book, and manage classes so they feel motivated to maintain a consistent yoga practice?',
   },
 
@@ -59,13 +61,11 @@ export const dragonfly = {
   ideationProcess: {
     earlyIdeation: {
       title: 'Early ideation',
-      body: 'I didn\'t start with screens — I started with a Miro board and a wide net. Five thematic directions (personalization, booking, onboarding, notifications, engagement) and twenty-five individual ideas, so I was reacting to a spread of possibilities instead of anchoring on the first idea that felt right. Some of these ideas were obvious wins I already suspected mattered. Others — an AI chatbot for schedule questions, health-app integrations, group booking — were deliberately ambitious, included so I\'d have to justify cutting them rather than never considering them at all.',
-      takeaway:
-        'Casting a wide net first meant the concepts that survived weren\'t just the first idea I liked — they were the ones that held up against twenty-four others.',
+      body: 'I started by reviewing my research and used Claude as a brainstorming partner to rapidly explore problem framings before committing to a direction. I prompted it to challenge my assumptions and suggest edge cases I hadn\'t considered, like how power users versus first-time members would experience the same flow differently. This AI-assisted ideation helped me move faster through divergent thinking so I could spend more time in convergent design decisions. From there, I grouped ideas into themes like scheduling, personalization, and new member support — a wide net of five themes and twenty-five individual ideas — which led to the "Suggested for You" personalized feed concept.',
     },
     conceptExploration: {
       title: 'Concept exploration',
-      body: 'Three directions came out of that board worth developing further. Each one solved a different problem — the work was figuring out which problem actually mattered most.',
+      body: 'Three directions came out of that board worth developing further, each solving a different problem. The work from here was figuring out which problem actually mattered most to members.',
       concepts: [
         {
           name: 'Suggested for You feed',
