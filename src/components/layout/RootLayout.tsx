@@ -1,10 +1,9 @@
 import { Suspense, useEffect } from 'react'
-import { AnimatePresence } from 'framer-motion'
 import { Outlet, useLocation } from 'react-router-dom'
 import { Navbar } from './Navbar'
 import { Footer } from './Footer'
-import { PageTransition } from './PageTransition'
 import { SmoothScrollProvider } from './SmoothScrollProvider'
+import { RouteErrorBoundary } from './RouteErrorBoundary'
 import { CursorDot } from '@/components/ui/CursorDot'
 
 export function RootLayout() {
@@ -24,15 +23,13 @@ export function RootLayout() {
       </a>
       <CursorDot />
       <Navbar />
-      <AnimatePresence mode="wait">
-        <PageTransition key={location.pathname}>
-          <main id="main-content">
-            <Suspense fallback={<div className="min-h-screen" />}>
-              <Outlet />
-            </Suspense>
-          </main>
-        </PageTransition>
-      </AnimatePresence>
+      <main id="main-content">
+        <RouteErrorBoundary key={location.pathname}>
+          <Suspense fallback={<div className="min-h-screen" />}>
+            <Outlet />
+          </Suspense>
+        </RouteErrorBoundary>
+      </main>
       <Footer />
     </SmoothScrollProvider>
   )
