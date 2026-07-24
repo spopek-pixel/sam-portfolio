@@ -27,6 +27,18 @@ import { TestingFeedback } from '@/components/housingkind/TestingFeedback'
 import { Recognition } from '@/components/housingkind/Recognition'
 import { ProjectOutcomes } from '@/components/housingkind/ProjectOutcomes'
 import { HousingkindReflection } from '@/components/housingkind/HousingkindReflection'
+import { DragonflyTheme } from '@/components/dragonfly/DragonflyTheme'
+import { DragonflyHero } from '@/components/dragonfly/DragonflyHero'
+import { Overview } from '@/components/dragonfly/Overview'
+import { Challenge } from '@/components/dragonfly/Challenge'
+import { ResearchDiscovery } from '@/components/dragonfly/ResearchDiscovery'
+import { DesignGoals } from '@/components/dragonfly/DesignGoals'
+import { Ideation } from '@/components/dragonfly/Ideation'
+import { FinalExperience } from '@/components/dragonfly/FinalExperience'
+import { DesignSystemShowcase } from '@/components/dragonfly/DesignSystemShowcase'
+import { PrototypeShowcase } from '@/components/dragonfly/PrototypeShowcase'
+import { ImpactSection } from '@/components/dragonfly/ImpactSection'
+import { DragonflyReflection } from '@/components/dragonfly/DragonflyReflection'
 
 export default function ProjectDetail() {
   const { slug } = useParams()
@@ -57,6 +69,27 @@ export default function ProjectDetail() {
         <Recognition />
         <ProjectOutcomes />
         <HousingkindReflection />
+        <NextProjectNav project={nextProject} />
+      </div>
+    )
+  }
+
+  if (project.slug === 'dragonfly-yoga') {
+    return (
+      <div>
+        <DragonflyTheme>
+          <DragonflyHero project={project} />
+          <Overview />
+          <Challenge />
+          <ResearchDiscovery />
+          <DesignGoals />
+          <Ideation />
+          <FinalExperience />
+          <DesignSystemShowcase />
+          <PrototypeShowcase />
+          <ImpactSection />
+          <DragonflyReflection />
+        </DragonflyTheme>
         <NextProjectNav project={nextProject} />
       </div>
     )

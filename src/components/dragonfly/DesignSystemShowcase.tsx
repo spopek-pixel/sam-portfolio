@@ -1,0 +1,53 @@
+import { Accessibility, Component, MousePointerClick } from 'lucide-react'
+import { dragonfly } from '@/data/dragonfly'
+import { SectionHeading } from '@/components/ui/SectionHeading'
+import { Reveal } from '@/components/ui/Reveal'
+
+const icons = [Component, MousePointerClick, Accessibility]
+
+export function DesignSystemShowcase() {
+  const { intro, colors, principles } = dragonfly.designSystem
+
+  return (
+    <section className="px-6 py-14 sm:px-10 sm:py-20">
+      <div className="mx-auto max-w-6xl">
+        <SectionHeading kicker="Design system" title="A soft, consistent language." description={intro} className="mb-10 max-w-2xl" />
+
+        <Reveal>
+          <div className="flex flex-wrap gap-6 rounded-3xl border border-line bg-surface p-8 shadow-[0_16px_40px_rgba(59,50,45,0.06)]">
+            {colors.map((color) => (
+              <div key={color.name} className="flex flex-col items-center gap-2">
+                <span
+                  className="h-16 w-16 rounded-full border border-line shadow-[0_8px_20px_rgba(59,50,45,0.12)]"
+                  style={{ backgroundColor: color.hex }}
+                />
+                <span className="text-xs text-fg-muted">{color.name}</span>
+              </div>
+            ))}
+            <div className="flex flex-1 flex-col justify-center gap-1 border-l border-line pl-6">
+              <p className="font-display text-2xl">Aa Bricolage Grotesque</p>
+              <p className="text-sm text-fg-muted">Headings — warmed by color rather than a new typeface</p>
+              <p className="mt-2 text-lg">Aa Inter</p>
+              <p className="text-sm text-fg-muted">Body copy and UI text</p>
+            </div>
+          </div>
+        </Reveal>
+
+        <div className="mt-6 grid gap-6 sm:grid-cols-3">
+          {principles.map((item, index) => {
+            const Icon = icons[index]
+            return (
+              <Reveal key={item.title} delay={0.1 + index * 0.06} className="h-full">
+                <div className="flex h-full flex-col gap-2.5 rounded-3xl border border-line bg-surface p-6 shadow-[0_16px_40px_rgba(59,50,45,0.06)]">
+                  <Icon size={20} className="text-violet-tint" />
+                  <h3 className="text-sm font-medium">{item.title}</h3>
+                  <p className="text-sm text-fg-muted">{item.body}</p>
+                </div>
+              </Reveal>
+            )
+          })}
+        </div>
+      </div>
+    </section>
+  )
+}
