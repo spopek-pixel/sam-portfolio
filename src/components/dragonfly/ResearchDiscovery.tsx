@@ -18,7 +18,7 @@ export function ResearchDiscovery() {
             const Icon = icons[index]
             return (
               <Reveal key={card.title} delay={index * 0.06} className="h-full">
-                <div className="flex h-full flex-col gap-3 rounded-3xl border border-line bg-surface p-6 shadow-[0_16px_40px_rgba(59,50,45,0.06)]">
+                <div className="flex h-full flex-col gap-3 rounded-2xl border border-line bg-surface/60 p-6">
                   <Icon size={22} className="text-acid" />
                   <h3 className="font-medium">{card.title}</h3>
                   <p className="text-sm text-fg-muted">{card.body}</p>

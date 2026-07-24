@@ -12,6 +12,7 @@ export const dragonfly = {
 
   challenge: {
     intro: 'The existing app created friction at nearly every step of the booking journey.',
+    currentApp: 'The current Dragonfly Hot Yoga booking app — the starting point for this redesign.',
     painPoints: [
       {
         title: 'Information access',
@@ -70,25 +71,36 @@ export const dragonfly = {
     { title: 'Create a calming digital experience', icon: 'Flower2' },
   ],
 
-  ideation: {
-    steps: [
-      {
-        title: 'Sketches',
-        body: 'Rough explorations of the booking flow and home screen, kept loose on purpose so early feedback stayed focused on structure, not polish.',
-      },
-      {
-        title: 'User flows',
-        body: 'Five core task flows mapped in FigJam: onboarding, booking a recommended class, handling a full class, managing an existing booking, and exploring something new.',
-      },
-      {
-        title: 'Wireframes',
-        body: 'Low-fidelity screens built to test information hierarchy and navigation before any visual design decisions entered the picture.',
-      },
-      {
-        title: 'Early concepts',
-        body: 'Three directions emerged: a Suggested for You feed, a Smart Scheduler, and a social Yoga Challenges feature — the last deprioritized to focus on waitlists and personalization.',
-      },
-    ],
+  ideationProcess: {
+    earlyIdeation: {
+      title: 'Early ideation',
+      body: 'Started broad on Miro — five different thematic directions and twenty-five individual ideas mapped out before narrowing anything down.',
+    },
+    conceptExploration: {
+      title: 'Concept exploration',
+      body: 'Narrowed to three directions worth prototyping further.',
+      concepts: ['Suggested for You feed', 'Smart Scheduler', 'Yoga Challenges with friends'],
+    },
+    storyboard: {
+      title: 'Storyboard',
+      body: 'Storyboarded the emotional arc of a first-time visitor, from opening the app to walking through the studio door — the anxiety starts well before the booking screen loads.',
+    },
+    taskFlows: {
+      title: 'Task flows',
+      body: 'Five core task flows mapped in FigJam: onboarding, booking a recommended class, handling a full class, managing an existing booking, and exploring something new.',
+    },
+    sketches: {
+      title: 'Screen sketches',
+      body: 'Rough hand sketches of the three highest-priority screens, kept loose on purpose so early feedback stayed focused on structure, not polish.',
+    },
+    wireframe: {
+      title: 'Wireframe',
+      body: 'Low-fidelity structure built to test information hierarchy and navigation before any visual design decisions entered the picture.',
+    },
+    aiDesign: {
+      title: 'AI-assisted design in Figma',
+      body: 'Used AI tooling inside Figma to rapidly generate layout variations for the booking and recommendation screens, which I then evaluated against research, modified, and refined into the final direction — AI accelerated exploration, but every decision that shipped was mine.',
+    },
   },
 
   finalExperience: [

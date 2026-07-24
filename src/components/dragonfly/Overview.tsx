@@ -12,7 +12,7 @@ export function Overview() {
           <p className="mt-4 text-lg leading-relaxed text-fg-muted sm:text-xl">{intro}</p>
         </Reveal>
         <Reveal delay={0.14} className="lg:flex-1">
-          <blockquote className="rounded-[2rem] rounded-bl-none border border-line bg-surface p-8 shadow-[0_20px_50px_rgba(59,50,45,0.08)]">
+          <blockquote className="rounded-2xl border-l-4 border-acid bg-surface/60 p-6 lg:p-8">
             <p className="font-display text-xl leading-snug sm:text-2xl">"{hmw}"</p>
             <cite className="mt-4 block font-mono text-xs uppercase not-italic tracking-wider text-fg-muted">
               How might we

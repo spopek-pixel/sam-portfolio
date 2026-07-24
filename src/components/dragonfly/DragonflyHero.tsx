@@ -4,7 +4,7 @@ import { ArrowLeft, Smartphone } from 'lucide-react'
 import type { Project } from '@/data/projects'
 import { dragonfly } from '@/data/dragonfly'
 import { Reveal } from '@/components/ui/Reveal'
-import { GradientBlob } from '@/components/ui/GradientBlob'
+import { GradientBlob, NoiseOverlay } from '@/components/ui/GradientBlob'
 import { ArtifactPlaceholder } from '@/components/housingkind/ArtifactPlaceholder'
 import { usePrefersReducedMotion } from '@/hooks/useReducedMotion'
 
@@ -21,7 +21,7 @@ export function DragonflyHero({ project }: { project: Project }) {
 
   return (
     <section className="relative overflow-hidden px-6 pb-14 pt-32 sm:px-10 sm:pb-20 sm:pt-40">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#0b0b10]/55 to-transparent" />
+      <NoiseOverlay />
       <GradientBlob tone="mixed" className="left-[-10%] top-10 h-[420px] w-[420px] opacity-40" />
       <GradientBlob tone="mint" className="right-[-10%] top-40 h-[360px] w-[360px] opacity-30" />
 
@@ -66,7 +66,7 @@ export function DragonflyHero({ project }: { project: Project }) {
               <motion.div
                 animate={reducedMotion ? undefined : { y: [0, -12, 0], rotate: [-2, 1.5, -2] }}
                 transition={reducedMotion ? undefined : { duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-                className="overflow-hidden rounded-[2.5rem] border-[6px] border-surface bg-surface shadow-[0_35px_70px_rgba(59,50,45,0.25)]"
+                className="overflow-hidden rounded-[2.5rem] border-[6px] border-surface-raised bg-surface-raised shadow-[0_35px_70px_rgba(0,0,0,0.5)]"
               >
                 <ArtifactPlaceholder
                   image={undefined}

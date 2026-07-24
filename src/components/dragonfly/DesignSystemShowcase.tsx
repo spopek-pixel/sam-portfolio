@@ -14,13 +14,10 @@ export function DesignSystemShowcase() {
         <SectionHeading kicker="Design system" title="A soft, consistent language." description={intro} className="mb-10 max-w-2xl" />
 
         <Reveal>
-          <div className="flex flex-wrap gap-6 rounded-3xl border border-line bg-surface p-8 shadow-[0_16px_40px_rgba(59,50,45,0.06)]">
+          <div className="flex flex-wrap gap-6 rounded-2xl border border-line bg-surface/60 p-8">
             {colors.map((color) => (
               <div key={color.name} className="flex flex-col items-center gap-2">
-                <span
-                  className="h-16 w-16 rounded-full border border-line shadow-[0_8px_20px_rgba(59,50,45,0.12)]"
-                  style={{ backgroundColor: color.hex }}
-                />
+                <span className="h-16 w-16 rounded-full border border-line" style={{ backgroundColor: color.hex }} />
                 <span className="text-xs text-fg-muted">{color.name}</span>
               </div>
             ))}
@@ -38,7 +35,7 @@ export function DesignSystemShowcase() {
             const Icon = icons[index]
             return (
               <Reveal key={item.title} delay={0.1 + index * 0.06} className="h-full">
-                <div className="flex h-full flex-col gap-2.5 rounded-3xl border border-line bg-surface p-6 shadow-[0_16px_40px_rgba(59,50,45,0.06)]">
+                <div className="flex h-full flex-col gap-2.5 rounded-2xl border border-line bg-surface/60 p-6">
                   <Icon size={20} className="text-violet-tint" />
                   <h3 className="text-sm font-medium">{item.title}</h3>
                   <p className="text-sm text-fg-muted">{item.body}</p>

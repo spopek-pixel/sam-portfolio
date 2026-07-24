@@ -33,7 +33,7 @@ import { Overview } from '@/components/dragonfly/Overview'
 import { Challenge } from '@/components/dragonfly/Challenge'
 import { ResearchDiscovery } from '@/components/dragonfly/ResearchDiscovery'
 import { DesignGoals } from '@/components/dragonfly/DesignGoals'
-import { Ideation } from '@/components/dragonfly/Ideation'
+import { IdeationProcess } from '@/components/dragonfly/IdeationProcess'
 import { FinalExperience } from '@/components/dragonfly/FinalExperience'
 import { DesignSystemShowcase } from '@/components/dragonfly/DesignSystemShowcase'
 import { PrototypeShowcase } from '@/components/dragonfly/PrototypeShowcase'
@@ -83,7 +83,7 @@ export default function ProjectDetail() {
           <Challenge />
           <ResearchDiscovery />
           <DesignGoals />
-          <Ideation />
+          <IdeationProcess />
           <FinalExperience />
           <DesignSystemShowcase />
           <PrototypeShowcase />

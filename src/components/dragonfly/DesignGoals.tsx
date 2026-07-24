@@ -18,8 +18,8 @@ export function DesignGoals() {
             const Icon = iconMap[goal.icon as keyof typeof iconMap]
             return (
               <Reveal key={goal.title} delay={index * 0.06} className="h-full">
-                <div className="flex h-full flex-col items-center gap-3 rounded-3xl border border-line bg-surface p-6 text-center shadow-[0_16px_40px_rgba(59,50,45,0.06)]">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-surface-raised text-violet-tint">
+                <div className="flex h-full flex-col items-center gap-3 rounded-2xl border border-line bg-surface/60 p-6 text-center">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-line text-violet-tint">
                     <Icon size={22} />
                   </span>
                   <h3 className="text-sm font-medium leading-snug">{goal.title}</h3>

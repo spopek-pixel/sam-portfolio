@@ -1,25 +1,13 @@
 import type { CSSProperties, ReactNode } from 'react'
 
 const theme: CSSProperties = {
-  ['--color-ink' as string]: '#FBF4EF',
-  ['--color-ink-soft' as string]: '#F5ECE4',
-  ['--color-surface' as string]: '#FFFDFB',
-  ['--color-surface-raised' as string]: '#F6E9E2',
-  ['--color-violet' as string]: '#C98A82',
-  ['--color-violet-deep' as string]: '#A66760',
-  ['--color-violet-tint' as string]: '#B97D74',
-  ['--color-acid' as string]: '#7C9163',
-  ['--color-mint' as string]: '#93A87C',
-  ['--color-fg' as string]: '#3B322D',
-  ['--color-fg-muted' as string]: '#8B7F76',
-  ['--color-line' as string]: 'rgba(59,50,45,0.14)',
-  colorScheme: 'light',
+  ['--color-violet' as string]: '#E3A69D',
+  ['--color-violet-deep' as string]: '#B97D74',
+  ['--color-violet-tint' as string]: '#E8B6AE',
+  ['--color-acid' as string]: '#A8C08A',
+  ['--color-mint' as string]: '#C3D6AC',
 }
 
 export function DragonflyTheme({ children }: { children: ReactNode }) {
-  return (
-    <div style={theme} className="bg-ink text-fg">
-      {children}
-    </div>
-  )
+  return <div style={theme}>{children}</div>
 }
