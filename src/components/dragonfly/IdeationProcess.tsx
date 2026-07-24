@@ -19,6 +19,7 @@ import wireframe2Img from '@/assets/images/projects/dragonfly-yoga/wireframe2.pn
 import taskflow1 from '@/assets/images/projects/dragonfly-yoga/taskflow1.png'
 import taskflow2 from '@/assets/images/projects/dragonfly-yoga/taskflow2.png'
 import taskflow3 from '@/assets/images/projects/dragonfly-yoga/taskflow3.png'
+import taskflow4 from '@/assets/images/projects/dragonfly-yoga/taskflow4.png'
 import taskflow5 from '@/assets/images/projects/dragonfly-yoga/taskflow5.png'
 
 const sketchImages = [task1, task2, task3]
@@ -27,6 +28,7 @@ const taskFlowImages = [
   { src: taskflow1, label: 'Task Flow 1 — Onboarding & Personalization Setup' },
   { src: taskflow2, label: 'Task Flow 2 — Booking a Recommended Class' },
   { src: taskflow3, label: 'Task Flow 3 — Viewing Alternative Recommendations' },
+  { src: taskflow4, label: 'Task Flow 4 — Managing Upcoming Classes' },
   { src: taskflow5, label: 'Task Flow 5 — Discovering New Class Types' },
 ]
 

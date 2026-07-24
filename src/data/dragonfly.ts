@@ -110,28 +110,28 @@ export const dragonfly = {
 
   finalExperience: [
     {
-      title: 'Personalized onboarding',
-      body: 'New members set goals and experience level up front, so the app can personalize from the very first session instead of the tenth.',
+      title: 'Welcome Experience',
+      body: 'Illustrated onboarding introduces the studio experience, sets the tone of the brand, and encourages new members to begin their wellness journey.',
     },
     {
-      title: 'Class booking',
-      body: 'A streamlined flow with clear CTAs and the class information that actually matters, front and center.',
+      title: 'Personalized Onboarding',
+      body: 'New members personalize their experience by selecting their location, fitness goals, and skill level, allowing the app to deliver recommendations tailored to their needs.',
     },
     {
-      title: 'AI recommendations',
-      body: 'An "AI picks for you" feed with plain-language reasoning — "Because you\'ve booked Core Flow 4 times this month" — and a page explaining the match.',
+      title: 'AI-Powered Recommendations',
+      body: 'Personalized class suggestions are generated using attendance history, fitness goals, and progress to help members discover their next session with confidence.',
     },
     {
-      title: 'Waitlist improvements',
-      body: 'A full class opens a pop-up with real, bookable alternatives instead of a dead end — the single change built to fix the app\'s biggest complaint.',
+      title: 'Effortless Class Booking',
+      body: 'A simplified booking flow makes it easy to browse schedules, compare classes, and reserve a spot in just a few taps.',
     },
     {
-      title: 'Schedule management',
-      body: 'Reminders, cancellations, and confirmations rebuilt to be unambiguous — no more guessing whether a booking actually went through.',
+      title: 'Waitlist Without the Frustration',
+      body: 'When classes reach capacity, members can instantly join the waitlist and receive updates instead of repeatedly checking availability.',
     },
     {
-      title: 'User profile',
-      body: 'Preferences, favorite instructors, and booking history in one place, so the app remembers what a member already told it.',
+      title: 'On-Demand Learning Library & Profile',
+      body: 'Members can browse a curated library of free yoga, barre, and wellness videos, check the latest studio events, and manage their profile — preferences, history, and all — in one place.',
     },
   ],
 
