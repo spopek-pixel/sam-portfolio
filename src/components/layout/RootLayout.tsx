@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { Outlet, useLocation } from 'react-router-dom'
 import { Navbar } from './Navbar'
@@ -27,7 +27,9 @@ export function RootLayout() {
       <AnimatePresence mode="wait">
         <PageTransition key={location.pathname}>
           <main id="main-content">
-            <Outlet />
+            <Suspense fallback={<div className="min-h-screen" />}>
+              <Outlet />
+            </Suspense>
           </main>
         </PageTransition>
       </AnimatePresence>
