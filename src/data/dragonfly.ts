@@ -108,6 +108,20 @@ export const dragonfly = {
     },
   },
 
+  claudeProcess: {
+    goal: 'get the AI recommendation feature to feel trustworthy, not just smart.',
+    usedFor: [
+      'Pressure-testing whether the reasoning copy read as helpful or as surveillance',
+      'Exploring how to surface "why this recommendation" without another modal or hidden menu',
+      'Iterating on the hotspot-callout pattern used to explain the feature on this page',
+    ],
+    did: [
+      'Rewrote the plain-language reasoning until it sounded like a person, not a data dump',
+      'Decided against showing a bare confidence score — a percentage with no explanation is just a bigger "trust me"',
+      'Kept the final call on tone and hierarchy — Claude Code proposed options, I picked the one that matched the rest of the app',
+    ],
+  },
+
   finalExperience: [
     {
       title: 'Welcome Experience',

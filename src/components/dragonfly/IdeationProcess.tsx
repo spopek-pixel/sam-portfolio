@@ -150,7 +150,7 @@ export function IdeationProcess() {
             <div>
               <StageHeader index={4} icon={Waypoints} title={taskFlows.title} />
               <p className="mb-5 max-w-2xl text-sm leading-relaxed text-fg-muted">{taskFlows.body}</p>
-              <div className="flex flex-col gap-4">
+              <div className="mx-auto flex max-w-2xl flex-col gap-4">
                 {taskFlowImages.map((flow, i) => (
                   <Reveal key={flow.label} delay={i * 0.08}>
                     <Lightbox src={flow.src} alt={flow.label}>
