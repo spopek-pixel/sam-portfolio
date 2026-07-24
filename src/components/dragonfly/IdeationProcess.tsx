@@ -77,18 +77,13 @@ function FramedZoomImage({ src, className }: { src: string; className?: string }
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.06])
+  const alt = 'Miro brainstorm board — 5 themes, 25 ideas'
 
   return (
     <div ref={ref} className={cn('overflow-hidden rounded-2xl border border-line bg-surface/60 p-2', className)}>
-      <div className="overflow-hidden rounded-xl">
-        <motion.img
-          src={src}
-          alt="Miro brainstorm board — 5 themes, 25 ideas"
-          className="aspect-[4/3] w-full object-cover"
-          loading="lazy"
-          style={{ scale }}
-        />
-      </div>
+      <Lightbox src={src} alt={alt} triggerClassName="overflow-hidden rounded-xl">
+        <motion.img src={src} alt={alt} className="aspect-[4/3] w-full object-cover" loading="lazy" style={{ scale }} />
+      </Lightbox>
     </div>
   )
 }
@@ -191,7 +186,7 @@ export function IdeationProcess() {
 
           {/* 6. Wireframes — two-image gallery, matching sketches' weight */}
           <Reveal delay={0.22}>
-            <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-8">
+            <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-8">
               <div>
                 <StageHeader index={6} icon={LayoutTemplate} title={wireframe.title} />
                 <p className="text-sm leading-relaxed text-fg-muted">{wireframe.body}</p>

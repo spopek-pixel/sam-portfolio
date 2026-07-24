@@ -1,11 +1,11 @@
-import { ArrowUpRight, MonitorSmartphone } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { dragonfly } from '@/data/dragonfly'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
-import { ArtifactPlaceholder } from '@/components/housingkind/ArtifactPlaceholder'
+import dragonflyRecording from '@/assets/images/projects/dragonfly-yoga/dragonfly_recording.mp4'
 
 export function PrototypeShowcase() {
-  const { body } = dragonfly.prototype
+  const { body, videoNote } = dragonfly.prototype
 
   return (
     <section className="px-6 py-8 sm:px-10 sm:py-12">
@@ -13,14 +13,20 @@ export function PrototypeShowcase() {
         <SectionHeading kicker="Prototype" title="See it in motion." description={body} className="mb-10 max-w-2xl" />
 
         <Reveal>
-          <ArtifactPlaceholder
-            label="Interactive prototype preview"
-            icon={MonitorSmartphone}
-            className="mx-auto aspect-[16/10] w-full max-w-4xl"
+          <video
+            src={dragonflyRecording}
+            controls
+            playsInline
+            preload="metadata"
+            className="mx-auto max-h-[600px] w-full max-w-sm rounded-2xl border border-line shadow-[0_25px_60px_rgba(0,0,0,0.45)]"
           />
         </Reveal>
 
-        <Reveal delay={0.1}>
+        <Reveal delay={0.08}>
+          <p className="mx-auto mt-6 max-w-xl text-center text-sm leading-relaxed text-fg-muted">{videoNote}</p>
+        </Reveal>
+
+        <Reveal delay={0.14}>
           <div className="mt-6 flex justify-center">
             {/* TODO: placeholder href — swap in the real Figma prototype link when ready */}
             <a

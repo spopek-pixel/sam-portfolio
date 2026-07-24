@@ -1,12 +1,12 @@
-import { CalendarCheck, Info, Quote, Search, Sparkles, TrendingUp } from 'lucide-react'
+import { CalendarCheck, Quote, Search, Sparkles } from 'lucide-react'
 import { dragonfly } from '@/data/dragonfly'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
 
-const insightIcons = { Search, CalendarCheck, Sparkles, Info, TrendingUp }
+const insightIcons = { Search, CalendarCheck, Sparkles }
 
 export function UserInterviews() {
-  const { intro, participants, insightGroups, takeaway } = dragonfly.userInterviews
+  const { intro, participants, standoutInsights, takeaway } = dragonfly.userInterviews
 
   return (
     <section className="px-6 py-8 sm:px-10 sm:py-12">
@@ -30,26 +30,21 @@ export function UserInterviews() {
           ))}
         </div>
 
-        <div className="mt-14">
+        <div className="mt-16 border-t border-line pt-12">
           <Reveal>
-            <h3 className="kicker mb-6">Key insights pulled from these interviews</h3>
+            <h3 className="kicker mb-8">What stood out most</h3>
           </Reveal>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {insightGroups.map((group, index) => {
-              const Icon = insightIcons[group.icon as keyof typeof insightIcons]
+          <div className="grid gap-10 sm:grid-cols-3 sm:divide-x sm:divide-line">
+            {standoutInsights.map((insight, index) => {
+              const Icon = insightIcons[insight.icon as keyof typeof insightIcons]
               return (
-                <Reveal key={group.title} delay={index * 0.06} className="h-full">
-                  <div className="flex h-full flex-col gap-3 rounded-2xl border border-line bg-surface/60 p-6">
-                    <Icon size={20} className="text-acid" />
-                    <h4 className="font-medium">{group.title}</h4>
-                    <ul className="flex flex-col gap-2">
-                      {group.items.map((item) => (
-                        <li key={item} className="flex gap-2.5 text-sm text-fg-muted">
-                          <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-violet-tint" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
+                <Reveal key={insight.title} delay={index * 0.08}>
+                  <div className="flex flex-col gap-4 sm:px-8 sm:first:pl-0">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-acid/10">
+                      <Icon size={22} className="text-acid" />
+                    </div>
+                    <h4 className="text-lg font-medium">{insight.title}</h4>
+                    <p className="text-sm leading-relaxed text-fg-muted">{insight.body}</p>
                   </div>
                 </Reveal>
               )

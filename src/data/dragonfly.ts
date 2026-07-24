@@ -83,44 +83,21 @@ export const dragonfly = {
           'It should feel personal. Recommend classes, remember my favorites, show upcoming bookings clearly, and make everything easy to find.',
       },
     ],
-    insightGroups: [
+    standoutInsights: [
       {
-        title: 'Finding classes',
-        icon: 'Search',
-        items: [
-          'Users want quicker access to classes they frequently attend.',
-          'New members struggle to identify beginner-friendly options.',
-        ],
+        title: 'Personalization',
+        icon: 'Sparkles',
+        body: 'Every member expected the app to remember them — favorite instructors, past bookings, recommendations — without being asked twice.',
       },
       {
         title: 'Booking experience',
         icon: 'CalendarCheck',
-        items: [
-          'Waitlist uncertainty creates frustration.',
-          'Booking requires more taps than users expect.',
-          'Reminder notifications could be more helpful.',
-        ],
+        body: 'Waitlist uncertainty and too many taps turned a quick decision into a gamble members wanted to avoid.',
       },
       {
-        title: 'Personalization',
-        icon: 'Sparkles',
-        items: [
-          'Members expect recommendations based on previous bookings.',
-          'Users want favorite instructors and classes surfaced automatically.',
-        ],
-      },
-      {
-        title: 'Information',
-        icon: 'Info',
-        items: [
-          'Users want clearer difficulty levels, heat intensity, and class descriptions.',
-          'Studio amenities and what to bring should be easier to find.',
-        ],
-      },
-      {
-        title: 'Motivation',
-        icon: 'TrendingUp',
-        items: ['Members would enjoy progress tracking, streaks, and personalized milestones.'],
+        title: 'Finding classes',
+        icon: 'Search',
+        body: "Members wanted their most-booked classes to surface first, and new members couldn't tell what was beginner-friendly until they were already in it.",
       },
     ],
     takeaway:
@@ -225,17 +202,18 @@ export const dragonfly = {
   },
 
   claudeProcess: {
-    goal: 'get the AI recommendation feature to feel trustworthy, not just smart.',
+    goal: 'iterate through fast design options for the AI recommendation feature instead of committing to the first idea.',
     usedFor: [
+      'Generating quick layout variations of the "Suggested for you" screen to compare side by side',
       'Pressure-testing whether the reasoning copy read as helpful or as surveillance',
       'Exploring how to surface "why this recommendation" without another modal or hidden menu',
-      'Iterating on the hotspot-callout pattern used to explain the feature on this page',
     ],
     did: [
+      'Picked the direction that led with the "why" explanation over the one that led with the match score alone',
       'Rewrote the plain-language reasoning until it sounded like a person, not a data dump',
-      'Decided against showing a bare confidence score — a percentage with no explanation is just a bigger "trust me"',
-      'Kept the final call on tone and hierarchy — Claude Code proposed options, I picked the one that matched the rest of the app',
+      'Kept the final call on tone and hierarchy — Claude proposed options, I picked the one that matched the rest of the app',
     ],
+    comparisonNote: 'Three early directions explored with Claude, next to the one that shipped.',
   },
 
   finalExperience: [
@@ -285,6 +263,8 @@ export const dragonfly = {
 
   prototype: {
     body: 'An interactive Figma prototype walks through all three core flows — onboarding, booking, and waitlist management — end to end.',
+    videoNote:
+      'Every round of this prototype went back in front of real Dragonfly members before moving forward — watching where they hesitated, what they misread, and what they reached for first — so each iteration answered a real question instead of a guess.',
   },
 
   impact: {
