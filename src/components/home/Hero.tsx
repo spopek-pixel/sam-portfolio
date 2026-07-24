@@ -26,7 +26,7 @@ export function Hero() {
   return (
     <section
       onMouseMove={handleMouseMove}
-      className="relative overflow-hidden px-6 pb-14 pt-32 sm:px-10 sm:pb-20 sm:pt-40"
+      className="relative overflow-hidden px-6 pb-28 pt-32 sm:px-10 sm:pb-36 sm:pt-40"
     >
       <NoiseOverlay />
       <motion.div style={{ x: blobOneX, y: blobOneY }}>
@@ -61,7 +61,7 @@ export function Hero() {
           >
             I combine UX research, product thinking, front-end development, and AI to turn
             complex ideas into digital products that solve real problems. Every project begins
-            with understanding people — not just designing interfaces.
+            with real people and ends with work that meets real business requirements.
           </motion.p>
 
           <motion.div
@@ -93,7 +93,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: reducedMotion ? 0 : [0, 8, 0] }}
         transition={{ opacity: { delay: 1, duration: 0.6 }, y: { repeat: reducedMotion ? 0 : Infinity, duration: 2, ease: 'easeInOut' } }}
-        className="absolute inset-x-0 bottom-6 z-10 mx-auto flex w-fit items-center gap-2 font-mono text-xs uppercase tracking-widest text-fg-muted sm:bottom-10"
+        className="absolute inset-x-0 bottom-4 z-10 mx-auto flex w-fit items-center gap-2 font-mono text-xs uppercase tracking-widest text-fg-muted sm:bottom-6"
       >
         <ArrowDown size={14} /> Scroll
       </motion.div>

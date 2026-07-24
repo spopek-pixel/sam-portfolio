@@ -15,7 +15,7 @@ const photos = [
   { keyword: 'football', caption: 'Hoosier football season', rotate: '-rotate-1' },
   { keyword: '3d-print', caption: '3D printing my own designs', rotate: 'rotate-2' },
   { keyword: 'laser-cut', caption: 'Laser cutting a dinosaur (yes, really)', rotate: '-rotate-2' },
-  { keyword: 'building1', caption: 'Experimenting with new tools & skills', rotate: 'rotate-1' },
+  { keyword: 'building1', caption: 'Experimenting with new tools & skills', rotate: 'rotate-1', objectPosition: 'object-left' },
 ]
 
 export function PhotoCollage() {
@@ -31,7 +31,12 @@ export function PhotoCollage() {
                 <div className={cn('flex flex-col gap-3 transition-transform hover:rotate-0', photo.rotate)}>
                   <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-surface-raised to-surface">
                     {image ? (
-                      <img src={image} alt={photo.caption} className="h-full w-full object-cover" loading="lazy" />
+                      <img
+                        src={image}
+                        alt={photo.caption}
+                        className={cn('h-full w-full object-cover', photo.objectPosition)}
+                        loading="lazy"
+                      />
                     ) : (
                       <div className="flex h-full w-full items-center justify-center p-4 text-center font-mono text-xs uppercase tracking-wider text-fg-muted">
                         {photo.caption}

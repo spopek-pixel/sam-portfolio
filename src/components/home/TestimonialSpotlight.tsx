@@ -17,21 +17,26 @@ const testimonials = [
   },
   {
     quote:
-      'Sam asks the question everyone else in the room is quietly avoiding — and the work is always better for it.',
-    name: 'Dr. Renee Aldrich',
-    role: 'Faculty Advisor, UW–Madison Design + Innovation',
-  },
-  {
-    quote:
-      "What stood out was that she didn't just hand us a Figma file — she understood our booking system well enough to argue with our engineers about it.",
-    name: 'Jordan Pak',
-    role: 'Stakeholder, Dragonfly Yoga',
-  },
-  {
-    quote:
       "Most designers stop at the mockup. Sam kept going until it was a real, working product she could put in front of us.",
     name: 'Obid Ochilov',
     role: 'Teammate, Housingkind',
+  },
+  {
+    quote:
+      "Sam thinks in systems, not just screens — that's exactly the kind of designer this moment needs.",
+    name: 'Bruce Mau',
+    role: 'CEO & Co-Founder, Massive Change Network',
+  },
+  {
+    quote:
+      "She came in eager to learn and left having genuinely sharpened how our team thought about campaign clarity.",
+    name: 'Matthew Becker',
+    role: 'Associate Creative Director, OUTFRONT Media',
+  },
+  {
+    quote: "Sam has an eye for hierarchy most designers spend years developing — she already has it.",
+    name: 'Sarah Barcelos',
+    role: 'Art Director, OUTFRONT Media',
   },
 ]
 

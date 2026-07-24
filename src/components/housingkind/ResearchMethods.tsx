@@ -15,7 +15,7 @@ export function ResearchMethods() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="Research" title="Research methods." className="mb-8" />
 
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-stretch lg:gap-12">
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-12">
           <div className="flex flex-col gap-5">
             {methods.map((method, index) => {
               const Icon = icons[index]
@@ -33,15 +33,15 @@ export function ResearchMethods() {
             })}
           </div>
 
-          <Reveal delay={0.2} className="h-full">
-            <figure className="flex h-full flex-col">
+          <Reveal delay={0.2}>
+            <figure>
               <ArtifactPlaceholder
                 image={houseMeetPhoto}
                 label="Ideation session photo"
                 icon={Camera}
-                className="aspect-[4/3] w-full lg:aspect-auto lg:min-h-0 lg:flex-1"
+                className="aspect-video w-full"
               />
-              <figcaption className="mt-3 shrink-0 text-sm text-fg-muted">{photoCaption}</figcaption>
+              <figcaption className="mt-3 text-sm text-fg-muted">{photoCaption}</figcaption>
             </figure>
           </Reveal>
         </div>

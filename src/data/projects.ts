@@ -68,11 +68,12 @@ export const projects: Project[] = [
     accent: 'mint',
     variant: 'case-study',
     featured: true,
-    // TODO: paste the real URLs to show the hero buttons — they stay hidden while this is empty
-    // links: [
-    //   { label: 'Visit Housingkind', href: 'https://…' },
-    //   { label: 'View in Figma', href: 'https://…' },
-    // ],
+    // TODO: placeholder hrefs — swap in the real URLs when ready
+    links: [
+      { label: 'Live Site', href: '#' },
+      { label: 'Figma', href: '#' },
+      { label: 'GitHub', href: '#' },
+    ],
     problem:
       "Communities say they want walkable, affordable neighborhoods — then organize against the very housing that would make that possible. Across fifteen-plus interviews with developers, city council members, advocates, and residents, one line kept surfacing, almost word for word: people fear what they cannot see. Developers had the data. Residents had the anxiety. Nobody had a shared way to picture what missing-middle housing would actually look like on their own block, so every zoning meeting turned into a fight over imagination instead of a conversation about design.",
     research: [

@@ -18,7 +18,7 @@ export function FeaturedWork() {
                 Case studies, not just <span className="text-gradient">screens.</span>
               </>
             }
-            description="Three projects that show the full arc — research, decisions, and the interface that came out of them."
+            description="Every case study here started with a real constraint — a housing crisis, a booking flow nobody trusted, a safety app students actually needed — and ends with something I designed, decided on, and, more often than not, built myself."
           />
           <Reveal delay={0.1}>
             <LinkButton href="/work" variant="secondary" className="whitespace-nowrap">

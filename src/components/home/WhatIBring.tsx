@@ -39,15 +39,25 @@ export function WhatIBring() {
   return (
     <section className="px-6 py-16 sm:px-10 sm:py-20">
       <div className="mx-auto flex max-w-6xl flex-col gap-14">
-        <SectionHeading
-          kicker="Why hire me"
-          title={
-            <>
-              What I <span className="text-gradient">bring.</span>
-            </>
-          }
-          description="I'm endlessly curious — the kind of person who picks up a new tool or skill because I want to understand it, not because a job description asked me to. That's why I taught myself to code, why I got into AI tooling early, and why I'm rarely doing the same thing twice. I move fluidly between research, design, and code, and I'm just as comfortable learning fast on my own as I am pairing closely with engineers and PMs on a team."
-        />
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-12">
+          <SectionHeading
+            kicker="Why hire me"
+            title={
+              <>
+                What I <span className="text-gradient">bring.</span>
+              </>
+            }
+          />
+          <Reveal delay={0.12}>
+            <p className="text-lg text-fg-muted">
+              I'm endlessly curious — the kind of person who picks up a new tool or skill because I want to
+              understand it, not because a job description asked me to. That's why I taught myself to code, why I got
+              into AI tooling early, and why I'm rarely doing the same thing twice. I move fluidly between research,
+              design, and code, and I'm just as comfortable learning fast on my own as I am pairing closely with
+              engineers and PMs on a team.
+            </p>
+          </Reveal>
+        </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {pillars.map((pillar, index) => (

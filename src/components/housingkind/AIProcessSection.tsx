@@ -1,8 +1,9 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { housingkind } from '@/data/housingkind'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
+import { LinkButton } from '@/components/ui/Button'
 import { usePrefersReducedMotion } from '@/hooks/useReducedMotion'
 import { cn } from '@/lib/utils'
 import figmaMakeBefore from '@/assets/images/projects/housingkind/figma_make_before.png'
@@ -88,6 +89,15 @@ export function AIProcessSection() {
             </motion.div>
           ))}
         </motion.div>
+
+        <Reveal delay={0.14}>
+          <div className="mt-6 flex justify-center">
+            {/* TODO: placeholder href — swap in the real Figma Make link when ready */}
+            <LinkButton href="#" target="_blank" rel="noreferrer" variant="secondary" className="px-5 py-2.5 text-sm">
+              View in Figma Make <ArrowUpRight size={16} />
+            </LinkButton>
+          </div>
+        </Reveal>
 
         <Reveal delay={0.18}>
           <p className="mx-auto mt-12 max-w-2xl text-center text-fg-muted">{comparisonNote}</p>
