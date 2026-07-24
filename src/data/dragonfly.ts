@@ -91,8 +91,6 @@ export const dragonfly = {
     taskFlows: {
       title: 'Task flows',
       body: 'Mapping the core task flows by hand — onboarding & personalization, booking a class, and managing an existing booking — before touching Figma kept the early debates about structure, not visual polish.',
-      // TODO: drop in the real task flow diagram here once it's ready — the component picks it up automatically.
-      image: undefined as string | undefined,
     },
     sketches: {
       title: 'Screen sketches',

@@ -16,9 +16,19 @@ import task2 from '@/assets/images/projects/dragonfly-yoga/task2.png'
 import task3 from '@/assets/images/projects/dragonfly-yoga/task3.png'
 import wireframeImg from '@/assets/images/projects/dragonfly-yoga/wireframe.png'
 import wireframe2Img from '@/assets/images/projects/dragonfly-yoga/wireframe2.png'
+import taskflow1 from '@/assets/images/projects/dragonfly-yoga/taskflow1.png'
+import taskflow2 from '@/assets/images/projects/dragonfly-yoga/taskflow2.png'
+import taskflow3 from '@/assets/images/projects/dragonfly-yoga/taskflow3.png'
+import taskflow5 from '@/assets/images/projects/dragonfly-yoga/taskflow5.png'
 
 const sketchImages = [task1, task2, task3]
 const wireframeImages = [wireframeImg, wireframe2Img]
+const taskFlowImages = [
+  { src: taskflow1, label: 'Task Flow 1 — Onboarding & Personalization Setup' },
+  { src: taskflow2, label: 'Task Flow 2 — Booking a Recommended Class' },
+  { src: taskflow3, label: 'Task Flow 3 — Viewing Alternative Recommendations' },
+  { src: taskflow5, label: 'Task Flow 5 — Discovering New Class Types' },
+]
 
 function StageHeader({ index, icon: Icon, title }: { index: number; icon: typeof StickyNote; title: string }) {
   return (
@@ -81,40 +91,6 @@ function FramedZoomImage({ src, className }: { src: string; className?: string }
   )
 }
 
-function TaskFlowPlaceholder() {
-  const nodes = [
-    { x: 30, label: 'Home' },
-    { x: 130, label: 'Details' },
-    { x: 230, label: 'Confirm' },
-    { x: 330, label: 'Booked' },
-  ]
-
-  return (
-    <div className="mx-auto flex aspect-[2/1] w-full max-w-2xl flex-col items-center justify-center gap-4 rounded-2xl border border-dashed border-line bg-surface/40 p-6 text-center">
-      <svg viewBox="0 0 360 60" className="w-full max-w-sm" aria-hidden>
-        <motion.path
-          d="M30 30 H330"
-          stroke="var(--color-violet-tint)"
-          strokeOpacity={0.4}
-          strokeWidth={2}
-          strokeDasharray="6 8"
-          fill="none"
-          animate={{ strokeDashoffset: [0, -28] }}
-          transition={{ duration: 2.4, repeat: Infinity, ease: 'linear' }}
-        />
-        {nodes.map((node) => (
-          <g key={node.label}>
-            <circle cx={node.x} cy={30} r={9} fill="var(--color-ink)" stroke="var(--color-violet-tint)" strokeWidth={1.5} />
-          </g>
-        ))}
-      </svg>
-      <span className="font-mono text-[11px] uppercase tracking-wider text-fg-muted/70">
-        Full task flow diagram — coming soon
-      </span>
-    </div>
-  )
-}
-
 export function IdeationProcess() {
   const { earlyIdeation, conceptExploration, storyboard, taskFlows, sketches, wireframe, aiDesign } = dragonfly.ideationProcess
 
@@ -167,20 +143,25 @@ export function IdeationProcess() {
             </div>
           </Reveal>
 
-          {/* 4. Task flows — animated placeholder, or the real diagram once supplied */}
+          {/* 4. Task flows — real diagrams, uniform size, zoomable */}
           <Reveal delay={0.14}>
             <div>
               <StageHeader index={4} icon={Waypoints} title={taskFlows.title} />
               <p className="mb-5 max-w-2xl text-sm leading-relaxed text-fg-muted">{taskFlows.body}</p>
-              {taskFlows.image ? (
-                <Lightbox src={taskFlows.image} alt="Full task flow diagram" triggerClassName="mx-auto block w-full max-w-2xl">
-                  <div className="overflow-hidden rounded-2xl border border-line">
-                    <img src={taskFlows.image} alt="" className="w-full" loading="lazy" />
-                  </div>
-                </Lightbox>
-              ) : (
-                <TaskFlowPlaceholder />
-              )}
+              <div className="flex flex-col gap-4">
+                {taskFlowImages.map((flow, i) => (
+                  <Reveal key={flow.label} delay={i * 0.08}>
+                    <Lightbox src={flow.src} alt={flow.label}>
+                      <img
+                        src={flow.src}
+                        alt={flow.label}
+                        className="aspect-[3/1] w-full rounded-2xl border border-line bg-white object-cover"
+                        loading="lazy"
+                      />
+                    </Lightbox>
+                  </Reveal>
+                ))}
+              </div>
             </div>
           </Reveal>
 
