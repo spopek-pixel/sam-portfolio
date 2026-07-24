@@ -213,7 +213,9 @@ export const dragonfly = {
       'Rewrote the plain-language reasoning until it sounded like a person, not a data dump',
       'Kept the final call on tone and hierarchy — Claude proposed options, I picked the one that matched the rest of the app',
     ],
-    comparisonNote: 'Three early directions explored with Claude, next to the one that shipped.',
+    explorationTitle: 'AI recommendation exploration',
+    explorationBody:
+      'Rapid concepts generated with Claude accelerated exploration, allowing multiple recommendation layouts to be evaluated before refining the final experience.',
   },
 
   finalExperience: [
