@@ -68,9 +68,9 @@ export const projects: Project[] = [
     accent: 'mint',
     variant: 'case-study',
     featured: true,
-    // TODO: placeholder hrefs — swap in the real URLs when ready
+    // TODO: swap in the real Figma/GitHub URLs when ready
     links: [
-      { label: 'Live Site', href: '#' },
+      { label: 'Live Site', href: 'https://www.housingkind.org/' },
       { label: 'Figma', href: '#' },
       { label: 'GitHub', href: '#' },
     ],

@@ -56,24 +56,29 @@ export function CaseStudyHero({ project }: { project: Project }) {
               </Reveal>
             )}
 
-            {project.links && project.links.length > 0 && (
-              <Reveal delay={0.24}>
-                <div className="flex flex-wrap gap-3">
-                  {project.links.map((link, index) => (
-                    <LinkButton
-                      key={link.label}
-                      href={link.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      variant={index === 0 ? 'primary' : 'secondary'}
-                      className="px-5 py-2.5 text-sm"
-                    >
-                      {link.label} <ArrowUpRight size={16} />
-                    </LinkButton>
-                  ))}
-                </div>
-              </Reveal>
-            )}
+            {(() => {
+              const readyLinks = project.links?.filter((link) => link.href !== '#') ?? []
+              return (
+                readyLinks.length > 0 && (
+                  <Reveal delay={0.24}>
+                    <div className="flex flex-wrap gap-3">
+                      {readyLinks.map((link, index) => (
+                        <LinkButton
+                          key={link.label}
+                          href={link.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          variant={index === 0 ? 'primary' : 'secondary'}
+                          className="px-5 py-2.5 text-sm"
+                        >
+                          {link.label} <ArrowUpRight size={16} />
+                        </LinkButton>
+                      ))}
+                    </div>
+                  </Reveal>
+                )
+              )
+            })()}
 
             <Reveal delay={0.28}>
               <div className="grid grid-cols-2 gap-6 border-t border-line pt-6">
