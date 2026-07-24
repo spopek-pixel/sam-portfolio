@@ -1,28 +1,28 @@
-import { UserRound } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { dragonfly } from '@/data/dragonfly'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
-import onboardingGoal from '@/assets/images/projects/dragonfly-yoga/onboarding8.png'
+import onboard3 from '@/assets/images/projects/dragonfly-yoga/onboard_3.png'
 import aiScreen1 from '@/assets/images/projects/dragonfly-yoga/ai_screen1.png'
 import wireframeImg from '@/assets/images/projects/dragonfly-yoga/wireframe.png'
 import wireframe2Img from '@/assets/images/projects/dragonfly-yoga/wireframe2.png'
+import otherNav from '@/assets/images/projects/dragonfly-yoga/other_nav.png'
 
 interface CardVisual {
-  kind: 'image' | 'crop' | 'placeholder'
-  src?: string
+  kind: 'image' | 'crop'
+  src: string
   position?: string
   size?: string
   badge?: string
 }
 
 const visuals: CardVisual[] = [
-  { kind: 'image', src: onboardingGoal },
+  { kind: 'image', src: onboard3 },
   { kind: 'crop', src: wireframeImg, position: '14% 22%', size: '280% auto', badge: 'Wireframe' },
   { kind: 'image', src: aiScreen1 },
   { kind: 'crop', src: wireframe2Img, position: '46% 78%', size: '280% auto', badge: 'Wireframe' },
   { kind: 'crop', src: wireframeImg, position: '86% 24%', size: '280% auto', badge: 'Wireframe' },
-  { kind: 'placeholder' },
+  { kind: 'image', src: otherNav },
 ]
 
 export function FinalExperience() {
@@ -44,12 +44,7 @@ export function FinalExperience() {
                   className="group flex h-full flex-col gap-5 overflow-hidden rounded-2xl border border-line bg-surface/60 p-5"
                 >
                   <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-line bg-surface">
-                    {visual.kind === 'placeholder' ? (
-                      <div className="flex h-full flex-col items-center justify-center gap-2 text-center">
-                        <UserRound size={28} className="text-fg-muted/50" />
-                        <span className="font-mono text-[11px] uppercase tracking-wider text-fg-muted/70">UI coming soon</span>
-                      </div>
-                    ) : visual.kind === 'image' ? (
+                    {visual.kind === 'image' ? (
                       <img
                         src={visual.src}
                         alt={`${feature.title} screen`}
