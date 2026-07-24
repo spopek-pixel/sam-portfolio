@@ -30,6 +30,7 @@ import { HousingkindReflection } from '@/components/housingkind/HousingkindRefle
 import { DragonflyTheme } from '@/components/dragonfly/DragonflyTheme'
 import { DragonflyHero } from '@/components/dragonfly/DragonflyHero'
 import { Overview } from '@/components/dragonfly/Overview'
+import { UserInterviews } from '@/components/dragonfly/UserInterviews'
 import { Challenge } from '@/components/dragonfly/Challenge'
 import { KeyInsights } from '@/components/dragonfly/KeyInsights'
 import { DesignPrinciplesOrbit } from '@/components/dragonfly/DesignPrinciplesOrbit'
@@ -37,7 +38,6 @@ import { IdeationProcess } from '@/components/dragonfly/IdeationProcess'
 import { ClaudeProcessSection } from '@/components/dragonfly/ClaudeProcessSection'
 import { FinalExperience } from '@/components/dragonfly/FinalExperience'
 import { DesignSystemShowcase } from '@/components/dragonfly/DesignSystemShowcase'
-import { OnboardingCarousel } from '@/components/dragonfly/OnboardingCarousel'
 import { PrototypeShowcase } from '@/components/dragonfly/PrototypeShowcase'
 import { ImpactSection } from '@/components/dragonfly/ImpactSection'
 import { DragonflyReflection } from '@/components/dragonfly/DragonflyReflection'
@@ -82,14 +82,14 @@ export default function ProjectDetail() {
         <DragonflyTheme>
           <DragonflyHero project={project} />
           <Overview />
+          <UserInterviews />
           <Challenge />
           <KeyInsights />
           <DesignPrinciplesOrbit />
+          <DesignSystemShowcase />
           <IdeationProcess />
           <ClaudeProcessSection />
           <FinalExperience />
-          <DesignSystemShowcase />
-          <OnboardingCarousel />
           <PrototypeShowcase />
           <ImpactSection />
           <DragonflyReflection />

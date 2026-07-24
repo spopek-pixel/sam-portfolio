@@ -11,6 +11,122 @@ export const dragonfly = {
     hmw: 'How might we help Dragonfly members and newcomers easily explore, book, and manage classes so they feel motivated to maintain a consistent yoga practice?',
   },
 
+  userInterviews: {
+    intro:
+      'Before sketching anything, I sat down with 12 real Dragonfly members — a mix of new, weekly, and multi-year regulars — to hear how they actually use the app, not how I assumed they did.',
+    participants: [
+      {
+        role: 'Member for 2 years',
+        question: 'Tell me about the last time you used the Dragonfly app.',
+        quote:
+          "I usually open it just to book a class, but I have to click around more than I'd like. I wish the classes I take most often showed up first.",
+      },
+      {
+        role: 'New Member',
+        question: 'What was confusing when you first downloaded the app?',
+        quote:
+          "I didn't know which class was beginner-friendly. Everything looked similar, so I ended up Googling the instructors instead.",
+      },
+      {
+        role: 'Weekly Member',
+        question: "What's the biggest frustration with booking?",
+        quote:
+          "The waitlist. I never know if I actually have a chance of getting in or if I should just book another class.",
+      },
+      {
+        role: 'Busy Professional',
+        question: 'How do you usually decide which class to attend?',
+        quote:
+          "Mostly based on time. It would be nice if the app recommended classes based on my schedule or the instructors I've taken before.",
+      },
+      {
+        role: 'New to Hot Yoga',
+        question: 'What information do you look for before class?',
+        quote:
+          "I want to know how difficult the class is, how hot the room gets, and what I should bring. That information isn't obvious.",
+      },
+      {
+        role: 'Longtime Member',
+        question: 'Is there anything you wish the app remembered?',
+        quote: "I always take Sculpt with the same instructor. I wish it remembered that and made booking faster.",
+      },
+      {
+        role: 'Occasional Member',
+        question: 'Have you ever missed a class? Why?',
+        quote: "Yes. Sometimes I forget I booked it because the reminders aren't very noticeable.",
+      },
+      {
+        role: 'Fitness Enthusiast',
+        question: 'If you could add one feature, what would it be?',
+        quote:
+          "Personalized recommendations. If I liked one class, suggest similar ones instead of making me search every time.",
+      },
+      {
+        role: 'Student',
+        question: 'How do you feel about the current navigation?',
+        quote: "It's functional, but it feels outdated. It takes too many taps to get where I want to go.",
+      },
+      {
+        role: 'Frequent Visitor',
+        question: 'What would make you use the app more often?',
+        quote: "Progress tracking. I'd love to see how many classes I've taken, streaks, or milestones.",
+      },
+      {
+        role: 'Parent',
+        question: 'What makes booking difficult?',
+        quote: "I'm usually booking while juggling other things. I need it to be really fast, with fewer steps.",
+      },
+      {
+        role: 'Returning Member',
+        question: 'What do you expect from a modern fitness app?',
+        quote:
+          'It should feel personal. Recommend classes, remember my favorites, show upcoming bookings clearly, and make everything easy to find.',
+      },
+    ],
+    insightGroups: [
+      {
+        title: 'Finding classes',
+        icon: 'Search',
+        items: [
+          'Users want quicker access to classes they frequently attend.',
+          'New members struggle to identify beginner-friendly options.',
+        ],
+      },
+      {
+        title: 'Booking experience',
+        icon: 'CalendarCheck',
+        items: [
+          'Waitlist uncertainty creates frustration.',
+          'Booking requires more taps than users expect.',
+          'Reminder notifications could be more helpful.',
+        ],
+      },
+      {
+        title: 'Personalization',
+        icon: 'Sparkles',
+        items: [
+          'Members expect recommendations based on previous bookings.',
+          'Users want favorite instructors and classes surfaced automatically.',
+        ],
+      },
+      {
+        title: 'Information',
+        icon: 'Info',
+        items: [
+          'Users want clearer difficulty levels, heat intensity, and class descriptions.',
+          'Studio amenities and what to bring should be easier to find.',
+        ],
+      },
+      {
+        title: 'Motivation',
+        icon: 'TrendingUp',
+        items: ['Members would enjoy progress tracking, streaks, and personalized milestones.'],
+      },
+    ],
+    takeaway:
+      'These patterns line up directly with the redesign: AI-powered recommendations, streamlined booking, improved onboarding, and a more personalized member experience.',
+  },
+
   challenge: {
     intro:
       'The existing Dragonfly experience is a video-on-demand site bolted onto a booking flow — not a product built around how members actually decide to show up. It\'s the experience I set out to replace.',
@@ -148,22 +264,6 @@ export const dragonfly = {
       body: 'Members can browse a curated library of free yoga, barre, and wellness videos, check the latest studio events, and manage their profile — preferences, history, and all — in one place.',
     },
   ],
-
-  onboarding: {
-    intro:
-      'This is where the visual system does its heaviest lifting — nine screens carrying a new member from a cold open to a personalized home feed, using warm illustration, a confident color palette, and copy that sounds like a person instead of a form.',
-    captions: [
-      'Welcome — the first brand moment a new member sees.',
-      'Intro — "Learning to Relax," setting the emotional tone before any sign-up friction.',
-      'Intro — "Your Healthy," building toward the habit, not just the class.',
-      'Intro — "Your Yoga," finding a pace instead of a pressure.',
-      'Sign-up — email, Facebook, or Google, kept to one clear decision.',
-      'Account setup — connecting an email without making it feel like paperwork.',
-      'Location — choosing a home studio in two taps.',
-      'Personalization — "What\'s your goal?" the first input the recommendation engine actually uses.',
-      'Personalization — experience level, so day one never feels like a guru\'s class.',
-    ],
-  },
 
   designSystem: {
     intro:
