@@ -8,8 +8,6 @@ import { OutcomeSection } from '@/components/work/OutcomeSection'
 import { ReflectionSection } from '@/components/work/ReflectionSection'
 import { MockupGallery } from '@/components/work/MockupGallery'
 import { VisualGallery } from '@/components/work/VisualGallery'
-import { ClientCaseStudies } from '@/components/work/ClientCaseStudies'
-import { ClientTestimonials } from '@/components/work/ClientTestimonials'
 import { NextProjectNav } from '@/components/work/NextProjectNav'
 import { Deliverables } from '@/components/work/Deliverables'
 import { ProductStrategy } from '@/components/housingkind/ProductStrategy'
@@ -43,6 +41,13 @@ import { DesignSystemShowcase } from '@/components/dragonfly/DesignSystemShowcas
 import { PrototypeShowcase } from '@/components/dragonfly/PrototypeShowcase'
 import { ImpactSection } from '@/components/dragonfly/ImpactSection'
 import { DragonflyReflection } from '@/components/dragonfly/DragonflyReflection'
+import { OutfrontHero } from '@/components/outfront/OutfrontHero'
+import { OutfrontOverview } from '@/components/outfront/OutfrontOverview'
+import { ClientCaseStudies } from '@/components/outfront/ClientCaseStudies'
+import { DesignExplorations } from '@/components/outfront/DesignExplorations'
+import { OutfrontGallery } from '@/components/outfront/OutfrontGallery'
+import { OutfrontTestimonials } from '@/components/outfront/OutfrontTestimonials'
+import { OutfrontKeyTakeaways } from '@/components/outfront/OutfrontKeyTakeaways'
 
 export default function ProjectDetail() {
   const { slug } = useParams()
@@ -104,11 +109,13 @@ export default function ProjectDetail() {
   if (project.slug === 'outfront-media-graphics') {
     return (
       <div>
-        <CaseStudyHero project={project} />
-        <ProblemSection problem={project.problem} research={project.research} />
+        <OutfrontHero project={project} />
+        <OutfrontOverview project={project} />
         <ClientCaseStudies project={project} />
-        <ClientTestimonials project={project} />
-        <ReflectionSection reflection={project.reflection} />
+        <DesignExplorations />
+        <OutfrontGallery project={project} />
+        <OutfrontTestimonials />
+        <OutfrontKeyTakeaways />
         <NextProjectNav project={nextProject} />
       </div>
     )

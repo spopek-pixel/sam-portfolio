@@ -11,20 +11,6 @@ export interface ProcessStep {
   status?: 'done' | 'in-progress'
 }
 
-export interface ClientCaseStudy {
-  name: string
-  folder: string
-  overview: string
-  whatIDid: string
-  timeline: string
-  tools: string[]
-}
-
-export interface Testimonial {
-  quote: string
-  client: string
-}
-
 export interface Project {
   slug: string
   title: string
@@ -48,8 +34,6 @@ export interface Project {
   titleVisual?: string
   deliverables?: string[]
   links?: { label: string; href: string }[]
-  clients?: ClientCaseStudy[]
-  testimonials?: Testimonial[]
 }
 
 const modules = import.meta.glob<{ default: string }>('@/assets/images/projects/**/*.{png,jpg,jpeg,webp}', {
@@ -312,6 +296,7 @@ export const projects: Project[] = [
     category: ['Visual'],
     role: 'Graphic Design Intern',
     timeline: 'Summer 2023',
+    team: 'Solo per client — collaborated with a multi-region graphic design team on Pike Nurseries',
     tools: ['Adobe Photoshop', 'Adobe Illustrator'],
     accent: 'acid',
     variant: 'gallery',
@@ -319,81 +304,13 @@ export const projects: Project[] = [
     problem:
       "Out-of-home advertising gives you one constraint that overrides everything else: a seven-second glance from a moving bus, or a few seconds at a red light. If a design doesn't land instantly — no time to read a paragraph, no time to squint at a logo — it doesn't work, regardless of how it looks in a portfolio.",
     research: [],
-    process: [
-      {
-        title: 'Ting Internet',
-        body: 'Bus king ads for NYC transit placements, pairing "fast, reliable internet" messaging with transit-native language like "All Aboard" and "Next Stop" across four colorways.',
-      },
-      {
-        title: 'Law Office of Jack Brackney',
-        body: 'High-impact bus ads designed around one rule: legible and persuasive in the seven seconds it takes a bus to pass a bus stop.',
-      },
-      {
-        title: "It's No Yoke",
-        body: 'A product campaign built around balance and functionality, with an interactive QR code tie-in to bridge the physical ad into a digital follow-up.',
-      },
-      {
-        title: 'Pike Nurseries',
-        body: 'A month-long, museum-inspired campaign across billboard, liveboard, and bus wrap — landscapes presented as framed artwork rather than typical nursery advertising.',
-      },
-    ],
+    process: [],
     decisions: [],
     outcome: 'Four shipped out-of-home campaigns, each built to a real client brief and a real deadline.',
     reflection:
-      "This internship shaped how I approach design today. Seeing four campaigns actually running on New York City buses taught me to think past visuals and toward clear communication under a real constraint — if it didn't land in seven seconds, it didn't work. Client feedback consistently praised clarity over cleverness, and hearing it firsthand built the kind of confidence a classroom project never could.",
+      "This internship shaped how I approach design today. Seeing four campaigns actually running on New York City buses taught me to think past visuals and toward clear communication under a real constraint — if it didn't land in seven seconds, it didn't work.",
     images: imagesFor('outfront-media-graphics'),
-    clients: [
-      {
-        name: 'Ting Internet',
-        folder: 'ting',
-        overview:
-          "Ting Internet delivers high-speed, reliable internet connectivity to communities across the U.S., with a customer-first reputation for fast, friendly service and fiber-optic installs for homes and businesses.",
-        whatIDid:
-          'I researched Ting\'s site and messaging closely, then carried recurring phrases like "fast, reliable internet" and "reliable fiber internet" straight into the graphics to keep the brand voice consistent. Since the placements were NYC bus kings, I layered in transit-native language — "All Aboard," "Next Stop" — across four colorways to make the ads feel native to the ride, not bolted onto it.',
-        timeline: '2 weeks — June 2023',
-        tools: ['Adobe Photoshop', 'Adobe Illustrator'],
-      },
-      {
-        name: 'The Law Office of Jack Brackney',
-        folder: 'jack-brackney',
-        overview:
-          'Jack Brackney is a personal injury and employment attorney who helps clients navigate complicated legal situations — disputes with an employer, a creditor, or an injury caused by someone else\'s negligence.',
-        whatIDid:
-          "The ad was going on the back of a bus, which meant roughly seven seconds of viewing time at a red light. I kept the tagline short and impactful, chose imagery tied directly to his legal expertise, and held everything to his firm's style guide — the goal was a design that read instantly, not one that rewarded a second look.",
-        timeline: '2 weeks — June 2023',
-        tools: ['Adobe Photoshop', 'Adobe Illustrator'],
-      },
-      {
-        name: "It's No Yoke",
-        folder: 'its-no-yoke',
-        overview:
-          "IT'S NO YOKE is a simple, lightweight bag-holding solution that keeps bags from slipping off your shoulders, frees your hands, and helps you stand balanced throughout the day.",
-        whatIDid:
-          'I built the graphic around the product\'s core promise — "balance" and "shoulder-free" — and matched the color scheme to the brand\'s black, orange, and white. At the client\'s request, I added a scannable QR code so bus riders could go from a seven-second glance to more product info on their own phone.',
-        timeline: '2 weeks — July 2023',
-        tools: ['Adobe Photoshop', 'Adobe Illustrator'],
-      },
-      {
-        name: 'Pike Nurseries',
-        folder: 'pike-nurseries',
-        overview:
-          "A collaborative project with graphic interns across regions, developing a shared design theme that reflected Pike Nurseries' values as a landscaping company — spanning a billboard, a liveboard, and a bus wrap.",
-        whatIDid:
-          'After looking through Pike Nurseries\' site and garden designs, I pitched a museum-inspired theme — presenting their landscaping like pieces of art, framed in gold to give the work a gallery feel. The team liked it, and I designed the bus wrap, an animated liveboard, and mobile ads around that concept, then presented the final work to the creative team at OUTFRONT Media.',
-        timeline: '1 month — July to August 2023',
-        tools: ['Adobe Photoshop', 'Adobe Illustrator'],
-      },
-    ],
-    testimonials: [
-      {
-        quote: 'A clean, eye-catching design that clearly communicates our fast and reliable internet.',
-        client: 'Ting Internet',
-      },
-      {
-        quote: 'A creative design that highlights our product in a simple and engaging way.',
-        client: "It's No Yoke",
-      },
-    ],
+    deliverables: ['Bus king ads', 'Bus rear king', 'Billboard', 'Animated liveboard', 'Bus wrap', 'Mobile ads'],
   },
 ]
 
