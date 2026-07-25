@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils'
 
 export interface CarouselSlide {
   label: string
-  images: { src: string; alt: string }[]
+  images: { src: string; alt: string; fit?: 'cover' | 'contain' }[]
 }
 
 export function ImageCarousel({ slides }: { slides: CarouselSlide[] }) {
@@ -20,8 +20,18 @@ export function ImageCarousel({ slides }: { slides: CarouselSlide[] }) {
         <div key={current.label} className={cn('grid gap-4', current.images.length > 1 && 'sm:grid-cols-2')}>
           {current.images.map((image) => (
             <Lightbox key={image.src} src={image.src} alt={image.alt}>
-              <div className="aspect-[3/2] w-full overflow-hidden rounded-xl border border-line bg-surface">
-                <img src={image.src} alt="" className="h-full w-full object-cover" loading="lazy" />
+              <div
+                className={cn(
+                  'aspect-[3/2] w-full overflow-hidden rounded-xl border border-line',
+                  image.fit === 'contain' ? 'bg-white p-3' : 'bg-surface',
+                )}
+              >
+                <img
+                  src={image.src}
+                  alt=""
+                  className={cn('h-full w-full', image.fit === 'contain' ? 'object-contain' : 'object-cover')}
+                  loading="lazy"
+                />
               </div>
             </Lightbox>
           ))}

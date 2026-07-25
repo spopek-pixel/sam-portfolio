@@ -14,7 +14,7 @@ export interface ClientImage {
 }
 
 export type Media =
-  | { type: 'grid'; images: ClientImage[]; layout?: 'even' | 'feature-left' }
+  | { type: 'grid'; images: ClientImage[]; layout?: 'even' | 'feature-left' | 'stacked' }
   | { type: 'carousel'; slides: CarouselSlide[] }
 
 export interface ClientCaseStudyProps {
@@ -23,7 +23,32 @@ export interface ClientCaseStudyProps {
   index: number
 }
 
-function ImageGrid({ images, layout = 'even' }: { images: ClientImage[]; layout?: 'even' | 'feature-left' }) {
+function ImageGrid({ images, layout = 'even' }: { images: ClientImage[]; layout?: 'even' | 'feature-left' | 'stacked' }) {
+  if (layout === 'stacked') {
+    return (
+      <div className="flex flex-col gap-4">
+        {images.map((image, slot) => (
+          <Lightbox key={image.src} src={image.src} alt={image.alt}>
+            <div
+              className={cn(
+                'w-full overflow-hidden rounded-xl border border-line',
+                slot === 0 ? 'aspect-[16/9]' : 'aspect-[21/9]',
+                image.fit === 'contain' ? 'bg-white p-3' : 'bg-surface',
+              )}
+            >
+              <img
+                src={image.src}
+                alt=""
+                className={cn('h-full w-full', image.fit === 'contain' ? 'object-contain' : 'object-cover')}
+                loading={slot === 0 ? 'eager' : 'lazy'}
+              />
+            </div>
+          </Lightbox>
+        ))}
+      </div>
+    )
+  }
+
   if (layout === 'feature-left') {
     return (
       <div className="flex flex-col gap-4 sm:flex-row">

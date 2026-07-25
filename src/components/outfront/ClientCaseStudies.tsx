@@ -22,28 +22,28 @@ const tingCarousel = [
     label: 'Destination — reliable fiber internet',
     images: [
       { src: busBlue, alt: 'Ting "Destination: reliable fiber internet" bus king, live in NYC' },
-      { src: blueTemplate, alt: 'Ting "Destination" — OUTFRONT production template' },
+      { src: blueTemplate, alt: 'Ting "Destination" — OUTFRONT production template', fit: 'contain' as const },
     ],
   },
   {
     label: 'Next Stop — unbeatable fast internet',
     images: [
       { src: busPink, alt: 'Ting "Next Stop: unbeatable fast internet" bus king, live in NYC' },
-      { src: pinkTemplate, alt: 'Ting "Next Stop" — OUTFRONT production template' },
+      { src: pinkTemplate, alt: 'Ting "Next Stop" — OUTFRONT production template', fit: 'contain' as const },
     ],
   },
   {
     label: 'All Aboard — lightning-fast internet',
     images: [
       { src: busOrange, alt: 'Ting "All Aboard: lightning-fast internet" bus king, live in NYC' },
-      { src: orangeTemplate, alt: 'Ting "All Aboard" — OUTFRONT production template' },
+      { src: orangeTemplate, alt: 'Ting "All Aboard" — OUTFRONT production template', fit: 'contain' as const },
     ],
   },
   {
     label: 'Zoom Into — light-speed internet',
     images: [
       { src: busGreen, alt: 'Ting "Zoom Into: light-speed internet" bus king, live in NYC' },
-      { src: greenTemplate, alt: 'Ting "Zoom Into" — OUTFRONT production template' },
+      { src: greenTemplate, alt: 'Ting "Zoom Into" — OUTFRONT production template', fit: 'contain' as const },
     ],
   },
 ]
@@ -52,7 +52,7 @@ const mediaBySlug: Record<string, ClientCaseStudyProps['media']> = {
   ting: { type: 'carousel', slides: tingCarousel },
   'jack-brackney': {
     type: 'grid',
-    layout: 'feature-left',
+    layout: 'stacked',
     images: [
       { src: jackBus, alt: 'Jack Brackney bus rear king ad live on the M42 in Manhattan' },
       { src: jackBoard, alt: 'Jack Brackney ad on an OUTFRONT wall installation' },
