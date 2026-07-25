@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import type { outfront } from '@/data/outfront'
 import { Reveal } from '@/components/ui/Reveal'
 import { Lightbox } from '@/components/ui/Lightbox'
+import { ImageCarousel, type CarouselImage } from './ImageCarousel'
 import { cn } from '@/lib/utils'
 
 type Client = (typeof outfront)['clients'][number]
@@ -12,7 +13,71 @@ export interface ClientImage {
   fit?: 'cover' | 'contain'
 }
 
-export function ClientCaseStudy({ client, images, index }: { client: Client; images: ClientImage[]; index: number }) {
+export type Media =
+  | { type: 'grid'; images: ClientImage[]; layout?: 'even' | 'feature-left' }
+  | { type: 'carousel'; images: CarouselImage[] }
+
+export interface ClientCaseStudyProps {
+  client: Client
+  media: Media
+  index: number
+}
+
+function ImageGrid({ images, layout = 'even' }: { images: ClientImage[]; layout?: 'even' | 'feature-left' }) {
+  if (layout === 'feature-left') {
+    return (
+      <div className="flex flex-col gap-4 sm:flex-row">
+        {images.map((image, slot) => (
+          <Lightbox
+            key={image.src}
+            src={image.src}
+            alt={image.alt}
+            className="h-full"
+            triggerClassName={cn('h-72 sm:h-96', slot === 0 ? 'sm:flex-[1.5]' : 'sm:flex-1')}
+          >
+            <div
+              className={cn(
+                'h-full w-full overflow-hidden rounded-xl border border-line',
+                image.fit === 'contain' ? 'bg-white p-3' : 'bg-surface',
+              )}
+            >
+              <img
+                src={image.src}
+                alt=""
+                className={cn('h-full w-full', image.fit === 'contain' ? 'object-contain' : 'object-cover')}
+                loading={slot === 0 ? 'eager' : 'lazy'}
+              />
+            </div>
+          </Lightbox>
+        ))}
+      </div>
+    )
+  }
+
+  return (
+    <div className="grid gap-4 sm:grid-cols-2">
+      {images.map((image, slot) => (
+        <Lightbox key={image.src} src={image.src} alt={image.alt}>
+          <div
+            className={cn(
+              'aspect-[3/2] w-full overflow-hidden rounded-xl border border-line',
+              image.fit === 'contain' ? 'bg-white p-3' : 'bg-surface',
+            )}
+          >
+            <img
+              src={image.src}
+              alt=""
+              className={cn('h-full w-full', image.fit === 'contain' ? 'object-contain' : 'object-cover')}
+              loading={slot === 0 ? 'eager' : 'lazy'}
+            />
+          </div>
+        </Lightbox>
+      ))}
+    </div>
+  )
+}
+
+export function ClientCaseStudy({ client, media, index }: ClientCaseStudyProps) {
   return (
     <Reveal delay={index * 0.06}>
       <motion.div
@@ -62,25 +127,11 @@ export function ClientCaseStudy({ client, images, index }: { client: Client; ima
           </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          {images.map((image, slot) => (
-            <Lightbox key={image.src} src={image.src} alt={image.alt}>
-              <div
-                className={cn(
-                  'aspect-[3/2] w-full overflow-hidden rounded-xl border border-line',
-                  image.fit === 'contain' ? 'bg-white p-3' : 'bg-surface',
-                )}
-              >
-                <img
-                  src={image.src}
-                  alt=""
-                  className={cn('h-full w-full', image.fit === 'contain' ? 'object-contain' : 'object-cover')}
-                  loading={slot === 0 ? 'eager' : 'lazy'}
-                />
-              </div>
-            </Lightbox>
-          ))}
-        </div>
+        {media.type === 'carousel' ? (
+          <ImageCarousel images={media.images} />
+        ) : (
+          <ImageGrid images={media.images} layout={media.layout} />
+        )}
       </motion.div>
     </Reveal>
   )

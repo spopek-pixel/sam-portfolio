@@ -24,11 +24,11 @@ export const outfront = {
       header1: { label: 'Project Brief', body: 'Ting Internet delivers high-speed, reliable internet connectivity to communities across the U.S., with a customer-first reputation for fast, friendly service and fiber-optic installs for homes and businesses.' },
       header2: {
         label: 'Design Decisions',
-        body: 'I researched Ting\'s site and messaging closely, then carried recurring phrases like "fast, reliable internet" and "reliable fiber internet" straight into the graphics to keep the brand voice consistent. Since the placements were NYC bus kings, I layered in transit-native language — "All Aboard," "Next Stop," "Destination" — across four colorways to make the ads feel native to the ride, not bolted onto it.',
+        body: 'I researched Ting\'s site and messaging closely, then carried recurring phrases like "fast, reliable internet" and "reliable fiber internet" straight into the graphics to keep the brand voice consistent. Since the placements were NYC bus kings, I layered in transit-native language — "All Aboard," "Next Stop," "Destination" — across four colorways to make the ads feel native to the ride, not bolted onto it. The client ran all four simultaneously across the fleet rather than picking one, so every version had to hold up on its own.',
       },
       timeline: '2 weeks — June 2023',
       tools: ['Adobe Photoshop', 'Adobe Illustrator'],
-      deliverables: ['4 bus king colorways', 'NYC transit placement', 'OUTFRONT production file'],
+      deliverables: ['4 bus king colorways', 'NYC transit placement', '4 production templates'],
     },
     {
       slug: 'jack-brackney',
@@ -79,17 +79,6 @@ export const outfront = {
       deliverables: ['Billboard', 'Animated liveboard', 'Bus wrap', 'Mobile ads'],
     },
   ],
-
-  explorations: {
-    intro:
-      "Ting's brief left room to explore before committing. I mocked up four full colorways in OUTFRONT's bus-king production template, each pairing a different transit-native headline with the same core message, before landing on the one that shipped.",
-    concepts: [
-      { label: 'Concept A', headline: 'Next Stop: unbeatable fast internet' },
-      { label: 'Concept B', headline: 'All Aboard: lightning-fast internet' },
-      { label: 'Concept C', headline: 'Zoom Into: light-speed internet' },
-      { label: 'Final Direction', headline: 'Destination: reliable fiber internet', final: true },
-    ],
-  },
 
   testimonials: [
     {

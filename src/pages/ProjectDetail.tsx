@@ -44,7 +44,6 @@ import { DragonflyReflection } from '@/components/dragonfly/DragonflyReflection'
 import { OutfrontHero } from '@/components/outfront/OutfrontHero'
 import { OutfrontOverview } from '@/components/outfront/OutfrontOverview'
 import { ClientCaseStudies } from '@/components/outfront/ClientCaseStudies'
-import { DesignExplorations } from '@/components/outfront/DesignExplorations'
 import { OutfrontGallery } from '@/components/outfront/OutfrontGallery'
 import { OutfrontTestimonials } from '@/components/outfront/OutfrontTestimonials'
 import { OutfrontKeyTakeaways } from '@/components/outfront/OutfrontKeyTakeaways'
@@ -112,7 +111,6 @@ export default function ProjectDetail() {
         <OutfrontHero project={project} />
         <OutfrontOverview project={project} />
         <ClientCaseStudies />
-        <DesignExplorations />
         <OutfrontGallery />
         <OutfrontTestimonials />
         <OutfrontKeyTakeaways />
