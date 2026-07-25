@@ -10,12 +10,12 @@ function findImage(keyword: string) {
 }
 
 const photos = [
-  { keyword: 'vball', caption: 'Intramural volleyball', rotate: '-rotate-2' },
-  { keyword: 'agd', caption: 'Alpha Gamma Delta', rotate: 'rotate-1' },
-  { keyword: 'football', caption: 'Hoosier football season', rotate: '-rotate-1' },
-  { keyword: 'dog_mom', caption: 'My mom and our dog', rotate: 'rotate-2' },
-  { keyword: 'dino_laser', caption: 'Laser cutting a dinosaur (yes, really)', rotate: '-rotate-2' },
-  { keyword: 'building1', caption: 'Experimenting with new tools & skills', rotate: 'rotate-1', objectPosition: 'object-left' },
+  { keyword: 'vball', caption: '2x intramural volleyball champion', rotate: '-rotate-2' },
+  { keyword: 'football', caption: 'Hoosier football season', rotate: 'rotate-1' },
+  { keyword: 'agd', caption: 'Alpha Gamma Delta', rotate: '-rotate-1' },
+  { keyword: 'dino_laser', caption: 'Laser cutting a dinosaur (yes, really)', rotate: 'rotate-2' },
+  { keyword: 'building1', caption: 'Experimenting with new tools & skills', rotate: '-rotate-2', objectPosition: 'object-left' },
+  { keyword: 'dog_mom', caption: 'Me and Sparkle, my 19-year-old dog', rotate: 'rotate-1' },
 ]
 
 export function PhotoCollage() {
