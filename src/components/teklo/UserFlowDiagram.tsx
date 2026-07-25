@@ -1,11 +1,27 @@
-import { Sparkles } from 'lucide-react'
+import { MessageCircleQuestion } from 'lucide-react'
 import { teklo } from '@/data/teklo'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import { cn } from '@/lib/utils'
 
+function ThoughtBubble({ children }: { children: string }) {
+  return (
+    <div className="relative max-w-md rounded-2xl rounded-bl-none border border-mint/25 bg-mint/5 p-5">
+      <p className="flex items-start gap-2.5 text-sm leading-relaxed text-fg-muted">
+        <MessageCircleQuestion size={16} className="mt-0.5 shrink-0 text-mint" />
+        <span>
+          <span className="font-medium text-fg">Thought process. </span>
+          {children}
+        </span>
+      </p>
+      <span className="absolute -bottom-2 left-6 h-2.5 w-2.5 rounded-full border border-mint/25 bg-ink" />
+      <span className="absolute -bottom-4 left-9 h-1.5 w-1.5 rounded-full border border-mint/25 bg-ink" />
+    </div>
+  )
+}
+
 export function UserFlowDiagram() {
-  const { intro, branches, note } = teklo.userFlow
+  const { intro, branches, thoughtBubble } = teklo.userFlow
 
   return (
     <section className="px-6 py-8 sm:px-10 sm:py-12">
@@ -13,13 +29,16 @@ export function UserFlowDiagram() {
         <SectionHeading kicker="User flow" title="Mapping every path through the app." description={intro} className="mb-14 max-w-2xl" />
 
         <div className="rounded-3xl border border-line bg-surface/40 p-6 sm:p-10">
-          <Reveal>
-            <div className="mb-6 flex justify-center">
-              <span className="rounded-2xl border-2 border-mint bg-mint/10 px-6 py-3 font-display text-lg font-semibold text-mint">
+          <div className="mb-8 grid gap-6 lg:grid-cols-[auto_1fr] lg:items-center">
+            <Reveal className="flex justify-center lg:justify-start">
+              <span className="whitespace-nowrap rounded-2xl border-2 border-mint bg-mint/10 px-6 py-3 font-display text-lg font-semibold text-mint">
                 Teklo
               </span>
-            </div>
-          </Reveal>
+            </Reveal>
+            <Reveal delay={0.1} className="flex justify-center lg:justify-start">
+              <ThoughtBubble>{thoughtBubble}</ThoughtBubble>
+            </Reveal>
+          </div>
 
           <div className="mx-auto mb-2 hidden h-px w-full max-w-4xl bg-line sm:block" />
 
@@ -63,13 +82,6 @@ export function UserFlowDiagram() {
             ))}
           </div>
         </div>
-
-        <Reveal delay={0.2}>
-          <p className="mx-auto mt-8 flex max-w-2xl items-start gap-2.5 text-center text-sm leading-relaxed text-fg-muted">
-            <Sparkles size={16} className="mt-0.5 shrink-0 text-violet-tint" />
-            <span>{note}</span>
-          </p>
-        </Reveal>
       </div>
     </section>
   )

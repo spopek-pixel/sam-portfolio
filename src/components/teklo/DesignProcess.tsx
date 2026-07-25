@@ -1,13 +1,37 @@
-import { Lightbulb, LayoutTemplate, Palette } from 'lucide-react'
+import { ArrowRight, ClipboardCheck, Heart, Lightbulb, LayoutTemplate, MonitorSmartphone, Palette, PenLine } from 'lucide-react'
 import { teklo } from '@/data/teklo'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import { ProjectVisual } from '@/components/ui/ProjectVisual'
-import { Lightbox } from '@/components/ui/Lightbox'
 import { cn } from '@/lib/utils'
-import methodologyDiagram from '@/assets/images/projects/teklo/tech.png'
 
 const iconMap = { Lightbulb, LayoutTemplate, Palette }
+
+const methodologyStages = [
+  { icon: Heart, label: 'Empathize' },
+  { icon: PenLine, label: 'Define' },
+  { icon: Lightbulb, label: 'Ideate' },
+  { icon: MonitorSmartphone, label: 'Design' },
+  { icon: ClipboardCheck, label: 'Test' },
+]
+
+function MethodologyStrip() {
+  return (
+    <div className="mb-12 flex flex-wrap items-start justify-center gap-x-1 gap-y-6 sm:gap-x-2">
+      {methodologyStages.map((stage, index) => (
+        <div key={stage.label} className="flex items-start gap-1 sm:gap-2">
+          <div className="flex flex-col items-center gap-2">
+            <span className="flex h-14 w-14 items-center justify-center rounded-full border border-mint/30 bg-mint/10 text-mint">
+              <stage.icon size={22} />
+            </span>
+            <span className="font-mono text-[10px] uppercase tracking-wider text-fg-muted">{stage.label}</span>
+          </div>
+          {index < methodologyStages.length - 1 && <ArrowRight size={16} className="mt-5 shrink-0 text-fg-muted/30" />}
+        </div>
+      ))}
+    </div>
+  )
+}
 
 function StageHeader({ index, icon: Icon, title }: { index: number; icon: typeof Lightbulb; title: string }) {
   return (
@@ -54,11 +78,7 @@ export function DesignProcess() {
         <SectionHeading kicker="Design process" title="From a blank board to a shipped flow." className="mb-10" />
 
         <Reveal delay={0.04}>
-          <Lightbox src={methodologyDiagram} alt="Design thinking methodology — empathize, define, ideate, design, test" triggerClassName="mx-auto mb-12 block max-w-2xl">
-            <div className="overflow-hidden rounded-2xl border border-line bg-white p-4">
-              <img src={methodologyDiagram} alt="" className="w-full object-contain" loading="lazy" />
-            </div>
-          </Lightbox>
+          <MethodologyStrip />
         </Reveal>
 
         <div className="flex flex-col gap-12">

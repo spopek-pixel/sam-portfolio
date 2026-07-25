@@ -24,7 +24,7 @@ export function TheChallenge() {
                   initial={{ rotate: baseRotate[index] }}
                   whileHover={{ y: -8, rotate: 0 }}
                   transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-                  className="group relative flex h-full flex-col gap-4 rounded-2xl border border-line bg-surface/60 p-6 shadow-[0_20px_45px_-30px_rgba(0,0,0,0.6)] transition-[border-color,box-shadow] duration-300 hover:border-mint/50 hover:shadow-[0_25px_55px_-20px_rgba(166,255,77,0.35)]"
+                  className="group relative flex h-full flex-col gap-4 rounded-2xl border border-line bg-surface/60 p-6 shadow-[0_20px_45px_-30px_rgba(0,0,0,0.6)] transition-[border-color,box-shadow] duration-300 hover:border-mint/50 hover:shadow-[0_25px_55px_-20px_rgba(59,130,246,0.35)]"
                 >
                   <span className="absolute -top-3 right-5 rounded-full bg-mint px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-ink shadow-md">
                     Barrier {item.number}

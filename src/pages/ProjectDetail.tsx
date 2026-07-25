@@ -47,6 +47,7 @@ import { ClientCaseStudies } from '@/components/outfront/ClientCaseStudies'
 import { OutfrontGallery } from '@/components/outfront/OutfrontGallery'
 import { OutfrontTestimonials } from '@/components/outfront/OutfrontTestimonials'
 import { OutfrontKeyTakeaways } from '@/components/outfront/OutfrontKeyTakeaways'
+import { TekloTheme } from '@/components/teklo/TekloTheme'
 import { TekloHero } from '@/components/teklo/TekloHero'
 import { TekloOverview } from '@/components/teklo/TekloOverview'
 import { TheChallenge } from '@/components/teklo/TheChallenge'
@@ -119,17 +120,19 @@ export default function ProjectDetail() {
   if (project.slug === 'teklo') {
     return (
       <div>
-        <TekloHero project={project} />
-        <TekloOverview />
-        <TheChallenge />
-        <ResearchDiscovery />
-        <AffinityAndPersona />
-        <UserFlowDiagram />
-        <DesignProcess />
-        <TekloKeyFeatures />
-        <TekloPrototypeShowcase />
-        <TekloOutcomes />
-        <TekloReflection />
+        <TekloTheme>
+          <TekloHero project={project} />
+          <TekloOverview />
+          <TheChallenge />
+          <DesignProcess />
+          <ResearchDiscovery />
+          <AffinityAndPersona />
+          <UserFlowDiagram />
+          <TekloKeyFeatures />
+          <TekloPrototypeShowcase />
+          <TekloOutcomes />
+          <TekloReflection />
+        </TekloTheme>
         <NextProjectNav project={nextProject} />
       </div>
     )

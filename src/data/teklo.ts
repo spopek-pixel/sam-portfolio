@@ -109,7 +109,7 @@ export const teklo = {
 
   userFlow: {
     intro:
-      "Before any screen got designed, I mapped out how someone would actually move through the app — every branch off the home hub, from browsing to checkout to managing an order. Laying it out end to end is what first made the two-sided marketplace idea feel bloated: the Sell branch competed for the same real estate as the buying flow the research said actually mattered.",
+      "One of the clearest planning artifacts from this process: mapping out how someone would actually move through the app, every branch off the home hub, from browsing to checkout to managing an order. Laying it out end to end is what made the two-sided marketplace idea feel bloated — the Sell branch competed for the same real estate as the buying flow the research said actually mattered.",
     branches: [
       { title: 'Main', items: ['Notifications', 'New Listings', 'Suggested', 'Previously Viewed'] },
       { title: 'Search', items: ['Catalog', 'Product List', 'Filters', 'Product Page', 'Reviews'] },
@@ -117,7 +117,8 @@ export const teklo = {
       { title: 'Cart', items: ['Checkout', 'Payment', 'Success'] },
       { title: 'Profile', items: ['Orders', 'Edit Profile', 'Payment', 'Address'] },
     ],
-    note: 'The Sell branch mapped here is exactly what got cut in the design process that follows — seeing the full flow laid out is what made the case for scope obvious.',
+    thoughtBubble:
+      "Seeing every branch at once — not just the buying side — is what made the decision obvious. Cutting Sell wasn't about doing less. It was about giving the buying flow the whole map instead of half of it.",
   },
 
   process: {
