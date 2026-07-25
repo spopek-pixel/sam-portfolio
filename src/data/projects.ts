@@ -57,7 +57,8 @@ export const projects: Project[] = [
   {
     slug: 'housingkind',
     title: 'Housingkind',
-    tagline: 'Making invisible housing policy visible.',
+    tagline:
+      'Making invisible housing policy visible, with an AI-powered platform that turns missing-middle housing into something residents can actually picture.',
     description:
       'Housingkind is a community-focused platform that combines interactive visualization and AI to make gentle density more approachable and easier to understand.',
     category: ['Research', 'Product'],
@@ -254,6 +255,17 @@ export const projects: Project[] = [
     accent: 'mint',
     variant: 'case-study',
     featured: false,
+    // TODO: placeholder href — swap in the real Figma prototype link when ready
+    links: [{ label: 'Figma Prototype', href: '#' }],
+    deliverables: [
+      'User Interviews',
+      'User Personas',
+      'User Journey Mapping',
+      'Low-Fidelity Wireframes',
+      'High-Fidelity UI Design',
+      'Interactive Figma Prototype',
+      'Design System',
+    ],
     problem:
       "Framed around the UN's 'No Poverty' goal: reliable technology has become a precondition for education and work, but the students and budget-conscious buyers who need it most are priced out of the primary market and underserved by a resale market built on Craigslist-era trust assumptions. The real barrier wasn't just price — interviews kept surfacing the same fear: getting scammed on a used device with no way to check it beforehand.",
     research: [
@@ -302,7 +314,7 @@ export const projects: Project[] = [
     outcome: 'Four shipped out-of-home campaigns, each built to a real client brief and a real deadline.',
     reflection:
       "This internship shaped how I approach design today. Seeing four campaigns actually running on New York City buses taught me to think past visuals and toward clear communication under a real constraint — if it didn't land in seven seconds, it didn't work.",
-    images: imagesFor('outfront-media-graphics'),
+    images: imagesFor('outfront-media-graphics', 'outfront.jpg'),
     deliverables: ['Bus king ads', 'Bus rear king', 'Billboard', 'Animated liveboard', 'Bus wrap', 'Mobile ads'],
   },
 ]

@@ -47,6 +47,16 @@ import { ClientCaseStudies } from '@/components/outfront/ClientCaseStudies'
 import { OutfrontGallery } from '@/components/outfront/OutfrontGallery'
 import { OutfrontTestimonials } from '@/components/outfront/OutfrontTestimonials'
 import { OutfrontKeyTakeaways } from '@/components/outfront/OutfrontKeyTakeaways'
+import { TekloHero } from '@/components/teklo/TekloHero'
+import { TekloOverview } from '@/components/teklo/TekloOverview'
+import { TheChallenge } from '@/components/teklo/TheChallenge'
+import { ResearchDiscovery } from '@/components/teklo/ResearchDiscovery'
+import { AffinityAndPersona } from '@/components/teklo/AffinityAndPersona'
+import { DesignProcess } from '@/components/teklo/DesignProcess'
+import { KeyFeatures as TekloKeyFeatures } from '@/components/teklo/KeyFeatures'
+import { PrototypeShowcase as TekloPrototypeShowcase } from '@/components/teklo/PrototypeShowcase'
+import { TekloOutcomes } from '@/components/teklo/TekloOutcomes'
+import { TekloReflection } from '@/components/teklo/TekloReflection'
 
 export default function ProjectDetail() {
   const { slug } = useParams()
@@ -100,6 +110,24 @@ export default function ProjectDetail() {
           <ImpactSection />
           <DragonflyReflection />
         </DragonflyTheme>
+        <NextProjectNav project={nextProject} />
+      </div>
+    )
+  }
+
+  if (project.slug === 'teklo') {
+    return (
+      <div>
+        <TekloHero project={project} />
+        <TekloOverview />
+        <TheChallenge />
+        <ResearchDiscovery />
+        <AffinityAndPersona />
+        <DesignProcess />
+        <TekloKeyFeatures />
+        <TekloPrototypeShowcase />
+        <TekloOutcomes />
+        <TekloReflection />
         <NextProjectNav project={nextProject} />
       </div>
     )

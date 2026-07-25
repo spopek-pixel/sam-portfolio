@@ -63,9 +63,7 @@ export function ProjectCard({ project, index, size = 'regular' }: ProjectCardPro
                 <Tag key={cat}>{cat}</Tag>
               ))}
             </div>
-            <h3 className={cn('text-2xl sm:text-3xl', project.slug === 'housingkind' && 'text-gradient')}>
-              {project.title}
-            </h3>
+            <h3 className="text-2xl sm:text-3xl">{project.title}</h3>
             <span className="font-mono text-[11px] uppercase tracking-wider text-fg-muted">{project.role}</span>
             <p className="max-w-md text-sm text-fg-muted sm:text-base">{project.tagline}</p>
           </div>
