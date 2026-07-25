@@ -8,6 +8,8 @@ import { OutcomeSection } from '@/components/work/OutcomeSection'
 import { ReflectionSection } from '@/components/work/ReflectionSection'
 import { MockupGallery } from '@/components/work/MockupGallery'
 import { VisualGallery } from '@/components/work/VisualGallery'
+import { ClientCaseStudies } from '@/components/work/ClientCaseStudies'
+import { ClientTestimonials } from '@/components/work/ClientTestimonials'
 import { NextProjectNav } from '@/components/work/NextProjectNav'
 import { Deliverables } from '@/components/work/Deliverables'
 import { ProductStrategy } from '@/components/housingkind/ProductStrategy'
@@ -94,6 +96,19 @@ export default function ProjectDetail() {
           <ImpactSection />
           <DragonflyReflection />
         </DragonflyTheme>
+        <NextProjectNav project={nextProject} />
+      </div>
+    )
+  }
+
+  if (project.slug === 'outfront-media-graphics') {
+    return (
+      <div>
+        <CaseStudyHero project={project} />
+        <ProblemSection problem={project.problem} research={project.research} />
+        <ClientCaseStudies project={project} />
+        <ClientTestimonials project={project} />
+        <ReflectionSection reflection={project.reflection} />
         <NextProjectNav project={nextProject} />
       </div>
     )
