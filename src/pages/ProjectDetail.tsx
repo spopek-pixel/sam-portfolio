@@ -52,6 +52,7 @@ import { TekloOverview } from '@/components/teklo/TekloOverview'
 import { TheChallenge } from '@/components/teklo/TheChallenge'
 import { ResearchDiscovery } from '@/components/teklo/ResearchDiscovery'
 import { AffinityAndPersona } from '@/components/teklo/AffinityAndPersona'
+import { UserFlowDiagram } from '@/components/teklo/UserFlowDiagram'
 import { DesignProcess } from '@/components/teklo/DesignProcess'
 import { KeyFeatures as TekloKeyFeatures } from '@/components/teklo/KeyFeatures'
 import { PrototypeShowcase as TekloPrototypeShowcase } from '@/components/teklo/PrototypeShowcase'
@@ -123,6 +124,7 @@ export default function ProjectDetail() {
         <TheChallenge />
         <ResearchDiscovery />
         <AffinityAndPersona />
+        <UserFlowDiagram />
         <DesignProcess />
         <TekloKeyFeatures />
         <TekloPrototypeShowcase />

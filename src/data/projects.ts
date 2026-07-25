@@ -200,48 +200,23 @@ export const projects: Project[] = [
     images: imagesFor('dragonfly-yoga', 'dragon_home_1.png', ['dragon-home-case.png']),
   },
   {
-    slug: 'iusafe',
-    title: 'IUSafe',
-    tagline: 'A campus safety app built around the walk home, not just the alert.',
-    category: ['Research', 'Product'],
-    role: 'UX / Product Designer',
-    timeline: 'Jan — May 2025 · HCI Capstone',
-    team: 'Sam Popek, Sui Sung, Kerem Keskin',
-    tools: ['Figma', 'FigJam', 'Miro'],
+    slug: 'aivy',
+    title: 'AIVY',
+    tagline: 'A new website, currently in progress.',
+    category: ['Product'],
+    role: 'Product Designer & Developer',
+    timeline: 'In progress',
+    tools: ['Figma', 'React'],
     accent: 'violet',
     variant: 'case-study',
-    featured: true,
-    problem:
-      "IU's official safety alerts read as vague — timestamped, jargon-heavy texts that told students something had happened without telling them what to do about it. Existing tools like SafeRide and the campus blue-light network went underused, not because they didn't work, but because most students didn't know they existed or how to reach them under stress. The result: nighttime walks across campus stayed genuinely anxious, for students and for the parents who couldn't see any of it happening.",
-    research: [
-      'Interviewed students, parents, and university safety authorities in parallel, deliberately looking for where their mental models of "safety" diverged rather than converged',
-      "Benchmarked SafeRide, IUPD's 24/7 presence, and IU's existing safety websites to map what already existed before proposing anything new",
-      'Ran a manual workaround test before designing anything: two students, iMessage standing in for the eventual app, a real walk across campus at night, real periodic check-ins — to find the emotional and logistical pain points a paper prototype would have missed entirely',
-    ],
-    process: [
-      {
-        title: 'Personas',
-        body: 'Built two personas around a real tension rather than a generic archetype: the student who wants independence and resents being tracked, and the parent who wants reassurance without a play-by-play. Every later feature decision got run against both.',
-      },
-      {
-        title: 'Low-fidelity',
-        body: "Prototypes centered on one non-negotiable: an SOS button that's impossible to miss, even one-handed, even in a panic. Everything else in the layout deferred to that.",
-      },
-      {
-        title: 'High-fidelity',
-        body: "Refined for information hierarchy that holds up under stress — bigger targets, fewer decisions per screen, status always visible — because a design that only works when the user is calm doesn't actually work.",
-      },
-    ],
-    decisions: [
-      'The buddy system became the differentiator after the workaround test: mark yourself available, request a walk, exchange a meeting point, get periodic "are you okay?" check-ins with automatic escalation to a real contact if you don\'t respond',
-      "Verification via mutual campus connections or university ID, because a safety feature that isn't trustworthy just adds a new anxiety on top of the old one",
-      'Proposed enhancements came directly from workaround-test friction: customizable meeting points restricted to well-lit, high-traffic locations; matching filters for walking pace, dorm, and major; escalating notification intensity if a check-in goes unanswered',
-    ],
-    outcome:
-      "IUSafe integrates real-time safety alerts, a safe-route and crime map, an emergency contact directory, tip-line reporting, and the buddy system into a single app students would actually open — not a fourth safety tool competing with the three nobody used, but a replacement for all three.",
-    reflection:
-      "Safety design turned out to be emotional design first and functional design second. The iteration that changed the most about my thinking happened after watching two actors fumble through a fake walk home — not during any whiteboard session.",
-    images: imagesFor('iusafe'),
+    featured: false,
+    problem: "This case study is still in progress — check back soon for the full write-up.",
+    research: [],
+    process: [],
+    decisions: [],
+    outcome: "AIVY is actively being designed and built. Full case study coming soon.",
+    reflection: "More to come once the project ships.",
+    images: imagesFor('aivy'),
   },
   {
     slug: 'teklo',
@@ -254,7 +229,7 @@ export const projects: Project[] = [
     tools: ['Figma', 'FigJam', 'Miro'],
     accent: 'mint',
     variant: 'case-study',
-    featured: false,
+    featured: true,
     // TODO: placeholder href — swap in the real Figma prototype link when ready
     links: [{ label: 'Figma Prototype', href: '#' }],
     deliverables: [

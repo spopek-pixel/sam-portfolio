@@ -8,8 +8,9 @@ export const teklo = {
     intro: [
       "Teklo started as an undergraduate project framed around the UN's \"No Poverty\" Sustainable Development Goal: reliable technology has become a precondition for education and work, but the people who need it most are priced out of the primary market. For this portfolio, I revisited the concept from scratch — sharper research, a real design system, and decisions grounded in what actually changed people's minds in interviews, not just the original brief.",
       'The result is a community marketplace where students and budget-conscious buyers can search, compare, and buy technology across a range of price points — without the trust problems that usually come with buying anything secondhand.',
+      "I followed the full design process end to end: talking to real buyers, mapping their frustrations into an affinity diagram, building a persona grounded in their actual words, mapping how someone would actually move through the app, then moving through wireframes and a full visual design system before landing on a working prototype.",
+      "What follows is that process in order — the research that shaped it, the decisions that came out of it, and the product it became.",
     ],
-    hmw: 'How might we help budget-conscious buyers find and trust affordable technology, without the anxiety that usually comes with buying used?',
   },
 
   challenge: {
@@ -53,16 +54,42 @@ export const teklo = {
     ],
     interviews: [
       {
-        role: 'Student, regular tech buyer',
-        question: 'What stops you from buying used tech?',
-        quote:
-          "I want to save money, but I've been burned before — there's no way to know if a used laptop actually works until it's too late.",
+        name: 'Michael',
+        role: 'Regular tech buyer',
+        date: '10/25',
+        qa: [
+          {
+            question: 'What frustrates you about buying tech?',
+            answer: "There's too many options and prices vary so much, it's confusing.",
+          },
+          {
+            question: 'Do you look for cheaper or secondhand options?',
+            answer: "Yeah, but I don't always trust them or know where to look.",
+          },
+          {
+            question: 'What features would make buying easier?',
+            answer: 'Good filters and a way to compare options side by side.',
+          },
+        ],
       },
       {
+        name: 'Sarah',
         role: 'Budget-conscious buyer',
-        question: 'What would make you trust a marketplace listing?',
-        quote:
-          "If I could see the actual condition and know someone already checked it out, I'd trust it a lot more than just a photo and a price.",
+        date: '10/24',
+        qa: [
+          {
+            question: 'What challenges do you face when buying tech?',
+            answer: 'Everything is so expensive, especially laptops and iPads.',
+          },
+          {
+            question: 'What would make you trust a product more?',
+            answer: 'Clear photos, detailed descriptions, and knowing the condition.',
+          },
+          {
+            question: 'What features would you want in a tech marketplace app?',
+            answer: 'Filters for price, type, and condition would help a lot.',
+          },
+        ],
       },
     ],
     takeaway:
@@ -78,6 +105,19 @@ export const teklo = {
       title: 'User persona',
       body: 'I built two personas directly from interview language rather than assumed demographics, so later feature debates could be settled by asking "would this person actually do this" instead of guessing. Both centered on the same tension: wanting a good deal without wanting to gamble on it.',
     },
+  },
+
+  userFlow: {
+    intro:
+      "Before any screen got designed, I mapped out how someone would actually move through the app — every branch off the home hub, from browsing to checkout to managing an order. Laying it out end to end is what first made the two-sided marketplace idea feel bloated: the Sell branch competed for the same real estate as the buying flow the research said actually mattered.",
+    branches: [
+      { title: 'Main', items: ['Notifications', 'New Listings', 'Suggested', 'Previously Viewed'] },
+      { title: 'Search', items: ['Catalog', 'Product List', 'Filters', 'Product Page', 'Reviews'] },
+      { title: 'Sell', items: ['Product Info', 'Photos', 'Post Listing'], cut: true },
+      { title: 'Cart', items: ['Checkout', 'Payment', 'Success'] },
+      { title: 'Profile', items: ['Orders', 'Edit Profile', 'Payment', 'Address'] },
+    ],
+    note: 'The Sell branch mapped here is exactly what got cut in the design process that follows — seeing the full flow laid out is what made the case for scope obvious.',
   },
 
   process: {

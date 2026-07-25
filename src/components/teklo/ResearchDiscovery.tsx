@@ -36,16 +36,26 @@ export function ResearchDiscovery() {
           </Reveal>
           <div className="grid gap-4 sm:grid-cols-2">
             {interviews.map((interview, index) => (
-              <Reveal key={interview.role} delay={index * 0.06} className="h-full">
-                <div className="flex h-full flex-col gap-3 rounded-2xl border border-line bg-surface/60 p-5">
+              <Reveal key={interview.name} delay={index * 0.06} className="h-full">
+                <div className="flex h-full flex-col gap-4 rounded-2xl border border-line bg-surface/60 p-5">
                   <div className="flex items-center justify-between gap-2">
-                    <span className="rounded-full border border-line px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-fg-muted">
-                      {interview.role}
-                    </span>
+                    <div className="flex items-baseline gap-2">
+                      <span className="font-medium">{interview.name}</span>
+                      <span className="rounded-full border border-line px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-fg-muted">
+                        {interview.role}
+                      </span>
+                    </div>
                     <Quote size={16} className="shrink-0 text-mint/50" />
                   </div>
-                  <p className="text-xs text-fg-muted">{interview.question}</p>
-                  <p className="text-sm leading-relaxed">&ldquo;{interview.quote}&rdquo;</p>
+                  <div className="flex flex-col gap-3">
+                    {interview.qa.map((qa) => (
+                      <div key={qa.question} className="flex flex-col gap-1">
+                        <p className="text-xs text-fg-muted">{qa.question}</p>
+                        <p className="text-sm leading-relaxed">&ldquo;{qa.answer}&rdquo;</p>
+                      </div>
+                    ))}
+                  </div>
+                  <span className="mt-auto font-mono text-[10px] uppercase tracking-wider text-fg-muted/60">Interviewed {interview.date}</span>
                 </div>
               </Reveal>
             ))}
