@@ -1,17 +1,14 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import type { Project } from '@/data/projects'
-import { imagesForClient } from '@/data/projects'
 import { outfront } from '@/data/outfront'
 import { Reveal } from '@/components/ui/Reveal'
 import { GradientBlob, NoiseOverlay } from '@/components/ui/GradientBlob'
-import { ProjectVisual } from '@/components/ui/ProjectVisual'
 import { Lightbox } from '@/components/ui/Lightbox'
 import { Tag } from '@/components/ui/Tag'
+import heroImage from '@/assets/images/projects/outfront-media-graphics/outfront.jpg'
 
 export function OutfrontHero({ project }: { project: Project }) {
-  const heroImage = imagesForClient(project.slug, 'ting')[0]
-
   return (
     <section className="relative overflow-hidden px-6 pb-10 pt-32 sm:px-10 sm:pb-14 sm:pt-40">
       <NoiseOverlay />
@@ -42,19 +39,11 @@ export function OutfrontHero({ project }: { project: Project }) {
 
         <Reveal delay={0.2}>
           <div className="mt-10">
-            {heroImage ? (
-              <Lightbox src={heroImage} alt="OUTFRONT Media campaign live in New York City" triggerClassName="rounded-3xl">
-                <div className="aspect-[16/9] w-full overflow-hidden rounded-3xl border border-line shadow-[0_40px_90px_rgba(0,0,0,0.5)] sm:aspect-[21/9]">
-                  <img src={heroImage} alt="" className="h-full w-full object-cover" loading="eager" />
-                </div>
-              </Lightbox>
-            ) : (
-              <ProjectVisual
-                title={project.title}
-                accent={project.accent}
-                className="aspect-[16/9] w-full shadow-[0_40px_90px_rgba(0,0,0,0.5)] sm:aspect-[21/9]"
-              />
-            )}
+            <Lightbox src={heroImage} alt="An OUTFRONT Media billboard in the wild" triggerClassName="rounded-3xl">
+              <div className="aspect-[16/9] w-full overflow-hidden rounded-3xl border border-line shadow-[0_40px_90px_rgba(0,0,0,0.5)] sm:aspect-[21/9]">
+                <img src={heroImage} alt="" className="h-full w-full object-cover" loading="eager" />
+              </div>
+            </Lightbox>
             <p className="mt-4 text-sm text-fg-muted">{outfront.hero.caption}</p>
           </div>
         </Reveal>

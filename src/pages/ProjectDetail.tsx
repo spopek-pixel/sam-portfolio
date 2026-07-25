@@ -111,9 +111,9 @@ export default function ProjectDetail() {
       <div>
         <OutfrontHero project={project} />
         <OutfrontOverview project={project} />
-        <ClientCaseStudies project={project} />
+        <ClientCaseStudies />
         <DesignExplorations />
-        <OutfrontGallery project={project} />
+        <OutfrontGallery />
         <OutfrontTestimonials />
         <OutfrontKeyTakeaways />
         <NextProjectNav project={nextProject} />

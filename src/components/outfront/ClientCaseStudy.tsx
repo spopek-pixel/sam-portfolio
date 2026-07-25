@@ -1,16 +1,18 @@
 import { motion } from 'framer-motion'
-import type { Accent } from '@/data/projects'
-import { imagesForClient } from '@/data/projects'
 import type { outfront } from '@/data/outfront'
 import { Reveal } from '@/components/ui/Reveal'
 import { Lightbox } from '@/components/ui/Lightbox'
-import { ProjectVisual } from '@/components/ui/ProjectVisual'
+import { cn } from '@/lib/utils'
 
 type Client = (typeof outfront)['clients'][number]
 
-export function ClientCaseStudy({ client, slug, accent, index }: { client: Client; slug: string; accent: Accent; index: number }) {
-  const images = imagesForClient(slug, client.slug)
+export interface ClientImage {
+  src: string
+  alt: string
+  fit?: 'cover' | 'contain'
+}
 
+export function ClientCaseStudy({ client, images, index }: { client: Client; images: ClientImage[]; index: number }) {
   return (
     <Reveal delay={index * 0.06}>
       <motion.div
@@ -61,17 +63,23 @@ export function ClientCaseStudy({ client, slug, accent, index }: { client: Clien
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          {[0, 1].map((slot) =>
-            images[slot] ? (
-              <Lightbox key={slot} src={images[slot]} alt={`${client.name} mockup ${slot + 1}`}>
-                <div className="aspect-[4/3] w-full overflow-hidden rounded-xl border border-line bg-surface">
-                  <img src={images[slot]} alt="" className="h-full w-full object-cover" loading="lazy" />
-                </div>
-              </Lightbox>
-            ) : (
-              <ProjectVisual key={slot} title={client.name} accent={accent} className="aspect-[4/3] w-full" />
-            ),
-          )}
+          {images.map((image, slot) => (
+            <Lightbox key={image.src} src={image.src} alt={image.alt}>
+              <div
+                className={cn(
+                  'aspect-[3/2] w-full overflow-hidden rounded-xl border border-line',
+                  image.fit === 'contain' ? 'bg-white p-3' : 'bg-surface',
+                )}
+              >
+                <img
+                  src={image.src}
+                  alt=""
+                  className={cn('h-full w-full', image.fit === 'contain' ? 'object-contain' : 'object-cover')}
+                  loading={slot === 0 ? 'eager' : 'lazy'}
+                />
+              </div>
+            </Lightbox>
+          ))}
         </div>
       </motion.div>
     </Reveal>

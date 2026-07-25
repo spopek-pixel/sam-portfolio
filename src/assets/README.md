@@ -3,7 +3,7 @@
 Drop new files into the matching folder — everything here is imported directly by components, so Vite will optimize/hash them automatically.
 
 - `images/projects/<slug>/` — case study mockups, screens, hero shots. Slugs: `housingkind`, `dragonfly-yoga`, `iusafe`, `teklo`, `outfront-media-graphics`.
-  - `images/projects/outfront-media-graphics/<client>/` — per-client mockups for that gallery page. Client folders: `ting`, `jack-brackney`, `its-no-yoke`, `pike-nurseries`. Drop up to 2 images per folder; they'll replace the placeholder tiles automatically.
+  - `images/projects/outfront-media-graphics/` — flat folder, no client subfolders. Each image is imported by exact filename in `src/components/outfront/*.tsx` (hero, per-client case studies, design explorations, gallery), so renaming a file means updating its import there too.
 - `images/about/` — headshots, personal photos (currently placeholders).
 - `images/logos/` — wordmark / logomark files.
 - `illustrations/` — SVG illustrations.

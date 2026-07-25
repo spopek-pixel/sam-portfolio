@@ -53,13 +53,6 @@ function imagesFor(slug: string, primary?: string, exclude: string[] = []) {
     .map(([, mod]) => mod.default)
 }
 
-export function imagesForClient(slug: string, folder: string) {
-  return Object.entries(modules)
-    .filter(([path]) => path.includes(`/projects/${slug}/${folder}/`))
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([, mod]) => mod.default)
-}
-
 export const projects: Project[] = [
   {
     slug: 'housingkind',

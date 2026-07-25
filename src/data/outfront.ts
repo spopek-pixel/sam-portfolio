@@ -1,6 +1,6 @@
 export const outfront = {
   hero: {
-    caption: 'A bus king ad running live on New York City transit — one of four campaigns shipped that summer.',
+    caption: 'OUTFRONT Media — the out-of-home network these four campaigns shipped through.',
   },
 
   overview: {
@@ -84,10 +84,10 @@ export const outfront = {
     intro:
       "Ting's brief left room to explore before committing. I mocked up four full colorways in OUTFRONT's bus-king production template, each pairing a different transit-native headline with the same core message, before landing on the one that shipped.",
     concepts: [
-      { label: 'Concept A', color: '#F26B6B', headline: 'Next Stop: unbeatable fast internet' },
-      { label: 'Concept B', color: '#F5C244', headline: 'All Aboard: lightning-fast internet' },
-      { label: 'Concept C', color: '#5FB77E', headline: 'Zoom Into: light-speed internet' },
-      { label: 'Final Direction', color: '#38BDF8', headline: 'Destination: reliable fiber internet', final: true },
+      { label: 'Concept A', headline: 'Next Stop: unbeatable fast internet' },
+      { label: 'Concept B', headline: 'All Aboard: lightning-fast internet' },
+      { label: 'Concept C', headline: 'Zoom Into: light-speed internet' },
+      { label: 'Final Direction', headline: 'Destination: reliable fiber internet', final: true },
     ],
   },
 

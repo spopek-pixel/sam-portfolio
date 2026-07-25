@@ -3,7 +3,14 @@ import { motion } from 'framer-motion'
 import { outfront } from '@/data/outfront'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
+import { Lightbox } from '@/components/ui/Lightbox'
 import { cn } from '@/lib/utils'
+import pinkTemplate from '@/assets/images/projects/outfront-media-graphics/pink1.png'
+import orangeTemplate from '@/assets/images/projects/outfront-media-graphics/orange2.png'
+import greenTemplate from '@/assets/images/projects/outfront-media-graphics/green3.png'
+import blueTemplate from '@/assets/images/projects/outfront-media-graphics/blue4.png'
+
+const conceptImages = [pinkTemplate, orangeTemplate, greenTemplate, blueTemplate]
 
 export function DesignExplorations() {
   const { intro, concepts } = outfront.explorations
@@ -20,7 +27,7 @@ export function DesignExplorations() {
                 whileHover={{ y: -4 }}
                 transition={{ type: 'spring', stiffness: 260, damping: 24 }}
                 className={cn(
-                  'flex h-full flex-col gap-4 rounded-2xl border p-5',
+                  'flex h-full flex-col gap-4 rounded-2xl border p-4',
                   concept.final ? 'border-acid/40 bg-acid/[0.06] shadow-[0_20px_50px_-20px_rgba(166,255,77,0.25)]' : 'border-line bg-surface/40',
                 )}
               >
@@ -36,12 +43,11 @@ export function DesignExplorations() {
                   {concept.final && <CheckCircle2 size={16} className="text-acid" />}
                 </div>
 
-                <div
-                  className="flex aspect-[4/3] w-full flex-col justify-end overflow-hidden rounded-xl p-4"
-                  style={{ backgroundColor: concept.color }}
-                >
-                  <p className="font-display text-sm font-semibold leading-snug text-ink sm:text-base">{concept.headline}</p>
-                </div>
+                <Lightbox src={conceptImages[index]} alt={`${concept.label} — ${concept.headline}`} triggerClassName="rounded-xl">
+                  <div className="aspect-[4/3] w-full overflow-hidden rounded-xl border border-line bg-white p-1.5">
+                    <img src={conceptImages[index]} alt="" className="h-full w-full object-contain" loading="lazy" />
+                  </div>
+                </Lightbox>
 
                 <p className={cn('text-xs', concept.final ? 'text-fg' : 'text-fg-muted')}>
                   {concept.final ? 'Shipped to NYC bus kings' : 'Explored, not selected'}
