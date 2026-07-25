@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import type { outfront } from '@/data/outfront'
 import { Reveal } from '@/components/ui/Reveal'
 import { Lightbox } from '@/components/ui/Lightbox'
-import { ImageCarousel, type CarouselImage } from './ImageCarousel'
+import { ImageCarousel, type CarouselSlide } from './ImageCarousel'
 import { cn } from '@/lib/utils'
 
 type Client = (typeof outfront)['clients'][number]
@@ -15,7 +15,7 @@ export interface ClientImage {
 
 export type Media =
   | { type: 'grid'; images: ClientImage[]; layout?: 'even' | 'feature-left' }
-  | { type: 'carousel'; images: CarouselImage[] }
+  | { type: 'carousel'; slides: CarouselSlide[] }
 
 export interface ClientCaseStudyProps {
   client: Client
@@ -128,7 +128,7 @@ export function ClientCaseStudy({ client, media, index }: ClientCaseStudyProps) 
         </div>
 
         {media.type === 'carousel' ? (
-          <ImageCarousel images={media.images} />
+          <ImageCarousel slides={media.slides} />
         ) : (
           <ImageGrid images={media.images} layout={media.layout} />
         )}

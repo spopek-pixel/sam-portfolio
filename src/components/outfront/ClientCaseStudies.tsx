@@ -18,18 +18,38 @@ import pikeLive from '@/assets/images/projects/outfront-media-graphics/pikelive.
 import type { ClientCaseStudyProps } from './ClientCaseStudy'
 
 const tingCarousel = [
-  { src: busPink, alt: 'Ting "Next Stop: unbeatable fast internet" bus king, live in NYC', label: 'Next Stop — live on the bus' },
-  { src: pinkTemplate, alt: 'Ting "Next Stop" — OUTFRONT production template', label: 'Next Stop — production template' },
-  { src: busOrange, alt: 'Ting "All Aboard: lightning-fast internet" bus king, live in NYC', label: 'All Aboard — live on the bus' },
-  { src: orangeTemplate, alt: 'Ting "All Aboard" — OUTFRONT production template', label: 'All Aboard — production template' },
-  { src: busGreen, alt: 'Ting "Zoom Into: light-speed internet" bus king, live in NYC', label: 'Zoom Into — live on the bus' },
-  { src: greenTemplate, alt: 'Ting "Zoom Into" — OUTFRONT production template', label: 'Zoom Into — production template' },
-  { src: busBlue, alt: 'Ting "Destination: reliable fiber internet" bus king, live in NYC', label: 'Destination — live on the bus' },
-  { src: blueTemplate, alt: 'Ting "Destination" — OUTFRONT production template', label: 'Destination — production template' },
+  {
+    label: 'Destination — reliable fiber internet',
+    images: [
+      { src: busBlue, alt: 'Ting "Destination: reliable fiber internet" bus king, live in NYC' },
+      { src: blueTemplate, alt: 'Ting "Destination" — OUTFRONT production template' },
+    ],
+  },
+  {
+    label: 'Next Stop — unbeatable fast internet',
+    images: [
+      { src: busPink, alt: 'Ting "Next Stop: unbeatable fast internet" bus king, live in NYC' },
+      { src: pinkTemplate, alt: 'Ting "Next Stop" — OUTFRONT production template' },
+    ],
+  },
+  {
+    label: 'All Aboard — lightning-fast internet',
+    images: [
+      { src: busOrange, alt: 'Ting "All Aboard: lightning-fast internet" bus king, live in NYC' },
+      { src: orangeTemplate, alt: 'Ting "All Aboard" — OUTFRONT production template' },
+    ],
+  },
+  {
+    label: 'Zoom Into — light-speed internet',
+    images: [
+      { src: busGreen, alt: 'Ting "Zoom Into: light-speed internet" bus king, live in NYC' },
+      { src: greenTemplate, alt: 'Ting "Zoom Into" — OUTFRONT production template' },
+    ],
+  },
 ]
 
 const mediaBySlug: Record<string, ClientCaseStudyProps['media']> = {
-  ting: { type: 'carousel', images: tingCarousel },
+  ting: { type: 'carousel', slides: tingCarousel },
   'jack-brackney': {
     type: 'grid',
     layout: 'feature-left',
