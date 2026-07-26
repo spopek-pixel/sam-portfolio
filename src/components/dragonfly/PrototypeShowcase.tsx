@@ -28,9 +28,8 @@ export function PrototypeShowcase() {
 
         <Reveal delay={0.14}>
           <div className="mt-6 flex justify-center">
-            {/* TODO: placeholder href — swap in the real Figma prototype link when ready */}
             <a
-              href="#"
+              href="https://www.figma.com/proto/KoMzOgN4g69OMpESgDxpyQ/DragonFly-Hot-Yoga?node-id=53-999&p=f&t=4WxZdcJAne6a0YQ7-1&scaling=scale-down&content-scaling=fixed&page-id=50%3A162&starting-point-node-id=53%3A999"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-violet px-6 py-3 font-medium text-ink transition-transform hover:scale-[1.03]"

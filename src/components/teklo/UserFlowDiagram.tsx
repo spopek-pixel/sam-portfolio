@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 
 function ThoughtBubble({ children }: { children: string }) {
   return (
-    <div className="relative max-w-md rounded-2xl rounded-bl-none border border-mint/25 bg-mint/5 p-5">
+    <div className="relative h-full w-full rounded-2xl rounded-bl-none border border-mint/25 bg-mint/5 p-5">
       <p className="flex items-start gap-2.5 text-sm leading-relaxed text-fg-muted">
         <MessageCircleQuestion size={16} className="mt-0.5 shrink-0 text-mint" />
         <span>
@@ -26,9 +26,9 @@ export function UserFlowDiagram() {
   return (
     <section className="px-6 py-8 sm:px-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-14 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-start lg:gap-10">
-          <SectionHeading kicker="User flow" title="Mapping every path through the app." description={intro} className="max-w-2xl" />
-          <Reveal delay={0.1} className="flex lg:justify-end">
+        <div className="mb-14 grid gap-6 lg:grid-cols-2 lg:items-start lg:gap-10">
+          <SectionHeading kicker="Defining the experience" title="Mapping every path through the app." description={intro} className="max-w-2xl" />
+          <Reveal delay={0.1}>
             <ThoughtBubble>{thoughtBubble}</ThoughtBubble>
           </Reveal>
         </div>

@@ -8,8 +8,7 @@ export const teklo = {
     intro: [
       "Teklo started as an undergraduate project framed around the UN's \"No Poverty\" Sustainable Development Goal: reliable technology has become a precondition for education and work, but the people who need it most are priced out of the primary market. For this portfolio, I revisited the concept from scratch — sharper research, a real design system, and decisions grounded in what actually changed people's minds in interviews, not just the original brief.",
       'The result is a community marketplace where students and budget-conscious buyers can search, compare, and buy technology across a range of price points — without the trust problems that usually come with buying anything secondhand.',
-      "I followed the full design process end to end: talking to real buyers, mapping their frustrations into an affinity diagram, building a persona grounded in their actual words, mapping how someone would actually move through the app, then moving through wireframes and a full visual design system before landing on a working prototype.",
-      "What follows is that process in order — the research that shaped it, the decisions that came out of it, and the product it became.",
+      "What follows is the process end to end, in the order it actually happened: who I designed for, what I learned from them, how those patterns became a plan, and how that plan became the product below.",
     ],
   },
 
@@ -37,9 +36,9 @@ export const teklo = {
     ],
   },
 
-  research: {
+  understandingUsers: {
     intro:
-      'Before sketching anything, I talked to the two groups Teklo is actually built for — students juggling a tight budget and budget-conscious buyers shopping outside the primary retail market.',
+      "Before anything got designed, I needed to know exactly who Teklo was for and what they were actually afraid of. Two groups kept surfacing in early conversations, and a persona built from their real words kept every later feature debate honest.",
     segments: [
       {
         icon: 'GraduationCap',
@@ -52,6 +51,15 @@ export const teklo = {
         body: 'Want dependable technology at a lower price for work or daily life, without gambling on a listing that might not be what it claims.',
       },
     ],
+    persona: {
+      title: 'User persona',
+      body: 'I built the persona directly from interview language rather than assumed demographics, so later feature debates could be settled by asking "would this person actually do this" instead of guessing. Alex centers on one tension: wanting a good deal without wanting to gamble on it.',
+    },
+  },
+
+  researchAndDiscovery: {
+    intro:
+      'With the audience defined, I talked to real buyers — primarily students who regularly shop for tech — to hear where trust actually breaks down in a purchase.',
     interviews: [
       {
         name: 'Michael',
@@ -94,22 +102,15 @@ export const teklo = {
     ],
     takeaway:
       'Both interviews came back to the same thing: affordability gets people looking, but trust is what gets them to buy.',
-  },
-
-  discovery: {
     affinity: {
-      title: 'Affinity diagram',
+      title: 'Synthesis — affinity diagram',
       body: "I grouped every interview response into clusters instead of treating them as a list of individual complaints. Three themes kept surfacing — affordability, trust in a device's condition, and wanting the buying process to be simple — and those three became the literal backbone of the feature list that followed.",
-    },
-    persona: {
-      title: 'User persona',
-      body: 'I built two personas directly from interview language rather than assumed demographics, so later feature debates could be settled by asking "would this person actually do this" instead of guessing. Both centered on the same tension: wanting a good deal without wanting to gamble on it.',
     },
   },
 
   userFlow: {
     intro:
-      "One of the clearest planning artifacts from this process: mapping out how someone would actually move through the app, every branch off the home hub, from browsing to checkout to managing an order. Laying it out end to end is what made the two-sided marketplace idea feel bloated — the Sell branch competed for the same real estate as the buying flow the research said actually mattered.",
+      "With the research patterns clear, the next step was turning them into a concrete plan: how someone would actually move through the app, every branch off the home hub, from browsing to checkout to managing an order. Laying it out end to end is what made the two-sided marketplace idea feel bloated — the Sell branch competed for the same real estate as the buying flow the research said actually mattered.",
     branches: [
       { title: 'Main', items: ['Notifications', 'New Listings', 'Suggested', 'Previously Viewed'] },
       { title: 'Search', items: ['Catalog', 'Product List', 'Filters', 'Product Page', 'Reviews'] },
@@ -121,24 +122,21 @@ export const teklo = {
       "Seeing every branch at once — not just the buying side — is what made the decision obvious. Cutting Sell wasn't about doing less. It was about giving the buying flow the whole map instead of half of it.",
   },
 
-  process: {
-    stages: [
-      {
-        icon: 'Lightbulb',
-        title: 'Ideation & concept exploration',
-        body: 'Before wireframing anything, I mapped out what a buying-only vs. a two-sided marketplace would each require — and how much of the trust problem a two-sided model would actually solve. That comparison is what led to cutting the selling side later.',
-      },
-      {
-        icon: 'LayoutTemplate',
-        title: 'Low-fidelity wireframes',
-        body: 'Wireframed the core structure and flows — browsing, item detail, cart — before any visual polish, so early feedback stayed focused on whether the buying flow made sense at all, not on color.',
-      },
-      {
-        icon: 'Palette',
-        title: 'High-fidelity design system',
-        body: 'Refined typography, spacing, and a full component system in Figma once the underlying flows were validated, so visual design was finishing a decision the wireframes had already made, not making a new one.',
-      },
-    ],
+  ideation: {
+    body: "Before wireframing anything, I mapped out what a buying-only vs. a two-sided marketplace would each require — and how much of the trust problem a two-sided model would actually solve. That comparison, informed directly by the flow above, is what led to cutting the selling side entirely. No sketches from this stage survived — the real output here was a decision, not a drawing.",
+  },
+
+  wireframing: {
+    intro:
+      'Once the direction was set, wireframes came first — structure and flow only, no visual polish, so early feedback stayed focused on whether the buying flow made sense at all. The high-fidelity design system is that same structure, refined: typography, spacing, and a full component system built once the underlying flows were already validated.',
+    lowFi: {
+      label: 'Low-fidelity',
+      body: 'Wireframed the core structure and flows — browsing, item detail, cart — before any visual polish, so early feedback stayed focused on whether the buying flow made sense at all, not on color.',
+    },
+    hiFi: {
+      label: 'High-fidelity',
+      body: 'Refined typography, spacing, and a full component system in Figma once the underlying flows were validated, so visual design was finishing a decision the wireframes had already made, not making a new one.',
+    },
   },
 
   features: [
@@ -147,41 +145,21 @@ export const teklo = {
       body: 'Fast product discovery across price points, with condition and trust signals surfaced before price on every listing.',
     },
     {
-      title: 'Favorites',
-      body: 'Save listings to compare later — built for buyers comparing five tabs at once, not committing on the spot.',
+      title: 'Personalized home feed',
+      body: 'Curated categories, active deals, and recently viewed items greet buyers the moment they open the app — built to feel like a real marketplace, not a spreadsheet of listings.',
     },
     {
       title: 'Cart & checkout',
-      body: 'A streamlined checkout with the minimum number of steps that still lets a price-sensitive buyer feel confident — not just the minimum that looked simplest in a wireframe.',
+      body: 'A streamlined checkout with the minimum number of steps that still lets a price-sensitive buyer feel confident — promo codes, delivery options, and payment method all in one clear view.',
     },
     {
-      title: 'Condition transparency',
-      body: 'Every listing leads with verified condition details, because the research said trust was the actual blocker, not affordability alone.',
+      title: 'Guided onboarding',
+      body: 'A short, visual walkthrough sets expectations before someone even creates an account — curated deals, fast delivery, and smart picks, not a wall of permission requests.',
     },
   ],
 
   prototype: {
     body: 'The high-fidelity Figma prototype walks through the full buying journey — searching, favoriting, adding to cart, and checking out — built to feel like a real marketplace app, not a wireframe with color added.',
-  },
-
-  outcomes: {
-    intro:
-      'Cutting the selling side of the marketplace was the single decision that changed the most — a buying-only platform let every design decision optimize for one job instead of two competing ones.',
-    solved: [
-      'Priced-out buyers now have a marketplace built around their price range, not the primary retail market',
-      'Trust signals — condition, verification — surface before price on every listing',
-      'A two-sided marketplace that diluted trust on both sides got cut down to one focused job: buying',
-    ],
-    benefits: [
-      'A search-to-checkout flow that stays simple even for a first-time buyer',
-      'Favoriting for buyers comparing options instead of committing immediately',
-      'Condition transparency that replaces the old "hope for the best" resale experience',
-    ],
-    whatsNext: [
-      'A full design system ready to extend past this first version',
-      'A validated case for scope-cutting as a design decision, not just a compromise',
-      'Usability testing the buying-only flow next, with real budget-conscious buyers',
-    ],
   },
 
   reflection: {
@@ -193,9 +171,10 @@ export const teklo = {
       'Usability test the buying-only flow with real budget-conscious buyers before calling any screen final.',
       'Pressure-test the condition-verification flow further — trust was the biggest research finding, and it deserves more than one feature.',
     ],
-    keyTakeaways: [
-      "Good design isn't about adding more — cutting the selling side is what made the rest of the product make sense.",
-      'Removing scope can be a design decision in its own right, not just a compromise.',
+    impact: [
+      "Priced-out buyers now have a marketplace built around their price range, not the primary retail market",
+      'Trust signals — condition, verification — surface before price on every listing, replacing the old "hope for the best" resale experience',
+      "Good design isn't about adding more: cutting the selling side is what made the rest of the product make sense, and it's a validated case for scope-cutting as a decision, not a compromise",
     ],
   },
 }

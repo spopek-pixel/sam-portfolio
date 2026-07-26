@@ -2,19 +2,19 @@ import { motion } from 'framer-motion'
 import { teklo } from '@/data/teklo'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
-import { ProjectVisual } from '@/components/ui/ProjectVisual'
 import { Lightbox } from '@/components/ui/Lightbox'
 import searchImage from '@/assets/images/projects/teklo/search_products.png'
-import favoriteImage from '@/assets/images/projects/teklo/favorite_teklo.png'
-import checkoutImage from '@/assets/images/projects/teklo/checkout_teklo.png'
+import homeImage from '@/assets/images/projects/teklo/home.png'
+import checkoutImage from '@/assets/images/projects/teklo/checkout1.png'
+import onboardingImage from '@/assets/images/projects/teklo/intro_teklo.png'
 
-const featureImages = [searchImage, favoriteImage, checkoutImage]
+const featureImages = [searchImage, homeImage, checkoutImage, onboardingImage]
 
 export function KeyFeatures() {
   return (
     <section className="px-6 py-8 sm:px-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading kicker="Key features" title="What the redesign actually does." className="mb-10" />
+        <SectionHeading kicker="Final product" title="What the redesign actually does." className="mb-10" />
 
         <div className="grid gap-6 sm:grid-cols-2">
           {teklo.features.map((feature, index) => {
@@ -26,20 +26,16 @@ export function KeyFeatures() {
                   transition={{ type: 'spring', stiffness: 260, damping: 24 }}
                   className="group flex h-full flex-col gap-5 overflow-hidden rounded-2xl border border-line bg-surface/60 p-5"
                 >
-                  {image ? (
-                    <Lightbox src={image} alt={`${feature.title} screen`}>
-                      <div className="aspect-[4/3] w-full overflow-hidden rounded-xl border border-line bg-surface">
-                        <img
-                          src={image}
-                          alt=""
-                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          loading="lazy"
-                        />
-                      </div>
-                    </Lightbox>
-                  ) : (
-                    <ProjectVisual title={feature.title} accent="mint" className="aspect-[4/3] w-full" />
-                  )}
+                  <Lightbox src={image} alt={`${feature.title} screen`}>
+                    <div className="aspect-[4/3] w-full overflow-hidden rounded-xl border border-line bg-white">
+                      <img
+                        src={image}
+                        alt=""
+                        className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                  </Lightbox>
                   <div className="flex flex-col gap-1.5">
                     <h3 className="text-lg font-medium">{feature.title}</h3>
                     <p className="text-sm text-fg-muted">{feature.body}</p>

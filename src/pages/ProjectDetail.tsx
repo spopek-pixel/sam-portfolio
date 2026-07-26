@@ -51,13 +51,13 @@ import { TekloTheme } from '@/components/teklo/TekloTheme'
 import { TekloHero } from '@/components/teklo/TekloHero'
 import { TekloOverview } from '@/components/teklo/TekloOverview'
 import { TheChallenge } from '@/components/teklo/TheChallenge'
+import { UnderstandingUsers } from '@/components/teklo/UnderstandingUsers'
 import { ResearchDiscovery } from '@/components/teklo/ResearchDiscovery'
-import { AffinityAndPersona } from '@/components/teklo/AffinityAndPersona'
 import { UserFlowDiagram } from '@/components/teklo/UserFlowDiagram'
-import { DesignProcess } from '@/components/teklo/DesignProcess'
+import { Ideation } from '@/components/teklo/Ideation'
+import { Wireframing } from '@/components/teklo/Wireframing'
 import { KeyFeatures as TekloKeyFeatures } from '@/components/teklo/KeyFeatures'
 import { PrototypeShowcase as TekloPrototypeShowcase } from '@/components/teklo/PrototypeShowcase'
-import { TekloOutcomes } from '@/components/teklo/TekloOutcomes'
 import { TekloReflection } from '@/components/teklo/TekloReflection'
 
 export default function ProjectDetail() {
@@ -124,13 +124,13 @@ export default function ProjectDetail() {
           <TekloHero project={project} />
           <TekloOverview />
           <TheChallenge />
-          <DesignProcess />
+          <UnderstandingUsers />
           <ResearchDiscovery />
-          <AffinityAndPersona />
           <UserFlowDiagram />
+          <Ideation />
+          <Wireframing />
           <TekloKeyFeatures />
           <TekloPrototypeShowcase />
-          <TekloOutcomes />
           <TekloReflection />
         </TekloTheme>
         <NextProjectNav project={nextProject} />

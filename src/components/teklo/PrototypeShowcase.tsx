@@ -17,7 +17,7 @@ export function PrototypeShowcase() {
   return (
     <section className="px-6 py-8 sm:px-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading kicker="Final product" title="The prototype, screen by screen." description={body} className="mb-14 max-w-2xl" />
+        <SectionHeading kicker="Prototype" title="The prototype, screen by screen." description={body} className="mb-14 max-w-2xl" />
 
         <div className="relative mx-auto flex max-w-2xl items-end justify-center">
           {screens.map((screen) => (
@@ -35,7 +35,13 @@ export function PrototypeShowcase() {
 
         <Reveal delay={0.2}>
           <div className="mt-14 flex justify-center">
-            <LinkButton href="#" target="_blank" rel="noreferrer" variant="secondary" className="px-5 py-2.5 text-sm">
+            <LinkButton
+              href="https://www.figma.com/proto/AxRtilipdp5Y9OSZteljwW/Teklo?node-id=5-122&p=f&t=lIW24nDlfenidhOJ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A122"
+              target="_blank"
+              rel="noreferrer"
+              variant="secondary"
+              className="px-5 py-2.5 text-sm"
+            >
               View interactive prototype <ArrowUpRight size={16} />
             </LinkButton>
           </div>

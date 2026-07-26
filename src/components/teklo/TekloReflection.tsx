@@ -1,4 +1,4 @@
-import { Lightbulb, ListTree, Wrench } from 'lucide-react'
+import { Lightbulb, TrendingUp, Wrench } from 'lucide-react'
 import { teklo } from '@/data/teklo'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
@@ -6,12 +6,12 @@ import { Reveal } from '@/components/ui/Reveal'
 const groups = [
   { key: 'lessonsLearned', title: 'Lessons learned', icon: Lightbulb },
   { key: 'whatIdImprove', title: "What I'd improve", icon: Wrench },
-  { key: 'keyTakeaways', title: 'Key takeaways', icon: ListTree },
+  { key: 'impact', title: 'Impact', icon: TrendingUp },
 ] as const
 
 export function TekloReflection() {
-  const { lessonsLearned, whatIdImprove, keyTakeaways } = teklo.reflection
-  const lists = { lessonsLearned, whatIdImprove, keyTakeaways }
+  const { lessonsLearned, whatIdImprove, impact } = teklo.reflection
+  const lists = { lessonsLearned, whatIdImprove, impact }
 
   return (
     <section className="px-6 py-8 sm:px-10 sm:py-12">

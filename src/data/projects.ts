@@ -69,10 +69,13 @@ export const projects: Project[] = [
     accent: 'mint',
     variant: 'case-study',
     featured: true,
-    // TODO: swap in the real Figma/GitHub URLs when ready
+    // TODO: swap in the real GitHub URL when ready
     links: [
       { label: 'Live Site', href: 'https://www.housingkind.org/' },
-      { label: 'Figma', href: '#' },
+      {
+        label: 'Figma',
+        href: 'https://www.figma.com/proto/4f3RqPmsUHkB4WyuQmWT2n/Housingkind--Design-System?node-id=109-659&p=f&t=K32mIy2NFEQV0FCN-1&scaling=scale-down&content-scaling=fixed&page-id=2%3A4&starting-point-node-id=109%3A596',
+      },
       { label: 'GitHub', href: '#' },
     ],
     problem:
@@ -230,8 +233,12 @@ export const projects: Project[] = [
     accent: 'mint',
     variant: 'case-study',
     featured: true,
-    // TODO: placeholder href — swap in the real Figma prototype link when ready
-    links: [{ label: 'Figma Prototype', href: '#' }],
+    links: [
+      {
+        label: 'Figma Prototype',
+        href: 'https://www.figma.com/proto/AxRtilipdp5Y9OSZteljwW/Teklo?node-id=5-122&p=f&t=lIW24nDlfenidhOJ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A122',
+      },
+    ],
     deliverables: [
       'User Interviews',
       'User Personas',
