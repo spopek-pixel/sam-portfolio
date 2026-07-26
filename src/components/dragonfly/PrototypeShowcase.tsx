@@ -2,7 +2,7 @@ import { ArrowUpRight } from 'lucide-react'
 import { dragonfly } from '@/data/dragonfly'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
-import { YogaIconRail } from './YogaIcons'
+import { GradientBlob } from '@/components/ui/GradientBlob'
 import dragonflyRecording from '@/assets/images/projects/dragonfly-yoga/dragonfly_recording.mp4'
 
 export function PrototypeShowcase() {
@@ -15,8 +15,8 @@ export function PrototypeShowcase() {
 
         <Reveal>
           <div className="relative mx-auto max-w-sm">
-            <YogaIconRail side="left" />
-            <YogaIconRail side="right" />
+            <GradientBlob tone="violet" className="left-[-3rem] top-1/2 h-40 w-40 -translate-y-1/2 opacity-20" />
+            <GradientBlob tone="violet" className="right-[-3rem] top-1/2 h-40 w-40 -translate-y-1/2 opacity-20" />
             <video
               src={dragonflyRecording}
               controls

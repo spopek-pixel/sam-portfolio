@@ -5,6 +5,8 @@ export const aivy = {
       'A speculative ecosystem of AI-powered products, set in 2046, that helps people build real relationships with the living world around them.',
   },
 
+  quote: "Instead of technology replacing human connection like we feared, it gave us more time for it.",
+
   challenge: {
     question: 'How might AI help people build stronger relationships beyond human-to-human interaction?',
     body: "Every AI product we could name was designed to connect people to other people, or to connect people to information. Almost none of them were designed to connect people to the living world they actually live inside of. That gap became the brief: design a future where technology strengthens the relationship between humans and nature, instead of substituting for it.",
@@ -28,8 +30,29 @@ export const aivy = {
   mirrorBoard: {
     title: 'How do we connect?',
     kicker: 'Ideation — Mirror Board',
-    body: "Before AIVY became a product about plants, it started as an open question on a mirror board: how do we connect? We mapped out every future form of connection we could think of — human-to-human social tools, brain-computer interfaces, ambient presence, AI companionship — and kept circling back to the same gap. Almost every idea assumed connection meant connection to other people. We deliberately pushed past that assumption to ask what it would mean for AI to build a relationship between people and the natural world instead. That reframe — connection beyond humans — is what the rest of the project was built on.",
-    caption: 'Mirror board — themes explored before narrowing to "Connection Beyond Humans."',
+    body: "Before AIVY became a product about plants, it started as an open question on a mirror board: how do we connect? We mapped out every future form of connection we could think of — human-to-human social tools, AI chatbots, AR and VR, digital third spaces, shared human experiences, plant communication used for agriculture — and kept circling back to the same gap. Almost every branch assumed connection meant connection to other people. We deliberately pushed past that assumption to ask what it would mean for AI to build a relationship between people and the natural world instead. That reframe — connection beyond humans — is what the rest of the project was built on.",
+    caption: 'The mirror board — every form of connection we mapped before narrowing to "connection beyond humans."',
+  },
+
+  advisors: {
+    kicker: 'Advisor feedback',
+    title: 'Three advisors, three installation-art backgrounds.',
+    body: 'We brought the concept to three faculty advisors with backgrounds in installation and interactive art before committing to a direction. Their feedback reshaped the project as much as our own research did.',
+    themes: [
+      {
+        title: 'Reciprocity over monitoring',
+        body: 'The plant needed to get something back from the relationship, not just be watched. That pushed us from a "smart sensor" framing toward an actual symbiotic one.',
+      },
+      {
+        title: '"Plants are slow" — and that\'s the point',
+        body: "One advisor flagged our early prompts as too eager, priming the user to expect an instant response. We rebuilt the pacing around plant time, not app time.",
+      },
+      {
+        title: 'Design the space for the plant, not around it',
+        body: "The clearest note we got: the plant can't just be an accessory in the room. That single line is why the installation gives plants their own dedicated zone instead of tucking them into a corner.",
+      },
+    ],
+    caption: 'Advisor feedback board — reciprocity, pacing, and where the plants actually belong in the space.',
   },
 
   ecosystem: [
@@ -65,6 +88,41 @@ export const aivy = {
     },
   ],
 
+  sitePreview: {
+    kicker: 'Built, not just diagrammed',
+    title: 'We coded the ecosystem to see if it held up.',
+    body: 'Wireframes can hide problems that only show up once something is real and clickable. So we built AIVY as a working concept site — the same ecosystem, same pacing, same naming — to pressure-test the idea beyond a slide deck.',
+  },
+
+  installation: {
+    kicker: 'The end goal',
+    title: 'How do we connect? A speculative installation.',
+    dimensions: '10 7/8 ft × 20 ft 10 in · 10 ft ceilings',
+    body: "The digital ecosystem is one half of AIVY. The other half — the part we actually want to build — is physical: a walk-through installation where visitors move between a projected forest floor and a living home, and feel firsthand what it might be like for humans and plants to actually communicate.",
+    zones: [
+      {
+        name: 'Forest space',
+        body: 'Immersive projections of the forest floor, trees, and bioluminescent code — visitors step into a digital forest built from roots and light.',
+      },
+      {
+        name: 'Transition zone',
+        body: 'A light curtain visitors physically pass through — the threshold where the plant world and the human world intertwine.',
+      },
+      {
+        name: 'Home space',
+        body: 'A domestic room with living plants, artifacts, and visual stories of connection — where the relationship the installation just taught you actually gets to live.',
+      },
+    ],
+    journey: [
+      { step: 'Enter the forest', body: 'Step into a digital forest floor built from code and roots.' },
+      { step: 'Discover connection', body: 'Interact with plant data, stories, and projected life.' },
+      { step: 'Communicate', body: 'Send a message, ask a question, or offer energy.' },
+      { step: 'Cross over', body: 'Pass through the threshold between worlds.' },
+      { step: 'Build relationship', body: 'Learn how humans and plants can coexist and thrive together.' },
+    ],
+    materials: ['Projection mapping', 'Interactive sensors', 'Light curtain / threshold', 'Living plants', 'Artifacts & stories'],
+  },
+
   stats: [
     { value: '68%', label: 'Canopy cover tracked in the pilot neighborhood model' },
     { value: '142', label: 'Species monitored across connected public spaces' },
@@ -75,15 +133,15 @@ export const aivy = {
   process: [
     {
       title: 'Future brainstorming',
-      body: "Started wide — every plausible near-future relationship between AI and daily life, no idea too strange to write down.",
+      body: 'Started wide — every plausible near-future relationship between AI and daily life, no idea too strange to write down.',
     },
     {
       title: 'Mirror board & theme exploration',
       body: 'Mapped every future form of connection we could think of on a mirror board, then narrowed from "connection" broadly to "connection beyond humans" specifically.',
     },
     {
-      title: 'Concept sketching',
-      body: 'Sketched early product concepts for a home intelligence, a wellness companion, and a public-space system before any of them had names.',
+      title: 'Advisor feedback',
+      body: 'Brought the concept to three faculty advisors with installation-art backgrounds, who pushed us toward reciprocity, slower pacing, and designing space for the plants themselves.',
     },
     {
       title: 'Systems thinking & ecosystem mapping',
@@ -95,13 +153,13 @@ export const aivy = {
     },
     {
       title: 'Product architecture & build',
-      body: 'Built out the ecosystem structure — Root, Bloom, Sprout, Vine, and Canopy — into a coded concept site to see the system as something real, not just a diagram.',
+      body: 'Built the ecosystem structure — Root, Bloom, Sprout, Vine, and Canopy — into a coded concept site, then designed the walk-through installation that would let people feel it in person.',
     },
   ],
 
   outcome:
-    'We developed a speculative AI ecosystem — Root, Bloom, Sprout, Vine, and Canopy — that explores how technology can strengthen relationships between people, communities, and nature through adaptive, connected experiences. Rather than a single app, AIVY is a system: a home intelligence, a personal companion, and a public-space network that all learn from the same underlying idea, that technology doesn\'t have to replace relationships to be useful. It can grow them.',
+    "We developed a speculative AI ecosystem — Root, Bloom, Sprout, Vine, and Canopy — plus a walk-through installation design that makes the concept physical: visitors cross from a projected forest into a living home and experience what it might feel like for people and plants to actually communicate. Rather than a single app, AIVY is a system: a home intelligence, a personal companion, a public-space network, and a room you can stand inside, all built on the same idea — technology doesn't have to replace relationships to be useful. It can grow them.",
 
   reflection:
-    "This was the first project where the interface was the least interesting design decision I made. The real work was upstream of any screen: deciding what \"connection\" should even mean for an AI product, and having the discipline to keep pushing past the obvious answer. Working in five connected products instead of one also forced a kind of systems thinking I hadn't done before — every decision about Root had to make sense for Vine and Canopy too, not just look good in isolation.",
+    "This was the first project where the interface was the least interesting design decision I made. The real work was upstream of any screen: deciding what \"connection\" should even mean for an AI product, and having the discipline to keep pushing past the obvious answer. Our advisors' pushback on pacing — that plants are slow, and that's the point — reshaped how I think about designing for AI generally: fast isn't always the feature. Working across five connected products and a physical installation also forced a kind of systems thinking I hadn't done before — every decision about Root had to make sense for Vine, Canopy, and the room itself, not just look good in isolation.",
 }

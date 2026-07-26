@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, ArrowUpRight } from 'lucide-react'
 import type { Project } from '@/data/projects'
 import { aivy } from '@/data/aivy'
 import { Reveal } from '@/components/ui/Reveal'
@@ -10,6 +10,7 @@ export function AivyHero({ project }: { project: Project }) {
   const meta = [
     { label: 'Role', value: project.role },
     { label: 'Timeline', value: project.timeline },
+    ...(project.team ? [{ label: 'Team', value: project.team }] : []),
     { label: 'Tools', value: project.tools.join(', ') },
   ]
 
@@ -29,15 +30,23 @@ export function AivyHero({ project }: { project: Project }) {
         </Reveal>
 
         <Reveal delay={0.06}>
-          <div className="mt-8 flex flex-wrap gap-2">
-            {aivy.hero.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full border border-mint/30 bg-mint/10 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-mint"
-              >
-                {tag}
-              </span>
-            ))}
+          <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
+            <div className="flex flex-wrap gap-2">
+              {aivy.hero.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-mint/30 bg-mint/10 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-mint"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 rounded-full bg-mint px-5 py-2.5 font-medium text-ink transition-transform hover:scale-[1.03]"
+            >
+              Visit AIVY <ArrowUpRight size={16} />
+            </a>
           </div>
         </Reveal>
 
@@ -72,7 +81,7 @@ export function AivyHero({ project }: { project: Project }) {
         </Reveal>
 
         <Reveal delay={0.42}>
-          <div className="mt-10 grid grid-cols-2 gap-6 border-t border-line pt-6 sm:grid-cols-3">
+          <div className="mt-10 grid grid-cols-2 gap-6 border-t border-line pt-6">
             {meta.map((item) => (
               <div key={item.label} className="flex flex-col gap-1">
                 <span className="font-mono text-xs uppercase tracking-wider text-fg-muted">{item.label}</span>

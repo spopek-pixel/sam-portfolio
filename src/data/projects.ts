@@ -213,6 +213,7 @@ export const projects: Project[] = [
     category: ['Research', 'Product'],
     role: 'Speculative Product Designer',
     timeline: '3-Week Design Sprint',
+    team: 'Sam Popek, Mya Lovett, Erin Grisar',
     tools: ['Figma', 'FigJam', 'Miro', 'React', 'Claude Code'],
     accent: 'mint',
     variant: 'case-study',
