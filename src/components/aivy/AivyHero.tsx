@@ -43,7 +43,9 @@ export function AivyHero({ project }: { project: Project }) {
               ))}
             </div>
             <a
-              href="#"
+              href="https://aivy-lovat.vercel.app/#top"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-mint px-5 py-2.5 font-medium text-ink transition-transform hover:scale-[1.03]"
             >
               Visit AIVY <ArrowUpRight size={16} />

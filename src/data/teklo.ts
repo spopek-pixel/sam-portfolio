@@ -118,8 +118,6 @@ export const teklo = {
       { title: 'Cart', items: ['Checkout', 'Payment', 'Success'] },
       { title: 'Profile', items: ['Orders', 'Edit Profile', 'Payment', 'Address'] },
     ],
-    thoughtBubble:
-      "Seeing every branch at once — not just the buying side — is what made the decision obvious. Cutting Sell wasn't about doing less. It was about giving the buying flow the whole map instead of half of it.",
   },
 
   ideation: {

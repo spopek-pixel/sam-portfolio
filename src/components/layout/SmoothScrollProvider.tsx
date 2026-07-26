@@ -1,4 +1,5 @@
-import { useEffect, type ReactNode } from 'react'
+import { useEffect, useRef, type ReactNode } from 'react'
+import { useLocation } from 'react-router-dom'
 import Lenis from 'lenis'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -8,6 +9,8 @@ gsap.registerPlugin(ScrollTrigger)
 
 export function SmoothScrollProvider({ children }: { children: ReactNode }) {
   const reducedMotion = usePrefersReducedMotion()
+  const lenisRef = useRef<Lenis | null>(null)
+  const location = useLocation()
 
   useEffect(() => {
     if (reducedMotion) return
@@ -17,6 +20,7 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
       easing: (t) => 1 - Math.pow(1 - t, 3),
       smoothWheel: true,
     })
+    lenisRef.current = lenis
 
     lenis.on('scroll', ScrollTrigger.update)
 
@@ -26,9 +30,14 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
 
     return () => {
       lenis.destroy()
+      lenisRef.current = null
       gsap.ticker.remove(raf)
     }
   }, [reducedMotion])
+
+  useEffect(() => {
+    lenisRef.current?.scrollTo(0, { immediate: true })
+  }, [location.pathname])
 
   return <>{children}</>
 }

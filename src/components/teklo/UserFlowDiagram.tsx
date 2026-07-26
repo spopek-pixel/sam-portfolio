@@ -1,37 +1,20 @@
-import { MessageCircleQuestion } from 'lucide-react'
 import { teklo } from '@/data/teklo'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import { cn } from '@/lib/utils'
 
-function ThoughtBubble({ children }: { children: string }) {
-  return (
-    <div className="relative h-full w-full rounded-2xl rounded-bl-none border border-mint/25 bg-mint/5 p-4">
-      <p className="flex items-start gap-2.5 text-sm leading-relaxed text-fg-muted">
-        <MessageCircleQuestion size={16} className="mt-0.5 shrink-0 text-mint" />
-        <span>
-          <span className="font-medium text-fg">Thought process. </span>
-          {children}
-        </span>
-      </p>
-      <span className="absolute -bottom-2 left-6 h-2.5 w-2.5 rounded-full border border-mint/25 bg-ink" />
-      <span className="absolute -bottom-4 left-9 h-1.5 w-1.5 rounded-full border border-mint/25 bg-ink" />
-    </div>
-  )
-}
-
 export function UserFlowDiagram() {
-  const { intro, branches, thoughtBubble } = teklo.userFlow
+  const { intro, branches } = teklo.userFlow
 
   return (
     <section className="px-6 py-8 sm:px-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-8 grid gap-6 lg:grid-cols-[1fr_340px] lg:items-stretch lg:gap-8">
-          <SectionHeading kicker="Defining the experience" title="Mapping every path through the app." description={intro} className="max-w-2xl" />
-          <Reveal delay={0.1}>
-            <ThoughtBubble>{thoughtBubble}</ThoughtBubble>
-          </Reveal>
-        </div>
+        <SectionHeading
+          kicker="Defining the experience"
+          title="Mapping every path through the app."
+          description={intro}
+          className="mb-8 max-w-2xl"
+        />
 
         <div className="relative rounded-3xl border border-line bg-surface/40 p-6 sm:p-10">
           <Reveal>

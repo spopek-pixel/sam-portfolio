@@ -98,6 +98,7 @@ export default function ProjectDetail() {
         <TestingFeedback />
         <Recognition />
         <ProjectOutcomes />
+        {project.deliverables && <Deliverables items={project.deliverables} />}
         <HousingkindReflection />
         <NextProjectNav project={nextProject} />
       </div>
