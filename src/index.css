@@ -30,6 +30,7 @@
 
   /* Container */
   --breakpoint-3xl: 1920px;
+  --container-6xl: 96rem;
 }
 
 @layer base {
