@@ -145,8 +145,8 @@ export const teklo = {
       body: 'Fast product discovery across price points, with condition and trust signals surfaced before price on every listing.',
     },
     {
-      title: 'Personalized home feed',
-      body: 'Curated categories, active deals, and recently viewed items greet buyers the moment they open the app — built to feel like a real marketplace, not a spreadsheet of listings.',
+      title: 'Favorites',
+      body: 'Save listings to compare later — built for buyers comparing five tabs at once, not committing on the spot.',
     },
     {
       title: 'Cart & checkout',

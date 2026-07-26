@@ -4,11 +4,11 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import { Lightbox } from '@/components/ui/Lightbox'
 import searchImage from '@/assets/images/projects/teklo/search_products.png'
-import homeImage from '@/assets/images/projects/teklo/home.png'
-import checkoutImage from '@/assets/images/projects/teklo/checkout1.png'
+import favoriteImage from '@/assets/images/projects/teklo/favorite_teklo.png'
+import checkoutImage from '@/assets/images/projects/teklo/checkout_teklo.png'
 import onboardingImage from '@/assets/images/projects/teklo/intro_teklo.png'
 
-const featureImages = [searchImage, homeImage, checkoutImage, onboardingImage]
+const featureImages = [searchImage, favoriteImage, checkoutImage, onboardingImage]
 
 export function KeyFeatures() {
   return (

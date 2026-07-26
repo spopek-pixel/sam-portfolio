@@ -6,16 +6,15 @@ import { cn } from '@/lib/utils'
 
 function ThoughtBubble({ children }: { children: string }) {
   return (
-    <div className="relative h-full w-full rounded-2xl rounded-bl-none border border-mint/25 bg-mint/5 p-5">
-      <p className="flex items-start gap-2.5 text-sm leading-relaxed text-fg-muted">
-        <MessageCircleQuestion size={16} className="mt-0.5 shrink-0 text-mint" />
+    <div className="relative max-w-[260px] rounded-xl rounded-bl-none border border-mint/25 bg-ink/95 p-3.5 shadow-[0_15px_35px_-10px_rgba(0,0,0,0.5)] backdrop-blur-sm sm:max-w-[220px]">
+      <p className="flex items-start gap-2 text-xs leading-snug text-fg-muted">
+        <MessageCircleQuestion size={13} className="mt-0.5 shrink-0 text-mint" />
         <span>
           <span className="font-medium text-fg">Thought process. </span>
           {children}
         </span>
       </p>
-      <span className="absolute -bottom-2 left-6 h-2.5 w-2.5 rounded-full border border-mint/25 bg-ink" />
-      <span className="absolute -bottom-4 left-9 h-1.5 w-1.5 rounded-full border border-mint/25 bg-ink" />
+      <span className="absolute -bottom-1.5 left-5 h-2 w-2 rounded-full border border-mint/25 bg-ink" />
     </div>
   )
 }
@@ -26,16 +25,15 @@ export function UserFlowDiagram() {
   return (
     <section className="px-6 py-8 sm:px-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-14 grid gap-6 lg:grid-cols-2 lg:items-start lg:gap-10">
-          <SectionHeading kicker="Defining the experience" title="Mapping every path through the app." description={intro} className="max-w-2xl" />
-          <Reveal delay={0.1}>
+        <SectionHeading kicker="Defining the experience" title="Mapping every path through the app." description={intro} className="mb-6 max-w-2xl" />
+
+        <div className="relative rounded-3xl border border-line bg-surface/40 p-6 sm:p-10">
+          <Reveal delay={0.05} className="mb-4 flex justify-end sm:absolute sm:right-5 sm:top-5 sm:z-10 sm:mb-0">
             <ThoughtBubble>{thoughtBubble}</ThoughtBubble>
           </Reveal>
-        </div>
 
-        <div className="rounded-3xl border border-line bg-surface/40 p-6 sm:p-10">
           <Reveal>
-            <div className="mb-6 flex justify-center">
+            <div className="mb-4 flex justify-center">
               <span className="rounded-2xl border-2 border-mint bg-mint/10 px-6 py-3 font-display text-lg font-semibold text-mint">
                 Teklo
               </span>
