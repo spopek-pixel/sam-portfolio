@@ -1,20 +1,23 @@
 import type { MouseEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
 import { usePrefersReducedMotion } from '@/hooks/useReducedMotion'
 import { GradientBlob } from '@/components/ui/GradientBlob'
 import { cn } from '@/lib/utils'
 import samPhoto from '@/assets/images/about/sam.jpg'
 import houseLap from '@/assets/images/projects/housingkind/house-lap.png'
 
-const steps = ['Research', 'Define', 'Design', 'Build']
-
 function PhotoWithProcess({ className }: { className?: string }) {
   const reducedMotion = usePrefersReducedMotion()
 
   return (
     <div className={cn('relative', className)}>
+      <motion.div
+        aria-hidden
+        animate={reducedMotion ? undefined : { opacity: [0.35, 0.6, 0.35] }}
+        transition={reducedMotion ? undefined : { duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute -inset-3 -z-10 rounded-[2rem] bg-gradient-to-br from-acid/40 via-violet-tint/30 to-transparent blur-2xl"
+      />
       <div className="overflow-hidden rounded-3xl border border-line">
         <img
           src={samPhoto}
@@ -22,16 +25,6 @@ function PhotoWithProcess({ className }: { className?: string }) {
           className="aspect-[4/3] w-full rounded-3xl object-cover object-top"
           loading="eager"
         />
-        <div className="absolute inset-x-0 bottom-0 rounded-b-3xl bg-gradient-to-t from-ink via-ink/70 to-transparent pt-8">
-          <div className="flex items-center justify-center gap-1 px-2 py-2.5 font-mono text-[9px] uppercase tracking-wider text-fg-muted">
-            {steps.map((step, index) => (
-              <span key={step} className="flex items-center gap-1">
-                <span className={index === steps.length - 1 ? 'text-acid' : undefined}>{step}</span>
-                {index < steps.length - 1 && <ArrowRight size={8} className="shrink-0 opacity-60" />}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
 
       <motion.div

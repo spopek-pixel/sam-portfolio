@@ -58,6 +58,12 @@ import { Wireframing } from '@/components/teklo/Wireframing'
 import { KeyFeatures as TekloKeyFeatures } from '@/components/teklo/KeyFeatures'
 import { PrototypeShowcase as TekloPrototypeShowcase } from '@/components/teklo/PrototypeShowcase'
 import { TekloReflection } from '@/components/teklo/TekloReflection'
+import { AivyTheme } from '@/components/aivy/AivyTheme'
+import { AivyHero } from '@/components/aivy/AivyHero'
+import { AivyConcept } from '@/components/aivy/AivyConcept'
+import { MirrorBoard } from '@/components/aivy/MirrorBoard'
+import { AivyEcosystem } from '@/components/aivy/AivyEcosystem'
+import { AivyStats } from '@/components/aivy/AivyStats'
 
 export default function ProjectDetail() {
   const { slug } = useParams()
@@ -131,6 +137,24 @@ export default function ProjectDetail() {
           <TekloPrototypeShowcase />
           <TekloReflection />
         </TekloTheme>
+        <NextProjectNav project={nextProject} />
+      </div>
+    )
+  }
+
+  if (project.slug === 'aivy') {
+    return (
+      <div>
+        <AivyTheme>
+          <AivyHero project={project} />
+          <AivyConcept />
+          <MirrorBoard />
+          <AivyEcosystem />
+          <AivyStats />
+          <ProcessTimeline steps={project.process} />
+          <OutcomeSection outcome={project.outcome} />
+          <ReflectionSection reflection={project.reflection} />
+        </AivyTheme>
         <NextProjectNav project={nextProject} />
       </div>
     )

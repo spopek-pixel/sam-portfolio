@@ -1,6 +1,32 @@
 import { motion } from 'framer-motion'
 import type { ComponentType } from 'react'
-import { Users, GitBranch, LayoutGrid, UserCircle, ClipboardCheck, StickyNote, Sparkles, Image, PenTool, Bot } from 'lucide-react'
+import {
+  Users,
+  GitBranch,
+  LayoutGrid,
+  UserCircle,
+  ClipboardCheck,
+  StickyNote,
+  Sparkles,
+  PenTool,
+  Bot,
+  Map,
+  Scale,
+  Rows3,
+  Network,
+  Presentation,
+  Handshake,
+  Frame,
+  Component,
+  Accessibility,
+  Zap,
+  Workflow,
+  Film,
+  Cloud,
+  Code2,
+  TerminalSquare,
+  Smartphone,
+} from 'lucide-react'
 import {
   SiFigma,
   SiMiro,
@@ -9,6 +35,8 @@ import {
   SiTailwindcss,
   SiFramer,
   SiClaude,
+  SiVercel,
+  SiGithub,
 } from 'react-icons/si'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
@@ -23,10 +51,16 @@ const groups: Array<{ title: string; items: Item[] }> = [
     title: 'Research & Strategy',
     items: [
       { label: 'User Interviews', Icon: Users },
+      { label: 'Stakeholder Interviews', Icon: Handshake },
       { label: 'Systems Mapping', Icon: GitBranch },
       { label: 'Affinity Diagramming', Icon: LayoutGrid },
       { label: 'Personas', Icon: UserCircle },
       { label: 'Usability Testing', Icon: ClipboardCheck },
+      { label: 'Journey Mapping', Icon: Map },
+      { label: 'Competitive Analysis', Icon: Scale },
+      { label: 'Card Sorting', Icon: Rows3 },
+      { label: 'Information Architecture', Icon: Network },
+      { label: 'Design Workshops', Icon: Presentation },
     ],
   },
   {
@@ -35,9 +69,14 @@ const groups: Array<{ title: string; items: Item[] }> = [
       { label: 'Figma', Icon: SiFigma },
       { label: 'FigJam', Icon: StickyNote },
       { label: 'Figma Make', Icon: Sparkles },
-      { label: 'Adobe CC', Icon: Image },
       { label: 'Illustration', Icon: PenTool },
       { label: 'Miro', Icon: SiMiro },
+      { label: 'Wireframing', Icon: Frame },
+      { label: 'Design Systems', Icon: Component },
+      { label: 'Accessibility (WCAG)', Icon: Accessibility },
+      { label: 'Rapid Prototyping', Icon: Zap },
+      { label: 'User Flows', Icon: Workflow },
+      { label: 'Motion Design', Icon: Film },
     ],
   },
   {
@@ -48,7 +87,13 @@ const groups: Array<{ title: string; items: Item[] }> = [
       { label: 'Tailwind CSS', Icon: SiTailwindcss },
       { label: 'Framer Motion', Icon: SiFramer },
       { label: 'Claude', Icon: SiClaude },
+      { label: 'Claude Code', Icon: TerminalSquare },
       { label: 'ChatGPT', Icon: Bot },
+      { label: 'Cursor', Icon: Code2 },
+      { label: 'Azure OpenAI', Icon: Cloud },
+      { label: 'Vercel', Icon: SiVercel },
+      { label: 'GitHub', Icon: SiGithub },
+      { label: 'Responsive Design', Icon: Smartphone },
     ],
   },
 ]

@@ -1,0 +1,107 @@
+export const aivy = {
+  hero: {
+    tags: ['Speculative Product Design', 'Future Vision', 'AI + Sustainability'],
+    description:
+      'A speculative ecosystem of AI-powered products, set in 2046, that helps people build real relationships with the living world around them.',
+  },
+
+  challenge: {
+    question: 'How might AI help people build stronger relationships beyond human-to-human interaction?',
+    body: "Every AI product we could name was designed to connect people to other people, or to connect people to information. Almost none of them were designed to connect people to the living world they actually live inside of. That gap became the brief: design a future where technology strengthens the relationship between humans and nature, instead of substituting for it.",
+  },
+
+  concept: {
+    intro:
+      'AIVY takes its name and its logic from the ivy plant — a species defined by connection. It grows toward light, adapts to whatever it touches, and strengthens the structure underneath it rather than depleting it. We used that as a literal design brief: an ecosystem of AI-powered products, inspired by the growth patterns of ivy, that connects homes, communities, and nature into one adaptive intelligence.',
+    traits: [
+      { title: 'Grows through connection', body: 'Every new tendril links back to the network that came before it.' },
+      { title: 'Adapts to its environment', body: 'Ivy reads light, moisture, and structure, and responds in real time.' },
+      { title: 'Strengthens every surface it touches', body: 'Its growth reinforces what it grows on, rather than depleting it.' },
+      { title: 'Thrives as part of a larger ecosystem', body: 'No single vine acts alone — the whole system grows together.' },
+    ],
+    naming: {
+      pronunciation: '"eye-vee"',
+      body: "We landed on AIVY after cycling through names that described the technology (Verdant, Symbiont, GreenLoop) and finding all of them forgettable. AIVY works because it doesn't describe the product — it describes the relationship. AI, inspired by nature, growing the same way ivy does: through connection, not control.",
+    },
+  },
+
+  mirrorBoard: {
+    title: 'How do we connect?',
+    kicker: 'Ideation — Mirror Board',
+    body: "Before AIVY became a product about plants, it started as an open question on a mirror board: how do we connect? We mapped out every future form of connection we could think of — human-to-human social tools, brain-computer interfaces, ambient presence, AI companionship — and kept circling back to the same gap. Almost every idea assumed connection meant connection to other people. We deliberately pushed past that assumption to ask what it would mean for AI to build a relationship between people and the natural world instead. That reframe — connection beyond humans — is what the rest of the project was built on.",
+    caption: 'Mirror board — themes explored before narrowing to "Connection Beyond Humans."',
+  },
+
+  ecosystem: [
+    {
+      id: 'root',
+      name: 'Root',
+      tag: 'Home',
+      body: 'The intelligent heart of every home — connecting plants, environmental sensors, energy use, lighting, and smart devices into one adaptive intelligence that learns routines before they’re asked for.',
+    },
+    {
+      id: 'bloom',
+      name: 'Bloom',
+      tag: 'Wellness',
+      body: 'A personal wellness companion that reads light, air quality, and weather alongside your routine, and suggests small moments outdoors — a walk, an open window, a few minutes of morning sun.',
+    },
+    {
+      id: 'sprout',
+      name: 'Sprout',
+      tag: 'Learn',
+      body: 'A personal education companion that turns everyday plant care into ongoing lessons — why a leaf is curling, how root systems drink, what a neighborhood’s native species actually need.',
+    },
+    {
+      id: 'vine',
+      name: 'Vine',
+      tag: 'Neighborhood',
+      body: 'A neighborhood communication network connecting residents, shared gardens, and local projects — organizing volunteers the moment a community garden needs one.',
+    },
+    {
+      id: 'canopy',
+      name: 'Canopy',
+      tag: 'Public Space',
+      body: 'A system for smart public parks and shared spaces that monitors environmental health and biodiversity, helping cities make people-centered, nature-centered decisions.',
+    },
+  ],
+
+  stats: [
+    { value: '68%', label: 'Canopy cover tracked in the pilot neighborhood model' },
+    { value: '142', label: 'Species monitored across connected public spaces' },
+    { value: '5', label: 'Connected products, one adaptive ecosystem' },
+    { value: '2046', label: 'The year we designed this future for' },
+  ],
+
+  process: [
+    {
+      title: 'Future brainstorming',
+      body: "Started wide — every plausible near-future relationship between AI and daily life, no idea too strange to write down.",
+    },
+    {
+      title: 'Mirror board & theme exploration',
+      body: 'Mapped every future form of connection we could think of on a mirror board, then narrowed from "connection" broadly to "connection beyond humans" specifically.',
+    },
+    {
+      title: 'Concept sketching',
+      body: 'Sketched early product concepts for a home intelligence, a wellness companion, and a public-space system before any of them had names.',
+    },
+    {
+      title: 'Systems thinking & ecosystem mapping',
+      body: 'Mapped how five separate products would actually talk to each other — home, personal, and public layers, each feeding the next.',
+    },
+    {
+      title: 'Naming process',
+      body: 'Landed on AIVY after testing names that described the technology and finding they all missed the point — the name needed to describe the relationship, not the product.',
+    },
+    {
+      title: 'Product architecture & build',
+      body: 'Built out the ecosystem structure — Root, Bloom, Sprout, Vine, and Canopy — into a coded concept site to see the system as something real, not just a diagram.',
+    },
+  ],
+
+  outcome:
+    'We developed a speculative AI ecosystem — Root, Bloom, Sprout, Vine, and Canopy — that explores how technology can strengthen relationships between people, communities, and nature through adaptive, connected experiences. Rather than a single app, AIVY is a system: a home intelligence, a personal companion, and a public-space network that all learn from the same underlying idea, that technology doesn\'t have to replace relationships to be useful. It can grow them.',
+
+  reflection:
+    "This was the first project where the interface was the least interesting design decision I made. The real work was upstream of any screen: deciding what \"connection\" should even mean for an AI product, and having the discipline to keep pushing past the obvious answer. Working in five connected products instead of one also forced a kind of systems thinking I hadn't done before — every decision about Root had to make sense for Vine and Canopy too, not just look good in isolation.",
+}

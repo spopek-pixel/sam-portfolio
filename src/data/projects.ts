@@ -1,4 +1,6 @@
 import housingkindTitleVisual from '@/assets/images/projects/housingkind/house-lap-1.png'
+import aivyHero from '@/assets/images/projects/aivy/aivy-hero.jpg'
+import { aivy } from '@/data/aivy'
 
 export type Accent = 'violet' | 'acid' | 'mint'
 export type Category = 'Product' | 'Research' | 'Visual'
@@ -158,7 +160,7 @@ export const projects: Project[] = [
     description:
       'A calm, personalized redesign of Dragonfly Hot Yoga\'s booking app — reimagining onboarding, booking, and waitlists around building a consistent practice.',
     category: ['Product'],
-    role: 'UX Designer, Product Designer',
+    role: 'UX Designer & Product Strategist',
     team: 'Solo project',
     timeline: 'Jan 2026 — Present',
     tools: ['Figma', 'FigJam', 'Claude', 'ChatGPT', 'Miro'],
@@ -205,28 +207,32 @@ export const projects: Project[] = [
   {
     slug: 'aivy',
     title: 'AIVY',
-    tagline: 'A new website, currently in progress.',
-    category: ['Product'],
-    role: 'Product Designer & Developer',
-    timeline: 'In progress',
-    tools: ['Figma', 'React'],
-    accent: 'violet',
+    tagline: 'Designing AI that reconnects people with nature.',
+    description:
+      'A speculative ecosystem of AI-powered products, set in 2046, exploring how technology can strengthen relationships between people, communities, and the natural world.',
+    category: ['Research', 'Product'],
+    role: 'Speculative Product Designer',
+    timeline: '3-Week Design Sprint',
+    tools: ['Figma', 'FigJam', 'Miro', 'React', 'Claude Code'],
+    accent: 'mint',
     variant: 'case-study',
-    featured: false,
-    problem: "This case study is still in progress — check back soon for the full write-up.",
+    featured: true,
+    problem: aivy.challenge.body,
     research: [],
-    process: [],
+    process: aivy.process,
     decisions: [],
-    outcome: "AIVY is actively being designed and built. Full case study coming soon.",
-    reflection: "More to come once the project ships.",
+    outcome: aivy.outcome,
+    reflection: aivy.reflection,
     images: imagesFor('aivy'),
+    titleVisual: aivyHero,
   },
   {
     slug: 'teklo',
     title: 'Teklo',
-    tagline: 'Cutting a marketplace in half to make it trustworthy.',
+    tagline:
+      'Redesigned a marketplace by simplifying complex shopping decisions, increasing user trust, and creating a faster product discovery experience through research-driven design.',
     category: ['Research', 'Product'],
-    role: 'UX Design & Research',
+    role: 'Lead UX Designer & UX Researcher',
     timeline: 'Sept 2024 — Dec 2024',
     team: 'Sam Popek, Evan Cass',
     tools: ['Figma', 'FigJam', 'Miro'],
