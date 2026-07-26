@@ -34,15 +34,13 @@ const taskFlowImages = [
 
 function StageHeader({ index, icon: Icon, title }: { index: number; icon: typeof StickyNote; title: string }) {
   return (
-    <div className="mb-4 flex items-start gap-3.5">
+    <div className="mb-4 flex items-center gap-3.5">
       <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-line text-violet-tint">
         <Icon size={16} />
       </span>
-      <div>
-        <div className="flex items-baseline gap-2.5">
-          <span className="font-mono text-xs text-fg-muted">0{index}</span>
-          <h3 className="font-medium">{title}</h3>
-        </div>
+      <div className="flex items-baseline gap-2.5">
+        <span className="font-mono text-xs text-fg-muted">0{index}</span>
+        <h3 className="font-medium">{title}</h3>
       </div>
     </div>
   )

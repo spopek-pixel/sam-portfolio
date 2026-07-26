@@ -1,5 +1,7 @@
 import { teklo } from '@/data/teklo'
 import { Reveal } from '@/components/ui/Reveal'
+import { Lightbox } from '@/components/ui/Lightbox'
+import introImage from '@/assets/images/projects/teklo/intro_teklo.png'
 
 export function TekloOverview() {
   const { intro } = teklo.overview
@@ -16,6 +18,16 @@ export function TekloOverview() {
           </Reveal>
         ))}
       </div>
+
+      <Reveal delay={0.3}>
+        <div className="mx-auto mt-10 max-w-5xl">
+          <Lightbox src={introImage} alt="Teklo onboarding — curated deals, one-day delivery, smart picks">
+            <div className="aspect-[16/9] w-full overflow-hidden rounded-2xl border border-line bg-surface">
+              <img src={introImage} alt="" className="h-full w-full object-contain" loading="lazy" />
+            </div>
+          </Lightbox>
+        </div>
+      </Reveal>
     </section>
   )
 }

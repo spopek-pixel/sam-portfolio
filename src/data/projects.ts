@@ -267,7 +267,7 @@ export const projects: Project[] = [
       'The result is a streamlined marketplace for browsing, favoriting, and checking out affordable tech, backed by a full design system — built to prove that removing scope can be a design decision in its own right, not just a compromise.',
     reflection:
       "Good design isn't about adding more. Cutting the selling flow was the single decision that made the rest of the product make sense — everything downstream got simpler once that one thing was gone.",
-    images: imagesFor('teklo'),
+    images: imagesFor('teklo', 'teklo_home.png'),
   },
   {
     slug: 'outfront-media-graphics',

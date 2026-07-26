@@ -5,7 +5,8 @@ import { teklo } from '@/data/teklo'
 import { Reveal } from '@/components/ui/Reveal'
 import { LinkButton } from '@/components/ui/Button'
 import { GradientBlob, NoiseOverlay } from '@/components/ui/GradientBlob'
-import { ProjectVisual } from '@/components/ui/ProjectVisual'
+import { Lightbox } from '@/components/ui/Lightbox'
+import heroImage from '@/assets/images/projects/teklo/teklo_home.png'
 
 export function TekloHero({ project }: { project: Project }) {
   const { description } = teklo.hero
@@ -70,7 +71,11 @@ export function TekloHero({ project }: { project: Project }) {
           </div>
 
           <Reveal delay={0.24}>
-            <ProjectVisual title={project.title} accent={project.accent} className="aspect-[4/3] w-full" />
+            <Lightbox src={heroImage} alt="Teklo app — splash screen and home screen">
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-line bg-surface">
+                <img src={heroImage} alt="" className="h-full w-full object-cover" loading="eager" />
+              </div>
+            </Lightbox>
           </Reveal>
         </div>
       </div>

@@ -3,7 +3,9 @@ import { teklo } from '@/data/teklo'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import { ProjectVisual } from '@/components/ui/ProjectVisual'
+import { Lightbox } from '@/components/ui/Lightbox'
 import { cn } from '@/lib/utils'
+import wireframeImage from '@/assets/images/projects/teklo/wireframe_teklo.png'
 
 const iconMap = { Lightbulb, LayoutTemplate, Palette }
 
@@ -35,7 +37,7 @@ function MethodologyStrip() {
 
 function StageHeader({ index, icon: Icon, title }: { index: number; icon: typeof Lightbulb; title: string }) {
   return (
-    <div className="mb-4 flex items-start gap-3.5">
+    <div className="mb-4 flex items-center gap-3.5">
       <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-line text-mint">
         <Icon size={16} />
       </span>
@@ -43,28 +45,6 @@ function StageHeader({ index, icon: Icon, title }: { index: number; icon: typeof
         <span className="font-mono text-xs text-fg-muted">0{index}</span>
         <h3 className="font-medium">{title}</h3>
       </div>
-    </div>
-  )
-}
-
-function WireframeKit() {
-  const screens = ['Welcome', 'Search', 'Product', 'Checkout']
-  return (
-    <div className="grid aspect-[4/3] w-full grid-cols-2 gap-2 rounded-2xl border border-line bg-surface p-3">
-      {screens.map((screen) => (
-        <div key={screen} className="flex flex-col gap-1.5 rounded-lg border border-line/60 bg-ink/40 p-2">
-          <span className="font-mono text-[8px] uppercase tracking-wider text-fg-muted/70">{screen}</span>
-          <div className="h-2 w-3/4 rounded-full bg-fg-muted/25" />
-          <div className="relative mt-1 flex-1 rounded-md border border-dashed border-fg-muted/25">
-            <svg className="absolute inset-0 h-full w-full text-fg-muted/15" viewBox="0 0 100 100" preserveAspectRatio="none">
-              <line x1="0" y1="0" x2="100" y2="100" stroke="currentColor" strokeWidth="1" />
-              <line x1="100" y1="0" x2="0" y2="100" stroke="currentColor" strokeWidth="1" />
-            </svg>
-          </div>
-          <div className="mt-1 h-1.5 w-1/2 rounded-full bg-fg-muted/15" />
-          <div className="h-1.5 w-2/3 rounded-full bg-fg-muted/15" />
-        </div>
-      ))}
     </div>
   )
 }
@@ -84,8 +64,19 @@ export function DesignProcess() {
         <div className="flex flex-col gap-12">
           {stages.map((stage, index) => {
             const Icon = iconMap[stage.icon as keyof typeof iconMap]
+
+            if (index === 0) {
+              return (
+                <Reveal key={stage.title} delay={index * 0.08}>
+                  <div className="max-w-2xl">
+                    <StageHeader index={index + 1} icon={Icon} title={stage.title} />
+                    <p className="text-sm leading-relaxed text-fg-muted">{stage.body}</p>
+                  </div>
+                </Reveal>
+              )
+            }
+
             const imageFirst = index % 2 === 1
-            const isWireframeStage = index === 1
 
             return (
               <Reveal key={stage.title} delay={index * 0.08}>
@@ -95,7 +86,15 @@ export function DesignProcess() {
                     <p className="max-w-xl text-sm leading-relaxed text-fg-muted">{stage.body}</p>
                   </div>
                   <div className={cn(imageFirst && 'lg:order-1')}>
-                    {isWireframeStage ? <WireframeKit /> : <ProjectVisual title={stage.title} accent="mint" className="aspect-[4/3] w-full" />}
+                    {index === 1 ? (
+                      <Lightbox src={wireframeImage} alt="Teklo low-fidelity wireframe kit">
+                        <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-line bg-ink p-2">
+                          <img src={wireframeImage} alt="" className="h-full w-full object-contain" loading="lazy" />
+                        </div>
+                      </Lightbox>
+                    ) : (
+                      <ProjectVisual title={stage.title} accent="mint" className="aspect-[4/3] w-full" />
+                    )}
                   </div>
                 </div>
               </Reveal>

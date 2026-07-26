@@ -26,19 +26,21 @@ export function UserFlowDiagram() {
   return (
     <section className="px-6 py-8 sm:px-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading kicker="User flow" title="Mapping every path through the app." description={intro} className="mb-14 max-w-2xl" />
+        <div className="mb-14 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-start lg:gap-10">
+          <SectionHeading kicker="User flow" title="Mapping every path through the app." description={intro} className="max-w-2xl" />
+          <Reveal delay={0.1} className="flex lg:justify-end">
+            <ThoughtBubble>{thoughtBubble}</ThoughtBubble>
+          </Reveal>
+        </div>
 
         <div className="rounded-3xl border border-line bg-surface/40 p-6 sm:p-10">
-          <div className="mb-8 grid gap-6 lg:grid-cols-[auto_1fr] lg:items-center">
-            <Reveal className="flex justify-center lg:justify-start">
-              <span className="whitespace-nowrap rounded-2xl border-2 border-mint bg-mint/10 px-6 py-3 font-display text-lg font-semibold text-mint">
+          <Reveal>
+            <div className="mb-6 flex justify-center">
+              <span className="rounded-2xl border-2 border-mint bg-mint/10 px-6 py-3 font-display text-lg font-semibold text-mint">
                 Teklo
               </span>
-            </Reveal>
-            <Reveal delay={0.1} className="flex justify-center lg:justify-start">
-              <ThoughtBubble>{thoughtBubble}</ThoughtBubble>
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
 
           <div className="mx-auto mb-2 hidden h-px w-full max-w-4xl bg-line sm:block" />
 
