@@ -227,7 +227,7 @@ export const projects: Project[] = [
     tagline: 'Cutting a marketplace in half to make it trustworthy.',
     category: ['Research', 'Product'],
     role: 'UX Design & Research',
-    timeline: 'Aug 2025 — Present',
+    timeline: 'Sept 2024 — Dec 2024',
     team: 'Sam Popek, Evan Cass',
     tools: ['Figma', 'FigJam', 'Miro'],
     accent: 'mint',

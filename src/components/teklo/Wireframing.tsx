@@ -32,8 +32,8 @@ function StageCard({ label, labelTone, body, image, alt, imageFirst }: StageCard
             <p className="text-sm leading-relaxed text-fg-muted">{body}</p>
           </div>
           <Lightbox src={image} alt={alt} triggerClassName={cn(imageFirst && 'lg:order-1')}>
-            <div className="aspect-[4/3] w-full overflow-hidden rounded-xl border border-line bg-ink">
-              <img src={image} alt="" className="h-full w-full object-cover object-top" loading="lazy" />
+            <div className="aspect-[16/10] w-full overflow-hidden rounded-xl border border-line bg-ink p-2">
+              <img src={image} alt="" className="h-full w-full object-contain" loading="lazy" />
             </div>
           </Lightbox>
         </div>

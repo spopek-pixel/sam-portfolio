@@ -8,6 +8,7 @@ import { Lightbox } from '@/components/ui/Lightbox'
 import { ConceptRoadmap } from './ConceptRoadmap'
 import { StoryboardReveal } from './StoryboardReveal'
 import { AIFeatureShowcase } from './AIFeatureShowcase'
+import { YogaIconRail } from './YogaIcons'
 import { cn } from '@/lib/utils'
 import brainstormBoard from '@/assets/images/projects/dragonfly-yoga/brainstorm_dragon.jpg'
 import storyboardImg from '@/assets/images/projects/dragonfly-yoga/storyboard.png'
@@ -140,7 +141,9 @@ export function IdeationProcess() {
 
           {/* 4. Task flows — real diagrams, uniform size, zoomable */}
           <Reveal delay={0.14}>
-            <div>
+            <div className="relative">
+              <YogaIconRail side="left" />
+              <YogaIconRail side="right" />
               <StageHeader index={4} icon={Waypoints} title={taskFlows.title} />
               <p className="mb-5 max-w-2xl text-sm leading-relaxed text-fg-muted">{taskFlows.body}</p>
               <div className="mx-auto flex max-w-2xl flex-col gap-4">

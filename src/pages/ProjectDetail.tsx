@@ -35,7 +35,6 @@ import { Challenge } from '@/components/dragonfly/Challenge'
 import { KeyInsights } from '@/components/dragonfly/KeyInsights'
 import { DesignPrinciplesOrbit } from '@/components/dragonfly/DesignPrinciplesOrbit'
 import { IdeationProcess } from '@/components/dragonfly/IdeationProcess'
-import { ClaudeProcessSection } from '@/components/dragonfly/ClaudeProcessSection'
 import { FinalExperience } from '@/components/dragonfly/FinalExperience'
 import { DesignSystemShowcase } from '@/components/dragonfly/DesignSystemShowcase'
 import { PrototypeShowcase } from '@/components/dragonfly/PrototypeShowcase'
@@ -106,7 +105,6 @@ export default function ProjectDetail() {
           <DesignPrinciplesOrbit />
           <DesignSystemShowcase />
           <IdeationProcess />
-          <ClaudeProcessSection />
           <FinalExperience />
           <PrototypeShowcase />
           <ImpactSection />

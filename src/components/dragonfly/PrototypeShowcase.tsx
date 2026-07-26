@@ -2,6 +2,7 @@ import { ArrowUpRight } from 'lucide-react'
 import { dragonfly } from '@/data/dragonfly'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
+import { YogaIconRail } from './YogaIcons'
 import dragonflyRecording from '@/assets/images/projects/dragonfly-yoga/dragonfly_recording.mp4'
 
 export function PrototypeShowcase() {
@@ -13,13 +14,20 @@ export function PrototypeShowcase() {
         <SectionHeading kicker="Prototype" title="See it in motion." description={body} className="mb-10 max-w-2xl" />
 
         <Reveal>
-          <video
-            src={dragonflyRecording}
-            controls
-            playsInline
-            preload="metadata"
-            className="mx-auto max-h-[600px] w-full max-w-sm rounded-2xl border border-line shadow-[0_25px_60px_rgba(0,0,0,0.45)]"
-          />
+          <div className="relative mx-auto max-w-sm">
+            <YogaIconRail side="left" />
+            <YogaIconRail side="right" />
+            <video
+              src={dragonflyRecording}
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              className="mx-auto max-h-[600px] w-full rounded-2xl border border-line shadow-[0_25px_60px_rgba(0,0,0,0.45)]"
+            />
+          </div>
         </Reveal>
 
         <Reveal delay={0.08}>

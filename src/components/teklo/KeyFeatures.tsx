@@ -4,7 +4,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import { Lightbox } from '@/components/ui/Lightbox'
 import searchImage from '@/assets/images/projects/teklo/search_products.png'
-import favoriteImage from '@/assets/images/projects/teklo/favorite_teklo.png'
+import favoriteImage from '@/assets/images/projects/teklo/favorite_new.png'
 import checkoutImage from '@/assets/images/projects/teklo/checkout_teklo.png'
 import onboardingImage from '@/assets/images/projects/teklo/intro_teklo.png'
 
@@ -27,11 +27,11 @@ export function KeyFeatures() {
                   className="group flex h-full flex-col gap-5 overflow-hidden rounded-2xl border border-line bg-surface/60 p-5"
                 >
                   <Lightbox src={image} alt={`${feature.title} screen`}>
-                    <div className="aspect-[4/3] w-full overflow-hidden rounded-xl border border-line bg-white">
+                    <div className="aspect-[4/3] w-full overflow-hidden rounded-xl border border-line bg-white p-2">
                       <img
                         src={image}
                         alt=""
-                        className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
                         loading="lazy"
                       />
                     </div>

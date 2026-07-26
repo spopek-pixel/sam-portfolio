@@ -12,13 +12,13 @@ const testimonials = [
   {
     quote:
       "She turned a stack of stakeholder interviews into an actual working interface in days, not weeks. The rest of the team was still writing the brief.",
-    name: 'Lucy Murdock',
-    role: 'Teammate, Housingkind',
+    name: 'Emily Stover',
+    role: 'SOHE Staff, Housingkind',
   },
   {
     quote:
       "Most designers stop at the mockup. Sam kept going until it was a real, working product she could put in front of us.",
-    name: 'Obid Ochilov',
+    name: 'Mya Lovett',
     role: 'Teammate, Housingkind',
   },
   {
