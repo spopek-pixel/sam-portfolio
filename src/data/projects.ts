@@ -207,7 +207,8 @@ export const projects: Project[] = [
   {
     slug: 'aivy',
     title: 'AIVY',
-    tagline: 'Designing AI that reconnects people with nature.',
+    tagline:
+      "A speculative AI ecosystem — built with PBS Wisconsin around the question 'What if things turn out okay?' — imagining a future where technology helps people reconnect with each other and the living world around them.",
     description:
       'A speculative ecosystem of AI-powered products, set in 2046, exploring how technology can strengthen relationships between people, communities, and the natural world.',
     category: ['Research', 'Product'],
@@ -224,7 +225,7 @@ export const projects: Project[] = [
     decisions: [],
     outcome: aivy.outcome,
     reflection: aivy.reflection,
-    images: imagesFor('aivy'),
+    images: imagesFor('aivy', '/aivy.png'),
     titleVisual: aivyHero,
   },
   {

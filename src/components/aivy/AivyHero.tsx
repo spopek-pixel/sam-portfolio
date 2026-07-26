@@ -11,6 +11,7 @@ export function AivyHero({ project }: { project: Project }) {
     { label: 'Role', value: project.role },
     { label: 'Timeline', value: project.timeline },
     ...(project.team ? [{ label: 'Team', value: project.team }] : []),
+    { label: 'Partner', value: aivy.brief.partner },
     { label: 'Tools', value: project.tools.join(', ') },
   ]
 

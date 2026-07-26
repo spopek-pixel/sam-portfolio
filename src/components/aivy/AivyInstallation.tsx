@@ -3,6 +3,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import { Lightbox } from '@/components/ui/Lightbox'
 import installationImage from '@/assets/images/projects/aivy/visual_installation.png'
+import sketchImage from '@/assets/images/projects/aivy/aivy_sketch.jpg'
 
 export function AivyInstallation() {
   return (
@@ -15,17 +16,30 @@ export function AivyInstallation() {
           </span>
         </div>
 
-        <Reveal>
-          <figure className="overflow-hidden rounded-2xl border border-line bg-surface">
-            <Lightbox src={installationImage} alt="AIVY installation concept — floor plan, elevations, and experience journey">
-              <img
-                src={installationImage}
-                alt="AIVY installation concept — floor plan, elevations, and experience journey"
-                className="w-full object-cover"
-                loading="lazy"
-              />
-            </Lightbox>
-          </figure>
+        <div className="grid gap-6 sm:grid-cols-[0.85fr_1.15fr] sm:items-center">
+          <Reveal>
+            <figure className="overflow-hidden rounded-2xl border border-line bg-surface">
+              <Lightbox src={sketchImage} alt={aivy.installation.sketchCaption}>
+                <img src={sketchImage} alt={aivy.installation.sketchCaption} className="w-full object-cover" loading="lazy" />
+              </Lightbox>
+              <figcaption className="border-t border-line px-4 py-3 text-xs text-fg-muted">{aivy.installation.sketchCaption}</figcaption>
+            </figure>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <figure className="overflow-hidden rounded-2xl border border-line bg-surface">
+              <Lightbox src={installationImage} alt="AIVY installation concept — floor plan, elevations, and experience journey">
+                <img
+                  src={installationImage}
+                  alt="AIVY installation concept — floor plan, elevations, and experience journey"
+                  className="w-full object-cover"
+                  loading="lazy"
+                />
+              </Lightbox>
+            </figure>
+          </Reveal>
+        </div>
+        <Reveal delay={0.14}>
+          <p className="mt-4 text-center text-xs text-fg-muted">{aivy.installation.renderCaption}</p>
         </Reveal>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-3">

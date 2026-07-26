@@ -8,8 +8,19 @@ export const aivy = {
   quote: "Instead of technology replacing human connection like we feared, it gave us more time for it.",
 
   challenge: {
-    question: 'How might AI help people build stronger relationships beyond human-to-human interaction?',
-    body: "Every AI product we could name was designed to connect people to other people, or to connect people to information. Almost none of them were designed to connect people to the living world they actually live inside of. That gap became the brief: design a future where technology strengthens the relationship between humans and nature, instead of substituting for it.",
+    question: 'What if things turn out okay?',
+    body: "That was the prompt our partner, PBS Wisconsin, gave us. Not a technology brief, not a feature list — a question about the future itself. We took it somewhere specific: what if AI's role in the future wasn't to replace human connection, but to widen it, to include the living world we'd stopped paying attention to?",
+  },
+
+  brief: {
+    kicker: 'The brief — with PBS Wisconsin',
+    partner: 'PBS Wisconsin',
+    prompt: 'What if things turn out okay?',
+    paragraphs: [
+      'Who gets to imagine the future? There is an inherent privilege in imagining. Everything that shapes and contains the realities we live within were dreamed up, imagined, and put into the world by those who came before us. Even now, the future is being concocted, disseminated, and imposed upon us.',
+      "But the future is not inevitable. We can change it. We can influence it, nudge it, shape it, provoke it, and create different outcomes. We can re-story the world to come. This begins in imagining what that world looks like.",
+      "This is where we come in. Together, we'll imagine many futures — hopeful, compassionate, inclusive, globally engaged, and reciprocal futures.",
+    ],
   },
 
   concept: {
@@ -24,6 +35,10 @@ export const aivy = {
     naming: {
       pronunciation: '"eye-vee"',
       body: "We landed on AIVY after cycling through names that described the technology (Verdant, Symbiont, GreenLoop) and finding all of them forgettable. AIVY works because it doesn't describe the product — it describes the relationship. AI, inspired by nature, growing the same way ivy does: through connection, not control.",
+    },
+    inspiration: {
+      title: 'Early inspiration — PlantWave',
+      body: "Before we sketched a single screen, we looked at PlantWave — an existing device that translates a plant's bioelectric signals into sound. It became our reference point for what the physical product should feel like: something plant-communication-shaped, sitting on a table like a speaker, closer to an Alexa than an app icon.",
     },
   },
 
@@ -99,6 +114,8 @@ export const aivy = {
     title: 'How do we connect? A speculative installation.',
     dimensions: '10 7/8 ft × 20 ft 10 in · 10 ft ceilings',
     body: "The digital ecosystem is one half of AIVY. The other half — the part we actually want to build — is physical: a walk-through installation where visitors move between a projected forest floor and a living home, and feel firsthand what it might be like for humans and plants to actually communicate.",
+    sketchCaption: "Erin's first sketch of the space, drawn right after we shared our initial ideas — the forest floor, a projected narrative wall, and the product itself on a pedestal at the threshold.",
+    renderCaption: 'From sketch to render — the floor plan, elevations, and experience journey.',
     zones: [
       {
         name: 'Forest space',

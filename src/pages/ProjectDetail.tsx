@@ -60,6 +60,7 @@ import { PrototypeShowcase as TekloPrototypeShowcase } from '@/components/teklo/
 import { TekloReflection } from '@/components/teklo/TekloReflection'
 import { AivyTheme } from '@/components/aivy/AivyTheme'
 import { AivyHero } from '@/components/aivy/AivyHero'
+import { AivyBrief } from '@/components/aivy/AivyBrief'
 import { AivyQuote } from '@/components/aivy/AivyQuote'
 import { AivyConcept } from '@/components/aivy/AivyConcept'
 import { MirrorBoard } from '@/components/aivy/MirrorBoard'
@@ -151,6 +152,7 @@ export default function ProjectDetail() {
       <div>
         <AivyTheme>
           <AivyHero project={project} />
+          <AivyBrief />
           <AivyQuote />
           <AivyConcept />
           <MirrorBoard />
