@@ -16,6 +16,7 @@ import { BuildingWithAI } from '@/components/housingkind/BuildingWithAI'
 import { KeyFeatures } from '@/components/housingkind/KeyFeatures'
 import { OriginStory } from '@/components/housingkind/OriginStory'
 import { ResearchMethods } from '@/components/housingkind/ResearchMethods'
+import { UserQuotes } from '@/components/housingkind/UserQuotes'
 import { FieldResearch } from '@/components/housingkind/FieldResearch'
 import { Personas } from '@/components/housingkind/Personas'
 import { SystemsMap } from '@/components/housingkind/SystemsMap'
@@ -86,6 +87,7 @@ export default function ProjectDetail() {
         <DesignProcessFlow />
         <OriginStory />
         <ResearchMethods />
+        <UserQuotes />
         <FieldResearch />
         <Personas />
         <SystemsMap />

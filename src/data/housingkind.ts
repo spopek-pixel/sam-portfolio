@@ -108,6 +108,45 @@ export const housingkind = {
     photoCaption: 'Sharing early creative ideas and exploring different concepts during the ideation phase.',
   },
 
+  userQuotes: {
+    intro:
+      "Across 15+ interviews, residents kept describing the same gap in different words: not opposition to affordable housing, but a complete absence of information to picture it with. These quotes directly shaped the decision to build a visualization tool instead of another explainer page.",
+    quotes: [
+      {
+        participant: 'Participant A',
+        quote: "I know affordable housing exists, but I honestly have no idea where it's being built or what those developments actually look like.",
+      },
+      {
+        participant: 'Participant B',
+        quote: "Whenever I hear about a new housing project, I immediately wonder how it's going to affect the neighborhood because I don't have much information.",
+      },
+      {
+        participant: 'Participant C',
+        quote: 'I think people make assumptions because they never actually see what these communities are like.',
+      },
+      {
+        participant: 'Participant D',
+        quote: "If I could see the plans, photos, and progress, I'd probably feel a lot more comfortable supporting these projects.",
+      },
+      {
+        participant: 'Participant E',
+        quote: "Most of what I know comes from social media comments or word of mouth, and that's usually pretty negative.",
+      },
+      {
+        participant: 'Participant F',
+        quote: "There's a lack of transparency. It feels like decisions are made behind closed doors.",
+      },
+      {
+        participant: 'Participant G',
+        quote: "I don't think people necessarily oppose affordable housing—they're just filling in the gaps with their own assumptions.",
+      },
+      {
+        participant: 'Participant H',
+        quote: "I've never visited one of these developments, so it's easy to imagine the worst.",
+      },
+    ],
+  },
+
   fieldResearch: {
     body: [
       'We prioritized real-world engagement to better understand the housing crisis beyond desk research. As part of the program, we traveled to Milwaukee to meet with organizations working directly in this space.',
