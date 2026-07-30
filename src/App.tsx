@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import { RootLayout } from '@/components/layout/RootLayout'
 import { lazyWithRetry } from '@/lib/lazyWithRetry'
 
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
+      <Analytics />
     </BrowserRouter>
   )
 }
