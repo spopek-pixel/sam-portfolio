@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
+import { PixelAccent } from '@/components/ui/PixelAccent'
 
 const entries = [
   {
@@ -42,7 +43,8 @@ export function InteractiveTimeline() {
   const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1])
 
   return (
-    <section className="px-6 py-10 sm:px-14 sm:py-16">
+    <section className="relative px-6 py-10 sm:px-14 sm:py-16">
+      <PixelAccent icon="drop" color="#a78bfa" size={20} className="absolute right-[12%] top-8 hidden sm:block" />
       <div className="mx-auto max-w-4xl">
         <SectionHeading kicker="The timeline" title="Every stop on the way here." className="mb-14" />
 

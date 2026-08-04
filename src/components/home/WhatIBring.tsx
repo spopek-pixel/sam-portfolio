@@ -1,6 +1,7 @@
 import { Search, PenTool, Code2, Sparkles, Eye, Boxes } from 'lucide-react'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
+import { PixelAccent } from '@/components/ui/PixelAccent'
 
 const pillars = [
   {
@@ -37,7 +38,8 @@ const pillars = [
 
 export function WhatIBring() {
   return (
-    <section className="px-6 py-16 sm:px-10 sm:py-20">
+    <section className="relative px-6 py-16 sm:px-10 sm:py-20">
+      <PixelAccent icon="bolt" color="#a6ff4d" size={22} className="absolute right-[8%] top-6 hidden sm:block" />
       <div className="mx-auto flex max-w-6xl flex-col gap-14">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-12">
           <SectionHeading

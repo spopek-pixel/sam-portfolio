@@ -4,9 +4,11 @@ import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import type { Project } from '@/data/projects'
 import { ProjectVisual } from '@/components/ui/ProjectVisual'
+import { PixelSprite } from '@/components/ui/PixelSprite'
 import { Tag } from '@/components/ui/Tag'
 import { usePrefersReducedMotion } from '@/hooks/useReducedMotion'
 import { cn } from '@/lib/utils'
+import { projectPixelIcons } from '@/data/projectPixelIcons'
 
 interface ProjectCardProps {
   project: Project
@@ -17,6 +19,7 @@ interface ProjectCardProps {
 export function ProjectCard({ project, index, size = 'regular' }: ProjectCardProps) {
   const reducedMotion = usePrefersReducedMotion()
   const ref = useRef<HTMLDivElement>(null)
+  const pixelIcon = projectPixelIcons[project.slug]
   const rotateX = useMotionValue(0)
   const rotateY = useMotionValue(0)
   const springRotateX = useSpring(rotateX, { stiffness: 220, damping: 20 })
@@ -50,12 +53,22 @@ export function ProjectCard({ project, index, size = 'regular' }: ProjectCardPro
         style={{ rotateX: springRotateX, rotateY: springRotateY, y: lift, perspective: 1000 }}
         className="group relative flex h-full flex-col gap-5 rounded-3xl border border-line bg-surface/60 p-5 transition-colors hover:border-violet-tint/60"
       >
-        <ProjectVisual
-          image={project.images[0]}
-          title={project.title}
-          accent={project.accent}
-          className={cn('aspect-[4/3] w-full shrink-0', size === 'large' && 'aspect-[16/10]')}
-        />
+        <div className="relative shrink-0">
+          <ProjectVisual
+            image={project.images[0]}
+            title={project.title}
+            accent={project.accent}
+            className={cn('aspect-[4/3] w-full', size === 'large' && 'aspect-[16/10]')}
+          />
+          {pixelIcon && (
+            <div
+              aria-hidden
+              className="absolute right-3 top-3 origin-top-right scale-50 rounded-lg border border-line bg-ink/80 p-1.5 opacity-0 shadow-[0_8px_20px_rgba(0,0,0,0.4)] backdrop-blur-sm transition-all duration-300 ease-out group-hover:scale-100 group-hover:opacity-100 group-focus-visible:scale-100 group-focus-visible:opacity-100"
+            >
+              <PixelSprite grid={pixelIcon.grid} palette={{ '#': pixelIcon.color }} className="h-6 w-6" />
+            </div>
+          )}
+        </div>
         <div className="flex flex-1 items-start justify-between gap-4">
           <div className="flex flex-col gap-2">
             <div className="flex flex-wrap gap-2">

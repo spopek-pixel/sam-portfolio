@@ -1,5 +1,6 @@
 import { Quote } from 'lucide-react'
 import { SectionHeading } from '@/components/ui/SectionHeading'
+import { PixelAccent } from '@/components/ui/PixelAccent'
 import { cn } from '@/lib/utils'
 
 const testimonials = [
@@ -56,7 +57,8 @@ export function TestimonialSpotlight() {
   const doubled = [...testimonials, ...testimonials]
 
   return (
-    <section className="py-16 sm:py-20">
+    <section className="relative py-16 sm:py-20">
+      <PixelAccent icon="heart" color="#a6ff4d" size={20} className="absolute right-[10%] top-8 hidden sm:block" />
       <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <SectionHeading
           kicker="Kind words"

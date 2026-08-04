@@ -40,6 +40,7 @@ import {
 } from 'react-icons/si'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
+import { PixelAccent } from '@/components/ui/PixelAccent'
 
 interface Item {
   label: string
@@ -100,7 +101,8 @@ const groups: Array<{ title: string; items: Item[] }> = [
 
 export function ExpertiseGrid() {
   return (
-    <section className="px-6 py-16 sm:px-10 sm:py-20">
+    <section className="relative px-6 py-16 sm:px-10 sm:py-20">
+      <PixelAccent icon="star" color="#a78bfa" size={22} className="absolute left-[8%] top-6 hidden sm:block" />
       <div className="mx-auto flex max-w-6xl flex-col gap-14">
         <SectionHeading
           kicker="Expertise"

@@ -4,6 +4,7 @@
 @import '@fontsource-variable/inter';
 @import '@fontsource/jetbrains-mono/400.css';
 @import '@fontsource/jetbrains-mono/500.css';
+@import '@fontsource/press-start-2p';
 
 @theme {
   /* Brand palette */
@@ -24,6 +25,7 @@
   --font-display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', system-ui, sans-serif;
   --font-sans: 'Inter Variable', 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-pixel: 'Press Start 2P', 'JetBrains Mono', ui-monospace, monospace;
 
   /* Motion */
   --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
