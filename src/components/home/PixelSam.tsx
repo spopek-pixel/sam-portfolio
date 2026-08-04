@@ -22,7 +22,7 @@ export const PixelSam = forwardRef<HTMLDivElement, PixelSamProps>(function Pixel
       initial={reducedMotion ? { opacity: 0 } : { opacity: 0, x: 120 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: reducedMotion ? 0.4 : 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-      className="relative mx-auto w-full max-w-[420px]"
+      className="relative mx-auto w-full max-w-[460px] lg:mx-0 lg:ml-auto"
     >
       {/* Colored ground glow so she reads as standing in a lit spot, not floating */}
       <motion.div
