@@ -15,7 +15,6 @@ const colorClasses: Record<HeadlineWord['color'], string> = {
 
 function Word({ word, hit, onActivate }: { word: HeadlineWord; hit: boolean; onActivate: (el: HTMLElement) => void }) {
   const ref = useRef<HTMLButtonElement>(null)
-
   const isPixel = word.variant === 'pixel'
 
   return (
@@ -26,24 +25,35 @@ function Word({ word, hit, onActivate }: { word: HeadlineWord; hit: boolean; onA
       aria-pressed={hit}
       aria-label={hit ? `${word.text} — customized` : `Click to customize the word "${word.text}"`}
       onClick={() => !hit && ref.current && onActivate(ref.current)}
-      animate={{ scale: hit ? [0.5, 1.2, 1] : 1 }}
+      animate={{ scale: hit && !isPixel ? [0.5, 1.2, 1] : 1 }}
       transition={{ duration: 0.45, ease: [0.34, 1.56, 0.64, 1] }}
-      className={cn(
-        'relative inline-block rounded-md align-baseline outline-none transition-colors',
-        !hit &&
-          'cursor-pointer text-fg underline decoration-fg-muted/50 decoration-dotted decoration-2 underline-offset-8 hover:decoration-acid focus-visible:decoration-acid',
-        hit && !isPixel && cn('cursor-default font-semibold no-underline', colorClasses[word.color]),
-        hit && isPixel &&
-          'mx-1 -translate-y-1 cursor-default align-middle font-pixel text-[0.32em] uppercase leading-none tracking-wide text-acid no-underline',
-        'focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 focus-visible:ring-offset-ink',
-      )}
+      className="relative inline-block rounded-md align-baseline outline-none focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
     >
-      {hit && isPixel ? (
-        <span className="inline-flex items-center rounded-lg border-2 border-acid bg-acid/10 px-3 py-2 shadow-[0_0_24px_rgba(166,255,77,0.35)]">
+      {/* Always renders at the word's original size — reserves layout space so the
+          headline never reflows, even when the pixel variant visually grows on top of it. */}
+      <span
+        className={cn(
+          'transition-colors',
+          isPixel && hit && 'invisible',
+          !hit && 'cursor-pointer text-fg underline decoration-fg-muted/50 decoration-dotted decoration-2 underline-offset-8 hover:decoration-acid focus-visible:decoration-acid',
+          hit && !isPixel && cn('cursor-default font-semibold no-underline', colorClasses[word.color]),
+        )}
+      >
+        {word.text}
+      </span>
+
+      {/* The "bigger" pixel treatment lives in an absolutely-positioned overlay, scaled
+          via transform — transforms don't affect layout, so nothing else shifts. */}
+      {isPixel && hit && (
+        <motion.span
+          initial={{ opacity: 0, scale: 0.6 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4, ease: [0.34, 1.56, 0.64, 1] }}
+          style={{ transformOrigin: 'left center' }}
+          className="pointer-events-none absolute left-0 top-1/2 inline-flex -translate-y-1/2 scale-[1.7] items-center whitespace-nowrap rounded-lg border-2 border-acid bg-acid/10 px-2 py-1 font-pixel text-[0.28em] uppercase leading-none tracking-wide text-acid shadow-[0_0_24px_rgba(166,255,77,0.35)]"
+        >
           {word.text}
-        </span>
-      ) : (
-        word.text
+        </motion.span>
       )}
     </motion.button>
   )
