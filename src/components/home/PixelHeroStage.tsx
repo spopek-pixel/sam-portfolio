@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { LinkButton } from '@/components/ui/Button'
 import { InteractiveHeadline } from './InteractiveHeadline'
 import { PixelSam } from './PixelSam'
+import { PaintCelebration } from './PaintCelebration'
 import { PaintProjectile, type Point } from './PaintProjectile'
 import { heroWords, type HeadlineWord } from './heroWords'
 
@@ -119,7 +120,10 @@ export function PixelHeroStage() {
                 </button>
               </div>
             ) : (
-              <p className="font-mono text-xs uppercase tracking-wider text-acid">Now that feels more like me.</p>
+              <p className="relative inline-block font-mono text-xs uppercase tracking-wider text-acid">
+                Now that feels more like me.
+                <PaintCelebration />
+              </p>
             )}
           </div>
 
@@ -151,7 +155,7 @@ export function PixelHeroStage() {
 
         </div>
 
-        <PixelSam ref={muzzleRef} recoilKey={recoilKey} />
+        <PixelSam ref={muzzleRef} recoilKey={recoilKey} celebrate={revealed} />
       </div>
 
       {activeShot && (

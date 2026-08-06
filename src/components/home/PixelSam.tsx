@@ -6,15 +6,16 @@ import pixelSam from '@/assets/images/home/pixel-sam.png'
 
 interface PixelSamProps {
   recoilKey: number
+  celebrate?: boolean
 }
 
 /**
  * The character's blaster muzzle sits at roughly this position within the
  * cropped sprite — used as the paint projectile's launch point.
  */
-const MUZZLE_POSITION = { leftPct: 2, topPct: 44 }
+const MUZZLE_POSITION = { leftPct: 3.3, topPct: 40 }
 
-export const PixelSam = forwardRef<HTMLDivElement, PixelSamProps>(function PixelSam({ recoilKey }, muzzleRef) {
+export const PixelSam = forwardRef<HTMLDivElement, PixelSamProps>(function PixelSam({ recoilKey, celebrate }, muzzleRef) {
   const reducedMotion = usePrefersReducedMotion()
 
   return (
@@ -32,14 +33,19 @@ export const PixelSam = forwardRef<HTMLDivElement, PixelSamProps>(function Pixel
         className="absolute inset-x-[2%] bottom-[4%] h-28 rounded-[50%] bg-[radial-gradient(ellipse_at_center,rgba(166,255,77,0.55)_0%,rgba(124,92,255,0.5)_45%,transparent_72%)] blur-lg"
       />
 
-      {/* Floating pixel accents */}
-      <PixelAccent icon="heart" color="#a6ff4d" size={28} duration={3} className="absolute left-[2%] top-[6%] z-20" />
-      <PixelAccent icon="sparkle" color="#a78bfa" size={24} duration={3.6} delay={0.4} className="absolute right-[4%] top-[2%] z-20" />
-      <PixelAccent icon="star" color="#a6ff4d" size={20} duration={4.2} delay={0.8} className="absolute right-[10%] bottom-[14%] z-20" />
+      {/* Floating pixel accents — kept clear of the art's own baked-in speech bubble/sparkles */}
+      <PixelAccent icon="sparkle" color="#a78bfa" size={22} duration={3.6} delay={0.4} className="absolute right-[6%] top-[4%] z-20" />
+      <PixelAccent icon="star" color="#a6ff4d" size={18} duration={4.2} delay={0.8} className="absolute right-[8%] bottom-[10%] z-20" />
 
       <motion.div
-        animate={reducedMotion ? undefined : { y: [0, -8, 0], rotate: [0, -0.6, 0, 0.6, 0] }}
-        transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
+        animate={
+          reducedMotion
+            ? undefined
+            : celebrate
+              ? { scale: [1, 1.18, 0.94, 1.06, 1], rotate: [0, -4, 3, -1, 0] }
+              : { y: [0, -8, 0], rotate: [0, -0.6, 0, 0.6, 0] }
+        }
+        transition={celebrate ? { duration: 0.6, ease: [0.34, 1.56, 0.64, 1] } : { duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
       >
         <motion.div
           key={recoilKey}
@@ -50,9 +56,9 @@ export const PixelSam = forwardRef<HTMLDivElement, PixelSamProps>(function Pixel
         >
           <img
             src={pixelSam}
-            alt="Pixel-art illustration of Samantha aiming a purple-and-green paint blaster at the headline"
+            alt="Pixel-art illustration of Samantha, wearing an 'I heart UX' shirt, aiming a purple-and-green paint blaster with a speech bubble reading 'Design. Iterate. Repeat.'"
             width={700}
-            height={712}
+            height={700}
             className="relative z-10 w-full select-none [image-rendering:pixelated]"
             draggable={false}
             loading="eager"
