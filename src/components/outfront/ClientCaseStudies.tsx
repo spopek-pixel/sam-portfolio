@@ -19,31 +19,31 @@ import type { ClientCaseStudyProps } from './ClientCaseStudy'
 
 const tingCarousel = [
   {
-    label: 'Destination — reliable fiber internet',
+    label: 'Destination: reliable fiber internet',
     images: [
       { src: busBlue, alt: 'Ting "Destination: reliable fiber internet" bus king, live in NYC' },
-      { src: blueTemplate, alt: 'Ting "Destination" — OUTFRONT production template', fit: 'contain' as const },
+      { src: blueTemplate, alt: 'Ting "Destination", OUTFRONT production template', fit: 'contain' as const },
     ],
   },
   {
-    label: 'Next Stop — unbeatable fast internet',
+    label: 'Next Stop: unbeatable fast internet',
     images: [
       { src: busPink, alt: 'Ting "Next Stop: unbeatable fast internet" bus king, live in NYC' },
-      { src: pinkTemplate, alt: 'Ting "Next Stop" — OUTFRONT production template', fit: 'contain' as const },
+      { src: pinkTemplate, alt: 'Ting "Next Stop", OUTFRONT production template', fit: 'contain' as const },
     ],
   },
   {
-    label: 'All Aboard — lightning-fast internet',
+    label: 'All Aboard: lightning-fast internet',
     images: [
       { src: busOrange, alt: 'Ting "All Aboard: lightning-fast internet" bus king, live in NYC' },
-      { src: orangeTemplate, alt: 'Ting "All Aboard" — OUTFRONT production template', fit: 'contain' as const },
+      { src: orangeTemplate, alt: 'Ting "All Aboard", OUTFRONT production template', fit: 'contain' as const },
     ],
   },
   {
-    label: 'Zoom Into — light-speed internet',
+    label: 'Zoom Into: light-speed internet',
     images: [
       { src: busGreen, alt: 'Ting "Zoom Into: light-speed internet" bus king, live in NYC' },
-      { src: greenTemplate, alt: 'Ting "Zoom Into" — OUTFRONT production template', fit: 'contain' as const },
+      { src: greenTemplate, alt: 'Ting "Zoom Into", OUTFRONT production template', fit: 'contain' as const },
     ],
   },
 ]
@@ -62,14 +62,14 @@ const mediaBySlug: Record<string, ClientCaseStudyProps['media']> = {
     type: 'grid',
     images: [
       { src: yokeSheet, alt: "All four It's No Yoke bus interior ad headlines", fit: 'contain' },
-      { src: yokeBus, alt: "It's No Yoke bus interior ad — \"Elevate your Load\" — live in a bus" },
+      { src: yokeBus, alt: "It's No Yoke bus interior ad, \"Elevate your Load\", live in a bus" },
     ],
   },
   'pike-nurseries': {
     type: 'grid',
     images: [
-      { src: pikeBus, alt: 'Pike Nurseries bus wrap — "Make Your Garden A Masterpiece"' },
-      { src: pikeLive, alt: 'Pike Nurseries liveboard — "Make Your Garden A Work Of Art"' },
+      { src: pikeBus, alt: 'Pike Nurseries bus wrap, "Make Your Garden A Masterpiece"' },
+      { src: pikeLive, alt: 'Pike Nurseries liveboard, "Make Your Garden A Work Of Art"' },
     ],
   },
 }

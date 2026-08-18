@@ -69,7 +69,7 @@ export function BuildingItSection() {
             <div className="flex h-full flex-col justify-center gap-1 rounded-2xl border border-acid/40 bg-acid/5 p-5">
               <span className="font-display text-2xl text-acid">Shipped</span>
               <p className="text-xs leading-relaxed text-fg-muted">
-                Not a concept — a live, deployed front-end that anyone can open.
+                Not a concept: a live, deployed front-end that anyone can open.
               </p>
             </div>
           </Reveal>

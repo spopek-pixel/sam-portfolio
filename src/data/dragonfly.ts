@@ -1,19 +1,19 @@
 export const dragonfly = {
   hero: {
     description:
-      'Redesigning the Dragonfly Hot Yoga booking app — from a dead end when a class fills up to a calm, personalized path back to the mat.',
+      'Redesigning the Dragonfly Hot Yoga booking app: from a dead end when a class fills up to a calm, personalized path back to the mat.',
   },
 
   overview: {
     intro: [
-      "This redesign makes Dragonfly's booking experience modern, personalized, and easy to navigate — simplifying how members book, set preferences, and handle a full class. Claude and ChatGPT were thinking partners throughout. It's still ongoing: next is the AI recommendation prototype, then usability testing.",
+      "This redesign makes Dragonfly's booking experience modern, personalized, and easy to navigate, simplifying how members book, set preferences, and handle a full class. Claude and ChatGPT were thinking partners throughout. It's still ongoing: next is the AI recommendation prototype, then usability testing.",
     ],
     hmw: 'How might we help Dragonfly members and newcomers easily explore, book, and manage classes so they feel motivated to maintain a consistent yoga practice?',
   },
 
   userInterviews: {
     intro:
-      'Before sketching anything, I sat down with 12 real Dragonfly members — a mix of new, weekly, and multi-year regulars — to hear how they actually use the app, not how I assumed they did.',
+      'Before sketching anything, I sat down with 12 real Dragonfly members (a mix of new, weekly, and multi-year regulars) to hear how they actually use the app, not how I assumed they did.',
     participants: [
       {
         role: 'Member for 2 years',
@@ -87,7 +87,7 @@ export const dragonfly = {
       {
         title: 'Personalization',
         icon: 'Sparkles',
-        body: 'Every member expected the app to remember them — favorite instructors, past bookings, recommendations — without being asked twice.',
+        body: 'Every member expected the app to remember them: favorite instructors, past bookings, recommendations, without being asked twice.',
       },
       {
         title: 'Booking experience',
@@ -106,8 +106,8 @@ export const dragonfly = {
 
   challenge: {
     intro:
-      'The existing Dragonfly experience is a video-on-demand site bolted onto a booking flow — not a product built around how members actually decide to show up. It\'s the experience I set out to replace.',
-    currentApp: 'Dragonfly Hot Yoga\'s current on-demand and booking experience — the starting point for this redesign.',
+      'The existing Dragonfly experience is a video-on-demand site bolted onto a booking flow, not a product built around how members actually decide to show up. It\'s the experience I set out to replace.',
+    currentApp: 'Dragonfly Hot Yoga\'s current on-demand and booking experience: the starting point for this redesign.',
     supporting: [
       'The app interface feels outdated and not very user-friendly',
       'Booking a class is more complicated than it should be',
@@ -153,7 +153,7 @@ export const dragonfly = {
   ideationProcess: {
     earlyIdeation: {
       title: 'Early ideation',
-      body: 'I started by reviewing my research and used Claude as a brainstorming partner to rapidly explore problem framings before committing to a direction. I prompted it to challenge my assumptions and suggest edge cases I hadn\'t considered, like how power users versus first-time members would experience the same flow differently. This AI-assisted ideation helped me move faster through divergent thinking so I could spend more time in convergent design decisions. From there, I grouped ideas into themes like scheduling, personalization, and new member support — a wide net of five themes and twenty-five individual ideas — which led to the "Suggested for You" personalized feed concept.',
+      body: 'I started by reviewing my research and used Claude as a brainstorming partner to rapidly explore problem framings before committing to a direction. I prompted it to challenge my assumptions and suggest edge cases I hadn\'t considered, like how power users versus first-time members would experience the same flow differently. This AI-assisted ideation helped me move faster through divergent thinking so I could spend more time in convergent design decisions. From there, I grouped ideas into themes like scheduling, personalization, and new member support (a wide net of five themes and twenty-five individual ideas), which led to the "Suggested for You" personalized feed concept.',
     },
     conceptExploration: {
       title: 'Concept exploration',
@@ -172,26 +172,26 @@ export const dragonfly = {
         {
           name: 'Yoga Challenges with friends',
           status: 'Deprioritized',
-          body: 'A social layer to gamify consistency. Cut early — it was solving a different problem than the one members were actually telling me about.',
+          body: 'A social layer to gamify consistency. Cut early: it was solving a different problem than the one members were actually telling me about.',
         },
       ],
     },
     storyboard: {
       title: 'Storyboard',
-      body: 'Before I sketched a single screen, I storyboarded the emotional arc of a first-time visitor — from "am I ready for this?" to walking out the door feeling capable. Eight panels trace a member through doubt, checking the app for reassurance, finding beginner-specific guidance, and finally attending class. The anxiety starts well before the booking screen ever loads, which meant the interface had a job to do long before onboarding: reduce the stakes of showing up at all, not just make booking faster.',
+      body: 'Before I sketched a single screen, I storyboarded the emotional arc of a first-time visitor, from "am I ready for this?" to walking out the door feeling capable. Eight panels trace a member through doubt, checking the app for reassurance, finding beginner-specific guidance, and finally attending class. The anxiety starts well before the booking screen ever loads, which meant the interface had a job to do long before onboarding: reduce the stakes of showing up at all, not just make booking faster.',
       takeaway: 'The interface had a job to do before onboarding even started: lower the emotional stakes of showing up.',
     },
     taskFlows: {
       title: 'Task flows',
-      body: 'Mapping the core task flows by hand — onboarding & personalization, booking a class, and managing an existing booking — before touching Figma kept the early debates about structure, not visual polish.',
+      body: 'Mapping the core task flows by hand (onboarding & personalization, booking a class, and managing an existing booking) before touching Figma kept the early debates about structure, not visual polish.',
     },
     sketches: {
       title: 'Screen sketches',
-      body: 'These three sketches mapped onboarding, the home feed, and the booking flow before any visual design existed. What changed most between sketch and final: the amount of choice on screen at once — early versions asked for too much, too soon, and each pass cut it down further.',
+      body: 'These three sketches mapped onboarding, the home feed, and the booking flow before any visual design existed. What changed most between sketch and final: the amount of choice on screen at once: early versions asked for too much, too soon, and each pass cut it down further.',
     },
     wireframe: {
       title: 'Wireframe',
-      body: 'Low-fidelity, on purpose. This stage was about experimenting with layout options, testing whether the navigation actually held up across ten-plus screens, and refining interaction patterns — confirmation states, tab structure, card hierarchy — before a single color decision got made.',
+      body: 'Low-fidelity, on purpose. This stage was about experimenting with layout options, testing whether the navigation actually held up across ten-plus screens, and refining interaction patterns (confirmation states, tab structure, card hierarchy) before a single color decision got made.',
       why: 'Grayscale kept feedback sessions focused on whether a flow made sense, not whether someone liked the shade of orange on a button.',
     },
     aiDesign: {
@@ -211,7 +211,7 @@ export const dragonfly = {
     did: [
       'Picked the direction that led with the "why" explanation over the one that led with the match score alone',
       'Rewrote the plain-language reasoning until it sounded like a person, not a data dump',
-      'Kept the final call on tone and hierarchy — Claude proposed options, I picked the one that matched the rest of the app',
+      'Kept the final call on tone and hierarchy: Claude proposed options, I picked the one that matched the rest of the app',
     ],
     explorationTitle: 'AI recommendation exploration',
     explorationBody:
@@ -241,7 +241,7 @@ export const dragonfly = {
     },
     {
       title: 'On-Demand Learning Library & Profile',
-      body: 'Members can browse a curated library of free yoga, barre, and wellness videos, check the latest studio events, and manage their profile — preferences, history, and all — in one place.',
+      body: 'Members can browse a curated library of free yoga, barre, and wellness videos, check the latest studio events, and manage their profile (preferences, history, and all) in one place.',
     },
   ],
 
@@ -257,16 +257,16 @@ export const dragonfly = {
       { name: 'Stone Gray', hex: '#6D6D6D' },
     ],
     principles: [
-      { title: 'Components', body: 'A small, reusable set of cards, pills, and steps — consistent across every flow.' },
+      { title: 'Components', body: 'A small, reusable set of cards, pills, and steps, consistent across every flow.' },
       { title: 'Buttons & spacing', body: 'Rounded, touch-friendly targets with generous padding, so nothing feels cramped mid-flow.' },
       { title: 'Accessibility', body: 'Warm, high-contrast text pairings and calm, reduced-motion-aware transitions throughout.' },
     ],
   },
 
   prototype: {
-    body: 'An interactive Figma prototype walks through all three core flows — onboarding, booking, and waitlist management — end to end.',
+    body: 'An interactive Figma prototype walks through all three core flows (onboarding, booking, and waitlist management) end to end.',
     videoNote:
-      'Every round of this prototype went back in front of real Dragonfly members before moving forward — watching where they hesitated, what they misread, and what they reached for first — so each iteration answered a real question instead of a guess.',
+      'Every round of this prototype went back in front of real Dragonfly members before moving forward, watching where they hesitated, what they misread, and what they reached for first, so each iteration answered a real question instead of a guess.',
   },
 
   impact: {
@@ -290,8 +290,8 @@ export const dragonfly = {
 
   reflection: {
     lessonsLearned: [
-      'Problem clarity has to come before solutions — I started with a broad problem space and learned to narrow it deliberately before sketching anything.',
-      'Iteration beats perfection — staying low-fidelity longer let me explore more directions and gather feedback faster.',
+      'Problem clarity has to come before solutions: I started with a broad problem space and learned to narrow it deliberately before sketching anything.',
+      'Iteration beats perfection: staying low-fidelity longer let me explore more directions and gather feedback faster.',
       'AI was most useful as a thinking partner for pressure-testing assumptions, not as a shortcut past doing the thinking myself.',
     ],
     whatIdImprove: [
@@ -300,7 +300,7 @@ export const dragonfly = {
       'Revisit the social "Yoga Challenges" concept once the core flows are validated',
     ],
     keyTakeaways: [
-      'Emotional design matters as much as functional design — reducing uncertainty was just as important as completing a task',
+      'Emotional design matters as much as functional design: reducing uncertainty was just as important as completing a task',
       'Explainability is essential any time AI is part of the experience, not a nice-to-have',
       'Balancing user needs with business goals is a skill, not a given',
     ],

@@ -111,7 +111,7 @@ export function ExpertiseGrid() {
               Design that talks to <span className="text-gradient">code.</span>
             </>
           }
-          description="I move fluidly between research methods, design tools, and the code that ships — so nothing gets lost in translation between what's designed and what's built."
+          description="I move fluidly between research methods, design tools, and the code that ships, so nothing gets lost in translation between what's designed and what's built."
         />
 
         <div className="grid gap-10 lg:grid-cols-3">

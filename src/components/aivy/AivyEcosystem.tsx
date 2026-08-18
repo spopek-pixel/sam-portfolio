@@ -17,7 +17,7 @@ export function AivyEcosystem() {
         <SectionHeading
           kicker="The AIVY ecosystem"
           title="One system, growing together."
-          description="Five connected products, inspired by nature and designed to grow together — scroll to see how they link."
+          description="Five connected products, inspired by nature and designed to grow together. Scroll to see how they link."
           className="mb-14"
         />
 

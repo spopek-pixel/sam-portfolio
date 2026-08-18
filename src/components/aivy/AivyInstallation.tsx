@@ -27,10 +27,10 @@ export function AivyInstallation() {
           </Reveal>
           <Reveal delay={0.1}>
             <figure className="overflow-hidden rounded-2xl border border-line bg-surface">
-              <Lightbox src={installationImage} alt="AIVY installation concept — floor plan, elevations, and experience journey">
+              <Lightbox src={installationImage} alt="AIVY installation concept: floor plan, elevations, and experience journey">
                 <img
                   src={installationImage}
-                  alt="AIVY installation concept — floor plan, elevations, and experience journey"
+                  alt="AIVY installation concept: floor plan, elevations, and experience journey"
                   className="w-full object-cover"
                   loading="lazy"
                 />

@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 const testimonials = [
   {
     quote:
-      "Sam's interface design ability is one of the strongest I've seen from an emerging designer — she doesn't just make things look good, she makes them make sense.",
+      "Sam's interface design ability is one of the strongest I've seen from an emerging designer. She doesn't just make things look good, she makes them make sense.",
     name: 'Chad Shackelford',
     role: 'Chief Innovation Officer, OUTFRONT Media',
   },
@@ -24,19 +24,19 @@ const testimonials = [
   },
   {
     quote:
-      'Sam asks the question everyone else in the room is quietly avoiding — and the work is always better for it.',
+      'Sam asks the question everyone else in the room is quietly avoiding, and the work is always better for it.',
     name: 'Dr. Renee Aldrich',
     role: 'Faculty Advisor, UW–Madison Design + Innovation',
   },
   {
     quote:
-      "What stood out was that she didn't just hand us a Figma file — she understood our booking system well enough to argue with our engineers about it.",
+      "What stood out was that she didn't just hand us a Figma file. She understood our booking system well enough to argue with our engineers about it.",
     name: 'Jordan Pak',
     role: 'Stakeholder, Dragonfly Yoga',
   },
   {
     quote:
-      "Sam thinks in systems, not just screens — that's exactly the kind of designer this moment needs.",
+      "Sam thinks in systems, not just screens: that's exactly the kind of designer this moment needs.",
     name: 'Bruce Mau',
     role: 'CEO & Co-Founder, Massive Change Network',
   },
@@ -47,7 +47,7 @@ const testimonials = [
     role: 'Associate Creative Director, OUTFRONT Media',
   },
   {
-    quote: "Sam has an eye for hierarchy most designers spend years developing — she already has it.",
+    quote: "Sam has an eye for hierarchy most designers spend years developing. She already has it.",
     name: 'Sarah Barcelos',
     role: 'Art Director, OUTFRONT Media',
   },

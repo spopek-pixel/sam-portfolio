@@ -8,7 +8,7 @@ const entries = [
   {
     year: 'Grade school',
     title: '96 words per minute',
-    body: "Won my school's typing competition before I understood it meant anything. In hindsight — the first sign I was a computer kid.",
+    body: "Won my school's typing competition before I understood it meant anything. In hindsight, the first sign I was a computer kid.",
   },
   {
     year: 'Growing up',
@@ -18,7 +18,7 @@ const entries = [
   {
     year: 'Middle school',
     title: 'Rearranging HUDs before I knew the word "UX"',
-    body: "I was the kid tweaking inventory menus and HUD layouts before I'd even beaten the tutorial. I didn't have language for it yet, but I already noticed when a screen made a game feel effortless — and when it made me want to throw the controller. That gap is basically still my whole job.",
+    body: "I was the kid tweaking inventory menus and HUD layouts before I'd even beaten the tutorial. I didn't have language for it yet, but I already noticed when a screen made a game feel effortless, and when it made me want to throw the controller. That gap is basically still my whole job.",
   },
   {
     year: 'Teenage years',
@@ -33,7 +33,7 @@ const entries = [
   {
     year: 'UW–Madison, now',
     title: 'Design + Innovation',
-    body: 'Graduate studies pairing rigorous research with things I build myself — Housingkind, Dragonfly Yoga, Teklo, and this site.',
+    body: 'Graduate studies pairing rigorous research with things I build myself: Housingkind, Dragonfly Yoga, Teklo, and this site.',
   },
 ]
 

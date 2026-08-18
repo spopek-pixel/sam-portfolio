@@ -35,7 +35,7 @@ export function AIProcessSection() {
               <h3 className="kicker mb-3">What I used AI for</h3>
               <ul className="flex flex-col gap-2 text-fg-muted">
                 {usedFor.map((item) => (
-                  <li key={item}>— {item}</li>
+                  <li key={item}>• {item}</li>
                 ))}
               </ul>
             </div>
@@ -45,7 +45,7 @@ export function AIProcessSection() {
               <h3 className="kicker mb-3 text-acid">What I did</h3>
               <ul className="flex flex-col gap-2 text-fg-muted">
                 {did.map((item) => (
-                  <li key={item}>— {item}</li>
+                  <li key={item}>• {item}</li>
                 ))}
               </ul>
             </div>

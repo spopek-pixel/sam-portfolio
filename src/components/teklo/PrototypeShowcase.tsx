@@ -15,11 +15,11 @@ export function PrototypeShowcase() {
         <SectionHeading kicker="Prototype" title="The prototype, screen by screen." description={body} className="mb-14 max-w-2xl" />
 
         <Reveal>
-          <Lightbox src={newTekloImage} alt="Teklo prototype — onboarding, home, and search screens">
+          <Lightbox src={newTekloImage} alt="Teklo prototype: onboarding, home, and search screens">
             <div className="mx-auto max-w-3xl">
               <img
                 src={newTekloImage}
-                alt="Teklo prototype — onboarding, home, and search screens"
+                alt="Teklo prototype: onboarding, home, and search screens"
                 className="w-full object-contain"
                 loading="lazy"
               />

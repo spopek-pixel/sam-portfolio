@@ -29,10 +29,10 @@ export function AivySitePreview() {
           {shots.map((shot, index) => (
             <Reveal key={shot.label} delay={index * 0.08}>
               <figure className="overflow-hidden rounded-2xl border border-line bg-surface">
-                <Lightbox src={shot.src} alt={`AIVY concept site — ${shot.label}`}>
+                <Lightbox src={shot.src} alt={`AIVY concept site: ${shot.label}`}>
                   <img
                     src={shot.src}
-                    alt={`AIVY concept site — ${shot.label}`}
+                    alt={`AIVY concept site: ${shot.label}`}
                     className="aspect-[16/10] w-full object-cover object-top"
                     loading="lazy"
                   />

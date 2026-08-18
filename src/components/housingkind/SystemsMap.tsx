@@ -17,7 +17,7 @@ export function SystemsMap() {
           <figure className="mx-auto max-w-3xl">
             <ArtifactPlaceholder
               image={systemMappingDiagram}
-              label="Systems map diagram — Balancing Loop of the Missing Middle"
+              label="Systems map diagram: Balancing Loop of the Missing Middle"
               icon={Workflow}
               className="aspect-[16/10] w-full"
               bgClassName="bg-[#f4f3ef]"

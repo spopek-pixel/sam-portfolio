@@ -23,7 +23,7 @@ function Word({ word, hit, onActivate }: { word: HeadlineWord; hit: boolean; onA
       type="button"
       tabIndex={hit ? -1 : 0}
       aria-pressed={hit}
-      aria-label={hit ? `${word.text} — customized` : `Click to customize the word "${word.text}"`}
+      aria-label={hit ? `${word.text}, customized` : `Click to customize the word "${word.text}"`}
       onClick={() => !hit && ref.current && onActivate(ref.current)}
       animate={{ scale: hit && !isPixel ? [0.5, 1.2, 1] : 1 }}
       transition={{ duration: 0.45, ease: [0.34, 1.56, 0.64, 1] }}

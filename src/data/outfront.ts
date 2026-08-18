@@ -1,18 +1,18 @@
 export const outfront = {
   hero: {
-    caption: 'OUTFRONT Media — the out-of-home network these four campaigns shipped through.',
+    caption: 'OUTFRONT Media, the out-of-home network these four campaigns shipped through.',
   },
 
   overview: {
     intro: [
-      'Over one summer as a Graphic Design Intern at OUTFRONT Media, I designed four out-of-home campaigns for four different clients — each one shipped to real bus kings, liveboards, and a bus wrap across New York City.',
-      "Every brief came with the same non-negotiable constraint: a design has to land in the few seconds someone actually looks at it — a glance from a moving bus, a red light at a crosswalk. If it didn't work at a glance, it didn't work.",
+      'Over one summer as a Graphic Design Intern at OUTFRONT Media, I designed four out-of-home campaigns for four different clients, each one shipped to real bus kings, liveboards, and a bus wrap across New York City.',
+      "Every brief came with the same non-negotiable constraint: a design has to land in the few seconds someone actually looks at it: a glance from a moving bus, a red light at a crosswalk. If it didn't work at a glance, it didn't work.",
     ],
     contribution: [
       "Researched each client's brand voice, website, and existing marketing before opening Photoshop",
       'Designed final layouts, typography, and color direction for every campaign',
       'Explored multiple concepts per brief and presented final direction to the creative team',
-      "Followed OUTFRONT's production specs — bleed, visual area, file setup — for print-ready handoff",
+      "Followed OUTFRONT's production specs (bleed, visual area, file setup) for print-ready handoff",
     ],
   },
 
@@ -24,9 +24,9 @@ export const outfront = {
       header1: { label: 'Project Brief', body: 'Ting Internet delivers high-speed, reliable internet connectivity to communities across the U.S., with a customer-first reputation for fast, friendly service and fiber-optic installs for homes and businesses.' },
       header2: {
         label: 'Design Decisions',
-        body: 'I researched Ting\'s site and messaging closely, then carried recurring phrases like "fast, reliable internet" and "reliable fiber internet" straight into the graphics to keep the brand voice consistent. Since the placements were NYC bus kings, I layered in transit-native language — "All Aboard," "Next Stop," "Destination" — across four colorways to make the ads feel native to the ride, not bolted onto it. The client ran all four simultaneously across the fleet rather than picking one, so every version had to hold up on its own.',
+        body: 'I researched Ting\'s site and messaging closely, then carried recurring phrases like "fast, reliable internet" and "reliable fiber internet" straight into the graphics to keep the brand voice consistent. Since the placements were NYC bus kings, I layered in transit-native language, like "All Aboard," "Next Stop," and "Destination," across four colorways to make the ads feel native to the ride, not bolted onto it. The client ran all four simultaneously across the fleet rather than picking one, so every version had to hold up on its own.',
       },
-      timeline: '2 weeks — June 2023',
+      timeline: '2 weeks, June 2023',
       tools: ['Adobe Photoshop', 'Adobe Illustrator'],
       deliverables: ['4 bus king colorways', 'NYC transit placement', '4 production templates'],
     },
@@ -36,13 +36,13 @@ export const outfront = {
       brandColor: '#60A5FA',
       header1: {
         label: 'The Challenge',
-        body: "Jack Brackney is a personal injury and employment attorney who helps clients navigate complicated legal situations — disputes with an employer, a creditor, or an injury caused by someone else's negligence. The ad was going on the back of a bus, which meant roughly seven seconds of viewing time at a red light.",
+        body: "Jack Brackney is a personal injury and employment attorney who helps clients navigate complicated legal situations: disputes with an employer, a creditor, or an injury caused by someone else's negligence. The ad was going on the back of a bus, which meant roughly seven seconds of viewing time at a red light.",
       },
       header2: {
         label: 'My Design Approach',
         body: "I kept the tagline short and impactful, chose imagery tied directly to his legal expertise, and held everything to his firm's style guide. The goal was a design that read instantly, not one that rewarded a second look.",
       },
-      timeline: '2 weeks — June 2023',
+      timeline: '2 weeks, June 2023',
       tools: ['Adobe Photoshop', 'Adobe Illustrator'],
       deliverables: ['Bus rear king ad', 'Brand-guide-compliant layout'],
     },
@@ -56,9 +56,9 @@ export const outfront = {
       },
       header2: {
         label: 'Solution',
-        body: 'I built the graphic around the product\'s core promise — "balance" and "shoulder-free" — and matched the color scheme to the brand\'s black, orange, and white. At the client\'s request, I added a scannable QR code so bus riders could go from a seven-second glance to more product info on their own phone.',
+        body: 'I built the graphic around the product\'s core promise, "balance" and "shoulder-free", and matched the color scheme to the brand\'s black, orange, and white. At the client\'s request, I added a scannable QR code so bus riders could go from a seven-second glance to more product info on their own phone.',
       },
-      timeline: '2 weeks — July 2023',
+      timeline: '2 weeks, July 2023',
       tools: ['Adobe Photoshop', 'Adobe Illustrator'],
       deliverables: ['4 headline variations', 'QR-code tie-in', 'Bus king ad set'],
     },
@@ -68,13 +68,13 @@ export const outfront = {
       brandColor: '#C9A227',
       header1: {
         label: 'The Challenge',
-        body: "A collaborative project with graphic interns across regions, developing a shared design theme that reflected Pike Nurseries' values as a landscaping company — spanning a billboard, a liveboard, and a bus wrap.",
+        body: "A collaborative project with graphic interns across regions, developing a shared design theme that reflected Pike Nurseries' values as a landscaping company, spanning a billboard, a liveboard, and a bus wrap.",
       },
       header2: {
         label: 'Process',
-        body: "After looking through Pike Nurseries' site and garden designs, I pitched a museum-inspired theme — presenting their landscaping like pieces of art, framed in gold to give the work a gallery feel. The team liked it, and I designed the bus wrap, an animated liveboard, and mobile ads around that concept, then presented the final work to the creative team at OUTFRONT Media.",
+        body: "After looking through Pike Nurseries' site and garden designs, I pitched a museum-inspired theme, presenting their landscaping like pieces of art, framed in gold to give the work a gallery feel. The team liked it, and I designed the bus wrap, an animated liveboard, and mobile ads around that concept, then presented the final work to the creative team at OUTFRONT Media.",
       },
-      timeline: '1 month — July to August 2023',
+      timeline: '1 month, July to August 2023',
       tools: ['Adobe Photoshop', 'Adobe Illustrator'],
       deliverables: ['Billboard', 'Animated liveboard', 'Bus wrap', 'Mobile ads'],
     },
@@ -99,7 +99,7 @@ export const outfront = {
     {
       icon: 'Users',
       title: 'Working with Real Clients',
-      body: 'Presenting concepts to account teams and creative directors taught me to explain design decisions in terms of brand goals and audience — not just aesthetics.',
+      body: 'Presenting concepts to account teams and creative directors taught me to explain design decisions in terms of brand goals and audience, not just aesthetics.',
     },
     {
       icon: 'Timer',

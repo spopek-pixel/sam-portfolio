@@ -34,7 +34,7 @@ export function UnderstandingUsers() {
 
         <div className="mt-14 grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-14">
           <Reveal>
-            <Lightbox src={personaSheet} alt="User persona — Alex Martinez, the budget-conscious student">
+            <Lightbox src={personaSheet} alt="User persona: Alex Martinez, the budget-conscious student">
               <div className="aspect-[3/2] w-full overflow-hidden rounded-2xl border border-line bg-white p-2">
                 <img src={personaSheet} alt="" className="h-full w-full object-contain" loading="lazy" />
               </div>

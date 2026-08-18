@@ -7,7 +7,7 @@ const pillars = [
   {
     icon: Search,
     title: 'UX Research',
-    description: 'Fifteen-plus stakeholder interviews, systems maps, and affinity diagrams — not assumptions.',
+    description: 'Fifteen-plus stakeholder interviews, systems maps, and affinity diagrams, not assumptions.',
   },
   {
     icon: PenTool,
@@ -17,7 +17,7 @@ const pillars = [
   {
     icon: Code2,
     title: 'Front-End Development',
-    description: 'React, TypeScript, and Tailwind CSS — I ship what I design, pixel for pixel.',
+    description: 'React, TypeScript, and Tailwind CSS: I ship what I design, pixel for pixel.',
   },
   {
     icon: Sparkles,
@@ -52,7 +52,7 @@ export function WhatIBring() {
           />
           <Reveal delay={0.12}>
             <p className="text-lg text-fg-muted">
-              I'm endlessly curious — the kind of person who picks up a new tool or skill because I want to
+              I'm endlessly curious, the kind of person who picks up a new tool or skill because I want to
               understand it, not because a job description asked me to. That's why I taught myself to code, why I got
               into AI tooling early, and why I'm rarely doing the same thing twice. I move fluidly between research,
               design, and code, and I'm just as comfortable learning fast on my own as I am pairing closely with

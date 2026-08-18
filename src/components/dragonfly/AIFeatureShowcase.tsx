@@ -60,7 +60,7 @@ export function AIFeatureShowcase({ title, body, why }: AIFeatureShowcaseProps) 
         </div>
 
         <p className="max-w-[15rem] text-center text-xs leading-relaxed text-fg-muted">
-          Home feed — an "AI picks for you" badge and a plain-language reason ("Because you've booked Core Flow 4 times this month") make the top suggestion feel personal, not generic.
+          Home feed: an "AI picks for you" badge and a plain-language reason ("Because you've booked Core Flow 4 times this month") make the top suggestion feel personal, not generic.
         </p>
       </Reveal>
 

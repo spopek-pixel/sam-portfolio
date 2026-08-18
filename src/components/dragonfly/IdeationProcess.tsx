@@ -26,11 +26,11 @@ import taskflow5 from '@/assets/images/projects/dragonfly-yoga/taskflow5.png'
 const sketchImages = [task1, task2, task3]
 const wireframeImages = [wireframeImg, wireframe2Img]
 const taskFlowImages = [
-  { src: taskflow1, label: 'Task Flow 1 — Onboarding & Personalization Setup' },
-  { src: taskflow2, label: 'Task Flow 2 — Booking a Recommended Class' },
-  { src: taskflow3, label: 'Task Flow 3 — Viewing Alternative Recommendations' },
-  { src: taskflow4, label: 'Task Flow 4 — Managing Upcoming Classes' },
-  { src: taskflow5, label: 'Task Flow 5 — Discovering New Class Types' },
+  { src: taskflow1, label: 'Task Flow 1: Onboarding & Personalization Setup' },
+  { src: taskflow2, label: 'Task Flow 2: Booking a Recommended Class' },
+  { src: taskflow3, label: 'Task Flow 3: Viewing Alternative Recommendations' },
+  { src: taskflow4, label: 'Task Flow 4: Managing Upcoming Classes' },
+  { src: taskflow5, label: 'Task Flow 5: Discovering New Class Types' },
 ]
 
 function StageHeader({ index, icon: Icon, title }: { index: number; icon: typeof StickyNote; title: string }) {
@@ -76,7 +76,7 @@ function FramedZoomImage({ src, className }: { src: string; className?: string }
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.06])
-  const alt = 'Miro brainstorm board — 5 themes, 25 ideas'
+  const alt = 'Miro brainstorm board: 5 themes, 25 ideas'
 
   return (
     <div ref={ref} className={cn('overflow-hidden rounded-2xl border border-line bg-surface/60 p-2', className)}>
@@ -135,7 +135,7 @@ export function IdeationProcess() {
                 <p className="text-sm leading-relaxed text-fg-muted">{storyboard.body}</p>
                 <Takeaway>{storyboard.takeaway}</Takeaway>
               </div>
-              <StoryboardReveal src={storyboardImg} alt="Storyboard — Feeling ready for hot yoga" />
+              <StoryboardReveal src={storyboardImg} alt="Storyboard: Feeling ready for hot yoga" />
             </div>
           </Reveal>
 
@@ -196,9 +196,9 @@ export function IdeationProcess() {
               <div className="grid gap-4 sm:grid-cols-2">
                 {wireframeImages.map((img, i) => (
                   <Reveal key={i} delay={i * 0.08}>
-                    <Lightbox src={img} alt={`Wireframe kit ${i + 1} — Dragonfly Hot Yoga`}>
+                    <Lightbox src={img} alt={`Wireframe kit ${i + 1}: Dragonfly Hot Yoga`}>
                       <div className="overflow-hidden rounded-2xl border border-line bg-surface/60">
-                        <img src={img} alt={`Wireframe kit ${i + 1} — Dragonfly Hot Yoga`} className="w-full" loading="lazy" />
+                        <img src={img} alt={`Wireframe kit ${i + 1}: Dragonfly Hot Yoga`} className="w-full" loading="lazy" />
                       </div>
                     </Lightbox>
                   </Reveal>
@@ -212,7 +212,7 @@ export function IdeationProcess() {
             <div className="border-t border-line pt-12">
               <div className="mb-2 flex items-center justify-center gap-2 text-fg-muted">
                 <Bot size={16} />
-                <span className="font-mono text-xs uppercase tracking-wider">07 — AI-assisted design</span>
+                <span className="font-mono text-xs uppercase tracking-wider">07: AI-assisted design</span>
               </div>
               <AIFeatureShowcase title={aiDesign.title} body={aiDesign.body} why={aiDesign.why} />
             </div>

@@ -1,6 +1,7 @@
 import { StoryIntro } from '@/components/about/StoryIntro'
 import { InteractiveTimeline } from '@/components/about/InteractiveTimeline'
 import { SkillsMarquee } from '@/components/about/SkillsMarquee'
+import { WeaponsOfChoice } from '@/components/about/WeaponsOfChoice'
 import { PhotoCollage } from '@/components/about/PhotoCollage'
 import { FavoriteGames } from '@/components/about/FavoriteGames'
 import { ResumeCTA } from '@/components/about/ResumeCTA'
@@ -12,6 +13,7 @@ export default function About() {
       <StoryIntro />
       <InteractiveTimeline />
       <SkillsMarquee />
+      <WeaponsOfChoice />
       <PaintDivider align="left" />
       <PhotoCollage />
       <FavoriteGames />

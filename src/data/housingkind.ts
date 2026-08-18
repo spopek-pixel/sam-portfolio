@@ -21,7 +21,7 @@ export const housingkind = {
     title: 'Housingkind',
     tagline: 'A digital visualization platform that helps communities understand how missing middle housing can fit into their neighborhoods.',
     role: 'UX Design & Research',
-    timeline: 'Aug 2025 — Present',
+    timeline: 'Aug 2025 - Present',
     team: 'Samantha Popek, Lucy Murdock, Jaden Radcliff, Obid Ochilov',
     org: 'In partnership with ViaCDC, AARP & Startingblock',
     tools: ['Figma', 'Figma Make', 'Systems Mapping', 'Stakeholder Interviews'],
@@ -49,7 +49,7 @@ export const housingkind = {
     steps: [
       {
         label: 'Problem',
-        body: 'Communities support affordability and walkability in theory, but resist the housing that delivers them — because they can’t picture it on their own street.',
+        body: 'Communities support affordability and walkability in theory, but resist the housing that delivers them, because they can’t picture it on their own street.',
       },
       {
         label: 'Solution',
@@ -57,7 +57,7 @@ export const housingkind = {
       },
       {
         label: 'Outcome',
-        body: 'A working product presented to developers, city alders, and advocates — and Best UX Design at the Transcend Competition.',
+        body: 'A working product presented to developers, city alders, and advocates, and Best UX Design at the Transcend Competition.',
       },
     ],
     goals: [
@@ -80,10 +80,10 @@ export const housingkind = {
   originStory: {
     body: [
       "This project began in my Advanced Design Thinking for Transformation course, part of a year-long master's program project exploring challenges and opportunities within the housing crisis.",
-      "Through the team's research, we noticed a recurring pattern: many people admire vibrant, walkable neighborhoods with a mix of housing types, yet feel hesitant when similar developments are proposed in their own communities. This highlighted an important gap — housing conversations often happen in abstract terms, making it difficult for residents to clearly picture how new housing could realistically fit into the places they already know and care about.",
+      "Through the team's research, we noticed a recurring pattern: many people admire vibrant, walkable neighborhoods with a mix of housing types, yet feel hesitant when similar developments are proposed in their own communities. This highlighted an important gap: housing conversations often happen in abstract terms, making it difficult for residents to clearly picture how new housing could realistically fit into the places they already know and care about.",
     ],
     hmw: 'How might we design housing solutions that create greater access while supporting dignity and belonging across Wisconsin?',
-    hmwAttribution: '— MD+I Design Horizon',
+    hmwAttribution: 'MD+I Design Horizon',
   },
 
   researchMethods: {
@@ -138,7 +138,7 @@ export const housingkind = {
       },
       {
         participant: 'Participant G',
-        quote: "I don't think people necessarily oppose affordable housing—they're just filling in the gaps with their own assumptions.",
+        quote: "I don't think people necessarily oppose affordable housing, they're just filling in the gaps with their own assumptions.",
       },
       {
         participant: 'Participant H',
@@ -162,7 +162,7 @@ export const housingkind = {
 
   personas: {
     intro:
-      'The user personas for Housingkind were created from research and stakeholder insights to represent the different people impacted by housing development — residents, developers, and the community advocates working between them. They highlight key goals, concerns, and perceptions around "missing middle" housing, helping uncover common fears and misunderstandings.',
+      'The user personas for Housingkind were created from research and stakeholder insights to represent the different people impacted by housing development: residents, developers, and the community advocates working between them. They highlight key goals, concerns, and perceptions around "missing middle" housing, helping uncover common fears and misunderstandings.',
     roles: ['Resident', 'Developer', 'Community Advocate'],
   },
 
@@ -229,14 +229,14 @@ export const housingkind = {
       { title: 'Final prototype', subtitle: '' },
     ],
     comparisonNote:
-      'AI supported the early exploration — I evaluated the concepts against research, then redesigned and developed the final experience myself.',
+      'AI supported the early exploration. I evaluated the concepts against research, then redesigned and developed the final experience myself.',
     comparison: {
       before: {
-        title: 'Before — AI-generated Figma Make concept',
+        title: 'Before: AI-generated Figma Make concept',
         body: 'An early concept used to quickly explore possible layouts and interactions.',
       },
       after: {
-        title: 'After — Final design refined in Figma',
+        title: 'After: Final design refined in Figma',
         body: 'I redesigned and developed the experience using research insights, user feedback, and my own UX and visual design decisions.',
       },
     },
@@ -263,7 +263,7 @@ export const housingkind = {
     },
     {
       title: 'Branding & design direction',
-      body: "Defined Housingkind's visual identity — mark, blue palette, and typography.",
+      body: "Defined Housingkind's visual identity: mark, blue palette, and typography.",
       status: 'done',
     },
     {
@@ -280,10 +280,10 @@ export const housingkind = {
 
   buildingIt: {
     intro:
-      "I didn't stop at the prototype — I'm building Housingkind as a real, working product, bringing the Figma design into responsive, production code.",
+      "I didn't stop at the prototype. I'm building Housingkind as a real, working product, bringing the Figma design into responsive, production code.",
     whyLead: 'Curiosity pushed me beyond the prototype.',
     whyRest:
-      'I wanted to challenge myself to learn modern development tools, work with AI, better communicate and collaborate with engineers, and experience what it takes to ship a real product—not just design one.',
+      'I wanted to challenge myself to learn modern development tools, work with AI, better communicate and collaborate with engineers, and experience what it takes to ship a real product, not just design one.',
     stack: [
       { name: 'React', body: 'Componentized UI mirroring the Figma design system' },
       { name: 'TypeScript', body: 'Typed data models for projects, stories, and resources' },
@@ -291,15 +291,15 @@ export const housingkind = {
       { name: 'Responsive build', body: 'Every page designed and coded mobile-first' },
       { name: 'GitHub', body: 'Version-controlled development with a clean commit history' },
       { name: 'Claude Code', body: 'AI pair-programming to move faster from design to working code' },
-      { name: 'Vercel', body: 'Continuous deployment — every push ships to a live URL' },
+      { name: 'Vercel', body: 'Continuous deployment: every push ships to a live URL' },
     ],
     pipeline: ['Figma design', 'React + TypeScript', 'GitHub', 'Claude Code', 'Vercel deploy'],
-    screenshotCaption: 'The Housingkind front-end running in the browser — designed and developed by me.',
+    screenshotCaption: 'The Housingkind front-end running in the browser, designed and developed by me.',
   },
 
   aiExperience: {
     intro:
-      'Housingkind doesn’t just use AI in the design process — AI is part of the product. A built-in assistant, running on Microsoft’s Azure AI cloud platform, helps residents understand housing without reading policy documents.',
+      'Housingkind doesn’t just use AI in the design process. AI is part of the product. A built-in assistant, running on Microsoft’s Azure AI cloud platform, helps residents understand housing without reading policy documents.',
     cards: [
       {
         title: 'Azure OpenAI integration',
@@ -315,7 +315,7 @@ export const housingkind = {
       },
       {
         title: 'Prompt engineering',
-        body: 'System prompts tuned to answer in approachable, neutral housing language — informative, never preachy.',
+        body: 'System prompts tuned to answer in approachable, neutral housing language: informative, never preachy.',
       },
       {
         title: 'Context-aware responses (RAG)',
@@ -323,7 +323,7 @@ export const housingkind = {
       },
       {
         title: 'Future AI vision',
-        body: 'Toward personalized street visualizations and scenario simulation — ask “How does Housingkind help communities?” and get an answer grounded in your own neighborhood.',
+        body: 'Toward personalized street visualizations and scenario simulation. Ask “How does Housingkind help communities?” and get an answer grounded in your own neighborhood.',
       },
     ],
     chatCaption: 'The in-product AI assistant answering a resident’s question in real time.',
@@ -340,8 +340,8 @@ export const housingkind = {
 
   decisionNarrative: {
     body: [
-      "Taking on the design lead role for Housingkind meant sitting with a hard truth first: nobody organizes against housing because they've read the zoning code and disagree with it. They organize because they can't picture what's being proposed, and the unknown defaults to scary. So my real job wasn't decorating a website — it was building the shortest possible path from confusion to a clear mental picture, for someone who's never thought about \"missing middle\" housing in their life.",
-      "That reframing changed how I designed everything downstream. I used orange sparingly and deliberately — on the words that mattered, not the whole page — because a resident skimming this at 9pm after their kids are asleep isn't going to read paragraphs, they're going to scan for the two or three ideas that stick. If the design demanded more attention than that, it had already failed the person it was supposed to help.",
+      "Taking on the design lead role for Housingkind meant sitting with a hard truth first: nobody organizes against housing because they've read the zoning code and disagree with it. They organize because they can't picture what's being proposed, and the unknown defaults to scary. So my real job wasn't decorating a website. It was building the shortest possible path from confusion to a clear mental picture, for someone who's never thought about \"missing middle\" housing in their life.",
+      "That reframing changed how I designed everything downstream. I used orange sparingly and deliberately, on the words that mattered and not the whole page, because a resident skimming this at 9pm after their kids are asleep isn't going to read paragraphs, they're going to scan for the two or three ideas that stick. If the design demanded more attention than that, it had already failed the person it was supposed to help.",
     ],
     questions: [
       'Would my mom understand this without me explaining it?',
@@ -349,13 +349,13 @@ export const housingkind = {
       'If someone only reads the headline, do they still walk away with the right idea?',
     ],
     mockups: [
-      { caption: '"We\'re working to shift perception, not advocate for density" — the mindset page that sets the tone for every visitor' },
+      { caption: '"We\'re working to shift perception, not advocate for density": the mindset page that sets the tone for every visitor' },
     ],
   },
 
   testingFeedback: {
     intro:
-      'Feedback from residents, developers, and city stakeholders during walkthroughs was consistently positive — the biggest shift came from watching people see density before judging it.',
+      'Feedback from residents, developers, and city stakeholders during walkthroughs was consistently positive. The biggest shift came from watching people see density before judging it.',
     stats: [
       {
         value: '92%',
@@ -381,7 +381,7 @@ export const housingkind = {
   },
 
   recognition: {
-    body: 'Housingkind was presented at the Transcend Competition, an annual showcase where graduate students pitch real-world design solutions to a panel of CEOs and business leaders across Wisconsin. Competing against teams from across the program, our solution stood out for its clarity, research depth, and real-world applicability. Out of all competing teams, I was individually awarded Best User Experience Design — recognized for delivering a design that was not only visually compelling but grounded in genuine community research and systems thinking.',
+    body: 'Housingkind was presented at the Transcend Competition, an annual showcase where graduate students pitch real-world design solutions to a panel of CEOs and business leaders across Wisconsin. Competing against teams from across the program, our solution stood out for its clarity, research depth, and real-world applicability. Out of all competing teams, I was individually awarded Best User Experience Design, recognized for delivering a design that was not only visually compelling but grounded in genuine community research and systems thinking.',
     photoCaption: 'Presenting Housingkind at the Transcend Competition with my teammates.',
   },
 
@@ -396,7 +396,7 @@ export const housingkind = {
     ],
     quote: {
       quote: 'People fear what they cannot see.',
-      attribution: 'David Gordon, Accessible Housing Developer — key insight from stakeholder interviews',
+      attribution: 'David Gordon, Accessible Housing Developer, key insight from stakeholder interviews',
     } satisfies Quote,
     usersGained: [
       'A way to see density before judging it',
@@ -410,7 +410,7 @@ export const housingkind = {
       {
         title: 'Lessons learned',
         items: [
-          'Design goes beyond the interface — systems, stakeholders, and trust shape every decision',
+          'Design goes beyond the interface: systems, stakeholders, and trust shape every decision',
           'Grounding decisions in research and real conversations beats designing from assumptions',
           'AI speeds up exploration, but judgment decides what ships',
         ],
@@ -441,6 +441,6 @@ export const housingkind = {
       },
     ],
     highlight:
-      "Successful design is not just about creating interfaces — it's about using the right tools, research, and processes to help people better understand complex challenges and make informed decisions.",
+      "Successful design is not just about creating interfaces. It's about using the right tools, research, and processes to help people better understand complex challenges and make informed decisions.",
   },
 }

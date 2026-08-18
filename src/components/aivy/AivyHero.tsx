@@ -55,7 +55,7 @@ export function AivyHero({ project }: { project: Project }) {
 
         <Reveal delay={0.12}>
           <h1 className="mt-6 text-[clamp(2.5rem,6.5vw,5rem)] leading-[1.02]">
-            AIVY — <span className="text-gradient">designing AI that reconnects</span> people with nature.
+            AIVY: <span className="text-gradient">designing AI that reconnects</span> people with nature.
           </h1>
         </Reveal>
 

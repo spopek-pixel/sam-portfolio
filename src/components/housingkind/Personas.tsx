@@ -71,7 +71,7 @@ export function Personas() {
                   >
                     <img
                       src={personaImages[index]}
-                      alt={`Persona — ${roles[index]}`}
+                      alt={`Persona: ${roles[index]}`}
                       className="aspect-video w-full object-contain"
                     />
                   </motion.div>

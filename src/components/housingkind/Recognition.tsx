@@ -10,7 +10,7 @@ export function Recognition() {
   return (
     <section className="px-6 py-10 sm:px-14 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading kicker="Recognition" title="Best User Experience Design — Transcend." className="mb-8" />
+        <SectionHeading kicker="Recognition" title="Best User Experience Design, Transcend." className="mb-8" />
 
         <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:items-stretch">
           <Reveal className="h-full">

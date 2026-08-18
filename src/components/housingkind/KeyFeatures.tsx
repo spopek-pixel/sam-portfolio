@@ -75,7 +75,7 @@ export function KeyFeatures() {
         <SectionHeading
           kicker="Key features"
           title="What Housingkind does."
-          description="Straightforward, in plain terms: a platform residents and developers can both use to understand missing middle housing — no policy background required."
+          description="Straightforward, in plain terms: a platform residents and developers can both use to understand missing middle housing, no policy background required."
           className="mb-10"
         />
 

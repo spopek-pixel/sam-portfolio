@@ -71,7 +71,7 @@ export function TekloHero({ project }: { project: Project }) {
           </div>
 
           <Reveal delay={0.24}>
-            <Lightbox src={heroImage} alt="Teklo app — splash screen and home screen">
+            <Lightbox src={heroImage} alt="Teklo app: splash screen and home screen">
               <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-line bg-surface">
                 <img src={heroImage} alt="" className="h-full w-full object-cover" loading="eager" />
               </div>
