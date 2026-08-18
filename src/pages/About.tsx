@@ -13,11 +13,11 @@ export default function About() {
       <StoryIntro />
       <InteractiveTimeline />
       <SkillsMarquee />
-      <WeaponsOfChoice />
       <PaintDivider align="left" />
       <PhotoCollage />
       <FavoriteGames />
       <PaintDivider align="right" />
+      <WeaponsOfChoice />
       <ResumeCTA />
     </>
   )
