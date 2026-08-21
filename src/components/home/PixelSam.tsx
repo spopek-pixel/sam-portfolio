@@ -56,7 +56,7 @@ export const PixelSam = forwardRef<HTMLDivElement, PixelSamProps>(function Pixel
         >
           <img
             src={pixelSam}
-            alt="Pixel-art illustration of Samantha, wearing an 'I heart' shirt, aiming a purple-and-green paint blaster with a speech bubble reading 'Design. Iterate. Repeat.'"
+            alt="Pixel-art illustration of Samantha, wearing an 'I heart code' shirt, aiming a purple-and-green paint blaster with a speech bubble reading 'Design. Iterate. Repeat.'"
             width={700}
             height={700}
             className="relative z-10 w-full select-none [image-rendering:pixelated]"
