@@ -1,5 +1,6 @@
 import { StoryIntro } from '@/components/about/StoryIntro'
 import { InteractiveTimeline } from '@/components/about/InteractiveTimeline'
+import { AlwaysLearning } from '@/components/about/AlwaysLearning'
 import { SkillsMarquee } from '@/components/about/SkillsMarquee'
 import { WeaponsOfChoice } from '@/components/about/WeaponsOfChoice'
 import { PhotoCollage } from '@/components/about/PhotoCollage'
@@ -12,6 +13,7 @@ export default function About() {
     <>
       <StoryIntro />
       <InteractiveTimeline />
+      <AlwaysLearning />
       <SkillsMarquee />
       <PaintDivider align="left" />
       <PhotoCollage />
