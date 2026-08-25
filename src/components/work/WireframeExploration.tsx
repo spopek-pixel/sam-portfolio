@@ -38,9 +38,9 @@ export function WireframeExploration({ data }: { data: WireframeExplorationData 
         <SectionHeading kicker="Wireframes" title={data.title} description={data.subtitle} className="mb-12" />
 
         <Reveal>
-          <div className="mx-auto flex max-w-4xl flex-col gap-3">
+          <div className="mx-auto flex max-w-5xl flex-col gap-3">
             <div className="relative">
-              <div className="wf-scope max-h-[65vh] overflow-auto rounded-xl border border-line bg-[#f0eee9] [zoom:0.5] sm:[zoom:0.68] lg:[zoom:0.9]">
+              <div className="wf-scope overflow-x-auto rounded-xl border border-line bg-[#f0eee9] [zoom:0.4] sm:[zoom:0.7] lg:[zoom:1]">
                 <div key={current.id} dangerouslySetInnerHTML={{ __html: current.html }} />
               </div>
 
@@ -102,7 +102,7 @@ export function WireframeExploration({ data }: { data: WireframeExplorationData 
 
         {data.synthesis && (
           <Reveal delay={0.12}>
-            <div className="mx-auto mt-10 flex max-w-4xl gap-3 rounded-2xl border border-line bg-violet/10 p-6">
+            <div className="mx-auto mt-10 flex max-w-5xl gap-3 rounded-2xl border border-line bg-violet/10 p-6">
               <ArrowRight size={18} className="mt-0.5 shrink-0 text-violet-tint" />
               <p className="text-sm leading-relaxed text-fg">{data.synthesis}</p>
             </div>
