@@ -13,6 +13,13 @@ export interface ProcessStep {
   status?: 'done' | 'in-progress'
 }
 
+export interface InterviewCard {
+  team: string
+  question: string
+  response: string
+  opportunity?: string
+}
+
 export interface Project {
   slug: string
   title: string
@@ -32,6 +39,7 @@ export interface Project {
   decisions: string[]
   outcome: string
   reflection: string
+  interviews?: InterviewCard[]
   images: string[]
   titleVisual?: string
   deliverables?: string[]
@@ -371,6 +379,64 @@ export const projects: Project[] = [
       "MyOutfront.com is still in progress at OUTFRONT Media, so only select snippets of the prototype can be shared rather than the full design. What's shown here is the ad-submission flow for a client who meets all guidelines: enhanced notifications, a streamlined submission flow, and progress tracking from start to finish.",
     reflection:
       "I genuinely wish I'd had more time in this internship to keep refining the design: tightening sizing, adding features, polishing the overall experience. But this hands-on opportunity, working on a real client-facing product with real internal stakeholders, taught me things a classroom project couldn't, and I enjoyed every step of it.",
+    interviews: [
+      {
+        team: 'Ad Transaction Team',
+        question: 'Can you walk me through your current process for handling ad submissions, from start to finish?',
+        response:
+          'We receive ad submissions through email or our internal system. Our primary challenges include managing sizing errors and conducting manual content reviews. It would be helpful to have an automated validation tool for ad specifications to reduce back-and-forth with clients.',
+        opportunity: 'Automated spec validation at upload, with inline error messages instead of email replies.',
+      },
+      {
+        team: 'Contracts and Payment Team',
+        question: 'What types of payment issues do you encounter most often?',
+        response:
+          'Discrepancies between the contract terms and the billed amount, as well as confusion around payment due dates. Clearer invoicing and automated reminders would help reduce these issues.',
+        opportunity: 'Invoices that show contract line items side by side, plus scheduled payment reminders.',
+      },
+      {
+        team: 'Campaign Management Team',
+        question: 'What information do you need to effectively manage client campaigns through the platform?',
+        response:
+          'Access to real-time campaign data, including performance metrics, ad placements, and scheduling. It would be great if the platform could provide analytics dashboards and alert us to any underperforming campaigns.',
+        opportunity: 'A live campaign dashboard with threshold alerts for underperformance.',
+      },
+      {
+        team: 'Customer Support Team',
+        question: 'What are the most common support requests you receive related to the MyOutfront.com platform?',
+        response:
+          'Clients often ask for help navigating the site, accessing campaign data, or resolving billing issues. Simplifying the UI and providing self-help resources could reduce support tickets.',
+        opportunity: 'In-product help centre and guided navigation for the three top ticket types.',
+      },
+      {
+        team: 'Creative Services Team',
+        question: 'How do creative assets move between the client and your team today?',
+        response:
+          "Files arrive as email attachments or shared links, and we rename and re-file every version by hand. We often can't tell which version was approved. A single place to upload, version, and mark artwork as approved would save us hours a week.",
+        opportunity: 'Versioned asset library with an explicit approved state visible to both sides.',
+      },
+      {
+        team: 'Inventory and Availability Team',
+        question: 'How do you check and communicate what inventory is available?',
+        response:
+          "We pull availability into a spreadsheet and send it out, but by the time a client responds the holds have changed. We'd like availability the client can see directly, with the hold status shown as it stands right now.",
+        opportunity: 'Client-facing availability view with live hold status, replacing emailed spreadsheets.',
+      },
+      {
+        team: 'Proof of Performance Team',
+        question: 'What does it take to get proof of posting back to a client?',
+        response:
+          'Field photos come in from several sources and we assemble decks manually, matching each image to the right site and date. Clients chase us for them. If photos landed against the campaign automatically, the report would build itself.',
+        opportunity: 'Photos attached to the campaign record on upload, with a generated proof-of-posting report.',
+      },
+      {
+        team: 'Account Management Team',
+        question: 'Where do clients get stuck when they use the platform on their own?',
+        response:
+          "New users can't find their campaigns or documents without a walkthrough from us, and permissions for their wider team are unclear. A guided first session and clearer roles would let them work without calling.",
+        opportunity: 'First-run onboarding tour and a plain-language roles and permissions screen.',
+      },
+    ],
     images: imagesFor('myoutfront'),
     deliverables: [
       'Competitive Analysis',
