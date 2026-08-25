@@ -1,0 +1,24 @@
+.wf-scope .wf { width:980px;font:13px/1.45 ui-sans-serif,system-ui,sans-serif;color:#2b2b2b }
+.wf-scope .wf-top { display:flex;align-items:center;gap:16px;padding:11px 18px;border-bottom:1px solid #ddd9d3;background:#fbfaf8 }
+.wf-scope .wf-body { display:flex;min-height:540px }
+.wf-scope .wf-side { width:168px;flex:none;border-right:1px solid #e5e1db;padding:12px 0;display:flex;flex-direction:column;gap:1px;background:#faf9f7 }
+.wf-scope .wf-nav { padding:6px 14px;color:#70706c;font-size:12px }
+.wf-scope .wf-nav.on { background:#ececea;color:#1a1a1a;font-weight:600;box-shadow:inset 2px 0 0 #0091d5 }
+.wf-scope .wf-main { flex:1;padding:18px 20px 24px;display:flex;flex-direction:column;gap:16px;min-width:0 }
+.wf-scope .wf-h { font-size:16px;font-weight:600;margin:0 }
+.wf-scope .wf-sub { font-size:12px;color:#87857f }
+.wf-scope .wf-box { border:1px solid #e2ded8;border-radius:5px;background:#fff }
+.wf-scope .wf-lbl { font:11px/1.2 ui-monospace,Menlo,monospace;letter-spacing:.03em;text-transform:uppercase;color:#8a8a8a }
+.wf-scope .wf-num { font-size:22px;font-weight:600;letter-spacing:-.02em }
+.wf-scope .wf-link { color:#0091d5 }
+.wf-scope .wf-btn { border:1px solid #bcb8b1;border-radius:4px;padding:7px 12px;font-size:12px;background:#f4f2ef;display:inline-flex;align-items:center;gap:6px;white-space:nowrap }
+.wf-scope .wf-btn.pri { background:#0091d5;border-color:#0091d5;color:#fff }
+.wf-scope .wf-btn.gh { background:transparent;border-color:transparent;color:#6d6b66 }
+.wf-scope .wf-row { display:flex;align-items:center;gap:10px }
+.wf-scope .wf-bar { height:8px;border-radius:2px;background:#e6e3de }
+.wf-scope .wf-t { width:100%;border-collapse:collapse;font-size:12px }
+.wf-scope .wf-t th { text-align:left;font:11px/1 ui-monospace,Menlo,monospace;text-transform:uppercase;color:#8a8a8a;padding:9px 10px;border-bottom:1px solid #ddd9d3;white-space:nowrap }
+.wf-scope .wf-t td { padding:9px 10px;border-bottom:1px solid #efece7 }
+.wf-scope .wf-note { font:11px/1.4 ui-sans-serif,system-ui,sans-serif;color:#8a6320;background:#fdf7ea;border:1px dashed #e2caa0;border-radius:4px;padding:6px 9px }
+.wf-scope .wf-in { border:1px solid #d8d4ce;border-radius:4px;padding:7px 9px;font-size:12px;color:#9a978f;background:#fff }
+.wf-scope .wf-chip { border:1px solid #d8d4ce;border-radius:99px;padding:3px 9px;font-size:11px;color:#6d6b66;background:#fff }

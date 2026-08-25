@@ -8,6 +8,7 @@ import { OutcomeSection } from '@/components/work/OutcomeSection'
 import { ReflectionSection } from '@/components/work/ReflectionSection'
 import { MockupGallery } from '@/components/work/MockupGallery'
 import { StakeholderInterviews } from '@/components/work/StakeholderInterviews'
+import { WireframeExploration } from '@/components/work/WireframeExploration'
 import { VisualGallery } from '@/components/work/VisualGallery'
 import { NextProjectNav } from '@/components/work/NextProjectNav'
 import { Deliverables } from '@/components/work/Deliverables'
@@ -199,6 +200,7 @@ export default function ProjectDetail() {
           <ProblemSection problem={project.problem} research={project.research} />
           {project.interviews && <StakeholderInterviews interviews={project.interviews} />}
           <ProcessTimeline steps={project.process} />
+          {project.wireframes && <WireframeExploration data={project.wireframes} />}
           <KeyDecisions decisions={project.decisions} />
           {project.deliverables && <Deliverables items={project.deliverables} />}
           <MockupGallery images={project.images} title={project.title} />

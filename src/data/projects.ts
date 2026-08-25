@@ -1,6 +1,7 @@
 import housingkindTitleVisual from '@/assets/images/projects/housingkind/house-lap-1.png'
 import aivyHero from '@/assets/images/projects/aivy/aivy-hero.jpg'
 import { aivy } from '@/data/aivy'
+import { myoutfrontWireframes, type WireframeExplorationData } from '@/data/myoutfrontWireframes'
 
 export type Accent = 'violet' | 'acid' | 'mint'
 export type Category = 'Product' | 'Research' | 'Visual'
@@ -40,6 +41,7 @@ export interface Project {
   outcome: string
   reflection: string
   interviews?: InterviewCard[]
+  wireframes?: WireframeExplorationData
   images: string[]
   titleVisual?: string
   deliverables?: string[]
@@ -437,6 +439,7 @@ export const projects: Project[] = [
         opportunity: 'First-run onboarding tour and a plain-language roles and permissions screen.',
       },
     ],
+    wireframes: myoutfrontWireframes,
     images: imagesFor('myoutfront'),
     deliverables: [
       'Competitive Analysis',
@@ -447,6 +450,7 @@ export const projects: Project[] = [
       'User Stories',
       'Storyboarding',
       'Low-Fidelity Wireframes',
+      'Dashboard Wireframes',
       'High-Fidelity Prototype',
       'Presenting to Stakeholders',
     ],
