@@ -312,6 +312,79 @@ export const projects: Project[] = [
     images: imagesFor('outfront-media-graphics', 'outfront.jpg'),
     deliverables: ['Bus king ads', 'Bus rear king', 'Billboard', 'Animated liveboard', 'Bus wrap', 'Mobile ads'],
   },
+  {
+    slug: 'myoutfront',
+    title: 'MyOutfront.com',
+    tagline: 'Designing a self-service portal so OUTFRONT clients could submit, track, and troubleshoot their own ads.',
+    description:
+      'A UX/UI internship project reimagining how OUTFRONT Media clients submit ads, view contracts, and track upload status, without waiting on an internal team to do it for them.',
+    category: ['Product', 'Research'],
+    role: 'UX/UI Design Intern',
+    timeline: 'June - August 2024',
+    team: 'UX Design Team, OUTFRONT Media',
+    tools: ['Figma', 'Miro'],
+    accent: 'violet',
+    variant: 'case-study',
+    featured: false,
+    problem:
+      "The existing ad-submission process leaned heavily on other internal teams, so a submission that didn't meet sizing or content guidelines could sit stalled for days waiting on someone else to catch it. That bottleneck delayed ads from ever going live and created extra work on both sides. The opportunity was a self-service webpage where clients could log in, view their contract details, and upload ads directly, with the system checking sizing, flagging inappropriate content, and reporting upload status in real time, so problems surfaced immediately instead of after a delay.",
+    research: [
+      'Competitive analysis of similar self-service platforms to understand industry standards for user-friendly, seamless upload experiences',
+      'Benchmarking against top-performing sites to identify which layout and feature patterns would offer clients the most value',
+      'Trend analysis into minimalistic layouts, intuitive navigation, and responsive design to keep the platform practical, not just polished',
+      'Mood boarding for color, typography, and layout direction that stayed true to the MyOutfront.com brand identity',
+      'Internal interviews with the ad transaction team and the contracts/payments team, since neither workflow was one our design team normally touched, to understand how sizing errors, content review, and payment status actually get handled today',
+    ],
+    process: [
+      {
+        title: 'Research & inspiration',
+        body: 'Gathered competitive, benchmarking, trend, and mood-board research, then brainstormed concepts with the UX design team and presented my own design ideas and inspiration.',
+      },
+      {
+        title: 'Internal stakeholder interviews',
+        body: 'Interviewed the ad transaction team and the contracts/payments team to understand requirements our team doesn\'t typically own, since clients would need both integrated into one page.',
+      },
+      {
+        title: 'Low-fidelity prototype',
+        body: 'Sketched the core pages, structure, and navigation for ad submissions, contract views, and upload-status tracking, directly informed by the research phase.',
+      },
+      {
+        title: 'User stories & storyboarding',
+        body: 'Mapped every branch of the submission journey with the team, including the ideal path (an ad that passes guidelines) and the harder one (an ad that gets flagged, with feedback, guideline links, support access, and a resubmission path).',
+      },
+      {
+        title: 'High-fidelity prototype',
+        body: 'Refined color, typography, and iconography, then built out interactive states for buttons, inputs, and notifications, including how success and error feedback would actually look.',
+      },
+      {
+        title: 'Final presentation',
+        body: 'Tested and refined the high-fidelity designs with team feedback, then presented the final prototype to stakeholders.',
+      },
+    ],
+    decisions: [
+      'Built the platform around self-service rather than a support ticket, so sizing checks, content flags, and status updates happen automatically instead of waiting on another team',
+      'Designed real-time status tracking for every upload (succeeded, failed, or pending) so clients always know where their ad stands without asking',
+      'Storyboarded the declined-ad path as thoroughly as the successful one, with clear feedback, guideline links, and a direct resubmission flow, so no interaction was left as a dead end',
+      'Interviewed the contracts/payments and ad transaction teams directly instead of assuming their requirements, since those workflows sit outside what our design team normally handles',
+    ],
+    outcome:
+      "MyOutfront.com is still in progress at OUTFRONT Media, so only select snippets of the prototype can be shared rather than the full design. What's shown here is the ad-submission flow for a client who meets all guidelines: enhanced notifications, a streamlined submission flow, and progress tracking from start to finish.",
+    reflection:
+      "I genuinely wish I'd had more time in this internship to keep refining the design: tightening sizing, adding features, polishing the overall experience. But this hands-on opportunity, working on a real client-facing product with real internal stakeholders, taught me things a classroom project couldn't, and I enjoyed every step of it.",
+    images: imagesFor('myoutfront'),
+    deliverables: [
+      'Competitive Analysis',
+      'Benchmarking',
+      'Trend Analysis',
+      'Mood Boarding',
+      'Internal Stakeholder Interviews',
+      'User Stories',
+      'Storyboarding',
+      'Low-Fidelity Wireframes',
+      'High-Fidelity Prototype',
+      'Presenting to Stakeholders',
+    ],
+  },
 ]
 
 export function getProject(slug: string) {
