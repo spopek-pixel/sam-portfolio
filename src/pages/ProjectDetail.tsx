@@ -191,6 +191,25 @@ export default function ProjectDetail() {
     )
   }
 
+  if (project.slug === 'myoutfront') {
+    return (
+      <div>
+        <CaseStudyHero project={project} />
+        <ProblemSection problem={project.problem} research={project.research} />
+        {project.interviews && <StakeholderInterviews interviews={project.interviews} />}
+        {project.userStories && <UserStoriesSection data={project.userStories} />}
+        {project.lowFidelity && <SketchGallery data={project.lowFidelity} />}
+        {project.wireframes && <WireframeExploration data={project.wireframes} />}
+        <KeyDecisions decisions={project.decisions} />
+        {project.deliverables && <Deliverables items={project.deliverables} />}
+        <MockupGallery images={project.images} title={project.title} />
+        <OutcomeSection outcome={project.outcome} />
+        <ReflectionSection reflection={project.reflection} />
+        <NextProjectNav project={nextProject} />
+      </div>
+    )
+  }
+
   return (
     <div>
       <CaseStudyHero project={project} />
@@ -200,11 +219,7 @@ export default function ProjectDetail() {
       ) : (
         <>
           <ProblemSection problem={project.problem} research={project.research} />
-          {project.interviews && <StakeholderInterviews interviews={project.interviews} />}
           <ProcessTimeline steps={project.process} />
-          {project.userStories && <UserStoriesSection data={project.userStories} />}
-          {project.lowFidelity && <SketchGallery data={project.lowFidelity} />}
-          {project.wireframes && <WireframeExploration data={project.wireframes} />}
           <KeyDecisions decisions={project.decisions} />
           {project.deliverables && <Deliverables items={project.deliverables} />}
           <MockupGallery images={project.images} title={project.title} />
