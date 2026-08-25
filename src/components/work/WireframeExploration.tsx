@@ -38,20 +38,19 @@ export function WireframeExploration({ data }: { data: WireframeExplorationData 
         <SectionHeading kicker="Wireframes" title={data.title} description={data.subtitle} className="mb-12" />
 
         <Reveal>
-          <div className="mx-auto flex max-w-2xl flex-col gap-3">
+          <div className="mx-auto flex max-w-4xl flex-col gap-3">
             <div className="relative">
+              <div className="wf-scope max-h-[65vh] overflow-auto rounded-xl border border-line bg-[#f0eee9] [zoom:0.5] sm:[zoom:0.68] lg:[zoom:0.9]">
+                <div key={current.id} dangerouslySetInnerHTML={{ __html: current.html }} />
+              </div>
+
               <button
                 type="button"
                 onClick={() => setExpanded(true)}
                 aria-label={`Expand wireframe: ${current.group} ${current.id}`}
-                className="group relative block w-full cursor-zoom-in overflow-hidden rounded-xl border border-line bg-[#f0eee9]"
+                className="absolute right-3 top-3 z-20 flex h-9 w-9 items-center justify-center rounded-full border border-line bg-ink/70 text-fg backdrop-blur-sm transition-transform hover:scale-105"
               >
-                <div className="wf-scope max-h-[360px] overflow-hidden [zoom:0.32] sm:max-h-[440px] sm:[zoom:0.55] lg:[zoom:0.65]">
-                  <div key={current.id} dangerouslySetInnerHTML={{ __html: current.html }} />
-                </div>
-                <span className="pointer-events-none absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border border-line bg-ink/70 text-fg opacity-0 backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100">
-                  <ZoomIn size={16} />
-                </span>
+                <ZoomIn size={16} />
               </button>
 
               <button
@@ -103,7 +102,7 @@ export function WireframeExploration({ data }: { data: WireframeExplorationData 
 
         {data.synthesis && (
           <Reveal delay={0.12}>
-            <div className="mx-auto mt-10 flex max-w-2xl gap-3 rounded-2xl border border-line bg-violet/10 p-6">
+            <div className="mx-auto mt-10 flex max-w-4xl gap-3 rounded-2xl border border-line bg-violet/10 p-6">
               <ArrowRight size={18} className="mt-0.5 shrink-0 text-violet-tint" />
               <p className="text-sm leading-relaxed text-fg">{data.synthesis}</p>
             </div>
@@ -129,7 +128,7 @@ export function WireframeExploration({ data }: { data: WireframeExplorationData 
               className="relative max-h-[90vh] max-w-[92vw] overflow-auto rounded-lg bg-[#f0eee9] shadow-[0_40px_80px_rgba(0,0,0,0.6)]"
               onClick={(event) => event.stopPropagation()}
             >
-              <div className="wf-scope [zoom:0.4] sm:[zoom:0.65] lg:[zoom:1]">
+              <div className="wf-scope [zoom:0.65] sm:[zoom:0.85] lg:[zoom:1.1]">
                 <div key={current.id} dangerouslySetInnerHTML={{ __html: current.html }} />
               </div>
             </motion.div>

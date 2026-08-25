@@ -29,6 +29,16 @@ export interface SketchItem {
   caption: string
 }
 
+export interface UserStoriesData {
+  description: string[]
+  image: string
+}
+
+export interface LowFidelityData {
+  description: string[]
+  sketches: SketchItem[]
+}
+
 export interface Project {
   slug: string
   title: string
@@ -50,7 +60,8 @@ export interface Project {
   reflection: string
   interviews?: InterviewCard[]
   wireframes?: WireframeExplorationData
-  sketches?: SketchItem[]
+  userStories?: UserStoriesData
+  lowFidelity?: LowFidelityData
   images: string[]
   titleVisual?: string
   deliverables?: string[]
@@ -449,11 +460,24 @@ export const projects: Project[] = [
       },
     ],
     wireframes: myoutfrontWireframes,
-    sketches: [
-      { src: myoutfrontUserStories, caption: 'User stories map — the advertiser upload journey, success path and every fail branch' },
-      { src: myoutfrontSketchUpload, caption: 'Low-fidelity sketch — contract number entry and the drag-and-drop upload screen' },
-      { src: myoutfrontSketchNotifications, caption: 'Low-fidelity sketch — upload/verify/style stepper and the notifications + ETA timeline' },
-    ],
+    userStories: {
+      description: [
+        "When designing the MyOutfront.com platform, our process involved meticulously mapping out each step of the user journey to ensure a seamless and intuitive experience. I aimed to create a clear and consistent path for every possible interaction, making sure that whenever a user clicked a button or link, there was always a corresponding page or action.",
+        "One of the key storyboards I developed focused on the ad submission process. For scenarios where an ad met all guidelines, I designed a smooth flow that led to a confirmation page, displaying a successful submission message along with an overview of the upload's progress. However, I also wanted to thoroughly address less ideal situations, such as when an ad didn't comply with the guidelines. My storyboard for this scenario included a dedicated page providing detailed feedback on the issues, links to relevant guidelines, and an option to contact support for additional help. I also incorporated functionality for users to make adjustments and resubmit their ads directly through the platform.",
+        "My thought process was all about leaving no interaction unaccounted for. By visualizing the user journey through storyboards, I could easily identify missing pages or necessary touchpoints, especially in complex scenarios like handling declined ads. This approach helped me ensure that both ideal and problematic scenarios were thoughtfully considered, resulting in a comprehensive and user-friendly design.",
+      ],
+      image: myoutfrontUserStories,
+    },
+    lowFidelity: {
+      description: [
+        "To kick off the design process for MyOutfront.com, I started by creating a low-fidelity prototype with a few key pages, focusing on the basic structure, layout, and user flow. My goal was to visualize how core features, such as ad submissions, contract views, and upload status tracking, would be organized and navigated. My approach was heavily influenced by the design research I conducted earlier. Insights from competitive analysis and benchmarking helped me identify industry standards for user-friendly interfaces and effective self-service tools.",
+        "Trend analysis guided me toward a clean, minimalistic design with intuitive navigation, while mood boarding inspired a cohesive visual direction that aligned with the brand's identity. By sketching out these elements early on, I could quickly identify potential improvements and gather valuable feedback, ensuring the design balanced both internal needs and a seamless client experience.",
+      ],
+      sketches: [
+        { src: myoutfrontSketchUpload, caption: 'Contract number entry and the drag-and-drop upload screen' },
+        { src: myoutfrontSketchNotifications, caption: 'Upload/verify/style stepper and the notifications + ETA timeline' },
+      ],
+    },
     images: imagesFor('myoutfront', undefined, [
       'user-stories-map.png',
       'lofi-sketch-upload-verify.png',
