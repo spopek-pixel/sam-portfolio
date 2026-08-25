@@ -2,6 +2,9 @@ import housingkindTitleVisual from '@/assets/images/projects/housingkind/house-l
 import aivyHero from '@/assets/images/projects/aivy/aivy-hero.jpg'
 import { aivy } from '@/data/aivy'
 import { myoutfrontWireframes, type WireframeExplorationData } from '@/data/myoutfrontWireframes'
+import myoutfrontUserStories from '@/assets/images/projects/myoutfront/user-stories-map.png'
+import myoutfrontSketchUpload from '@/assets/images/projects/myoutfront/lofi-sketch-upload-verify.png'
+import myoutfrontSketchNotifications from '@/assets/images/projects/myoutfront/lofi-sketch-notifications-timeline.png'
 
 export type Accent = 'violet' | 'acid' | 'mint'
 export type Category = 'Product' | 'Research' | 'Visual'
@@ -19,6 +22,11 @@ export interface InterviewCard {
   question: string
   response: string
   opportunity?: string
+}
+
+export interface SketchItem {
+  src: string
+  caption: string
 }
 
 export interface Project {
@@ -42,6 +50,7 @@ export interface Project {
   reflection: string
   interviews?: InterviewCard[]
   wireframes?: WireframeExplorationData
+  sketches?: SketchItem[]
   images: string[]
   titleVisual?: string
   deliverables?: string[]
@@ -440,7 +449,16 @@ export const projects: Project[] = [
       },
     ],
     wireframes: myoutfrontWireframes,
-    images: imagesFor('myoutfront'),
+    sketches: [
+      { src: myoutfrontUserStories, caption: 'User stories map — the advertiser upload journey, success path and every fail branch' },
+      { src: myoutfrontSketchUpload, caption: 'Low-fidelity sketch — contract number entry and the drag-and-drop upload screen' },
+      { src: myoutfrontSketchNotifications, caption: 'Low-fidelity sketch — upload/verify/style stepper and the notifications + ETA timeline' },
+    ],
+    images: imagesFor('myoutfront', undefined, [
+      'user-stories-map.png',
+      'lofi-sketch-upload-verify.png',
+      'lofi-sketch-notifications-timeline.png',
+    ]),
     deliverables: [
       'Competitive Analysis',
       'Benchmarking',
