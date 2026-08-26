@@ -2,7 +2,6 @@ import housingkindTitleVisual from '@/assets/images/projects/housingkind/house-l
 import aivyHero from '@/assets/images/projects/aivy/aivy-hero.jpg'
 import { aivy } from '@/data/aivy'
 import { myoutfrontWireframes, type WireframeExplorationData } from '@/data/myoutfrontWireframes'
-import myoutfrontHomeVideo from '@/assets/images/projects/myoutfront/outfront-home.mp4'
 import myoutfrontUserStories from '@/assets/images/projects/myoutfront/user-stories-map.png'
 import myoutfrontSketchUpload from '@/assets/images/projects/myoutfront/lofi-sketch-upload-verify.png'
 import myoutfrontSketchNotifications from '@/assets/images/projects/myoutfront/lofi-sketch-notifications-timeline.png'
@@ -70,7 +69,7 @@ export interface Project {
   links?: { label: string; href: string }[]
 }
 
-const modules = import.meta.glob<{ default: string }>('@/assets/images/projects/**/*.{png,jpg,jpeg,webp}', {
+const modules = import.meta.glob<{ default: string }>('@/assets/images/projects/**/*.{png,jpg,jpeg,webp,gif}', {
   eager: true,
 })
 
@@ -242,109 +241,6 @@ export const projects: Project[] = [
     images: imagesFor('dragonfly-yoga', 'dragon_home_1.png', ['dragon-home-case.png']),
   },
   {
-    slug: 'aivy',
-    title: 'AIVY',
-    tagline:
-      "A speculative AI ecosystem built with PBS Wisconsin, exploring the question 'What if things turn out okay?' It imagines a future where technology helps people reconnect with each other and the living world around them.",
-    description:
-      'A speculative ecosystem of AI-powered products, set in 2046, exploring how technology can strengthen relationships between people, communities, and the natural world.',
-    category: ['Research', 'Product'],
-    role: 'Speculative Product Designer',
-    timeline: '3-Week Design Sprint',
-    team: 'Sam Popek, Mya Lovett, Erin Grisar',
-    tools: ['Figma', 'FigJam', 'Miro', 'React', 'Claude Code'],
-    accent: 'mint',
-    variant: 'case-study',
-    featured: true,
-    problem: aivy.challenge.body,
-    research: [],
-    process: aivy.process,
-    decisions: [],
-    outcome: aivy.outcome,
-    reflection: aivy.reflection,
-    images: imagesFor('aivy', '/aivy.png'),
-    titleVisual: aivyHero,
-  },
-  {
-    slug: 'teklo',
-    title: 'Teklo',
-    tagline:
-      'Redesigned a marketplace by simplifying complex shopping decisions, increasing user trust, and creating a faster product discovery experience through research-driven design.',
-    category: ['Research', 'Product'],
-    role: 'Lead UX Designer & UX Researcher',
-    timeline: 'Sept 2024 - Dec 2024',
-    team: 'Sam Popek, Evan Cass',
-    tools: ['Figma', 'FigJam', 'Miro'],
-    accent: 'mint',
-    variant: 'case-study',
-    featured: true,
-    links: [
-      {
-        label: 'Figma Prototype',
-        href: 'https://www.figma.com/proto/AxRtilipdp5Y9OSZteljwW/Teklo?node-id=5-122&p=f&t=lIW24nDlfenidhOJ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A122',
-      },
-    ],
-    deliverables: [
-      'User Interviews',
-      'User Personas',
-      'User Journey Mapping',
-      'Low-Fidelity Wireframes',
-      'High-Fidelity UI Design',
-      'Interactive Figma Prototype',
-      'Design System',
-    ],
-    problem:
-      "Framed around the UN's 'No Poverty' goal: reliable technology has become a precondition for education and work, but the students and budget-conscious buyers who need it most are priced out of the primary market and underserved by a resale market built on Craigslist-era trust assumptions. The real barrier wasn't just price. Interviews kept surfacing the same fear: getting scammed on a used device with no way to check it beforehand.",
-    research: [
-      'Interviewed students and budget-conscious buyers who regularly shop for used tech, specifically probing for the moment trust breaks down in an existing transaction',
-      'Affinity-mapped every response into three clusters (affordability, trust in used-device condition, and desire for a simple buying process), which became the literal backbone of the feature list',
-      'Built two personas directly from interview language rather than assumed demographics, so feature debates could be settled by asking "would this person actually do this" instead of guessing',
-    ],
-    process: [
-      {
-        title: 'Low-fidelity',
-        body: 'Wireframed structure and flow first, deliberately withholding visual polish so early feedback sessions stayed focused on whether the browsing and checkout logic made sense at all.',
-      },
-      {
-        title: 'High-fidelity',
-        body: 'Refined in Figma (typography, spacing, and a full component system) once the underlying flows had already been validated, so visual design was finishing a decision, not making one.',
-      },
-    ],
-    decisions: [
-      'Cut the selling side of the marketplace entirely partway through: a bidirectional marketplace diluted trust on both sides, and a buying-only platform let every design decision optimize for one job instead of two competing ones',
-      'Surfaced product condition and trust signals before price on every listing, because the research said trust was the actual blocker, not affordability alone',
-      'Streamlined checkout to the minimum number of steps that still let a price-sensitive buyer feel confident, rather than the minimum that just looked simplest in a wireframe',
-    ],
-    outcome:
-      'The result is a streamlined marketplace for browsing, favoriting, and checking out affordable tech, backed by a full design system, built to prove that removing scope can be a design decision in its own right, not just a compromise.',
-    reflection:
-      "Good design isn't about adding more. Cutting the selling flow was the single decision that made the rest of the product make sense. Everything downstream got simpler once that one thing was gone.",
-    images: imagesFor('teklo', 'teklo_home.png'),
-  },
-  {
-    slug: 'outfront-media-graphics',
-    title: 'OUTFRONT Media Graphics',
-    tagline: 'Four brands, four out-of-home campaigns, one summer.',
-    category: ['Visual'],
-    role: 'Graphic Design Intern',
-    timeline: 'Summer 2023',
-    team: 'Solo per client, collaborating with a multi-region graphic design team on Pike Nurseries',
-    tools: ['Adobe Photoshop', 'Adobe Illustrator'],
-    accent: 'acid',
-    variant: 'gallery',
-    featured: false,
-    problem:
-      "Out-of-home advertising gives you one constraint that overrides everything else: a seven-second glance from a moving bus, or a few seconds at a red light. If a design doesn't land instantly (no time to read a paragraph, no time to squint at a logo), it doesn't work, regardless of how it looks in a portfolio.",
-    research: [],
-    process: [],
-    decisions: [],
-    outcome: 'Four shipped out-of-home campaigns, each built to a real client brief and a real deadline.',
-    reflection:
-      "This internship shaped how I approach design today. Seeing four campaigns actually running on New York City buses taught me to think past visuals and toward clear communication under a real constraint: if it didn't land in seven seconds, it didn't work.",
-    images: imagesFor('outfront-media-graphics', 'outfront.jpg'),
-    deliverables: ['Bus king ads', 'Bus rear king', 'Billboard', 'Animated liveboard', 'Bus wrap', 'Mobile ads'],
-  },
-  {
     slug: 'myoutfront',
     title: 'MyOutfront.com',
     tagline: 'Designing a self-service portal so OUTFRONT clients could submit, track, and troubleshoot their own ads.',
@@ -357,7 +253,7 @@ export const projects: Project[] = [
     tools: ['Figma', 'Miro'],
     accent: 'violet',
     variant: 'case-study',
-    featured: false,
+    featured: true,
     problem:
       "The existing ad-submission process leaned heavily on other internal teams, so a submission that didn't meet sizing or content guidelines could sit stalled for days waiting on someone else to catch it. That bottleneck delayed ads from ever going live and created extra work on both sides. The opportunity was a self-service webpage where clients could log in, view their contract details, and upload ads directly, with the system checking sizing, flagging inappropriate content, and reporting upload status in real time, so problems surfaced immediately instead of after a delay.",
     research: [
@@ -462,7 +358,6 @@ export const projects: Project[] = [
       },
     ],
     wireframes: myoutfrontWireframes,
-    coverVideo: myoutfrontHomeVideo,
     userStories: {
       description: [
         "When designing the MyOutfront.com platform, I mapped every step of the user journey so any button or link a client clicked always led somewhere, no dead ends. One key storyboard covered the ad submission process end to end.",
@@ -498,6 +393,109 @@ export const projects: Project[] = [
       'High-Fidelity Prototype',
       'Presenting to Stakeholders',
     ],
+  },
+  {
+    slug: 'aivy',
+    title: 'AIVY',
+    tagline:
+      "A speculative AI ecosystem built with PBS Wisconsin, exploring the question 'What if things turn out okay?' It imagines a future where technology helps people reconnect with each other and the living world around them.",
+    description:
+      'A speculative ecosystem of AI-powered products, set in 2046, exploring how technology can strengthen relationships between people, communities, and the natural world.',
+    category: ['Research', 'Product'],
+    role: 'Speculative Product Designer',
+    timeline: '3-Week Design Sprint',
+    team: 'Sam Popek, Mya Lovett, Erin Grisar',
+    tools: ['Figma', 'FigJam', 'Miro', 'React', 'Claude Code'],
+    accent: 'mint',
+    variant: 'case-study',
+    featured: true,
+    problem: aivy.challenge.body,
+    research: [],
+    process: aivy.process,
+    decisions: [],
+    outcome: aivy.outcome,
+    reflection: aivy.reflection,
+    images: imagesFor('aivy', '/aivy.png'),
+    titleVisual: aivyHero,
+  },
+  {
+    slug: 'teklo',
+    title: 'Teklo',
+    tagline:
+      'Redesigned a marketplace by simplifying complex shopping decisions, increasing user trust, and creating a faster product discovery experience through research-driven design.',
+    category: ['Research', 'Product'],
+    role: 'Lead UX Designer & UX Researcher',
+    timeline: 'Sept 2024 - Dec 2024',
+    team: 'Sam Popek, Evan Cass',
+    tools: ['Figma', 'FigJam', 'Miro'],
+    accent: 'mint',
+    variant: 'case-study',
+    featured: true,
+    links: [
+      {
+        label: 'Figma Prototype',
+        href: 'https://www.figma.com/proto/AxRtilipdp5Y9OSZteljwW/Teklo?node-id=5-122&p=f&t=lIW24nDlfenidhOJ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A122',
+      },
+    ],
+    deliverables: [
+      'User Interviews',
+      'User Personas',
+      'User Journey Mapping',
+      'Low-Fidelity Wireframes',
+      'High-Fidelity UI Design',
+      'Interactive Figma Prototype',
+      'Design System',
+    ],
+    problem:
+      "Framed around the UN's 'No Poverty' goal: reliable technology has become a precondition for education and work, but the students and budget-conscious buyers who need it most are priced out of the primary market and underserved by a resale market built on Craigslist-era trust assumptions. The real barrier wasn't just price. Interviews kept surfacing the same fear: getting scammed on a used device with no way to check it beforehand.",
+    research: [
+      'Interviewed students and budget-conscious buyers who regularly shop for used tech, specifically probing for the moment trust breaks down in an existing transaction',
+      'Affinity-mapped every response into three clusters (affordability, trust in used-device condition, and desire for a simple buying process), which became the literal backbone of the feature list',
+      'Built two personas directly from interview language rather than assumed demographics, so feature debates could be settled by asking "would this person actually do this" instead of guessing',
+    ],
+    process: [
+      {
+        title: 'Low-fidelity',
+        body: 'Wireframed structure and flow first, deliberately withholding visual polish so early feedback sessions stayed focused on whether the browsing and checkout logic made sense at all.',
+      },
+      {
+        title: 'High-fidelity',
+        body: 'Refined in Figma (typography, spacing, and a full component system) once the underlying flows had already been validated, so visual design was finishing a decision, not making one.',
+      },
+    ],
+    decisions: [
+      'Cut the selling side of the marketplace entirely partway through: a bidirectional marketplace diluted trust on both sides, and a buying-only platform let every design decision optimize for one job instead of two competing ones',
+      'Surfaced product condition and trust signals before price on every listing, because the research said trust was the actual blocker, not affordability alone',
+      'Streamlined checkout to the minimum number of steps that still let a price-sensitive buyer feel confident, rather than the minimum that just looked simplest in a wireframe',
+    ],
+    outcome:
+      'The result is a streamlined marketplace for browsing, favoriting, and checking out affordable tech, backed by a full design system, built to prove that removing scope can be a design decision in its own right, not just a compromise.',
+    reflection:
+      "Good design isn't about adding more. Cutting the selling flow was the single decision that made the rest of the product make sense. Everything downstream got simpler once that one thing was gone.",
+    images: imagesFor('teklo', 'teklo_home.png'),
+  },
+  {
+    slug: 'outfront-media-graphics',
+    title: 'OUTFRONT Media Graphics',
+    tagline: 'Four brands, four out-of-home campaigns, one summer.',
+    category: ['Visual'],
+    role: 'Graphic Design Intern',
+    timeline: 'Summer 2023',
+    team: 'Solo per client, collaborating with a multi-region graphic design team on Pike Nurseries',
+    tools: ['Adobe Photoshop', 'Adobe Illustrator'],
+    accent: 'acid',
+    variant: 'gallery',
+    featured: false,
+    problem:
+      "Out-of-home advertising gives you one constraint that overrides everything else: a seven-second glance from a moving bus, or a few seconds at a red light. If a design doesn't land instantly (no time to read a paragraph, no time to squint at a logo), it doesn't work, regardless of how it looks in a portfolio.",
+    research: [],
+    process: [],
+    decisions: [],
+    outcome: 'Four shipped out-of-home campaigns, each built to a real client brief and a real deadline.',
+    reflection:
+      "This internship shaped how I approach design today. Seeing four campaigns actually running on New York City buses taught me to think past visuals and toward clear communication under a real constraint: if it didn't land in seven seconds, it didn't work.",
+    images: imagesFor('outfront-media-graphics', 'outfront.jpg'),
+    deliverables: ['Bus king ads', 'Bus rear king', 'Billboard', 'Animated liveboard', 'Bus wrap', 'Mobile ads'],
   },
 ]
 
