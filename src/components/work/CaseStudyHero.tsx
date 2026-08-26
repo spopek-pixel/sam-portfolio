@@ -95,6 +95,7 @@ export function CaseStudyHero({ project }: { project: Project }) {
           <Reveal delay={0.24}>
             <ProjectVisual
               image={project.images[0]}
+              video={project.coverVideo}
               title={project.title}
               accent={project.accent}
               className="aspect-[4/3] w-full"

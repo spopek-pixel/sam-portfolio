@@ -56,6 +56,7 @@ export function ProjectCard({ project, index, size = 'regular' }: ProjectCardPro
         <div className="relative shrink-0">
           <ProjectVisual
             image={project.images[0]}
+            video={project.coverVideo}
             title={project.title}
             accent={project.accent}
             className={cn('aspect-[4/3] w-full', size === 'large' && 'aspect-[16/10]')}

@@ -9,12 +9,29 @@ const accentGradients: Record<Accent, string> = {
 
 interface ProjectVisualProps {
   image?: string
+  video?: string
   title: string
   accent: Accent
   className?: string
 }
 
-export function ProjectVisual({ image, title, accent, className }: ProjectVisualProps) {
+export function ProjectVisual({ image, video, title, accent, className }: ProjectVisualProps) {
+  if (video) {
+    return (
+      <div className={cn('relative overflow-hidden rounded-2xl bg-surface', className)}>
+        <video
+          src={video}
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-label={`${title} interface preview`}
+          className="h-full w-full object-cover object-top"
+        />
+      </div>
+    )
+  }
+
   if (image) {
     return (
       <div className={cn('relative overflow-hidden rounded-2xl bg-surface', className)}>
