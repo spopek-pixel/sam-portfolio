@@ -203,7 +203,7 @@ export default function ProjectDetail() {
       <div>
         <CaseStudyHero project={project} />
         {project.summary && <ProblemChallengeSolution summary={project.summary} />}
-        <ProblemSection problem={project.problem} research={project.research} />
+        <ProblemSection research={project.research} />
         {project.interviews && <StakeholderInterviews interviews={project.interviews} />}
         {project.userStories && <UserStoriesSection data={project.userStories} />}
         {project.lowFidelity && <SketchGallery data={project.lowFidelity} />}

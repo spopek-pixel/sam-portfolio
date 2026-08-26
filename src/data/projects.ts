@@ -269,9 +269,7 @@ export const projects: Project[] = [
     slug: 'myoutfront',
     title: 'MyOutfront.com',
     tagline:
-      "Designing MyOutfront.com with OUTFRONT's design team: ad submissions and the payment/account dashboard behind them, so clients stop waiting on internal teams for either.",
-    description:
-      "A UX/UI internship project built with the OUTFRONT Media design team, spanning two connected surfaces: the ad-submission flow clients use to get campaigns live, and the payment and account dashboard they use to manage everything behind it.",
+      "A UX/UI internship project designing MyOutfront.com with OUTFRONT's design team: a self-service ad-submission flow and the payment and account dashboard behind it, so clients stop waiting on internal teams for either.",
     category: ['Product', 'Research'],
     role: 'UX/UI Design Intern',
     timeline: 'June - August 2024',
@@ -280,6 +278,13 @@ export const projects: Project[] = [
     accent: 'violet',
     variant: 'case-study',
     featured: true,
+    links: [
+      { label: 'Live Site', href: 'https://myoutfront.com/' },
+      {
+        label: 'Watch Demo',
+        href: 'https://assets.contentstack.io/v3/assets/bltbeaed4aed52c223a/bltb608d2f9587994b5/68cb0bfeedbc2520da407ad0/outfront-payment-portal-demo-v02.mp4',
+      },
+    ],
     summary: {
       problem:
         'Ad submissions and account management both leaned on internal teams for every check, and eight different departments had a stake in the same client dashboard, often for conflicting reasons.',
