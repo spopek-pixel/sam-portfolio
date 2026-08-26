@@ -15,10 +15,10 @@ export function FeaturedWork() {
             kicker="Selected work"
             title={
               <>
-                Case studies, not just <span className="text-gradient">screens.</span>
+                Real work, not just <span className="text-gradient">screens.</span>
               </>
             }
-            description="Every case study here started with a real constraint (a housing crisis, a booking flow nobody trusted, a marketplace nobody trusted enough to buy from) and ends with something I designed, decided on, and, more often than not, built myself."
+            description="Every project here (shipped work, internships, speculative research) started with a real constraint (a housing crisis, a booking flow nobody trusted, a marketplace nobody trusted enough to buy from) and ends with something I designed, decided on, and, more often than not, built myself."
           />
           <Reveal delay={0.1}>
             <LinkButton href="/work" variant="secondary" className="whitespace-nowrap">

@@ -202,7 +202,7 @@ export default function ProjectDetail() {
         {project.wireframes && <WireframeExploration data={project.wireframes} />}
         <KeyDecisions decisions={project.decisions} />
         {project.deliverables && <Deliverables items={project.deliverables} />}
-        <MockupGallery images={project.images} title={project.title} />
+        <MockupGallery images={project.images.slice(1)} title={project.title} />
         <OutcomeSection outcome={project.outcome} />
         <ReflectionSection reflection={project.reflection} />
         <NextProjectNav project={nextProject} />

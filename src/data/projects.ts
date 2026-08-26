@@ -243,9 +243,10 @@ export const projects: Project[] = [
   {
     slug: 'myoutfront',
     title: 'MyOutfront.com',
-    tagline: 'Designing a self-service portal so OUTFRONT clients could submit, track, and troubleshoot their own ads.',
+    tagline:
+      "Designing MyOutfront.com with OUTFRONT's design team: ad submissions and the payment/account dashboard behind them, so clients stop waiting on internal teams for either.",
     description:
-      'A UX/UI internship project reimagining how OUTFRONT Media clients submit ads, view contracts, and track upload status, without waiting on an internal team to do it for them.',
+      "A UX/UI internship project built with the OUTFRONT Media design team, spanning two connected surfaces: the ad-submission flow clients use to get campaigns live, and the payment and account dashboard they use to manage everything behind it.",
     category: ['Product', 'Research'],
     role: 'UX/UI Design Intern',
     timeline: 'June - August 2024',
@@ -255,13 +256,13 @@ export const projects: Project[] = [
     variant: 'case-study',
     featured: true,
     problem:
-      "The existing ad-submission process leaned heavily on other internal teams, so a submission that didn't meet sizing or content guidelines could sit stalled for days waiting on someone else to catch it. That bottleneck delayed ads from ever going live and created extra work on both sides. The opportunity was a self-service webpage where clients could log in, view their contract details, and upload ads directly, with the system checking sizing, flagging inappropriate content, and reporting upload status in real time, so problems surfaced immediately instead of after a delay.",
+      "MyOutfront.com had to work as one coherent client platform for two very different jobs: submitting ads, and managing the account behind them (invoices, payment methods, credits, claims, and support). Neither surface could be designed by looking only at what the client saw. I worked with OUTFRONT's design team on both: an ad-submission flow that, at the time, leaned on other internal teams for every sizing check and content review, so a single flagged ad could sit stalled for days; and a payment and account dashboard that eight different internal teams (ad transactions, contracts and payments, campaign management, customer support, creative services, inventory and availability, proof of performance, and account management) all had a stake in, often for conflicting reasons. Getting either surface right meant reconciling requirements across teams that had never had to design for the same screen before.",
     research: [
-      'Competitive analysis of similar self-service platforms to understand industry standards for user-friendly, seamless upload experiences',
-      'Benchmarking against top-performing sites to identify which layout and feature patterns would offer clients the most value',
-      'Trend analysis into minimalistic layouts, intuitive navigation, and responsive design to keep the platform practical, not just polished',
-      'Mood boarding for color, typography, and layout direction that stayed true to the MyOutfront.com brand identity',
-      'Internal interviews with the ad transaction team and the contracts/payments team, since neither workflow was one our design team normally touched, to understand how sizing errors, content review, and payment status actually get handled today',
+      "The ad transaction team's actual bottleneck wasn't the upload itself, it was manual content and sizing review; they asked for automated spec validation, not a nicer drag-and-drop screen",
+      "Payment confusion traced back to one visible gap: contract line items and the billed amount never appeared side by side anywhere a client could see, so 'why was I charged this' became a support ticket every time",
+      "Interviewing all eight internal teams instead of the two our design team usually touched surfaced requirements we would have otherwise missed entirely: live inventory holds, proof-of-performance photo matching, an issues log distinct from a billing dispute",
+      "Competitive analysis and benchmarking against other self-service platforms pointed toward the same pattern the internal interviews did: clients trusted real-time status over a polished landing page",
+      'Trend and mood-board research set the visual direction: minimal and brand-true, but calm enough to hold dense financial and campaign data without reading like a spreadsheet',
     ],
     process: [
       {
@@ -270,7 +271,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Internal stakeholder interviews',
-        body: 'Interviewed the ad transaction team and the contracts/payments team to understand requirements our team doesn\'t typically own, since clients would need both integrated into one page.',
+        body: "Interviewed eight internal teams, most of whom our design team had never designed for before, to understand how sizing errors, payments, inventory, proof of performance, and support actually get handled today, not just how the client-facing side was supposed to work.",
       },
       {
         title: 'Low-fidelity prototype',
@@ -281,8 +282,12 @@ export const projects: Project[] = [
         body: 'Mapped every branch of the submission journey with the team, including the ideal path (an ad that passes guidelines) and the harder one (an ad that gets flagged, with feedback, guideline links, support access, and a resubmission path).',
       },
       {
+        title: 'Dashboard wireframe exploration',
+        body: 'Explored two directions per screen for the payment and account dashboard with the team (a dense metrics grid vs. a balance-first view, a stepped wizard vs. a single-page checkout, and more), then converged on one direction per screen based on what clients actually asked for.',
+      },
+      {
         title: 'High-fidelity prototype',
-        body: 'Refined color, typography, and iconography, then built out interactive states for buttons, inputs, and notifications, including how success and error feedback would actually look.',
+        body: 'Refined color, typography, and iconography across both surfaces, then built out interactive states for buttons, inputs, and notifications, including how success and error feedback would actually look.',
       },
       {
         title: 'Final presentation',
@@ -290,15 +295,15 @@ export const projects: Project[] = [
       },
     ],
     decisions: [
-      'Built the platform around self-service rather than a support ticket, so sizing checks, content flags, and status updates happen automatically instead of waiting on another team',
-      'Designed real-time status tracking for every upload (succeeded, failed, or pending) so clients always know where their ad stands without asking',
+      "Designed the dashboard and the ad-submission flow as one system, not two, sharing the same navigation, status language, and notification pattern, so moving between 'is my ad live' and 'is my invoice paid' didn't feel like switching products",
+      "Interviewed all eight internal teams directly instead of assuming their requirements from documentation, then worked with the design team to reconcile conflicting asks (Support wanted fewer clicks, Payments wanted more confirmation steps) into a single flow",
+      "Took the balance-first dashboard direction forward and dropped the denser metrics-grid option: the research kept pointing to one question clients actually had (what do I owe, and can I fix it right now), and that only stayed true when the answer led every screen",
       'Storyboarded the declined-ad path as thoroughly as the successful one, with clear feedback, guideline links, and a direct resubmission flow, so no interaction was left as a dead end',
-      'Interviewed the contracts/payments and ad transaction teams directly instead of assuming their requirements, since those workflows sit outside what our design team normally handles',
     ],
     outcome:
-      "MyOutfront.com is still in progress at OUTFRONT Media, so only select snippets of the prototype can be shared rather than the full design. What's shown here is the ad-submission flow for a client who meets all guidelines: enhanced notifications, a streamlined submission flow, and progress tracking from start to finish.",
+      "MyOutfront.com is still in progress at OUTFRONT Media, so only select snippets can be shared rather than the full product. What's shown here spans both surfaces I worked on with the team: the ad-submission flow for a client who meets all guidelines (enhanced notifications, a streamlined upload, and progress tracking from start to finish), and the payment and account dashboard wireframes that came out of reconciling eight internal teams' requirements into one client-facing view.",
     reflection:
-      "I genuinely wish I'd had more time in this internship to keep refining the design: tightening sizing, adding features, polishing the overall experience. But this hands-on opportunity, working on a real client-facing product with real internal stakeholders, taught me things a classroom project couldn't, and I enjoyed every step of it.",
+      "I genuinely wish I'd had more time in this internship to keep refining the design: tightening sizing, adding features, polishing the overall experience. But designing two connected surfaces alongside a real design team, and reconciling eight internal teams' worth of real, sometimes conflicting requirements, taught me things a solo classroom project couldn't. I enjoyed every step of it.",
     interviews: [
       {
         team: 'Ad Transaction Team',
