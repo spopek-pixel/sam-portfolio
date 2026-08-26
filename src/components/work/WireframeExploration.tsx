@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, ChevronLeft, ChevronRight, X, ZoomIn } from 'lucide-react'
 import type { WireframeExplorationData } from '@/data/myoutfrontWireframes'
@@ -11,10 +11,18 @@ export function WireframeExploration({ data }: { data: WireframeExplorationData 
   const slides = data.groups.flatMap((group) => group.options.map((option) => ({ group: group.name, ...option })))
   const [index, setIndex] = useState(0)
   const [expanded, setExpanded] = useState(false)
+  const [frameHeight, setFrameHeight] = useState<number | null>(null)
+  const measureRef = useRef<HTMLDivElement>(null)
   const current = slides[index]
 
   const prev = () => setIndex((i) => (i - 1 + slides.length) % slides.length)
   const next = () => setIndex((i) => (i + 1) % slides.length)
+
+  useLayoutEffect(() => {
+    if (!measureRef.current) return
+    const heights = Array.from(measureRef.current.children).map((el) => (el as HTMLElement).scrollHeight)
+    setFrameHeight(Math.max(...heights))
+  }, [slides])
 
   useEffect(() => {
     if (!expanded) return
@@ -37,10 +45,23 @@ export function WireframeExploration({ data }: { data: WireframeExplorationData 
       <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="Wireframes" title={data.title} description={data.subtitle} className="mb-12" />
 
+        <div
+          ref={measureRef}
+          aria-hidden
+          className="wf-scope pointer-events-none absolute -left-[99999px] -top-[99999px] [zoom:1]"
+        >
+          {slides.map((slide) => (
+            <div key={slide.id} dangerouslySetInnerHTML={{ __html: slide.html }} />
+          ))}
+        </div>
+
         <Reveal>
           <div className="mx-auto flex max-w-4xl flex-col gap-3">
             <div className="relative">
-              <div className="wf-scope overflow-x-auto rounded-xl border border-line bg-[#f0eee9] [zoom:0.34] sm:[zoom:0.58] lg:[zoom:0.85]">
+              <div
+                className="wf-scope overflow-x-auto rounded-xl border border-line bg-[#f0eee9] [zoom:0.34] sm:[zoom:0.58] lg:[zoom:0.85]"
+                style={frameHeight ? { height: frameHeight } : undefined}
+              >
                 <div key={current.id} dangerouslySetInnerHTML={{ __html: current.html }} />
               </div>
 
