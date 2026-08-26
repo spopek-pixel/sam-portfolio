@@ -9,6 +9,7 @@ import { ReflectionSection } from '@/components/work/ReflectionSection'
 import { MockupGallery } from '@/components/work/MockupGallery'
 import { StakeholderInterviews } from '@/components/work/StakeholderInterviews'
 import { WireframeExploration } from '@/components/work/WireframeExploration'
+import { CreativeReviewShowcase } from '@/components/work/CreativeReviewShowcase'
 import { SketchGallery } from '@/components/work/SketchGallery'
 import { UserStoriesSection } from '@/components/work/UserStoriesSection'
 import { VisualGallery } from '@/components/work/VisualGallery'
@@ -200,6 +201,7 @@ export default function ProjectDetail() {
         {project.userStories && <UserStoriesSection data={project.userStories} />}
         {project.lowFidelity && <SketchGallery data={project.lowFidelity} />}
         {project.wireframes && <WireframeExploration data={project.wireframes} />}
+        {project.creativeReview && <CreativeReviewShowcase screens={project.creativeReview} />}
         <KeyDecisions decisions={project.decisions} />
         {project.deliverables && <Deliverables items={project.deliverables} />}
         <MockupGallery images={project.images.slice(1)} title={project.title} />

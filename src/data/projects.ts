@@ -2,6 +2,7 @@ import housingkindTitleVisual from '@/assets/images/projects/housingkind/house-l
 import aivyHero from '@/assets/images/projects/aivy/aivy-hero.jpg'
 import { aivy } from '@/data/aivy'
 import { myoutfrontWireframes, type WireframeExplorationData } from '@/data/myoutfrontWireframes'
+import { myoutfrontCreativeReview, type CreativeReviewScreen } from '@/data/myoutfrontCreativeReview'
 import myoutfrontUserStories from '@/assets/images/projects/myoutfront/user-stories-map.png'
 import myoutfrontSketchUpload from '@/assets/images/projects/myoutfront/lofi-sketch-upload-verify.png'
 import myoutfrontSketchNotifications from '@/assets/images/projects/myoutfront/lofi-sketch-notifications-timeline.png'
@@ -60,6 +61,7 @@ export interface Project {
   reflection: string
   interviews?: InterviewCard[]
   wireframes?: WireframeExplorationData
+  creativeReview?: CreativeReviewScreen[]
   userStories?: UserStoriesData
   lowFidelity?: LowFidelityData
   images: string[]
@@ -363,6 +365,7 @@ export const projects: Project[] = [
       },
     ],
     wireframes: myoutfrontWireframes,
+    creativeReview: myoutfrontCreativeReview,
     userStories: {
       description: [
         "When designing the MyOutfront.com platform, I mapped every step of the user journey so any button or link a client clicked always led somewhere, no dead ends. One key storyboard covered the ad submission process end to end.",
