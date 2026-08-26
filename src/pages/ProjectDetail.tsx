@@ -10,6 +10,7 @@ import { MockupGallery } from '@/components/work/MockupGallery'
 import { StakeholderInterviews } from '@/components/work/StakeholderInterviews'
 import { WireframeExploration } from '@/components/work/WireframeExploration'
 import { CreativeReviewShowcase } from '@/components/work/CreativeReviewShowcase'
+import { ProblemChallengeSolution } from '@/components/work/ProblemChallengeSolution'
 import { SketchGallery } from '@/components/work/SketchGallery'
 import { UserStoriesSection } from '@/components/work/UserStoriesSection'
 import { VisualGallery } from '@/components/work/VisualGallery'
@@ -88,6 +89,7 @@ export default function ProjectDetail() {
     return (
       <div>
         <CaseStudyHero project={project} />
+        {project.summary && <ProblemChallengeSolution summary={project.summary} />}
         <ProductStrategy />
         <DesignProcessFlow />
         <OriginStory />
@@ -117,6 +119,7 @@ export default function ProjectDetail() {
       <div>
         <DragonflyTheme>
           <DragonflyHero project={project} />
+          {project.summary && <ProblemChallengeSolution summary={project.summary} />}
           <Overview />
           <UserInterviews />
           <Challenge />
@@ -139,6 +142,7 @@ export default function ProjectDetail() {
       <div>
         <TekloTheme>
           <TekloHero project={project} />
+          {project.summary && <ProblemChallengeSolution summary={project.summary} />}
           <TekloOverview />
           <TheChallenge />
           <UnderstandingUsers />
@@ -160,6 +164,7 @@ export default function ProjectDetail() {
       <div>
         <AivyTheme>
           <AivyHero project={project} />
+          {project.summary && <ProblemChallengeSolution summary={project.summary} />}
           <AivyBrief />
           <AivyQuote />
           <AivyConcept />
@@ -182,6 +187,7 @@ export default function ProjectDetail() {
     return (
       <div>
         <OutfrontHero project={project} />
+        {project.summary && <ProblemChallengeSolution summary={project.summary} />}
         <OutfrontOverview project={project} />
         <ClientCaseStudies />
         <OutfrontGallery />
@@ -196,6 +202,7 @@ export default function ProjectDetail() {
     return (
       <div>
         <CaseStudyHero project={project} />
+        {project.summary && <ProblemChallengeSolution summary={project.summary} />}
         <ProblemSection problem={project.problem} research={project.research} />
         {project.interviews && <StakeholderInterviews interviews={project.interviews} />}
         {project.userStories && <UserStoriesSection data={project.userStories} />}
@@ -215,6 +222,7 @@ export default function ProjectDetail() {
   return (
     <div>
       <CaseStudyHero project={project} />
+      {project.summary && <ProblemChallengeSolution summary={project.summary} />}
 
       {project.variant === 'gallery' ? (
         <VisualGallery project={project} />

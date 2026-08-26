@@ -30,6 +30,12 @@ export interface SketchItem {
   caption: string
 }
 
+export interface ProjectSummary {
+  problem: string
+  challenge: string
+  solution: string
+}
+
 export interface UserStoriesData {
   description: string[]
   image: string
@@ -53,6 +59,7 @@ export interface Project {
   accent: Accent
   variant: Variant
   featured: boolean
+  summary?: ProjectSummary
   problem: string
   research: string[]
   process: ProcessStep[]
@@ -102,6 +109,14 @@ export const projects: Project[] = [
     accent: 'mint',
     variant: 'case-study',
     featured: true,
+    summary: {
+      problem:
+        "Communities say they want walkable, affordable housing, then organize against the very projects that would build it, because residents can't picture what missing-middle housing would actually look like on their own block.",
+      challenge:
+        'Give residents, developers, and city officials a shared, credible way to visualize housing options grounded in real buildings, not idealized renderings, understandable with zero policy background in five seconds.',
+      solution:
+        'An AI-powered interactive visualization platform, backed by 15+ stakeholder interviews and real building data from Milwaukee site visits, that turns abstract zoning debates into something residents can actually see and react to.',
+    },
     // TODO: swap in the real GitHub URL when ready
     links: [
       { label: 'Live Site', href: 'https://www.housingkind.org/' },
@@ -205,6 +220,14 @@ export const projects: Project[] = [
     accent: 'violet',
     variant: 'case-study',
     featured: true,
+    summary: {
+      problem:
+        "Dragonfly's booking app had no answer for a full class: no waitlist, no suggested alternative, quietly costing the studio its most valuable behavior, members building a consistent practice.",
+      challenge:
+        'Redesign booking, onboarding, and waitlists so a full class becomes a redirect instead of a dead end, and new members get an on-ramp the app never gave them.',
+      solution:
+        'A mobile-first prototype built around a "Suggested for You" feed and waitlists that always pair with a real, bookable alternative, with every AI recommendation showing its reasoning in plain language.',
+    },
     problem:
       "Dragonfly's booking app worked fine right up until a class filled up, and then it just stopped. No waitlist, no suggested alternative, no acknowledgment that the member had shown up at all. That dead end, more than any single interface complaint, was quietly costing the studio its most valuable behavior: people building a consistent practice. How might we help members book and manage classes so they stay motivated to keep showing up, not just today, but next month?",
     research: [
@@ -257,6 +280,14 @@ export const projects: Project[] = [
     accent: 'violet',
     variant: 'case-study',
     featured: true,
+    summary: {
+      problem:
+        'Ad submissions and account management both leaned on internal teams for every check, and eight different departments had a stake in the same client dashboard, often for conflicting reasons.',
+      challenge:
+        'Design one coherent client platform for two different jobs (submitting ads, managing the account behind them) by reconciling requirements across teams that had never designed for the same screen before.',
+      solution:
+        'A self-service ad-submission flow and payment/account dashboard, built with the design team from eight rounds of internal interviews to a converged wireframe direction, plus a creative-review flow that treats a failed check as carefully as a passed one.',
+    },
     problem:
       "MyOutfront.com had to work as one coherent client platform for two very different jobs: submitting ads, and managing the account behind them (invoices, payment methods, credits, claims, and support). Neither surface could be designed by looking only at what the client saw. I worked with OUTFRONT's design team on both: an ad-submission flow that, at the time, leaned on other internal teams for every sizing check and content review, so a single flagged ad could sit stalled for days; and a payment and account dashboard that eight different internal teams (ad transactions, contracts and payments, campaign management, customer support, creative services, inventory and availability, proof of performance, and account management) all had a stake in, often for conflicting reasons. Getting either surface right meant reconciling requirements across teams that had never had to design for the same screen before.",
     research: [
@@ -417,6 +448,14 @@ export const projects: Project[] = [
     accent: 'mint',
     variant: 'case-study',
     featured: true,
+    summary: {
+      problem:
+        "PBS Wisconsin's brief wasn't a feature list, it was a question: what if things turn out okay? Most speculative-future work defaults to human-to-human connection and stops there.",
+      challenge:
+        "Push past the obvious answer to imagine what it would mean for AI to build a relationship between people and the natural world instead, then make that concept physical, not just a slide deck.",
+      solution:
+        'AIVY: a five-product AI ecosystem (Root, Bloom, Sprout, Vine, Canopy) plus a walk-through installation design, shaped directly by three installation-art advisors who pushed the team toward reciprocity over monitoring and pacing that respects how slowly plants actually communicate.',
+    },
     problem: aivy.challenge.body,
     research: [],
     process: aivy.process,
@@ -439,6 +478,14 @@ export const projects: Project[] = [
     accent: 'mint',
     variant: 'case-study',
     featured: true,
+    summary: {
+      problem:
+        'Budget-conscious buyers who most needed reliable tech were priced out of the primary market and underserved by a resale market built on Craigslist-era trust assumptions, afraid of getting scammed with no way to check a device beforehand.',
+      challenge:
+        'Build trust into a resale marketplace before affordability, without the scope of a full two-sided platform diluting the experience for either side.',
+      solution:
+        'A buying-only marketplace that surfaces condition and trust signals before price on every listing, the direct result of cutting the selling side entirely partway through the project.',
+    },
     links: [
       {
         label: 'Figma Prototype',
@@ -494,6 +541,14 @@ export const projects: Project[] = [
     accent: 'acid',
     variant: 'gallery',
     featured: false,
+    summary: {
+      problem:
+        'Out-of-home advertising gives you one constraint that overrides everything else: a seven-second glance from a moving bus. Four different clients, four different briefs, one summer to ship all of them.',
+      challenge:
+        'Design for instant legibility on real transit placements, not portfolio polish, across brands with nothing in common but the deadline.',
+      solution:
+        'Four shipped campaigns (bus kings, a billboard, an animated liveboard, a bus wrap), each built to a real client brief and running on actual New York City buses within the summer.',
+    },
     problem:
       "Out-of-home advertising gives you one constraint that overrides everything else: a seven-second glance from a moving bus, or a few seconds at a red light. If a design doesn't land instantly (no time to read a paragraph, no time to squint at a logo), it doesn't work, regardless of how it looks in a portfolio.",
     research: [],
