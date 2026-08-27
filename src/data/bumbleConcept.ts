@@ -25,7 +25,7 @@ export const bumbleConcept = {
       channel: 'OOH — Billboard',
       format: 'billboard' as const,
       image: 'bff-billboard.png',
-      headline: 'Find yur group chat IRL.',
+      headline: 'Find your group chat IRL.',
       support: '',
       why: "A quiet, wide-open backdrop makes a messy, familiar group chat feel like something worth chasing down. The thread on the left ('wanna get food?' / 'I have no money' / 'me neither lol') is close to word-for-word from a real conversation with friends I met through BFF.",
     },
