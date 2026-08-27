@@ -14,6 +14,7 @@ import { ProblemChallengeSolution } from '@/components/work/ProblemChallengeSolu
 import { ConceptDisclaimer } from '@/components/bumble/ConceptDisclaimer'
 import { MyStorySection } from '@/components/bumble/MyStorySection'
 import { BigIdeaSection } from '@/components/bumble/BigIdeaSection'
+import { DesignDecisions } from '@/components/bumble/DesignDecisions'
 import { ChannelExecutions } from '@/components/bumble/ChannelExecutions'
 import { bumbleConcept } from '@/data/bumbleConcept'
 import { SketchGallery } from '@/components/work/SketchGallery'
@@ -212,6 +213,7 @@ export default function ProjectDetail() {
         <ConceptDisclaimer text={bumbleConcept.disclaimer} />
         <MyStorySection story={bumbleConcept.myStory} />
         <BigIdeaSection idea={bumbleConcept.bigIdea} brief={bumbleConcept.brief} />
+        <DesignDecisions decisions={bumbleConcept.designDecisions} />
         <ChannelExecutions channels={bumbleConcept.channels} />
         <Deliverables
           items={project.deliverables ?? []}

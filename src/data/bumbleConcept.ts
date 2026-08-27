@@ -66,6 +66,74 @@ export const bumbleConcept = {
   brief:
     "The friendships I actually made through Bumble BFF didn't stay one-on-one, **they turned into a group chat**. So instead of the usual \"meet someone new\" pitch, the campaign leans straight into that: every execution is styled around a real-feeling group chat, and the messages running through them are close to word-for-word from actual threads with friends I met on the app.",
 
+  designDecisions: {
+    kicker: 'Design decisions',
+    title: 'Every color has a job.',
+    intro:
+      "Before any headline went on a billboard, I set rules for how color and type would work across every placement, so the billboard and the bus wrap would feel like the same system in two different settings, not two different ads.",
+    image: 'bff-billboard.png',
+    palette: [
+      {
+        name: 'Hive Yellow',
+        hex: '#FFF28E',
+        role: 'Field color. Full-bleed ground on every placement.',
+        xPct: 50,
+        yPct: 21,
+      },
+      {
+        name: 'Bubble White',
+        hex: '#FFFFFF',
+        role: 'Received bubbles and the typing indicator.',
+        xPct: 27,
+        yPct: 26,
+      },
+      {
+        name: 'Ink Charcoal',
+        hex: '#454343',
+        role: 'Sent bubbles and the striped edge marker.',
+        xPct: 38,
+        yPct: 34,
+      },
+      {
+        name: 'True Black',
+        hex: '#000000',
+        role: 'Headline, logotype and flower mark.',
+        xPct: 65,
+        yPct: 34,
+      },
+      {
+        name: 'Charcoal 60%',
+        hex: '#454343',
+        opacity: 0.6,
+        role: 'Secondary tagline set beside the logotype.',
+        xPct: 75,
+        yPct: 47,
+      },
+    ],
+    typography: [
+      {
+        name: 'Archivo Bold',
+        role: 'Header',
+        specs: [
+          { label: 'Weight', value: '700 Bold' },
+          { label: 'Tracking', value: '-3.5%' },
+          { label: 'Leading', value: '0.98x — tight, two lines max' },
+        ],
+      },
+      {
+        name: 'Work Sans',
+        role: 'Headings',
+        specs: [
+          { label: 'Weights', value: '600 Semibold logotype · 400 Regular in bubbles' },
+          { label: 'Case', value: 'Lowercase in message copy, sentence case elsewhere' },
+          { label: 'Role', value: 'Subheads, logotype lockup, UI-voice copy' },
+        ],
+      },
+    ],
+    closing:
+      'The bus wrap runs the exact same palette and type rules against a busy street instead of an empty skyline — same job for every color, just a louder room to work in.',
+  },
+
   channels: [
     {
       id: 'ooh-billboard',
