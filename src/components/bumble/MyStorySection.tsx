@@ -17,10 +17,10 @@ type Story = (typeof bumbleConcept)['myStory']
 
 function BeatImages({ images }: { images: string[] }) {
   return (
-    <div className="flex justify-center">
+    <div className="mx-auto flex max-w-md justify-center">
       {images.map((id) => (
         <Lightbox key={id} src={imageById[id]} alt="">
-          <img src={imageById[id]} alt="" className="max-h-[200px] w-auto sm:max-h-[260px]" loading="lazy" />
+          <img src={imageById[id]} alt="" className="h-auto max-h-[540px] w-full" loading="lazy" />
         </Lightbox>
       ))}
     </div>
