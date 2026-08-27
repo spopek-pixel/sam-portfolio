@@ -12,7 +12,7 @@ export const bumbleConcept = {
       },
       {
         text: 'Through BFF I also met a handful of other amazing women, like Megan and Lexi, who I still go out with regularly. I still open the app to meet more people like them.',
-        images: ['friend-megan', 'friend-lexi'],
+        images: ['friends'],
         caption: 'Two of the friends I matched and connected with',
       },
     ],
@@ -24,11 +24,11 @@ export const bumbleConcept = {
       image: 'birthday',
       caption: 'My birthday, surrounded by the friends Bumble BFF gave me.',
       tags: [
-        { name: 'Name?', xPct: 8, yPct: 42 },
-        { name: 'Name?', xPct: 22, yPct: 45 },
-        { name: 'Name?', xPct: 58, yPct: 38 },
-        { name: 'Name?', xPct: 70, yPct: 35 },
-        { name: 'Name?', xPct: 84, yPct: 32 },
+        { name: 'Name?', xPct: 6, yPct: 48 },
+        { name: 'Name?', xPct: 19, yPct: 50 },
+        { name: 'Name?', xPct: 57, yPct: 45 },
+        { name: 'Name?', xPct: 68, yPct: 43 },
+        { name: 'Name?', xPct: 82, yPct: 40 },
       ],
     },
   },
@@ -36,7 +36,7 @@ export const bumbleConcept = {
   disclaimer:
     "Self-initiated concept project, built to demonstrate campaign thinking for a design + copywriting role. Not commissioned by, affiliated with, endorsed by, or reviewed by Bumble. All copy below is my own, written for this exercise, not final Bumble marketing.",
 
-  bigIdea: 'Find yur group chat IRL.',
+  bigIdea: 'Find your group chat IRL.',
 
   brief:
     "The friendships I actually made through Bumble BFF didn't stay one-on-one, they turned into a group chat. So instead of the usual \"meet someone new\" pitch, the campaign leans straight into that: every execution is styled around a real-feeling group chat, and the messages running through them are close to word-for-word from actual threads with friends I met on the app.",
@@ -56,7 +56,7 @@ export const bumbleConcept = {
       channel: 'OOH — Bus wrap',
       format: 'billboard' as const,
       image: 'bff-buswrap.png',
-      headline: 'Find yur group chat IRL.',
+      headline: 'Find your group chat IRL.',
       support: '',
       why: 'Same line, a completely different context: a bus wrap competes with an actual moving city instead of an empty skyline, so the chat bubbles have to catch a glance the billboard never had to fight for.',
     },
@@ -81,7 +81,7 @@ export const bumbleConcept = {
   ],
 
   rationale:
-    "Find yur group chat IRL came out of noticing that my own Bumble BFF friendships stopped feeling like one-on-one matches almost immediately; they became a group chat, then a standing plan, then people I actually call. The voice stays conversational and a little messy on purpose, the way real group chats are, and each execution adapts to where someone actually encounters it: a billboard with room to let a thread breathe, a bus wrap competing with a real street, something that reads like a text from a friend on social, and something short enough to survive being a phone-lock-screen interruption. One idea, one real feeling, carried across every context.",
+    "Find your group chat IRL came out of noticing that my own Bumble BFF friendships stopped feeling like one-on-one matches almost immediately; they became a group chat, then a standing plan, then people I actually call. The voice stays conversational and a little messy on purpose, the way real group chats are, and each execution adapts to where someone actually encounters it: a billboard with room to let a thread breathe, a bus wrap competing with a real street, something that reads like a text from a friend on social, and something short enough to survive being a phone-lock-screen interruption. One idea, one real feeling, carried across every context.",
 
   skills: ['Campaign Concepting', 'Copywriting', 'OOH Design', 'Social Content', 'Brand Voice', 'Creative Direction'],
 }
