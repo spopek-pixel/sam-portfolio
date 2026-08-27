@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { projects, type Category } from '@/data/projects'
+import { visibleProjects as projects, type Category } from '@/data/projects'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { ProjectCard } from '@/components/work/ProjectCard'
 import { GradientBlob } from '@/components/ui/GradientBlob'
@@ -20,7 +20,7 @@ export default function Work() {
         <SectionHeading
           kicker="Work"
           title="Every project, start to finish."
-          description="Seven projects spanning civic tech, wellness, campus safety, marketplaces, out-of-home advertising, and campaign messaging."
+          description="Six projects spanning civic tech, wellness, campus safety, marketplaces, and out-of-home advertising."
         />
 
         <div className="flex flex-wrap gap-3">

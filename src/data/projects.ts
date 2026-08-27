@@ -60,6 +60,7 @@ export interface Project {
   accent: Accent
   variant: Variant
   featured: boolean
+  hidden?: boolean
   summary?: ProjectSummary
   problem: string
   research: string[]
@@ -578,7 +579,8 @@ export const projects: Project[] = [
     tools: ['Figma', 'Copywriting', 'Brand Strategy'],
     accent: 'acid',
     variant: 'gallery',
-    featured: true,
+    featured: false,
+    hidden: true,
     problem:
       "Most \"meet new people\" advertising talks around the actual discomfort of making friends as an adult instead of naming it directly.",
     research: [],
@@ -592,11 +594,14 @@ export const projects: Project[] = [
   },
 ]
 
+export const visibleProjects = projects.filter((project) => !project.hidden)
+
 export function getProject(slug: string) {
   return projects.find((project) => project.slug === slug)
 }
 
 export function getAdjacentProject(slug: string) {
-  const index = projects.findIndex((project) => project.slug === slug)
-  return projects[(index + 1) % projects.length]
+  const index = visibleProjects.findIndex((project) => project.slug === slug)
+  if (index === -1) return visibleProjects[0]
+  return visibleProjects[(index + 1) % visibleProjects.length]
 }

@@ -1,4 +1,4 @@
-import { projects } from '@/data/projects'
+import { visibleProjects as projects } from '@/data/projects'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { ProjectCard } from '@/components/work/ProjectCard'
 import { LinkButton } from '@/components/ui/Button'

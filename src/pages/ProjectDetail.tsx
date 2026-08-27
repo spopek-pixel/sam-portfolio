@@ -86,7 +86,7 @@ export default function ProjectDetail() {
   const { slug } = useParams()
   const project = slug ? getProject(slug) : undefined
 
-  if (!project) return <Navigate to="/work" replace />
+  if (!project || project.hidden) return <Navigate to="/work" replace />
 
   const nextProject = getAdjacentProject(project.slug)
 
