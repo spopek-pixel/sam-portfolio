@@ -1,4 +1,5 @@
 import { Reveal } from '@/components/ui/Reveal'
+import { renderHighlighted } from '@/lib/highlightText'
 
 export function BigIdeaSection({ idea, brief }: { idea: string; brief: string }) {
   return (
@@ -11,7 +12,7 @@ export function BigIdeaSection({ idea, brief }: { idea: string; brief: string })
           <p className="font-display text-3xl leading-snug sm:text-4xl md:text-5xl">"{idea}"</p>
         </Reveal>
         <Reveal delay={0.16}>
-          <p className="max-w-2xl text-base leading-relaxed text-fg-muted sm:text-lg">{brief}</p>
+          <p className="max-w-2xl text-base leading-relaxed text-fg-muted sm:text-lg">{renderHighlighted(brief)}</p>
         </Reveal>
       </div>
     </section>

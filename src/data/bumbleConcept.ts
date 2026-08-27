@@ -3,22 +3,22 @@ export const bumbleConcept = {
     kicker: 'Why this project',
     title: "I didn't pick Bumble BFF at random.",
     intro:
-      "I moved to Wisconsin for grad school knowing no one. My program was small, only about fifteen people, and between classes and everyone already living their own lives, nobody was really looking to build a social life outside of school. I spent my first month in a new, unfamiliar city with genuine FOMO: watching everyone else's weekends happen without me, feeling small in a place that suddenly felt very big.",
+      "I moved to Wisconsin for grad school **knowing no one**. My program was small, only about fifteen people, and between classes and everyone already living their own lives, nobody was really looking to build a social life outside of school. I spent my first month in a new, unfamiliar city with genuine FOMO: watching everyone else's weekends happen without me, **feeling small in a place that suddenly felt very big**. It's a strange kind of homesick, missing a social life you haven't built yet.",
     beats: [
       {
-        text: "That's when I actually tried Bumble BFF. I started messaging people, being upfront about wanting real friends, not just acquaintances, and showing up to meet them. That's how I met Sarah. She was finishing her senior year studying business while I was starting a master's in technology and design, two completely different worlds, and we became inseparable almost immediately. I don't think I'd have ever met her without that app.",
+        text: "That's when I actually tried Bumble BFF. I started messaging people, being upfront about wanting real friends, not just acquaintances, and showing up to meet them. **That's how I met Sarah.** She was finishing her senior year studying business while I was starting a master's in technology and design, two completely different worlds, and we became inseparable almost immediately. **I don't think I'd have ever met her without that app.**",
         images: ['instagram-sarah'],
         caption: 'My first message to Sarah, after finding her Instagram through her Bumble BFF profile',
       },
       {
-        text: 'Through BFF I also met a handful of other amazing women, like Megan and Lexi, who I still go out with regularly. I still open the app to meet more people like them.',
+        text: 'Through BFF I also met a handful of other amazing women, like **Megan and Lexi**, who I still go out with regularly. I still open the app to meet more people like them.',
         images: ['friends'],
         caption: 'Two of the friends I matched and connected with',
       },
     ],
     closing: [
-      "Sarah has since graduated and moved to Chicago, and I'm still in Wisconsin, but we FaceTime every week without fail. I think about how different that first lonely month would have looked if I'd never opened the app, and I'm genuinely thankful for it, not as a brand I'm pitching to, but as something that changed what my life here actually looks like.",
-      "That's the real reason I wanted to design something for this feature instead of picking a product I don't actually use: I've lived exactly the problem BFF mode solves. The campaign below isn't guesswork about what a lonely grad student might feel. It's what I felt, translated into a few lines of copy.",
+      "Sarah has since graduated and moved to Chicago, and I'm still in Wisconsin, but **we FaceTime every week without fail**. I think about how different that first lonely month would have looked if I'd never opened the app, and I'm genuinely thankful for it, not as a brand I'm pitching to, but as something that changed what my life here actually looks like.",
+      "That's the real reason I wanted to design something for this feature instead of picking a product I don't actually use: **I've lived exactly the problem BFF mode solves.** The campaign below isn't guesswork about what a lonely grad student might feel. It's what I felt, translated into a few lines of copy.",
     ],
     finale: {
       image: 'birthday',
@@ -39,7 +39,7 @@ export const bumbleConcept = {
   bigIdea: 'Find your group chat IRL.',
 
   brief:
-    "The friendships I actually made through Bumble BFF didn't stay one-on-one, they turned into a group chat. So instead of the usual \"meet someone new\" pitch, the campaign leans straight into that: every execution is styled around a real-feeling group chat, and the messages running through them are close to word-for-word from actual threads with friends I met on the app.",
+    "The friendships I actually made through Bumble BFF didn't stay one-on-one, **they turned into a group chat**. So instead of the usual \"meet someone new\" pitch, the campaign leans straight into that: every execution is styled around a real-feeling group chat, and the messages running through them are close to word-for-word from actual threads with friends I met on the app.",
 
   channels: [
     {

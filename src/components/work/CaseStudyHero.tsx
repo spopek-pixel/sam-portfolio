@@ -18,7 +18,14 @@ export function CaseStudyHero({ project }: { project: Project }) {
   return (
     <section className="relative overflow-hidden px-6 pb-10 pt-32 sm:px-10 sm:pb-12 sm:pt-40">
       <NoiseOverlay />
-      <GradientBlob tone={project.accent} className="left-[-10%] top-0 h-[420px] w-[420px]" />
+      {project.slug === 'bumble-bff-concept' ? (
+        <div
+          aria-hidden
+          className="pointer-events-none absolute left-[-10%] top-0 h-[420px] w-[420px] rounded-full bg-[#ffcc33] opacity-30 blur-[100px]"
+        />
+      ) : (
+        <GradientBlob tone={project.accent} className="left-[-10%] top-0 h-[420px] w-[420px]" />
+      )}
 
       <div className="relative mx-auto max-w-6xl">
         <Reveal>

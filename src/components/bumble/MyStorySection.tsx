@@ -1,6 +1,8 @@
 import type { bumbleConcept } from '@/data/bumbleConcept'
 import { Reveal } from '@/components/ui/Reveal'
 import { Lightbox } from '@/components/ui/Lightbox'
+import { PixelAccent } from '@/components/ui/PixelAccent'
+import { renderHighlighted } from '@/lib/highlightText'
 import { cn } from '@/lib/utils'
 import instagramSarah from '@/assets/images/projects/bumble-bff-concept/proof-instagram-sarah.png'
 import friends from '@/assets/images/projects/bumble-bff-concept/proof-friends.png'
@@ -15,10 +17,10 @@ type Story = (typeof bumbleConcept)['myStory']
 
 function BeatImages({ images }: { images: string[] }) {
   return (
-    <div className="mx-auto flex max-w-md justify-center">
+    <div className="relative flex h-[320px] justify-center sm:h-[400px]">
       {images.map((id) => (
         <Lightbox key={id} src={imageById[id]} alt="">
-          <img src={imageById[id]} alt="" className="h-auto w-full" loading="lazy" />
+          <img src={imageById[id]} alt="" className="h-full w-auto" loading="lazy" />
         </Lightbox>
       ))}
     </div>
@@ -27,8 +29,12 @@ function BeatImages({ images }: { images: string[] }) {
 
 export function MyStorySection({ story }: { story: Story }) {
   return (
-    <section className="px-6 py-10 sm:px-14 sm:py-16">
-      <div className="mx-auto flex max-w-5xl flex-col gap-14">
+    <section className="relative overflow-hidden px-6 py-10 sm:px-14 sm:py-16">
+      <PixelAccent icon="sparkle" color="#a6ff4d" size={20} className="absolute right-[6%] top-8 hidden sm:block" />
+      <PixelAccent icon="heart" color="#a6ff4d" size={18} delay={0.6} className="absolute left-[4%] top-1/3 hidden sm:block" />
+      <PixelAccent icon="star" color="#a6ff4d" size={16} delay={1.2} className="absolute right-[10%] bottom-1/4 hidden sm:block" />
+
+      <div className="relative mx-auto flex max-w-5xl flex-col gap-14">
         <div className="flex flex-col gap-5">
           <Reveal>
             <span className="kicker">{story.kicker}</span>
@@ -37,7 +43,7 @@ export function MyStorySection({ story }: { story: Story }) {
             <h2 className="text-3xl sm:text-4xl">{story.title}</h2>
           </Reveal>
           <Reveal delay={0.12}>
-            <p className="max-w-2xl text-base leading-relaxed text-fg-muted sm:text-lg">{story.intro}</p>
+            <p className="max-w-2xl text-base leading-relaxed text-fg-muted sm:text-lg">{renderHighlighted(story.intro)}</p>
           </Reveal>
         </div>
 
@@ -55,7 +61,7 @@ export function MyStorySection({ story }: { story: Story }) {
                   <p className="mt-3 text-center text-xs text-fg-muted">{beat.caption}</p>
                 </div>
                 <div className="md:w-1/2">
-                  <p className="text-base leading-relaxed text-fg-muted sm:text-lg">{beat.text}</p>
+                  <p className="text-base leading-relaxed text-fg-muted sm:text-lg">{renderHighlighted(beat.text)}</p>
                 </div>
               </div>
             </Reveal>
@@ -65,7 +71,7 @@ export function MyStorySection({ story }: { story: Story }) {
         <div className="flex flex-col gap-4">
           {story.closing.map((paragraph) => (
             <Reveal key={paragraph.slice(0, 24)}>
-              <p className="max-w-3xl text-base leading-relaxed text-fg-muted sm:text-lg">{paragraph}</p>
+              <p className="max-w-3xl text-base leading-relaxed text-fg-muted sm:text-lg">{renderHighlighted(paragraph)}</p>
             </Reveal>
           ))}
         </div>
