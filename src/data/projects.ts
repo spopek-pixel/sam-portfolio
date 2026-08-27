@@ -6,6 +6,7 @@ import { myoutfrontCreativeReview, type CreativeReviewScreen } from '@/data/myou
 import myoutfrontUserStories from '@/assets/images/projects/myoutfront/user-stories-map.png'
 import myoutfrontSketchUpload from '@/assets/images/projects/myoutfront/lofi-sketch-upload-verify.png'
 import myoutfrontSketchNotifications from '@/assets/images/projects/myoutfront/lofi-sketch-notifications-timeline.png'
+import { bumbleConcept } from '@/data/bumbleConcept'
 
 export type Accent = 'violet' | 'acid' | 'mint'
 export type Category = 'Product' | 'Research' | 'Visual'
@@ -564,6 +565,30 @@ export const projects: Project[] = [
       "This internship shaped how I approach design today. Seeing four campaigns actually running on New York City buses taught me to think past visuals and toward clear communication under a real constraint: if it didn't land in seven seconds, it didn't work.",
     images: imagesFor('outfront-media-graphics', 'outfront.jpg'),
     deliverables: ['Bus king ads', 'Bus rear king', 'Billboard', 'Animated liveboard', 'Bus wrap', 'Mobile ads'],
+  },
+  {
+    slug: 'bumble-bff-concept',
+    title: 'Bumble BFF — Concept Campaign',
+    tagline:
+      "A self-initiated concept campaign for Bumble's BFF mode: one idea, adapted across OOH, social, and push. Not commissioned by Bumble.",
+    category: ['Visual'],
+    role: 'Concept Copywriter & Designer',
+    timeline: 'Self-initiated, 2026',
+    team: 'Solo, self-initiated',
+    tools: ['Figma', 'Copywriting', 'Brand Strategy'],
+    accent: 'acid',
+    variant: 'gallery',
+    featured: true,
+    problem:
+      "Most \"meet new people\" advertising talks around the actual discomfort of making friends as an adult instead of naming it directly.",
+    research: [],
+    process: [],
+    decisions: [],
+    outcome:
+      'A four-touchpoint concept campaign (OOH, a second billboard, social, and push), one idea carried in one voice across every context, built to demonstrate campaign and copy thinking, not a delivered Bumble asset.',
+    reflection: bumbleConcept.rationale,
+    images: imagesFor('bumble-bff-concept'),
+    deliverables: bumbleConcept.skills,
   },
 ]
 

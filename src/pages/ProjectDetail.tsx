@@ -11,6 +11,10 @@ import { StakeholderInterviews } from '@/components/work/StakeholderInterviews'
 import { WireframeExploration } from '@/components/work/WireframeExploration'
 import { CreativeReviewShowcase } from '@/components/work/CreativeReviewShowcase'
 import { ProblemChallengeSolution } from '@/components/work/ProblemChallengeSolution'
+import { ConceptDisclaimer } from '@/components/bumble/ConceptDisclaimer'
+import { BigIdeaSection } from '@/components/bumble/BigIdeaSection'
+import { ChannelExecutions } from '@/components/bumble/ChannelExecutions'
+import { bumbleConcept } from '@/data/bumbleConcept'
 import { SketchGallery } from '@/components/work/SketchGallery'
 import { UserStoriesSection } from '@/components/work/UserStoriesSection'
 import { VisualGallery } from '@/components/work/VisualGallery'
@@ -195,6 +199,24 @@ export default function ProjectDetail() {
         <OutfrontGallery />
         <OutfrontTestimonials />
         <OutfrontKeyTakeaways />
+        <NextProjectNav project={nextProject} />
+      </div>
+    )
+  }
+
+  if (project.slug === 'bumble-bff-concept') {
+    return (
+      <div>
+        <CaseStudyHero project={project} />
+        <ConceptDisclaimer text={bumbleConcept.disclaimer} />
+        <BigIdeaSection idea={bumbleConcept.bigIdea} brief={bumbleConcept.brief} />
+        <ChannelExecutions channels={bumbleConcept.channels} />
+        <Deliverables
+          items={project.deliverables ?? []}
+          kicker="Skills demonstrated"
+          title="What this project shows I can do."
+        />
+        <ReflectionSection reflection={project.reflection} />
         <NextProjectNav project={nextProject} />
       </div>
     )

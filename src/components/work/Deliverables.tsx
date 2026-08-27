@@ -3,7 +3,13 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Tag } from '@/components/ui/Tag'
 import { usePrefersReducedMotion } from '@/hooks/useReducedMotion'
 
-export function Deliverables({ items }: { items: string[] }) {
+interface DeliverablesProps {
+  items: string[]
+  kicker?: string
+  title?: string
+}
+
+export function Deliverables({ items, kicker = 'Deliverables', title = 'What this project actually shipped.' }: DeliverablesProps) {
   const reducedMotion = usePrefersReducedMotion()
 
   if (items.length === 0) return null
@@ -11,7 +17,7 @@ export function Deliverables({ items }: { items: string[] }) {
   return (
     <section className="px-6 py-10 sm:px-14 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading kicker="Deliverables" title="What this project actually shipped." className="mb-8" />
+        <SectionHeading kicker={kicker} title={title} className="mb-8" />
         <div className="flex flex-wrap gap-2.5">
           {items.map((item, index) => (
             <motion.div
