@@ -1,11 +1,31 @@
 import type { bumbleConcept } from '@/data/bumbleConcept'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
+import { Lightbox } from '@/components/ui/Lightbox'
 import { cn } from '@/lib/utils'
+import bffBillboard from '@/assets/images/projects/bumble-bff-concept/bff-billboard.png'
+import bffBuswrap from '@/assets/images/projects/bumble-bff-concept/bff-buswrap.png'
 
 type Channel = (typeof bumbleConcept)['channels'][number]
 
+const imageMap: Record<string, string> = {
+  'bff-billboard.png': bffBillboard,
+  'bff-buswrap.png': bffBuswrap,
+}
+
 function Mockup({ channel }: { channel: Channel }) {
+  const realImage = channel.image ? imageMap[channel.image] : undefined
+
+  if (realImage) {
+    return (
+      <Lightbox src={realImage} alt={`${channel.channel} mockup: "${channel.headline}"`}>
+        <div className="overflow-hidden rounded-2xl border border-line">
+          <img src={realImage} alt="" className="h-auto w-full" loading="lazy" />
+        </div>
+      </Lightbox>
+    )
+  }
+
   if (channel.format === 'billboard') {
     return (
       <div className="flex aspect-[16/9] w-full flex-col justify-between overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-violet-deep via-ink to-ink p-6 sm:p-8">
