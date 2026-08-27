@@ -42,12 +42,12 @@ function ImageBlock({ entry, imageSide }: { entry: TimelineEntry; imageSide: 'le
         <img
           src={imageById[entry.image]}
           alt=""
-          className="h-auto max-h-[260px] w-auto max-w-full rounded-xl border border-line sm:max-h-[400px]"
+          className="h-auto max-h-[300px] w-auto max-w-full rounded-xl border border-line sm:max-h-[460px]"
           loading="lazy"
         />
       </Lightbox>
       {'caption' in entry && entry.caption && (
-        <p className="mt-2 text-[11px] leading-snug text-fg-muted">{entry.caption}</p>
+        <p className="mt-2 text-center text-[11px] leading-snug text-fg-muted">{entry.caption}</p>
       )}
     </div>
   )
@@ -60,7 +60,7 @@ function ImageBlock({ entry, imageSide }: { entry: TimelineEntry; imageSide: 'le
     )
 
   return (
-    <div className="mt-4 flex items-center gap-3 sm:mt-0">
+    <div className="mt-4 flex items-center justify-center gap-3 sm:mt-0">
       {imageSide === 'left' ? (
         <>
           {thumb}
@@ -114,7 +114,7 @@ export function MyStorySection({ story }: { story: Story }) {
                       <TextBlock entry={entry} />
                     </div>
                     {hasImage && (
-                      <div className={cn('sm:row-start-1', isRight ? 'sm:col-start-1' : 'sm:col-start-2')}>
+                      <div className={cn('flex justify-center sm:row-start-1', isRight ? 'sm:col-start-1' : 'sm:col-start-2')}>
                         <ImageBlock entry={entry} imageSide={isRight ? 'left' : 'right'} />
                       </div>
                     )}
