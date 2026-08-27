@@ -10,7 +10,7 @@ export const bumbleConcept = {
       },
       {
         label: 'Month one',
-        title: 'A strange kind of homesick',
+        title: "Homesick for a life I hadn't built",
         body: "I spent my first month in a new, unfamiliar city with genuine FOMO: watching everyone else's weekends happen without me, **feeling small in a place that suddenly felt very big**. It's a strange kind of homesick, missing a social life you haven't built yet.",
       },
       {
@@ -29,12 +29,12 @@ export const bumbleConcept = {
       },
       {
         label: 'Today',
-        title: 'Still calling, still close',
+        title: 'Different city, same friendship',
         body: "Sarah has since graduated and moved to Chicago, and I'm still in Wisconsin, but **we FaceTime every week without fail**. I think about how different that first lonely month would have looked if I'd never opened the app, and I'm genuinely thankful for it, not as a brand I'm pitching to, but as something that changed what my life here actually looks like.",
       },
       {
         label: 'Why this campaign',
-        title: 'Not guesswork',
+        title: 'Lived it, not guessed it',
         body: "That's the real reason I wanted to design something for this feature instead of picking a product I don't actually use: **I've lived exactly the problem BFF mode solves.** The campaign below isn't guesswork about what a lonely grad student might feel. It's what I felt, translated into a few lines of copy.",
       },
     ],
