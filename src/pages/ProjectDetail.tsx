@@ -12,6 +12,7 @@ import { WireframeExploration } from '@/components/work/WireframeExploration'
 import { CreativeReviewShowcase } from '@/components/work/CreativeReviewShowcase'
 import { ProblemChallengeSolution } from '@/components/work/ProblemChallengeSolution'
 import { ConceptDisclaimer } from '@/components/bumble/ConceptDisclaimer'
+import { MyStorySection } from '@/components/bumble/MyStorySection'
 import { BigIdeaSection } from '@/components/bumble/BigIdeaSection'
 import { ChannelExecutions } from '@/components/bumble/ChannelExecutions'
 import { bumbleConcept } from '@/data/bumbleConcept'
@@ -209,6 +210,7 @@ export default function ProjectDetail() {
       <div>
         <CaseStudyHero project={project} />
         <ConceptDisclaimer text={bumbleConcept.disclaimer} />
+        <MyStorySection story={bumbleConcept.myStory} />
         <BigIdeaSection idea={bumbleConcept.bigIdea} brief={bumbleConcept.brief} />
         <ChannelExecutions channels={bumbleConcept.channels} />
         <Deliverables
