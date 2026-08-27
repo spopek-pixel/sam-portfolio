@@ -8,7 +8,12 @@ export const bumbleConcept = {
       "Sarah has since graduated and moved to Chicago, and I'm still in Wisconsin, but we FaceTime every week without fail. I think about how different that first lonely month would have looked if I'd never opened the app, and I'm genuinely thankful for it, not as a brand I'm pitching to, but as something that changed what my life here actually looks like.",
       "That's the real reason I wanted to design something for this feature instead of picking a product I don't actually use: I've lived exactly the problem BFF mode solves. The campaign below isn't guesswork about what a lonely grad student might feel. It's what I felt, translated into a few lines of copy.",
     ],
-    proofCaption: 'Screenshot: my first message to Sarah on Bumble BFF',
+    proof: [
+      { id: 'instagram-sarah', caption: 'My first message to Sarah, after finding her Instagram through her Bumble BFF profile' },
+      { id: 'friend-megan', caption: 'One of the friends I matched and connected with' },
+      { id: 'friend-lexi', caption: 'Another friend I met through the app' },
+      { id: 'birthday', caption: 'My birthday, surrounded by friends I met on Bumble BFF' },
+    ],
   },
 
   disclaimer:
