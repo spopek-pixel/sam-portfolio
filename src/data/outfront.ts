@@ -18,11 +18,27 @@ export const outfront = {
 
   crossTeam: {
     intro:
-      "These four campaigns were my own client work, but they weren't the only creative I touched that summer. I regularly jumped in to support other designers on their briefs, too, from quick concept feedback to full layout passes when a deadline was tight.",
+      "These four campaigns were my own client work, but they weren't the only creative I touched that summer. OUTFRONT Studios, the in-house creative lab, brought me into brainstorms and concept reviews for national brand campaigns too, where I contributed ideas and learned directly from professional creatives working at a scale I hadn't yet.",
+    studioLink: 'https://www.outfront.com/creative/outfront-studios',
     pieces: [
-      { label: 'Team project' },
-      { label: 'Team project' },
-      { label: 'Team project' },
+      {
+        slug: 'snowflake',
+        brand: 'Snowflake × OpenTable',
+        note: "Brainstormed with the Studios team on the co-branded concept direction for this billboard, tying Snowflake's data-day hook to an OpenTable reservation call to action.",
+        href: 'https://www.outfront.com/resources/ooh-case-studies/snowflake',
+      },
+      {
+        slug: 'tinder',
+        brand: 'Tinder',
+        note: 'Sat in on concept development for this bus wrap and contributed to early idea rounds, watching a national dating-app campaign get built from brief to installed creative.',
+        href: 'https://www.outfront.com/resources/ooh-case-studies/tinder',
+      },
+      {
+        slug: 'belliwelli',
+        brand: 'BelliWelli',
+        note: 'Contributed to brainstorming for this billboard and got to see how a brand this candid about a sensitive topic still lands as funny, not crude, in the headline.',
+        href: 'https://www.outfront.com/resources/ooh-case-studies/belliwelli',
+      },
     ],
   },
 
