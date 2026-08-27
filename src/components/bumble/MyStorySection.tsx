@@ -37,9 +37,14 @@ function ImageBlock({ entry, imageSide }: { entry: TimelineEntry; imageSide: 'le
   if (!('image' in entry) || !entry.image) return null
 
   const thumb = (
-    <div className="w-64 max-w-full">
+    <div className="max-w-full">
       <Lightbox src={imageById[entry.image]} alt="">
-        <img src={imageById[entry.image]} alt="" className="h-auto w-full rounded-xl border border-line" loading="lazy" />
+        <img
+          src={imageById[entry.image]}
+          alt=""
+          className="h-auto max-h-[260px] w-auto max-w-full rounded-xl border border-line sm:max-h-[400px]"
+          loading="lazy"
+        />
       </Lightbox>
       {'caption' in entry && entry.caption && (
         <p className="mt-2 text-[11px] leading-snug text-fg-muted">{entry.caption}</p>
