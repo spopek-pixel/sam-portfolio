@@ -48,7 +48,7 @@ export const bumbleConcept = {
         },
         {
           image: 'birthday',
-          caption: 'My birthday, surrounded by the friends Bumble BFF gave me.',
+          caption: 'My birthday, surrounded by the friends Bumble BFF gave me — Sarah, Megan, Odessa, and Lexi.',
         },
         {
           image: 'blockparty-megan',

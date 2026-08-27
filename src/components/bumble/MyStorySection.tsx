@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 import type { bumbleConcept } from '@/data/bumbleConcept'
 import { Reveal } from '@/components/ui/Reveal'
 import { Lightbox } from '@/components/ui/Lightbox'
@@ -22,26 +23,49 @@ const imageById: Record<string, string> = {
 type Story = (typeof bumbleConcept)['myStory']
 type TimelineEntry = Story['timeline'][number]
 
-function EntryCard({ entry }: { entry: TimelineEntry }) {
+function TextBlock({ entry }: { entry: TimelineEntry }) {
   return (
     <div className="flex flex-col gap-2">
       <span className="font-mono text-xs uppercase tracking-wider text-violet-tint">{entry.label}</span>
       <h3 className="text-xl sm:text-2xl">{entry.title}</h3>
       <p className="text-base leading-relaxed text-fg-muted">{renderHighlighted(entry.body)}</p>
-      {'image' in entry && entry.image && (
-        <div className="mt-3 w-64 max-w-full">
-          <Lightbox src={imageById[entry.image]} alt="">
-            <img
-              src={imageById[entry.image]}
-              alt=""
-              className="h-auto w-full rounded-xl border border-line"
-              loading="lazy"
-            />
-          </Lightbox>
-          {'caption' in entry && entry.caption && (
-            <p className="mt-2 text-[11px] leading-snug text-fg-muted">{entry.caption}</p>
-          )}
-        </div>
+    </div>
+  )
+}
+
+function ImageBlock({ entry, imageSide }: { entry: TimelineEntry; imageSide: 'left' | 'right' }) {
+  if (!('image' in entry) || !entry.image) return null
+
+  const thumb = (
+    <div className="w-64 max-w-full">
+      <Lightbox src={imageById[entry.image]} alt="">
+        <img src={imageById[entry.image]} alt="" className="h-auto w-full rounded-xl border border-line" loading="lazy" />
+      </Lightbox>
+      {'caption' in entry && entry.caption && (
+        <p className="mt-2 text-[11px] leading-snug text-fg-muted">{entry.caption}</p>
+      )}
+    </div>
+  )
+
+  const arrow =
+    imageSide === 'left' ? (
+      <ArrowRight size={18} className="hidden shrink-0 text-violet-tint sm:block" />
+    ) : (
+      <ArrowLeft size={18} className="hidden shrink-0 text-violet-tint sm:block" />
+    )
+
+  return (
+    <div className="mt-4 flex items-center gap-3 sm:mt-0">
+      {imageSide === 'left' ? (
+        <>
+          {thumb}
+          {arrow}
+        </>
+      ) : (
+        <>
+          {arrow}
+          {thumb}
+        </>
       )}
     </div>
   )
@@ -68,21 +92,27 @@ export function MyStorySection({ story }: { story: Story }) {
           <div className="absolute left-[7px] top-2 bottom-2 w-px bg-line sm:left-1/2 sm:-translate-x-1/2" />
           <motion.div
             style={{ scaleY }}
-            className="absolute left-[7px] top-2 bottom-2 w-px origin-top bg-gradient-to-b from-violet-tint to-acid sm:left-1/2 sm:-translate-x-1/2"
+            className="absolute left-[7px] top-2 bottom-2 w-px origin-top bg-[#FFDE3B] sm:left-1/2 sm:-translate-x-1/2"
           />
 
           {story.timeline.map((entry, index) => {
             const isRight = index % 2 === 1
+            const hasImage = 'image' in entry && !!entry.image
             return (
               <Reveal key={entry.title} delay={index * 0.04}>
                 <div className="relative">
-                  <span className="absolute -left-10 top-1 h-3.5 w-3.5 rounded-full border-2 border-acid bg-ink sm:hidden" />
-                  <span className="absolute left-1/2 top-1 z-10 hidden h-3.5 w-3.5 -translate-x-1/2 rounded-full border-2 border-acid bg-ink sm:block" />
+                  <span className="absolute -left-10 top-1 h-3.5 w-3.5 rounded-full border-2 border-[#FFDE3B] bg-ink sm:hidden" />
+                  <span className="absolute left-1/2 top-1 z-10 hidden h-3.5 w-3.5 -translate-x-1/2 rounded-full border-2 border-[#FFDE3B] bg-ink sm:block" />
 
-                  <div className="sm:grid sm:grid-cols-2 sm:gap-x-14">
-                    <div className={cn(isRight ? 'sm:col-start-2' : 'sm:col-start-1')}>
-                      <EntryCard entry={entry} />
+                  <div className="sm:grid sm:grid-cols-2 sm:items-center sm:gap-x-14">
+                    <div className={isRight ? 'sm:col-start-2' : 'sm:col-start-1'}>
+                      <TextBlock entry={entry} />
                     </div>
+                    {hasImage && (
+                      <div className={cn('sm:row-start-1', isRight ? 'sm:col-start-1' : 'sm:col-start-2')}>
+                        <ImageBlock entry={entry} imageSide={isRight ? 'left' : 'right'} />
+                      </div>
+                    )}
                   </div>
                 </div>
               </Reveal>
@@ -97,22 +127,29 @@ export function MyStorySection({ story }: { story: Story }) {
               <h3 className="text-2xl sm:text-3xl">{story.finale.title}</h3>
             </div>
 
-            <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-3">
-              {story.finale.gallery.map((item) => (
-                <div key={item.image} className="flex flex-col gap-2">
-                  <Lightbox src={imageById[item.image]} alt={item.caption}>
-                    <div className="aspect-[3/4] w-full overflow-hidden rounded-2xl border border-line shadow-[0_25px_60px_rgba(0,0,0,0.35)]">
-                      <img
-                        src={imageById[item.image]}
-                        alt=""
-                        className="h-full w-full object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-                  </Lightbox>
-                  <p className="text-xs text-fg-muted">{item.caption}</p>
-                </div>
-              ))}
+            <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-[1fr_2fr_1fr] sm:items-center">
+              {story.finale.gallery.map((item) => {
+                const isCenter = item.image === 'birthday'
+                return (
+                  <div key={item.image} className="flex flex-col gap-2">
+                    <Lightbox src={imageById[item.image]} alt={item.caption}>
+                      {isCenter ? (
+                        <img
+                          src={imageById[item.image]}
+                          alt=""
+                          className="h-auto w-full rounded-2xl border border-line shadow-[0_35px_80px_rgba(0,0,0,0.4)]"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="aspect-[3/4] w-full overflow-hidden rounded-2xl border border-line shadow-[0_25px_60px_rgba(0,0,0,0.35)]">
+                          <img src={imageById[item.image]} alt="" className="h-full w-full object-cover" loading="lazy" />
+                        </div>
+                      )}
+                    </Lightbox>
+                    <p className="text-xs text-fg-muted">{item.caption}</p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </Reveal>
