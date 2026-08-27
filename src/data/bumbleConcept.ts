@@ -2,34 +2,47 @@ export const bumbleConcept = {
   myStory: {
     kicker: 'Why this project',
     title: "I didn't pick Bumble BFF at random.",
-    intro:
-      "I moved to Wisconsin for grad school **knowing no one**. My program was small, only about fifteen people, and between classes and everyone already living their own lives, nobody was really looking to build a social life outside of school. I spent my first month in a new, unfamiliar city with genuine FOMO: watching everyone else's weekends happen without me, **feeling small in a place that suddenly felt very big**. It's a strange kind of homesick, missing a social life you haven't built yet.",
-    beats: [
+    timeline: [
       {
-        text: "That's when I actually tried Bumble BFF. I started messaging people, being upfront about wanting real friends, not just acquaintances, and showing up to meet them. **That's how I met Sarah.** She was finishing her senior year studying business while I was starting a master's in technology and design, two completely different worlds, and we became inseparable almost immediately. **I don't think I'd have ever met her without that app.**",
-        images: ['instagram-sarah'],
+        label: 'The move',
+        title: 'New state, zero friends',
+        body: "I moved to Wisconsin for grad school **knowing no one**. My program was small, only about fifteen people, and between classes and everyone already living their own lives, nobody was really looking to build a social life outside of school.",
+      },
+      {
+        label: 'Month one',
+        title: 'A strange kind of homesick',
+        body: "I spent my first month in a new, unfamiliar city with genuine FOMO: watching everyone else's weekends happen without me, **feeling small in a place that suddenly felt very big**. It's a strange kind of homesick, missing a social life you haven't built yet.",
+      },
+      {
+        label: 'Trying BFF',
+        title: "That's how I met Sarah",
+        body: "I started messaging people on Bumble BFF, being upfront about wanting real friends, not just acquaintances, and showing up to meet them. **That's how I met Sarah.** She was finishing her senior year studying business while I was starting a master's in technology and design, two completely different worlds, and we became inseparable almost immediately.",
+        image: 'instagram-sarah',
         caption: 'My first message to Sarah, after finding her Instagram through her Bumble BFF profile',
       },
       {
-        text: "Through BFF I also met a handful of other amazing women, like **Megan and Lexi**, who I still go out with regularly. What started as one-off meetups turned into **a standing group chat of our own**, the kind where someone asks if anyone's free Friday and three people show up within the hour. I still open the app to meet more people like them, because that's exactly the kind of friendship I moved here hoping to find.",
-        images: ['friends'],
+        label: 'More than one',
+        title: 'Megan, Lexi, and a group chat',
+        body: "Through BFF I also met a handful of other amazing women, like **Megan and Lexi**, who I still go out with regularly. What started as one-off meetups turned into **a standing group chat of our own**, the kind where someone asks if anyone's free Friday and three people show up within the hour.",
+        image: 'friends',
         caption: 'Two of the friends I matched and connected with',
       },
-    ],
-    closing: [
-      "Sarah has since graduated and moved to Chicago, and I'm still in Wisconsin, but **we FaceTime every week without fail**. I think about how different that first lonely month would have looked if I'd never opened the app, and I'm genuinely thankful for it, not as a brand I'm pitching to, but as something that changed what my life here actually looks like.",
-      "That's the real reason I wanted to design something for this feature instead of picking a product I don't actually use: **I've lived exactly the problem BFF mode solves.** The campaign below isn't guesswork about what a lonely grad student might feel. It's what I felt, translated into a few lines of copy.",
+      {
+        label: 'Today',
+        title: 'Still calling, still close',
+        body: "Sarah has since graduated and moved to Chicago, and I'm still in Wisconsin, but **we FaceTime every week without fail**. I think about how different that first lonely month would have looked if I'd never opened the app, and I'm genuinely thankful for it, not as a brand I'm pitching to, but as something that changed what my life here actually looks like.",
+      },
+      {
+        label: 'Why this campaign',
+        title: 'Not guesswork',
+        body: "That's the real reason I wanted to design something for this feature instead of picking a product I don't actually use: **I've lived exactly the problem BFF mode solves.** The campaign below isn't guesswork about what a lonely grad student might feel. It's what I felt, translated into a few lines of copy.",
+      },
     ],
     finale: {
+      kicker: 'Where it led',
+      title: 'All of us, together.',
       image: 'birthday',
       caption: 'My birthday, surrounded by the friends Bumble BFF gave me.',
-      tags: [
-        { name: 'Name?', xPct: 6, yPct: 48 },
-        { name: 'Name?', xPct: 19, yPct: 50 },
-        { name: 'Name?', xPct: 57, yPct: 45 },
-        { name: 'Name?', xPct: 68, yPct: 43 },
-        { name: 'Name?', xPct: 82, yPct: 40 },
-      ],
     },
   },
 
