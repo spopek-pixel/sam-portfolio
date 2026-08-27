@@ -11,7 +11,7 @@ export const bumbleConcept = {
         caption: 'My first message to Sarah, after finding her Instagram through her Bumble BFF profile',
       },
       {
-        text: 'Through BFF I also met a handful of other amazing women, like **Megan and Lexi**, who I still go out with regularly. I still open the app to meet more people like them.',
+        text: "Through BFF I also met a handful of other amazing women, like **Megan and Lexi**, who I still go out with regularly. What started as one-off meetups turned into **a standing group chat of our own**, the kind where someone asks if anyone's free Friday and three people show up within the hour. I still open the app to meet more people like them, because that's exactly the kind of friendship I moved here hoping to find.",
         images: ['friends'],
         caption: 'Two of the friends I matched and connected with',
       },

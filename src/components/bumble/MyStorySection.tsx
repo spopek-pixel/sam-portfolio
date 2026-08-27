@@ -20,7 +20,7 @@ function BeatImages({ images }: { images: string[] }) {
     <div className="mx-auto flex max-w-md justify-center">
       {images.map((id) => (
         <Lightbox key={id} src={imageById[id]} alt="">
-          <img src={imageById[id]} alt="" className="h-auto max-h-[540px] w-full" loading="lazy" />
+          <img src={imageById[id]} alt="" className="h-auto max-h-[540px] w-auto max-w-full" loading="lazy" />
         </Lightbox>
       ))}
     </div>
