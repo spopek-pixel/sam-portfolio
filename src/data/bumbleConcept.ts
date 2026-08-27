@@ -41,8 +41,20 @@ export const bumbleConcept = {
     finale: {
       kicker: 'Where it led',
       title: 'All of us, together.',
-      image: 'birthday',
-      caption: 'My birthday, surrounded by the friends Bumble BFF gave me.',
+      gallery: [
+        {
+          image: 'nashville-sarah',
+          caption: 'Sarah and me on the pig — our Nashville trip.',
+        },
+        {
+          image: 'birthday',
+          caption: 'My birthday, surrounded by the friends Bumble BFF gave me.',
+        },
+        {
+          image: 'blockparty-megan',
+          caption: 'Megan and me at the State Street block party.',
+        },
+      ],
     },
   },
 
