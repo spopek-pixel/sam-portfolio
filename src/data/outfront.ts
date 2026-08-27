@@ -16,6 +16,16 @@ export const outfront = {
     ],
   },
 
+  crossTeam: {
+    intro:
+      "These four campaigns were my own client work, but they weren't the only creative I touched that summer. I regularly jumped in to support other designers on their briefs, too, from quick concept feedback to full layout passes when a deadline was tight.",
+    pieces: [
+      { label: 'Team project' },
+      { label: 'Team project' },
+      { label: 'Team project' },
+    ],
+  },
+
   clients: [
     {
       slug: 'ting',

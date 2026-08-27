@@ -53,6 +53,7 @@ import { ClientCaseStudies } from '@/components/outfront/ClientCaseStudies'
 import { OutfrontGallery } from '@/components/outfront/OutfrontGallery'
 import { OutfrontTestimonials } from '@/components/outfront/OutfrontTestimonials'
 import { OutfrontKeyTakeaways } from '@/components/outfront/OutfrontKeyTakeaways'
+import { CrossTeamWork } from '@/components/outfront/CrossTeamWork'
 import { TekloTheme } from '@/components/teklo/TekloTheme'
 import { TekloHero } from '@/components/teklo/TekloHero'
 import { TekloOverview } from '@/components/teklo/TekloOverview'
@@ -190,6 +191,7 @@ export default function ProjectDetail() {
         {project.summary && <ProblemChallengeSolution summary={project.summary} />}
         <OutfrontOverview project={project} />
         <ClientCaseStudies />
+        <CrossTeamWork />
         <OutfrontGallery />
         <OutfrontTestimonials />
         <OutfrontKeyTakeaways />
