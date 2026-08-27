@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { PenTool } from 'lucide-react'
 import type { outfront } from '@/data/outfront'
 import { Reveal } from '@/components/ui/Reveal'
 import { Lightbox } from '@/components/ui/Lightbox'
@@ -151,6 +152,48 @@ export function ClientCaseStudy({ client, media, index }: ClientCaseStudyProps) 
             </div>
           </div>
         </div>
+
+        {client.messaging && (
+          <div className="flex flex-col gap-4 rounded-2xl border border-line bg-bg/40 p-6">
+            <div className="flex items-center gap-2">
+              <PenTool size={15} className="text-violet-tint" />
+              <span className="kicker">Messaging approach</span>
+            </div>
+            <p className="max-w-2xl text-lg font-medium text-fg">"{client.messaging.hook}"</p>
+            <p className="max-w-2xl text-sm text-fg-muted sm:text-base">{client.messaging.body}</p>
+
+            {client.messaging.headlines.length > 0 && (
+              <div className="flex flex-col gap-2">
+                <span className="font-mono text-[11px] uppercase tracking-wider text-fg-muted">
+                  {client.messaging.headlines.length > 1 ? 'Headlines I wrote' : 'Headline I wrote'}
+                </span>
+                <div className="flex flex-wrap gap-2">
+                  {client.messaging.headlines.map((headline) => (
+                    <span
+                      key={headline}
+                      className="rounded-full border border-line bg-surface px-3 py-1.5 text-sm text-fg"
+                    >
+                      "{headline}"
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div className="flex flex-wrap gap-1.5 border-t border-line pt-4">
+              {client.messaging.considerations.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-line px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-fg-muted"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+
+            <p className="text-xs italic text-fg-muted">{client.messaging.copyCredit}</p>
+          </div>
+        )}
 
         {media.type === 'carousel' ? (
           <ImageCarousel slides={media.slides} />

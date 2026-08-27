@@ -133,9 +133,10 @@ export function PixelHeroStage() {
             transition={{ duration: 0.7, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-lg text-lg text-fg-muted"
           >
-            I combine UX research, product thinking, front-end development, and AI to turn
-            complex ideas into digital products that solve real problems. Every project begins
-            with real people and ends with work that meets real business requirements.
+            I design the message and the experience around it. My background spans product design,
+            UX research, front-end development, and brand/OOH communications, so whether I'm working
+            on an app interface, a billboard, or a line of copy, I'm asking the same question: what's
+            the clearest, most human way to make an idea connect.
           </motion.p>
 
           <motion.div

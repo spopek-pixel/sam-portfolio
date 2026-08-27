@@ -26,6 +26,7 @@ import {
   Code2,
   TerminalSquare,
   Smartphone,
+  MessageSquare,
 } from 'lucide-react'
 import {
   SiFigma,
@@ -62,6 +63,8 @@ const groups: Array<{ title: string; items: Item[] }> = [
       { label: 'Card Sorting', Icon: Rows3 },
       { label: 'Information Architecture', Icon: Network },
       { label: 'Design Workshops', Icon: Presentation },
+      { label: 'Messaging & Copy', Icon: MessageSquare },
+      { label: 'Brand Voice', Icon: Sparkles },
     ],
   },
   {
