@@ -17,7 +17,7 @@ type Story = (typeof bumbleConcept)['myStory']
 
 function BeatImages({ images }: { images: string[] }) {
   return (
-    <div className="relative flex h-[320px] justify-center sm:h-[400px]">
+    <div className="relative flex h-[200px] justify-center sm:h-[260px]">
       {images.map((id) => (
         <Lightbox key={id} src={imageById[id]} alt="">
           <img src={imageById[id]} alt="" className="h-full w-auto" loading="lazy" />
@@ -29,13 +29,10 @@ function BeatImages({ images }: { images: string[] }) {
 
 export function MyStorySection({ story }: { story: Story }) {
   return (
-    <section className="relative overflow-hidden px-6 py-10 sm:px-14 sm:py-16">
-      <PixelAccent icon="sparkle" color="#a6ff4d" size={20} className="absolute right-[6%] top-8 hidden sm:block" />
-      <PixelAccent icon="heart" color="#a6ff4d" size={18} delay={0.6} className="absolute left-[4%] top-1/3 hidden sm:block" />
-      <PixelAccent icon="star" color="#a6ff4d" size={16} delay={1.2} className="absolute right-[10%] bottom-1/4 hidden sm:block" />
-
-      <div className="relative mx-auto flex max-w-5xl flex-col gap-14">
-        <div className="flex flex-col gap-5">
+    <section className="px-6 py-10 sm:px-14 sm:py-16">
+      <div className="mx-auto flex max-w-5xl flex-col gap-14">
+        <div className="relative flex flex-col gap-5">
+          <PixelAccent icon="sparkle" color="#a6ff4d" size={20} className="absolute right-0 top-0 hidden sm:block" />
           <Reveal>
             <span className="kicker">{story.kicker}</span>
           </Reveal>
