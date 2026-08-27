@@ -77,37 +77,27 @@ export const bumbleConcept = {
         name: 'Hive Yellow',
         hex: '#FFF28E',
         role: 'Field color. Full-bleed ground on every placement.',
-        xPct: 50,
-        yPct: 21,
       },
       {
         name: 'Bubble White',
         hex: '#FFFFFF',
         role: 'Received bubbles and the typing indicator.',
-        xPct: 27,
-        yPct: 26,
       },
       {
         name: 'Ink Charcoal',
         hex: '#454343',
         role: 'Sent bubbles and the striped edge marker.',
-        xPct: 38,
-        yPct: 34,
       },
       {
         name: 'True Black',
         hex: '#000000',
         role: 'Headline, logotype and flower mark.',
-        xPct: 65,
-        yPct: 34,
       },
       {
         name: 'Charcoal 60%',
         hex: '#454343',
         opacity: 0.6,
         role: 'Secondary tagline set beside the logotype.',
-        xPct: 75,
-        yPct: 47,
       },
     ],
     typography: [
@@ -130,8 +120,6 @@ export const bumbleConcept = {
         ],
       },
     ],
-    closing:
-      'The bus wrap runs the exact same palette and type rules against a busy street instead of an empty skyline — same job for every color, just a louder room to work in.',
   },
 
   channels: [
