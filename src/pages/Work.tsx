@@ -20,7 +20,7 @@ export default function Work() {
         <SectionHeading
           kicker="Work"
           title="Every project, start to finish."
-          description="Six projects spanning civic tech, wellness, campus safety, marketplaces, and out-of-home advertising."
+          description="Seven projects spanning civic tech, wellness, campus safety, marketplaces, out-of-home advertising, and campaign concepting."
         />
 
         <div className="flex flex-wrap gap-3">

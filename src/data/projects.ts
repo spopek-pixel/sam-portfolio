@@ -580,7 +580,6 @@ export const projects: Project[] = [
     accent: 'acid',
     variant: 'gallery',
     featured: false,
-    hidden: true,
     problem:
       "Most \"meet new people\" advertising talks around the actual discomfort of making friends as an adult instead of naming it directly.",
     research: [],
