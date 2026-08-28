@@ -233,65 +233,6 @@ export const projects: Project[] = [
     deliverables: bumbleConcept.skills,
   },
   {
-    slug: 'dragonfly-yoga',
-    title: 'Dragonfly Yoga',
-    tagline: 'Turning a dead-end booking flow into a system that keeps people coming back.',
-    description:
-      'A calm, personalized redesign of Dragonfly Hot Yoga\'s booking app, reimagining onboarding, booking, and waitlists around building a consistent practice.',
-    category: ['Product'],
-    role: 'UX Designer & Product Strategist',
-    team: 'Solo project',
-    timeline: 'Jan 2026 - Present',
-    tools: ['Figma', 'FigJam', 'Claude', 'ChatGPT', 'Miro'],
-    accent: 'violet',
-    variant: 'case-study',
-    featured: true,
-    summary: {
-      problem:
-        "Dragonfly's booking app had no answer for a full class: no waitlist, no suggested alternative, quietly costing the studio its most valuable behavior, members building a consistent practice.",
-      challenge:
-        'Redesign booking, onboarding, and waitlists so a full class becomes a redirect instead of a dead end, and new members get an on-ramp the app never gave them.',
-      solution:
-        'A mobile-first prototype built around a "Suggested for You" feed and waitlists that always pair with a real, bookable alternative, with every AI recommendation showing its reasoning in plain language.',
-    },
-    problem:
-      "Dragonfly's booking app worked fine right up until a class filled up, and then it just stopped. No waitlist, no suggested alternative, no acknowledgment that the member had shown up at all. That dead end, more than any single interface complaint, was quietly costing the studio its most valuable behavior: people building a consistent practice. How might we help members book and manage classes so they stay motivated to keep showing up, not just today, but next month?",
-    research: [
-      'Quick access to schedules, live availability, and instructor bios was the #1 mobile ask: most sessions were under 90 seconds, booked between other tasks',
-      'Cancellations, reminders, and confirmations were the single biggest source of confusion in a review of member support requests',
-      'New members had no clear on-ramp into class types, difficulty levels, or membership options. The app assumed a familiarity with the studio that first-timers simply didn\'t have',
-    ],
-    process: [
-      {
-        title: 'Ideation with an AI thinking partner',
-        body: "Used Claude to pressure-test problem framings before committing to a direction, deliberately asking it to argue the power user's perspective and the first-timer's perspective back to back, which surfaced edge cases a single-perspective brainstorm would have missed.",
-      },
-      {
-        title: 'Storyboarding',
-        body: "Mapped the emotional arc of a first-time attendee, not just their clicks. The anxiety starts before the app is even open: will I be behind everyone else? Do I have the right shoes? Is this actually the beginner class? A redesign that only fixed the booking flow would have missed where the real friction started.",
-      },
-      {
-        title: 'Task flows, then wireframes',
-        body: 'Sketched five core task flows in FigJam (onboarding, booking a recommended class, handling a full class, managing an existing booking, exploring something new), then wireframed low-fidelity before any visual design, specifically to keep the team arguing about flow instead of color.',
-      },
-      {
-        title: 'High-fidelity, explainability last',
-        body: 'Refined the AI recommendation surfaces only once the underlying flows were solid, so "smart" features were explaining a booking flow that already worked, rather than covering for one that didn\'t.',
-      },
-    ],
-    decisions: [
-      'Built a "Suggested for You" feed instead of trying to fix every identified problem at once: personalization was the single change most likely to reduce the overwhelm new members reported',
-      'Waitlists always pair with a real, bookable alternative class, so hitting a full class is a redirect, not a dead end',
-      'Every AI recommendation shows its reasoning in plain language, like "Because you\'ve booked Core Flow 4 times this month," because a recommendation a member doesn\'t trust is worse than no recommendation at all',
-      'Kept the visual design deliberately calm (soft palette, generous whitespace, consistent component placement) to match the pace of the activity the app exists to support',
-    ],
-    outcome:
-      'The result is a high-fidelity prototype spanning onboarding, booking, and full-class flows, built mobile-first to match how members actually use it, in short sessions, between other things. Next: usability testing with real Dragonfly members, and refining the recommendation engine\'s explainability before it ever touches production data.',
-    reflection:
-      "The biggest shift in my own thinking: reducing uncertainty turned out to matter as much as reducing clicks. A member who feels confident walking into a beginner class is a retention outcome, not just a nicety. AI was most useful here as a sparring partner for the thinking (pressure-testing assumptions), not as a shortcut past doing the thinking myself.",
-    images: imagesFor('dragonfly-yoga', 'dragon_home_1.png', ['dragon-home-case.png']),
-  },
-  {
     slug: 'myoutfront',
     title: 'MyOutfront.com',
     tagline:
@@ -463,6 +404,65 @@ export const projects: Project[] = [
       'High-Fidelity Prototype',
       'Presenting to Stakeholders',
     ],
+  },
+  {
+    slug: 'dragonfly-yoga',
+    title: 'Dragonfly Yoga',
+    tagline: 'Turning a dead-end booking flow into a system that keeps people coming back.',
+    description:
+      'A calm, personalized redesign of Dragonfly Hot Yoga\'s booking app, reimagining onboarding, booking, and waitlists around building a consistent practice.',
+    category: ['Product'],
+    role: 'UX Designer & Product Strategist',
+    team: 'Solo project',
+    timeline: 'Jan 2026 - Present',
+    tools: ['Figma', 'FigJam', 'Claude', 'ChatGPT', 'Miro'],
+    accent: 'violet',
+    variant: 'case-study',
+    featured: true,
+    summary: {
+      problem:
+        "Dragonfly's booking app had no answer for a full class: no waitlist, no suggested alternative, quietly costing the studio its most valuable behavior, members building a consistent practice.",
+      challenge:
+        'Redesign booking, onboarding, and waitlists so a full class becomes a redirect instead of a dead end, and new members get an on-ramp the app never gave them.',
+      solution:
+        'A mobile-first prototype built around a "Suggested for You" feed and waitlists that always pair with a real, bookable alternative, with every AI recommendation showing its reasoning in plain language.',
+    },
+    problem:
+      "Dragonfly's booking app worked fine right up until a class filled up, and then it just stopped. No waitlist, no suggested alternative, no acknowledgment that the member had shown up at all. That dead end, more than any single interface complaint, was quietly costing the studio its most valuable behavior: people building a consistent practice. How might we help members book and manage classes so they stay motivated to keep showing up, not just today, but next month?",
+    research: [
+      'Quick access to schedules, live availability, and instructor bios was the #1 mobile ask: most sessions were under 90 seconds, booked between other tasks',
+      'Cancellations, reminders, and confirmations were the single biggest source of confusion in a review of member support requests',
+      'New members had no clear on-ramp into class types, difficulty levels, or membership options. The app assumed a familiarity with the studio that first-timers simply didn\'t have',
+    ],
+    process: [
+      {
+        title: 'Ideation with an AI thinking partner',
+        body: "Used Claude to pressure-test problem framings before committing to a direction, deliberately asking it to argue the power user's perspective and the first-timer's perspective back to back, which surfaced edge cases a single-perspective brainstorm would have missed.",
+      },
+      {
+        title: 'Storyboarding',
+        body: "Mapped the emotional arc of a first-time attendee, not just their clicks. The anxiety starts before the app is even open: will I be behind everyone else? Do I have the right shoes? Is this actually the beginner class? A redesign that only fixed the booking flow would have missed where the real friction started.",
+      },
+      {
+        title: 'Task flows, then wireframes',
+        body: 'Sketched five core task flows in FigJam (onboarding, booking a recommended class, handling a full class, managing an existing booking, exploring something new), then wireframed low-fidelity before any visual design, specifically to keep the team arguing about flow instead of color.',
+      },
+      {
+        title: 'High-fidelity, explainability last',
+        body: 'Refined the AI recommendation surfaces only once the underlying flows were solid, so "smart" features were explaining a booking flow that already worked, rather than covering for one that didn\'t.',
+      },
+    ],
+    decisions: [
+      'Built a "Suggested for You" feed instead of trying to fix every identified problem at once: personalization was the single change most likely to reduce the overwhelm new members reported',
+      'Waitlists always pair with a real, bookable alternative class, so hitting a full class is a redirect, not a dead end',
+      'Every AI recommendation shows its reasoning in plain language, like "Because you\'ve booked Core Flow 4 times this month," because a recommendation a member doesn\'t trust is worse than no recommendation at all',
+      'Kept the visual design deliberately calm (soft palette, generous whitespace, consistent component placement) to match the pace of the activity the app exists to support',
+    ],
+    outcome:
+      'The result is a high-fidelity prototype spanning onboarding, booking, and full-class flows, built mobile-first to match how members actually use it, in short sessions, between other things. Next: usability testing with real Dragonfly members, and refining the recommendation engine\'s explainability before it ever touches production data.',
+    reflection:
+      "The biggest shift in my own thinking: reducing uncertainty turned out to matter as much as reducing clicks. A member who feels confident walking into a beginner class is a retention outcome, not just a nicety. AI was most useful here as a sparring partner for the thinking (pressure-testing assumptions), not as a shortcut past doing the thinking myself.",
+    images: imagesFor('dragonfly-yoga', 'dragon_home_1.png', ['dragon-home-case.png']),
   },
   {
     slug: 'aivy',
