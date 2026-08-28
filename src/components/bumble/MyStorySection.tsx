@@ -1,6 +1,5 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ArrowLeft, ArrowRight } from 'lucide-react'
 import type { bumbleConcept } from '@/data/bumbleConcept'
 import { Reveal } from '@/components/ui/Reveal'
 import { Lightbox } from '@/components/ui/Lightbox'
@@ -33,44 +32,21 @@ function TextBlock({ entry }: { entry: TimelineEntry }) {
   )
 }
 
-function ImageBlock({ entry, imageSide }: { entry: TimelineEntry; imageSide: 'left' | 'right' }) {
+function ImageBlock({ entry }: { entry: TimelineEntry }) {
   if (!('image' in entry) || !entry.image) return null
 
-  const thumb = (
-    <div className="max-w-full">
+  return (
+    <div className="mx-auto mt-4 max-w-full sm:mt-0">
       <Lightbox src={imageById[entry.image]} alt="">
         <img
           src={imageById[entry.image]}
           alt=""
-          className="h-auto max-h-[300px] w-auto max-w-full rounded-xl border border-line sm:max-h-[460px]"
+          className="mx-auto h-auto max-h-[300px] w-auto max-w-full rounded-xl border border-line sm:max-h-[460px]"
           loading="lazy"
         />
       </Lightbox>
       {'caption' in entry && entry.caption && (
         <p className="mt-2 text-center text-[11px] leading-snug text-fg-muted">{entry.caption}</p>
-      )}
-    </div>
-  )
-
-  const arrow =
-    imageSide === 'left' ? (
-      <ArrowRight size={18} className="hidden shrink-0 text-violet-tint sm:block" />
-    ) : (
-      <ArrowLeft size={18} className="hidden shrink-0 text-violet-tint sm:block" />
-    )
-
-  return (
-    <div className="mt-4 flex items-center justify-center gap-3 sm:mt-0">
-      {imageSide === 'left' ? (
-        <>
-          {thumb}
-          {arrow}
-        </>
-      ) : (
-        <>
-          {arrow}
-          {thumb}
-        </>
       )}
     </div>
   )
@@ -115,7 +91,7 @@ export function MyStorySection({ story }: { story: Story }) {
                     </div>
                     {hasImage && (
                       <div className={cn('flex justify-center sm:row-start-1', isRight ? 'sm:col-start-1' : 'sm:col-start-2')}>
-                        <ImageBlock entry={entry} imageSide={isRight ? 'left' : 'right'} />
+                        <ImageBlock entry={entry} />
                       </div>
                     )}
                   </div>

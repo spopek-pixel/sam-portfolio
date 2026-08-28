@@ -12,7 +12,7 @@ export function DesignDecisions({ decisions }: { decisions: Decisions }) {
       <div className="mx-auto max-w-6xl">
         <SectionHeading kicker={decisions.kicker} title={decisions.title} description={decisions.intro} className="mb-12" />
 
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-start">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
           <Reveal>
             <div className="overflow-hidden rounded-2xl border border-line">
               <img src={bffBillboard} alt="Billboard for the campaign" className="h-auto w-full" loading="lazy" />

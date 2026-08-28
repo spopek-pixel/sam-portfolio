@@ -209,6 +209,61 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: 'bumble-bff-concept',
+    title: 'Bumble BFF — Concept Campaign',
+    tagline:
+      "A self-initiated concept campaign for Bumble's BFF mode: one idea, adapted across OOH, social, and push. Not commissioned by Bumble.",
+    category: ['Visual'],
+    role: 'Concept Copywriter & Designer',
+    timeline: 'Self-initiated, 2026',
+    team: 'Solo, self-initiated',
+    tools: ['Figma', 'Copywriting', 'Brand Strategy'],
+    accent: 'acid',
+    variant: 'gallery',
+    featured: true,
+    problem:
+      "Most \"meet new people\" advertising talks around the actual discomfort of making friends as an adult instead of naming it directly.",
+    research: [],
+    process: [],
+    decisions: [],
+    outcome:
+      'A four-touchpoint concept campaign (OOH, a second billboard, social, and push), one idea carried in one voice across every context, built to demonstrate campaign and copy thinking, not a delivered Bumble asset.',
+    reflection: bumbleConcept.rationale,
+    images: imagesFor('bumble-bff-concept', 'bff-billboard.png'),
+    deliverables: bumbleConcept.skills,
+  },
+  {
+    slug: 'outfront-media-graphics',
+    title: 'OUTFRONT Media Graphics',
+    tagline: 'Four brands, four out-of-home campaigns, one summer.',
+    category: ['Visual'],
+    role: 'Graphic Design Intern',
+    timeline: 'Summer 2023',
+    team: 'Solo per client, collaborating with a multi-region graphic design team on Pike Nurseries',
+    tools: ['Adobe Photoshop', 'Adobe Illustrator'],
+    accent: 'acid',
+    variant: 'gallery',
+    featured: true,
+    summary: {
+      problem:
+        'Out-of-home advertising gives you one constraint that overrides everything else: a seven-second glance from a moving bus. Four different clients, four different briefs, one summer to ship all of them.',
+      challenge:
+        'Design for instant legibility on real transit placements, not portfolio polish, across brands with nothing in common but the deadline.',
+      solution:
+        'Four shipped campaigns (bus kings, a billboard, an animated liveboard, a bus wrap), each built to a real client brief and running on actual New York City buses within the summer.',
+    },
+    problem:
+      "Out-of-home advertising gives you one constraint that overrides everything else: a seven-second glance from a moving bus, or a few seconds at a red light. If a design doesn't land instantly (no time to read a paragraph, no time to squint at a logo), it doesn't work, regardless of how it looks in a portfolio.",
+    research: [],
+    process: [],
+    decisions: [],
+    outcome: 'Four shipped out-of-home campaigns, each built to a real client brief and a real deadline.',
+    reflection:
+      "This internship shaped how I approach design today. Seeing four campaigns actually running on New York City buses taught me to think past visuals and toward clear communication under a real constraint: if it didn't land in seven seconds, it didn't work.",
+    images: imagesFor('outfront-media-graphics', 'outfront.jpg'),
+    deliverables: ['Bus king ads', 'Bus rear king', 'Billboard', 'Animated liveboard', 'Bus wrap', 'Mobile ads'],
+  },
+  {
     slug: 'dragonfly-yoga',
     title: 'Dragonfly Yoga',
     tagline: 'Turning a dead-end booking flow into a system that keeps people coming back.',
@@ -536,61 +591,7 @@ export const projects: Project[] = [
       "Good design isn't about adding more. Cutting the selling flow was the single decision that made the rest of the product make sense. Everything downstream got simpler once that one thing was gone.",
     images: imagesFor('teklo', 'teklo_home.png'),
   },
-  {
-    slug: 'outfront-media-graphics',
-    title: 'OUTFRONT Media Graphics',
-    tagline: 'Four brands, four out-of-home campaigns, one summer.',
-    category: ['Visual'],
-    role: 'Graphic Design Intern',
-    timeline: 'Summer 2023',
-    team: 'Solo per client, collaborating with a multi-region graphic design team on Pike Nurseries',
-    tools: ['Adobe Photoshop', 'Adobe Illustrator'],
-    accent: 'acid',
-    variant: 'gallery',
-    featured: false,
-    summary: {
-      problem:
-        'Out-of-home advertising gives you one constraint that overrides everything else: a seven-second glance from a moving bus. Four different clients, four different briefs, one summer to ship all of them.',
-      challenge:
-        'Design for instant legibility on real transit placements, not portfolio polish, across brands with nothing in common but the deadline.',
-      solution:
-        'Four shipped campaigns (bus kings, a billboard, an animated liveboard, a bus wrap), each built to a real client brief and running on actual New York City buses within the summer.',
-    },
-    problem:
-      "Out-of-home advertising gives you one constraint that overrides everything else: a seven-second glance from a moving bus, or a few seconds at a red light. If a design doesn't land instantly (no time to read a paragraph, no time to squint at a logo), it doesn't work, regardless of how it looks in a portfolio.",
-    research: [],
-    process: [],
-    decisions: [],
-    outcome: 'Four shipped out-of-home campaigns, each built to a real client brief and a real deadline.',
-    reflection:
-      "This internship shaped how I approach design today. Seeing four campaigns actually running on New York City buses taught me to think past visuals and toward clear communication under a real constraint: if it didn't land in seven seconds, it didn't work.",
-    images: imagesFor('outfront-media-graphics', 'outfront.jpg'),
-    deliverables: ['Bus king ads', 'Bus rear king', 'Billboard', 'Animated liveboard', 'Bus wrap', 'Mobile ads'],
-  },
-  {
-    slug: 'bumble-bff-concept',
-    title: 'Bumble BFF — Concept Campaign',
-    tagline:
-      "A self-initiated concept campaign for Bumble's BFF mode: one idea, adapted across OOH, social, and push. Not commissioned by Bumble.",
-    category: ['Visual'],
-    role: 'Concept Copywriter & Designer',
-    timeline: 'Self-initiated, 2026',
-    team: 'Solo, self-initiated',
-    tools: ['Figma', 'Copywriting', 'Brand Strategy'],
-    accent: 'acid',
-    variant: 'gallery',
-    featured: false,
-    problem:
-      "Most \"meet new people\" advertising talks around the actual discomfort of making friends as an adult instead of naming it directly.",
-    research: [],
-    process: [],
-    decisions: [],
-    outcome:
-      'A four-touchpoint concept campaign (OOH, a second billboard, social, and push), one idea carried in one voice across every context, built to demonstrate campaign and copy thinking, not a delivered Bumble asset.',
-    reflection: bumbleConcept.rationale,
-    images: imagesFor('bumble-bff-concept', 'bff-billboard.png'),
-    deliverables: bumbleConcept.skills,
-  },
+
 ]
 
 export const visibleProjects = projects.filter((project) => !project.hidden)
