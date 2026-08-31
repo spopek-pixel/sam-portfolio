@@ -227,7 +227,7 @@ export const projects: Project[] = [
     process: [],
     decisions: [],
     outcome:
-      'A four-touchpoint concept campaign (OOH, a second billboard, social, and push), one idea carried in one voice across every context, built to demonstrate campaign and copy thinking, not a delivered Bumble asset.',
+      'A five-touchpoint concept campaign (billboard, bus wrap, transit shelter, social, and push), one idea carried in one voice across every context, built to demonstrate campaign and copy thinking, not a delivered Bumble asset.',
     reflection: bumbleConcept.rationale,
     images: imagesFor('bumble-bff-concept', 'bff-billboard.png'),
     deliverables: bumbleConcept.skills,

@@ -142,13 +142,22 @@ export const bumbleConcept = {
       why: 'Same line, a completely different context: a bus wrap competes with an actual moving city instead of an empty skyline, so the chat bubbles have to catch a glance the billboard never had to fight for.',
     },
     {
+      id: 'ooh-transit-shelter',
+      channel: 'OOH — Transit shelter',
+      format: 'billboard' as const,
+      image: 'bff-bus-poster.png',
+      headline: 'wait... how did we just meet?',
+      support: 'find your groupchat IRL',
+      why: "This one leans straight into the actual texture of meeting someone through the app: a real photo strip, a real thread ('wanna get food?' / 'I have no money' / 'me neither lol'), and a QR code that goes straight to the group chat that started it. The conversation is what turns two strangers into friends, not the app icon, so the conversation is the whole ad.",
+    },
+    {
       id: 'social',
-      channel: 'Social — Caption',
+      channel: 'Social — Post',
       format: 'social' as const,
-      image: undefined as string | undefined,
-      headline: 'POV: the group chat you built through an app somehow got realer than half the people you already knew.',
+      image: 'bff-social.png',
+      headline: 'Your next inside joke starts here.',
       support: '',
-      why: 'Social gets to sound like a text from a friend, not an ad. POV format is native to how this exact feeling already gets posted, so the copy borrows the platform\'s own voice instead of importing a billboard voice into a feed.',
+      why: 'The inside jokes only exist because a conversation happened first: "the call incident," "do NOT let her order." Texting is how a stranger actually becomes a friend, so the post reads like the group chat itself, not an ad describing one.',
     },
     {
       id: 'push',
@@ -162,7 +171,7 @@ export const bumbleConcept = {
   ],
 
   rationale:
-    "Find your group chat IRL came out of noticing that my own Bumble BFF friendships stopped feeling like one-on-one matches almost immediately; they became a group chat, then a standing plan, then people I actually call. The voice stays conversational and a little messy on purpose, the way real group chats are, and each execution adapts to where someone actually encounters it: a billboard with room to let a thread breathe, a bus wrap competing with a real street, something that reads like a text from a friend on social, and something short enough to survive being a phone-lock-screen interruption. One idea, one real feeling, carried across every context.",
+    "Find your group chat IRL came out of noticing that my own Bumble BFF friendships stopped feeling like one-on-one matches almost immediately; they became a group chat, then a standing plan, then people I actually call. The voice stays conversational and a little messy on purpose, the way real group chats are, and each execution adapts to where someone actually encounters it: a billboard with room to let a thread breathe, a bus wrap and transit shelter competing with a real street, something that reads like a text from a friend on social, and something short enough to survive being a phone-lock-screen interruption. Underneath all of it is the same belief: texting is not a lesser version of meeting someone, it's the actual mechanism of connection, the part where two strangers become friends. So the campaign never shows a swipe or a match screen, only the conversation that comes after, because that's the part that's real.",
 
   skills: ['Campaign Concepting', 'Copywriting', 'OOH Design', 'Social Content', 'Brand Voice', 'Creative Direction'],
 }

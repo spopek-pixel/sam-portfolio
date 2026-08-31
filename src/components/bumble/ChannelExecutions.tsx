@@ -5,12 +5,16 @@ import { Lightbox } from '@/components/ui/Lightbox'
 import { cn } from '@/lib/utils'
 import bffBillboard from '@/assets/images/projects/bumble-bff-concept/bff-billboard.png'
 import bffBuswrap from '@/assets/images/projects/bumble-bff-concept/bff-buswrap.png'
+import bffBusPoster from '@/assets/images/projects/bumble-bff-concept/bff-bus-poster.png'
+import bffSocial from '@/assets/images/projects/bumble-bff-concept/bff-social.png'
 
 type Channel = (typeof bumbleConcept)['channels'][number]
 
 const imageMap: Record<string, string> = {
   'bff-billboard.png': bffBillboard,
   'bff-buswrap.png': bffBuswrap,
+  'bff-bus-poster.png': bffBusPoster,
+  'bff-social.png': bffSocial,
 }
 
 function Mockup({ channel }: { channel: Channel }) {
@@ -83,7 +87,7 @@ export function ChannelExecutions({ channels }: { channels: Channel[] }) {
     <section className="px-6 py-10 sm:px-14 sm:py-16">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          kicker="One idea, four contexts"
+          kicker="One idea, five contexts"
           title="Same voice, different rooms."
           className="mb-12"
         />
