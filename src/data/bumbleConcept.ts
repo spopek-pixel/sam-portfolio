@@ -6,36 +6,36 @@ export const bumbleConcept = {
       {
         label: 'The move',
         title: 'New state, zero friends',
-        body: "I moved to Wisconsin for grad school **knowing no one**. My program was small, only about fifteen people, and between classes and everyone already living their own lives, nobody was really looking to build a social life outside of school.",
+        body: "I moved to Wisconsin for grad school **knowing no one**. My program was tiny, and everyone already had their own lives outside of class.",
       },
       {
         label: 'Month one',
         title: "Homesick for a life I hadn't built",
-        body: "I spent my first month in a new, unfamiliar city with genuine FOMO: watching everyone else's weekends happen without me, **feeling small in a place that suddenly felt very big**. It's a strange kind of homesick, missing a social life you haven't built yet.",
+        body: "My first month was genuine FOMO: watching everyone else's weekends happen without me, **feeling small in a place that suddenly felt very big**.",
       },
       {
         label: 'Trying BFF',
         title: "That's how I met Sarah",
-        body: "I started messaging people on Bumble BFF, being upfront about wanting real friends, not just acquaintances, and showing up to meet them. **That's how I met Sarah.** She was finishing her senior year studying business while I was starting a master's in technology and design, two completely different worlds, and we became inseparable almost immediately.",
+        body: "I started messaging people on Bumble BFF, upfront about wanting real friends. **That's how I met Sarah** — a completely different world from mine, and we became inseparable almost immediately.",
         image: 'instagram-sarah',
         caption: 'My first message to Sarah, after finding her Instagram through her Bumble BFF profile',
       },
       {
         label: 'More than one',
         title: 'Megan, Lexi, and a group chat',
-        body: "Through BFF I also met a handful of other amazing women, like **Megan and Lexi**, who I still go out with regularly. What started as one-off meetups turned into **a standing group chat of our own**, the kind where someone asks if anyone's free Friday and three people show up within the hour.",
+        body: "Through BFF I also met **Megan and Lexi**. One-off meetups turned into **a standing group chat of our own** — the kind where someone asks if anyone's free Friday and three people show up.",
         image: 'friends',
         caption: 'Two of the friends I matched and connected with',
       },
       {
         label: 'Today',
         title: 'Different city, same friendship',
-        body: "Sarah has since graduated and moved to Chicago, and I'm still in Wisconsin, but **we FaceTime every week without fail**. I think about how different that first lonely month would have looked if I'd never opened the app, and I'm genuinely thankful for it, not as a brand I'm pitching to, but as something that changed what my life here actually looks like.",
+        body: "Sarah's since moved to Chicago, but **we FaceTime every week without fail**. I'm genuinely thankful for the app, not as a brand I'm pitching, but for what it actually changed.",
       },
       {
         label: 'Why this campaign',
         title: 'Lived it, not guessed it',
-        body: "That's the real reason I wanted to design something for this feature instead of picking a product I don't actually use: **I've lived exactly the problem BFF mode solves.** The campaign below isn't guesswork about what a lonely grad student might feel. It's what I felt, translated into a few lines of copy.",
+        body: "**I've lived exactly the problem BFF mode solves.** This campaign isn't guesswork about a lonely grad student. It's what I felt, translated into copy.",
       },
     ],
     finale: {
@@ -69,24 +69,24 @@ export const bumbleConcept = {
         {
           number: '01',
           title: 'Making the first move',
-          body: "Bumble started with one rule: whoever matches has to message first. That usually gets talked about as a dating thing, but it's really about **who gets to start the conversation**, and BFF asks the exact same thing of you.",
+          body: 'Whoever matches has to message first. Usually framed as dating advice, but really it\'s about **who gets to start the conversation** — and BFF asks the same of you.',
         },
         {
           number: '02',
           title: 'One mission, not just one kind of relationship',
-          body: "Their actual mission is a world where every relationship is healthy, not just romantic ones. Reading that is what made BFF click for me: **it's not a side feature bolted onto a dating app**, it's the same mission pointed at friendship.",
+          body: "Their mission: a world where every relationship is healthy, not just romantic ones. **Not a side feature bolted onto a dating app** — the same mission, pointed at friendship.",
         },
         {
           number: '03',
           title: 'Kindness is a feature, not a slogan',
-          body: "Moderation, reporting, the \"Be Kind\" prompts: none of that is just a values page. **It's built so people actually want to keep talking to each other**, which is exactly the tone I wanted the whole campaign to have.",
+          body: '"Be Kind" prompts, blocking, reporting — none of it\'s just a values page. **It\'s built so people actually want to keep talking**, the exact tone I wanted for the campaign.',
         },
       ],
     },
     origin: {
       kicker: 'Where it came from',
       title: 'I pulled it straight from my own phone.',
-      body: "Once I had that insight, I opened my own texts with Sarah, Megan, Odessa, and Lexi to see what that connection actually looks like. **The idea came from putting real conversation into the graphics themselves** instead of a stock photo of two strangers smiling over coffee: real slang, real inside jokes, real half-finished sentences. That's where the group-chat bubbles, the messy lowercase voice, and the whole \"find your group chat IRL\" line came from.",
+      body: "I opened my own texts with Sarah, Megan, Odessa, and Lexi. **The idea came from putting real conversation into the graphics themselves** — real slang, real inside jokes, real half-finished sentences — instead of a stock photo of two strangers over coffee.",
       pullQuote: "It's not a mood board. It's my group chat.",
     },
   },
@@ -94,7 +94,7 @@ export const bumbleConcept = {
   bigIdea: 'Find your group chat IRL.',
 
   brief:
-    "The friendships I actually made through Bumble BFF didn't stay one-on-one, **they turned into a group chat**. So instead of the usual \"meet someone new\" pitch, the campaign leans straight into that: every execution is styled around a real-feeling group chat, and the messages running through them are close to word-for-word from actual threads with friends I met on the app.",
+    "My BFF friendships didn't stay one-on-one, **they turned into a group chat**. So every execution is styled around that: a real-feeling thread, with messages close to word-for-word from actual texts with friends I met on the app.",
 
   designDecisions: {
     kicker: 'Design decisions',

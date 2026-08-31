@@ -76,7 +76,7 @@ function Mockup({ channel }: { channel: Channel }) {
 
 export function ChannelExecutions({ channels }: { channels: Channel[] }) {
   return (
-    <section className="px-6 py-10 sm:px-14 sm:py-16">
+    <section id="executions" className="px-6 py-10 sm:px-14 sm:py-16">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           kicker="One idea, four contexts"
