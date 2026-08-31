@@ -83,18 +83,12 @@ export const bumbleConcept = {
         },
       ],
     },
-    origin: {
-      kicker: 'Where it came from',
-      title: 'I pulled it straight from my own phone.',
-      body: "I opened my own texts with Sarah, Megan, Odessa, and Lexi. **The idea came from putting real conversation into the graphics themselves** — real slang, real inside jokes, real half-finished sentences — instead of a stock photo of two strangers over coffee.",
-      pullQuote: "It's not a mood board. It's my group chat.",
-    },
   },
 
   bigIdea: 'Find your group chat IRL.',
 
   brief:
-    "My BFF friendships didn't stay one-on-one, **they turned into a group chat**. So every execution is styled around that: a real-feeling thread, with messages close to word-for-word from actual texts with friends I met on the app.",
+    "My BFF friendships didn't stay one-on-one, **they turned into a group chat**. I pulled the concept straight from my own phone: real texts with Sarah, Megan, Odessa, and Lexi, real slang, real inside jokes, real half-finished sentences, instead of a stock photo of two strangers over coffee. So every execution is styled around that same energy, with messages close to word-for-word from actual conversations. **It's not a mood board. It's my group chat.**",
 
   designDecisions: {
     kicker: 'Design decisions',

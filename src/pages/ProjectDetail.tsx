@@ -216,7 +216,7 @@ export default function ProjectDetail() {
         <SneakPeek channels={bumbleConcept.channels} />
         <MyStorySection story={bumbleConcept.myStory} />
         <CampaignInsight research={bumbleConcept.insight.research} />
-        <BigIdeaSection idea={bumbleConcept.bigIdea} brief={bumbleConcept.brief} origin={bumbleConcept.insight.origin} />
+        <BigIdeaSection idea={bumbleConcept.bigIdea} brief={bumbleConcept.brief} />
         <DesignDecisions decisions={bumbleConcept.designDecisions} />
         <ChannelExecutions channels={bumbleConcept.channels} />
         <Deliverables

@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import type { bumbleConcept } from '@/data/bumbleConcept'
-import { Reveal } from '@/components/ui/Reveal'
+import { SectionHeading } from '@/components/ui/SectionHeading'
 import bffBillboard from '@/assets/images/projects/bumble-bff-concept/bff-billboard.png'
 import bffBuswrap from '@/assets/images/projects/bumble-bff-concept/bff-buswrap.png'
 import bffBusPoster from '@/assets/images/projects/bumble-bff-concept/bff-bus-poster.png'
@@ -19,26 +19,20 @@ export function SneakPeek({ channels }: { channels: Channel[] }) {
   const cards = channels.filter((channel) => channel.image)
 
   return (
-    <section className="px-6 pb-10 sm:px-14 sm:pb-16">
-      <div className="mx-auto max-w-6xl">
-        <Reveal>
-          <span className="kicker">A sneak peek</span>
-        </Reveal>
+    <section className="pb-10 sm:pb-16">
+      <div className="mx-auto max-w-6xl px-6 sm:px-14">
+        <SectionHeading kicker="A sneak peek" title="Here's what it actually looks like." className="mb-8" />
       </div>
 
-      <div className="mt-6 overflow-x-auto border-y border-line py-8">
-        <div className="mx-auto flex w-max min-w-full justify-center gap-6 px-6">
+      <div className="overflow-x-auto border-y border-line py-8">
+        <div className="flex w-max gap-6 px-6 sm:px-14">
           {cards.map((channel) => (
-            <a
-              key={channel.id}
-              href={`#${channel.id}`}
-              className="group flex w-56 shrink-0 flex-col gap-2.5 sm:w-64"
-            >
-              <div className="aspect-[3/4] w-full overflow-hidden rounded-xl border border-line shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
+            <a key={channel.id} href={`#${channel.id}`} className="group flex w-fit shrink-0 flex-col gap-2.5">
+              <div className="h-56 w-fit overflow-hidden rounded-xl border border-line shadow-[0_15px_35px_rgba(0,0,0,0.4)] sm:h-64">
                 <img
                   src={imageMap[channel.image as string]}
                   alt=""
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="h-full w-auto transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
                 />
               </div>
