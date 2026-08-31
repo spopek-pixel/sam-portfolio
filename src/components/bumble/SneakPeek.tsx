@@ -40,7 +40,7 @@ export function SneakPeek({ channels }: { channels: Channel[] }) {
   }, [distance, reducedMotion, controls])
 
   return (
-    <section className="pb-10 sm:pb-16">
+    <section className="pt-10 pb-10 sm:pt-16 sm:pb-16">
       <div className="mx-auto max-w-6xl px-6 sm:px-14">
         <SectionHeading kicker="A sneak peek" title="Here's what it actually looks like." className="mb-8" />
       </div>

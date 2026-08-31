@@ -154,7 +154,7 @@ export const bumbleConcept = {
       image: 'bff-billboard.png',
       headline: 'Find your group chat IRL.',
       support: '',
-      why: "The same commuter sees this billboard twice a day, so I let the full four-message thread play out instead of cutting it to one line. A near-empty sky keeps the focus on the thread instead of competing with it. The messages themselves are close to word-for-word from a real conversation with friends I met through BFF.",
+      why: "At OUTFRONT Media I learned that a commuter passing a billboard has about seven seconds to actually notice it, so the tagline has to stick immediately. That's why \"Find your group chat IRL.\" stays short and repeats across every execution. I used a real text thread instead of stock ad copy, so what someone catches in those seven seconds actually feels true.",
     },
     {
       id: 'ooh-buswrap',
@@ -163,7 +163,7 @@ export const bumbleConcept = {
       image: 'bff-buswrap.png',
       headline: 'Find your group chat IRL.',
       support: '',
-      why: "A bus wrap has to compete with real traffic and signage, not empty sky. I kept the same message and layout as the billboard, for consistency, but let the yellow do more of the work here since there's less visual room to spare.",
+      why: "Same seven-second rule, but a bus wrap gets even less of it, competing with real traffic and signage instead of an empty sky. So I kept it straightforward: same headline, same thread, same layout as the billboard, just louder color contrast to grab attention that much faster.",
     },
     {
       id: 'ooh-transit-shelter',
@@ -172,7 +172,7 @@ export const bumbleConcept = {
       image: 'bff-bus-poster.png',
       headline: 'wait... how did we just meet?',
       support: 'find your groupchat IRL',
-      why: "This is the only placement where someone's standing still, waiting for a bus, not glancing over from a moving car. That extra time is why this one gets more to look at: a real photo strip and a QR code straight to the group chat, on top of the thread. It gives someone something to actually read while they wait.",
+      why: "A transit shelter is different: people are standing still, waiting for a bus, so they actually have time to read. That's why I added a real photo strip and a QR code that leads straight to the app, on top of the thread, giving someone something to actually look at while they wait.",
     },
     {
       id: 'social',
@@ -181,7 +181,7 @@ export const bumbleConcept = {
       image: 'bff-social.png',
       headline: 'Your next inside joke starts here.',
       support: '',
-      why: "An obvious ad gets scrolled past in half a second on social. So this one is built to look like a real post about real friends, inside jokes and all. The small \"bff\" branding is the only thing marking it as an ad at all.",
+      why: "This one had to be engaging enough to stop a scroll, so I used real conversation texts pulled straight from my own threads with friends, plus a tagline built to catch attention fast.",
     },
   ],
 
