@@ -213,10 +213,10 @@ export default function ProjectDetail() {
       <div>
         <CaseStudyHero project={project} />
         <ConceptDisclaimer text={bumbleConcept.disclaimer} />
-        <SneakPeek />
+        <SneakPeek channels={bumbleConcept.channels} />
         <MyStorySection story={bumbleConcept.myStory} />
-        <CampaignInsight insight={bumbleConcept.insight} />
-        <BigIdeaSection idea={bumbleConcept.bigIdea} brief={bumbleConcept.brief} />
+        <CampaignInsight research={bumbleConcept.insight.research} />
+        <BigIdeaSection idea={bumbleConcept.bigIdea} brief={bumbleConcept.brief} origin={bumbleConcept.insight.origin} />
         <DesignDecisions decisions={bumbleConcept.designDecisions} />
         <ChannelExecutions channels={bumbleConcept.channels} />
         <Deliverables

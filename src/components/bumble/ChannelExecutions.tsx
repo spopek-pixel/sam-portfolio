@@ -88,8 +88,9 @@ export function ChannelExecutions({ channels }: { channels: Channel[] }) {
           {channels.map((channel, index) => (
             <Reveal key={channel.id} delay={0.04}>
               <div
+                id={channel.id}
                 className={cn(
-                  'flex flex-col gap-8 md:items-center md:gap-12',
+                  'scroll-mt-28 flex flex-col gap-8 md:items-center md:gap-12',
                   index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row',
                 )}
               >
