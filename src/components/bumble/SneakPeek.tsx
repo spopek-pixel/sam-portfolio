@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion, useMotionValue, animate, type AnimationPlaybackControls } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import type { bumbleConcept } from '@/data/bumbleConcept'
@@ -28,9 +28,20 @@ export function SneakPeek({ channels }: { channels: Channel[] }) {
   const playbackRef = useRef<AnimationPlaybackControls | null>(null)
   const directionRef = useRef<1 | -1>(1)
 
-  useLayoutEffect(() => {
-    if (!containerRef.current || !trackRef.current) return
-    setDistance(Math.max(trackRef.current.scrollWidth - containerRef.current.clientWidth, 0))
+  useEffect(() => {
+    const container = containerRef.current
+    const track = trackRef.current
+    if (!container || !track) return
+
+    const measure = () => {
+      setDistance(Math.max(track.scrollWidth - container.clientWidth, 0))
+    }
+
+    measure()
+    const resizeObserver = new ResizeObserver(measure)
+    resizeObserver.observe(track)
+    resizeObserver.observe(container)
+    return () => resizeObserver.disconnect()
   }, [cards.length])
 
   useEffect(() => {
