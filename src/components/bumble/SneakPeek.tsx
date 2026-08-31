@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { motion, useAnimationControls } from 'framer-motion'
+import { motion, useMotionValue, animate, type AnimationPlaybackControls } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import type { bumbleConcept } from '@/data/bumbleConcept'
 import { SectionHeading } from '@/components/ui/SectionHeading'
@@ -24,7 +24,9 @@ export function SneakPeek({ channels }: { channels: Channel[] }) {
   const trackRef = useRef<HTMLDivElement>(null)
   const [distance, setDistance] = useState(0)
   const reducedMotion = usePrefersReducedMotion()
-  const controls = useAnimationControls()
+  const x = useMotionValue(0)
+  const playbackRef = useRef<AnimationPlaybackControls | null>(null)
+  const directionRef = useRef<1 | -1>(1)
 
   useLayoutEffect(() => {
     if (!containerRef.current || !trackRef.current) return
@@ -33,11 +35,26 @@ export function SneakPeek({ channels }: { channels: Channel[] }) {
 
   useEffect(() => {
     if (reducedMotion || distance <= 0) return
-    controls.start({
-      x: [0, -distance, 0],
-      transition: { duration: Math.max(distance / 30, 10), repeat: Infinity, ease: 'easeInOut' },
-    })
-  }, [distance, reducedMotion, controls])
+    const fullDuration = Math.max(distance / 30, 10)
+
+    const step = () => {
+      const target = directionRef.current === 1 ? -distance : 0
+      const remaining = Math.abs(target - x.get())
+      const duration = (remaining / distance) * fullDuration
+      playbackRef.current = animate(x, target, {
+        duration,
+        ease: 'easeInOut',
+        onComplete: () => {
+          directionRef.current = directionRef.current === 1 ? -1 : 1
+          step()
+        },
+      })
+    }
+
+    step()
+    return () => playbackRef.current?.stop()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [distance, reducedMotion])
 
   return (
     <section className="pt-10 pb-10 sm:pt-16 sm:pb-16">
@@ -48,15 +65,9 @@ export function SneakPeek({ channels }: { channels: Channel[] }) {
       <div ref={containerRef} className="overflow-hidden border-y border-line py-8">
         <motion.div
           ref={trackRef}
-          animate={controls}
-          onHoverStart={() => controls.stop()}
-          onHoverEnd={() => {
-            if (reducedMotion || distance <= 0) return
-            controls.start({
-              x: [0, -distance, 0],
-              transition: { duration: Math.max(distance / 30, 10), repeat: Infinity, ease: 'easeInOut' },
-            })
-          }}
+          style={{ x }}
+          onHoverStart={() => playbackRef.current?.pause()}
+          onHoverEnd={() => playbackRef.current?.play()}
           className="flex w-max gap-6 px-6 sm:px-14"
         >
           {cards.map((channel) => (
