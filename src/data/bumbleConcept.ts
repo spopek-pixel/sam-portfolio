@@ -67,14 +67,17 @@ export const bumbleConcept = {
       title: 'What stood out to me about Bumble.',
       cards: [
         {
+          number: '01',
           title: 'Making the first move',
           body: "Bumble's founding rule (whoever matches has to send the first message) was never really about romance. It's about who gets to start the conversation, and that same idea carries straight into BFF: **you're the one who has to actually say \"hey, wanna get food?\"**",
         },
         {
+          number: '02',
           title: 'One app, every kind of connection',
           body: 'Date, BFF, and Bizz all run on the same belief: **connection isn\'t only romantic.** Bumble built an entire mode just for making friends, because that need is exactly as real.',
         },
         {
+          number: '03',
           title: 'Kindness, built into the mechanics',
           body: '"Be Kind" reminders, blocking, reporting: these aren\'t just community guidelines, **they\'re product decisions.** The app is designed so the conversation stays worth having.',
         },
@@ -83,7 +86,8 @@ export const bumbleConcept = {
     origin: {
       kicker: 'Where it came from',
       title: 'I pulled it straight from my own phone.',
-      body: "Once I had that insight, I opened my own texts with Sarah, Megan, Odessa, and Lexi to see what that connection actually looks like. **The idea came from putting real conversation into the graphics themselves** instead of a stock photo of two strangers smiling over coffee: real slang, real inside jokes, real half-finished sentences. That's where the group-chat bubbles, the messy lowercase voice, and the whole \"find your group chat IRL\" line came from — **it's not a mood board, it's my group chat.**",
+      body: "Once I had that insight, I opened my own texts with Sarah, Megan, Odessa, and Lexi to see what that connection actually looks like. **The idea came from putting real conversation into the graphics themselves** instead of a stock photo of two strangers smiling over coffee: real slang, real inside jokes, real half-finished sentences. That's where the group-chat bubbles, the messy lowercase voice, and the whole \"find your group chat IRL\" line came from.",
+      pullQuote: "It's not a mood board. It's my group chat.",
     },
   },
 
