@@ -6,36 +6,36 @@ export const bumbleConcept = {
       {
         label: 'The move',
         title: 'New state, zero friends',
-        body: "I moved to Wisconsin for grad school **knowing no one**. My program was tiny, and everyone already had their own lives outside of class.",
+        body: "I moved to Wisconsin for grad school **knowing no one**. My program was small, only about fifteen people, and between classes and everyone already living their own lives, nobody was really looking to build a social life outside of school.",
       },
       {
         label: 'Month one',
         title: "Homesick for a life I hadn't built",
-        body: "My first month was genuine FOMO: watching everyone else's weekends happen without me, **feeling small in a place that suddenly felt very big**.",
+        body: "I spent my first month in a new, unfamiliar city with genuine FOMO: watching everyone else's weekends happen without me, **feeling small in a place that suddenly felt very big**. It's a strange kind of homesick, missing a social life you haven't built yet.",
       },
       {
         label: 'Trying BFF',
         title: "That's how I met Sarah",
-        body: "I started messaging people on Bumble BFF, upfront about wanting real friends. **That's how I met Sarah** — a completely different world from mine, and we became inseparable almost immediately.",
+        body: "I started messaging people on Bumble BFF, being upfront about wanting real friends, not just acquaintances, and showing up to meet them. **That's how I met Sarah.** She was finishing her senior year studying business while I was starting a master's in technology and design, two completely different worlds, and we became inseparable almost immediately.",
         image: 'instagram-sarah',
         caption: 'My first message to Sarah, after finding her Instagram through her Bumble BFF profile',
       },
       {
         label: 'More than one',
         title: 'Megan, Lexi, and a group chat',
-        body: "Through BFF I also met **Megan and Lexi**. One-off meetups turned into **a standing group chat of our own** — the kind where someone asks if anyone's free Friday and three people show up.",
+        body: "Through BFF I also met a handful of other amazing women, like **Megan and Lexi**, who I still go out with regularly. What started as one-off meetups turned into **a standing group chat of our own**, the kind where someone asks if anyone's free Friday and three people show up within the hour.",
         image: 'friends',
         caption: 'Two of the friends I matched and connected with',
       },
       {
         label: 'Today',
         title: 'Different city, same friendship',
-        body: "Sarah's since moved to Chicago, but **we FaceTime every week without fail**. I'm genuinely thankful for the app, not as a brand I'm pitching, but for what it actually changed.",
+        body: "Sarah has since graduated and moved to Chicago, and I'm still in Wisconsin, but **we FaceTime every week without fail**. I think about how different that first lonely month would have looked if I'd never opened the app, and I'm genuinely thankful for it, not as a brand I'm pitching to, but as something that changed what my life here actually looks like.",
       },
       {
         label: 'Why this campaign',
         title: 'Lived it, not guessed it',
-        body: "**I've lived exactly the problem BFF mode solves.** This campaign isn't guesswork about a lonely grad student. It's what I felt, translated into copy.",
+        body: "That's the real reason I wanted to design something for this feature instead of picking a product I don't actually use: **I've lived exactly the problem BFF mode solves.** The campaign below isn't guesswork about what a lonely grad student might feel. It's what I felt, translated into a few lines of copy.",
       },
     ],
     finale: {
