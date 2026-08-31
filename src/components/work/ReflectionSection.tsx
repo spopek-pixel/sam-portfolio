@@ -8,7 +8,7 @@ export function ReflectionSection({ reflection }: { reflection: string }) {
           <span className="kicker">Reflection</span>
         </Reveal>
         <Reveal delay={0.1}>
-          <p className="mt-6 max-w-2xl font-display text-2xl leading-snug sm:text-3xl">"{reflection}"</p>
+          <p className="mt-6 font-display text-2xl leading-snug sm:text-3xl">"{reflection}"</p>
         </Reveal>
       </div>
     </section>
