@@ -1,0 +1,47 @@
+{
+  "siteUrl": "https://www.sampopek.com",
+  "pages": [
+    {
+      "slug": "housingkind",
+      "title": "Housingkind — Samantha Popek",
+      "description": "Making invisible housing policy visible, with an AI-powered platform that turns missing-middle housing into something residents can actually picture.",
+      "image": "src/assets/images/projects/housingkind/house-lap.png"
+    },
+    {
+      "slug": "bumble-bff-concept",
+      "title": "Bumble BFF — Concept Campaign — Samantha Popek",
+      "description": "A self-initiated concept campaign for Bumble's BFF mode: one idea, adapted across OOH, social, and push. Not commissioned by Bumble.",
+      "image": "src/assets/images/projects/bumble-bff-concept/bff-billboard.png"
+    },
+    {
+      "slug": "myoutfront",
+      "title": "MyOutfront.com — Samantha Popek",
+      "description": "A self-service ad-submission flow and the payment and account dashboard behind it, designed with OUTFRONT Media's UX team.",
+      "image": "src/assets/images/projects/myoutfront/outfront-home3.gif"
+    },
+    {
+      "slug": "dragonfly-yoga",
+      "title": "Dragonfly Yoga — Samantha Popek",
+      "description": "Turning a dead-end booking flow into a system that keeps people coming back.",
+      "image": "src/assets/images/projects/dragonfly-yoga/dragon_home_1.png"
+    },
+    {
+      "slug": "aivy",
+      "title": "AIVY — Samantha Popek",
+      "description": "A speculative AI ecosystem built with PBS Wisconsin, imagining a future where technology helps people reconnect with each other and the living world.",
+      "image": "src/assets/images/projects/aivy/aivy.png"
+    },
+    {
+      "slug": "teklo",
+      "title": "Teklo — Samantha Popek",
+      "description": "Redesigned a marketplace by simplifying complex shopping decisions and creating a faster product discovery experience through research-driven design.",
+      "image": "src/assets/images/projects/teklo/teklo_home.png"
+    },
+    {
+      "slug": "outfront-media-graphics",
+      "title": "OUTFRONT Media Graphics — Samantha Popek",
+      "description": "Four brands, four out-of-home campaigns, one summer.",
+      "image": "src/assets/images/projects/outfront-media-graphics/outfront.jpg"
+    }
+  ]
+}
