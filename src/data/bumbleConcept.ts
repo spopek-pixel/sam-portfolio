@@ -61,6 +61,21 @@ export const bumbleConcept = {
   disclaimer:
     "Self-initiated concept project, built to demonstrate campaign thinking for a design + copywriting role. Not commissioned by, affiliated with, endorsed by, or reviewed by Bumble. All copy below is my own, written for this exercise, not final Bumble marketing.",
 
+  insight: {
+    beats: [
+      {
+        kicker: 'The research',
+        title: "Bumble isn't selling a match. It's selling the conversation after it.",
+        body: "Every mode Bumble runs (Date, BFF, Bizz) works the same way underneath: the swipe is just the door. **The actual product is the conversation that happens once you're through it** — the thing that turns a stranger into a date, a business contact, or, in BFF's case, a friend. Once I noticed that, building the campaign around a match screen felt backwards. **The connection isn't the match. It's everything you text each other afterward.**",
+      },
+      {
+        kicker: 'Where it came from',
+        title: 'I pulled it straight from my own phone.',
+        body: "Once I had that insight, I opened my own texts with Sarah, Megan, Odessa, and Lexi to see what that connection actually looks like. **The idea came from putting real conversation into the graphics themselves** instead of a stock photo of two strangers smiling over coffee: real slang, real inside jokes, real half-finished sentences. That's where the group-chat bubbles, the messy lowercase voice, and the whole \"find your group chat IRL\" line came from — **it's not a mood board, it's my group chat.**",
+      },
+    ],
+  },
+
   bigIdea: 'Find your group chat IRL.',
 
   brief:

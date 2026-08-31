@@ -20,6 +20,35 @@ const imageMap: Record<string, string> = {
 function Mockup({ channel }: { channel: Channel }) {
   const realImage = channel.image ? imageMap[channel.image] : undefined
 
+  if (channel.format === 'social') {
+    return (
+      <div className="mx-auto flex w-full max-w-[280px] flex-col overflow-hidden rounded-3xl border border-line bg-surface">
+        <div className="flex items-center gap-2 border-b border-line px-3 py-2.5">
+          <span className="h-6 w-6 shrink-0 rounded-full bg-gradient-to-br from-violet to-acid" />
+          <span className="text-xs font-medium">bff</span>
+        </div>
+        {realImage ? (
+          <Lightbox src={realImage} alt={`${channel.channel} mockup: "${channel.headline}"`}>
+            <img src={realImage} alt="" className="aspect-[4/5] w-full object-cover" loading="lazy" />
+          </Lightbox>
+        ) : (
+          <div className="aspect-square w-full bg-gradient-to-br from-violet-deep via-violet to-acid/60" />
+        )}
+        <div className="flex flex-col gap-1.5 px-3 py-3">
+          <div className="flex gap-3 text-fg-muted">
+            <span className="text-lg leading-none">♡</span>
+            <span className="text-lg leading-none">◈</span>
+          </div>
+          {!realImage && (
+            <p className="text-xs leading-relaxed text-fg">
+              <span className="font-semibold">bff</span> {channel.headline}
+            </p>
+          )}
+        </div>
+      </div>
+    )
+  }
+
   if (realImage) {
     return (
       <Lightbox src={realImage} alt={`${channel.channel} mockup: "${channel.headline}"`}>
@@ -41,27 +70,6 @@ function Mockup({ channel }: { channel: Channel }) {
             {channel.headline}
           </p>
           {channel.support && <p className="text-sm text-fg/70 sm:text-base">{channel.support}</p>}
-        </div>
-      </div>
-    )
-  }
-
-  if (channel.format === 'social') {
-    return (
-      <div className="mx-auto flex w-full max-w-[280px] flex-col overflow-hidden rounded-3xl border border-line bg-surface">
-        <div className="flex items-center gap-2 border-b border-line px-3 py-2.5">
-          <span className="h-6 w-6 shrink-0 rounded-full bg-gradient-to-br from-violet to-acid" />
-          <span className="text-xs font-medium">bff</span>
-        </div>
-        <div className="aspect-square w-full bg-gradient-to-br from-violet-deep via-violet to-acid/60" />
-        <div className="flex flex-col gap-1.5 px-3 py-3">
-          <div className="flex gap-3 text-fg-muted">
-            <span className="text-lg leading-none">♡</span>
-            <span className="text-lg leading-none">◈</span>
-          </div>
-          <p className="text-xs leading-relaxed text-fg">
-            <span className="font-semibold">bff</span> {channel.headline}
-          </p>
         </div>
       </div>
     )

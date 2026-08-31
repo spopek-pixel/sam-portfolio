@@ -221,6 +221,12 @@ export const projects: Project[] = [
     accent: 'acid',
     variant: 'gallery',
     featured: true,
+    links: [
+      {
+        label: 'Figma',
+        href: 'https://www.figma.com/design/Nq3RO79WiHhQtcsmAAiRiX/Bumble-BFF-Concept-Campaign?node-id=0-1&t=qo65YtxVvInPF5lR-1',
+      },
+    ],
     problem:
       "Most \"meet new people\" advertising talks around the actual discomfort of making friends as an adult instead of naming it directly.",
     research: [],
