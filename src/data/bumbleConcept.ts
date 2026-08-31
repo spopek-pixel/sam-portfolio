@@ -64,22 +64,22 @@ export const bumbleConcept = {
   insight: {
     research: {
       kicker: 'The research',
-      title: 'What stood out to me about Bumble.',
+      title: 'Bumble already believed this. I just designed for it.',
       cards: [
         {
           number: '01',
           title: 'Making the first move',
-          body: "Bumble's founding rule (whoever matches has to send the first message) was never really about romance. It's about who gets to start the conversation, and that same idea carries straight into BFF: **you're the one who has to actually say \"hey, wanna get food?\"**",
+          body: "Bumble started with one rule: whoever matches has to message first. That usually gets talked about as a dating thing, but it's really about **who gets to start the conversation**, and BFF asks the exact same thing of you.",
         },
         {
           number: '02',
-          title: 'One app, every kind of connection',
-          body: 'Date, BFF, and Bizz all run on the same belief: **connection isn\'t only romantic.** Bumble built an entire mode just for making friends, because that need is exactly as real.',
+          title: 'One mission, not just one kind of relationship',
+          body: "Their actual mission is a world where every relationship is healthy, not just romantic ones. Reading that is what made BFF click for me: **it's not a side feature bolted onto a dating app**, it's the same mission pointed at friendship.",
         },
         {
           number: '03',
-          title: 'Kindness, built into the mechanics',
-          body: '"Be Kind" reminders, blocking, reporting: these aren\'t just community guidelines, **they\'re product decisions.** The app is designed so the conversation stays worth having.',
+          title: 'Kindness is a feature, not a slogan',
+          body: "Moderation, reporting, the \"Be Kind\" prompts: none of that is just a values page. **It's built so people actually want to keep talking to each other**, which is exactly the tone I wanted the whole campaign to have.",
         },
       ],
     },

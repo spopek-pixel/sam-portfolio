@@ -11,7 +11,7 @@ export function CampaignInsight({ insight }: { insight: Insight }) {
     <section className="px-6 py-10 sm:px-14 sm:py-16">
       <div className="mx-auto flex max-w-6xl flex-col gap-16">
         <div>
-          <SectionHeading kicker={insight.research.kicker} title={insight.research.title} className="mb-8 max-w-2xl" />
+          <SectionHeading kicker={insight.research.kicker} title={insight.research.title} className="mb-8" />
 
           <div className="flex flex-col">
             {insight.research.cards.map((card, index) => (
