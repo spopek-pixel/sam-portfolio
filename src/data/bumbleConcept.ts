@@ -154,7 +154,7 @@ export const bumbleConcept = {
       image: 'bff-billboard.png',
       headline: 'Find your group chat IRL.',
       support: '',
-      why: "A quiet, wide-open backdrop makes a messy, familiar group chat feel like something worth chasing down. The thread on the left ('wanna get food?' / 'I have no money' / 'me neither lol') is close to word-for-word from a real conversation with friends I met through BFF.",
+      why: "Billboards get seen the same way twice a day by the same commuter, so I could afford to let a full four-message thread play out instead of cutting it down to one line, someone catches a different part of the joke each pass. I kept the backdrop nearly empty on purpose: a quiet skyline makes a messy, familiar-feeling thread stand out instead of competing with more visual noise. The thread itself ('wanna get food?' / 'I have no money' / 'me neither lol') is close to word-for-word from an actual conversation with friends I met through BFF, because inventing a funnier fake thread would have undercut the whole point.",
     },
     {
       id: 'ooh-buswrap',
@@ -163,7 +163,7 @@ export const bumbleConcept = {
       image: 'bff-buswrap.png',
       headline: 'Find your group chat IRL.',
       support: '',
-      why: 'Same line, a completely different context: a bus wrap competes with an actual moving city instead of an empty skyline, so the chat bubbles have to catch a glance the billboard never had to fight for.',
+      why: "The billboard could rely on empty sky to make the yellow pop. A bus wrap doesn't get that: it's competing with real traffic, real signage, an actual moving city. So I kept the same message structure, for system consistency, but leaned harder on the color contrast alone to do the work of stopping someone's eye, since there wasn't room to add anything else without it turning into visual noise.",
     },
     {
       id: 'ooh-transit-shelter',
@@ -172,7 +172,7 @@ export const bumbleConcept = {
       image: 'bff-bus-poster.png',
       headline: 'wait... how did we just meet?',
       support: 'find your groupchat IRL',
-      why: "This one leans straight into the actual texture of meeting someone through the app: a real photo strip, a real thread ('wanna get food?' / 'I have no money' / 'me neither lol'), and a QR code that goes straight to the group chat that started it. The conversation is what turns two strangers into friends, not the app icon, so the conversation is the whole ad.",
+      why: "This is the one placement where someone's actually standing still, waiting five or ten minutes for a bus, not glancing over from a moving car. That's the only reason I could justify the extra layer here: a real photo strip and a QR code, stacked on top of the thread. Anywhere else that would be too much to read in the time available. Here it gives someone something to do while they wait, which is the whole point: the conversation is the ad, not the flower logo.",
     },
     {
       id: 'social',
@@ -181,7 +181,7 @@ export const bumbleConcept = {
       image: 'bff-social.png',
       headline: 'Your next inside joke starts here.',
       support: '',
-      why: 'The inside jokes only exist because a conversation happened first: "the call incident," "do NOT let her order." Texting is how a stranger actually becomes a friend, so the post reads like the group chat itself, not an ad describing one.',
+      why: "Everywhere else on this campaign I can get away with an obvious ad layout, because that's what a billboard is supposed to look like. Social doesn't work that way: if it reads like an ad, people scroll past it in half a second. So this one is built to look exactly like something a person would actually post about their friends, inside jokes and all, and the \"bff\" branding does the only job an ad needs to do here: just enough to clock what it's for without breaking the illusion.",
     },
   ],
 
