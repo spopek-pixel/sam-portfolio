@@ -62,18 +62,29 @@ export const bumbleConcept = {
     "Self-initiated concept project, built to demonstrate campaign thinking for a design + copywriting role. Not commissioned by, affiliated with, endorsed by, or reviewed by Bumble. All copy below is my own, written for this exercise, not final Bumble marketing.",
 
   insight: {
-    beats: [
-      {
-        kicker: 'The research',
-        title: "Bumble isn't selling a match. It's selling the conversation after it.",
-        body: "Every mode Bumble runs (Date, BFF, Bizz) works the same way underneath: the swipe is just the door. **The actual product is the conversation that happens once you're through it** — the thing that turns a stranger into a date, a business contact, or, in BFF's case, a friend. Once I noticed that, building the campaign around a match screen felt backwards. **The connection isn't the match. It's everything you text each other afterward.**",
-      },
-      {
-        kicker: 'Where it came from',
-        title: 'I pulled it straight from my own phone.',
-        body: "Once I had that insight, I opened my own texts with Sarah, Megan, Odessa, and Lexi to see what that connection actually looks like. **The idea came from putting real conversation into the graphics themselves** instead of a stock photo of two strangers smiling over coffee: real slang, real inside jokes, real half-finished sentences. That's where the group-chat bubbles, the messy lowercase voice, and the whole \"find your group chat IRL\" line came from — **it's not a mood board, it's my group chat.**",
-      },
-    ],
+    research: {
+      kicker: 'The research',
+      title: 'What stood out to me about Bumble.',
+      cards: [
+        {
+          title: 'Making the first move',
+          body: "Bumble's founding rule (whoever matches has to send the first message) was never really about romance. It's about who gets to start the conversation, and that same idea carries straight into BFF: **you're the one who has to actually say \"hey, wanna get food?\"**",
+        },
+        {
+          title: 'One app, every kind of connection',
+          body: 'Date, BFF, and Bizz all run on the same belief: **connection isn\'t only romantic.** Bumble built an entire mode just for making friends, because that need is exactly as real.',
+        },
+        {
+          title: 'Kindness, built into the mechanics',
+          body: '"Be Kind" reminders, blocking, reporting: these aren\'t just community guidelines, **they\'re product decisions.** The app is designed so the conversation stays worth having.',
+        },
+      ],
+    },
+    origin: {
+      kicker: 'Where it came from',
+      title: 'I pulled it straight from my own phone.',
+      body: "Once I had that insight, I opened my own texts with Sarah, Megan, Odessa, and Lexi to see what that connection actually looks like. **The idea came from putting real conversation into the graphics themselves** instead of a stock photo of two strangers smiling over coffee: real slang, real inside jokes, real half-finished sentences. That's where the group-chat bubbles, the messy lowercase voice, and the whole \"find your group chat IRL\" line came from — **it's not a mood board, it's my group chat.**",
+    },
   },
 
   bigIdea: 'Find your group chat IRL.',
@@ -174,19 +185,10 @@ export const bumbleConcept = {
       support: '',
       why: 'The inside jokes only exist because a conversation happened first: "the call incident," "do NOT let her order." Texting is how a stranger actually becomes a friend, so the post reads like the group chat itself, not an ad describing one.',
     },
-    {
-      id: 'push',
-      channel: 'Push notification',
-      format: 'push' as const,
-      image: undefined as string | undefined,
-      headline: 'Your group chat picked a place without you.',
-      support: 'Show up anyway.',
-      why: 'A push notification is an interruption, so it has to earn that interruption with a joke, not a pitch. Low-stakes and a little self-aware, the same tone as a friend texting you off your couch.',
-    },
   ],
 
   rationale:
-    "Find your group chat IRL came out of noticing that my own Bumble BFF friendships stopped feeling like one-on-one matches almost immediately; they became a group chat, then a standing plan, then people I actually call. The voice stays conversational and a little messy on purpose, the way real group chats are, and each execution adapts to where someone actually encounters it: a billboard with room to let a thread breathe, a bus wrap and transit shelter competing with a real street, something that reads like a text from a friend on social, and something short enough to survive being a phone-lock-screen interruption. Underneath all of it is the same belief: texting is not a lesser version of meeting someone, it's the actual mechanism of connection, the part where two strangers become friends. So the campaign never shows a swipe or a match screen, only the conversation that comes after, because that's the part that's real.",
+    "I built this because my own Bumble BFF friendships never stayed one-on-one matches. They turned into a group chat almost right away, then a standing plan, then people I actually call every week. So the whole campaign is built around real text threads instead of stock \"let's be friends!\" copy, because that's genuinely what it felt like. The billboard gets room to let a thread breathe; the bus wrap and transit shelter have to grab a faster glance; the social post is styled like something from the group chat, not an ad about one. None of it shows a match screen, because the match was never the interesting part. The conversation after it was.",
 
   skills: ['Campaign Concepting', 'Copywriting', 'OOH Design', 'Social Content', 'Brand Voice', 'Creative Direction'],
 }

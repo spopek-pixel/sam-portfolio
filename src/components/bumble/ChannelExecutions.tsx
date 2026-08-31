@@ -59,32 +59,16 @@ function Mockup({ channel }: { channel: Channel }) {
     )
   }
 
-  if (channel.format === 'billboard') {
-    return (
-      <div className="flex aspect-[16/9] w-full flex-col justify-between overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-violet-deep via-ink to-ink p-6 sm:p-8">
-        <span className="self-start rounded-full border border-fg/20 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-fg/60">
-          BFF
-        </span>
-        <div className="flex flex-col gap-2">
-          <p className="font-display text-xl font-semibold leading-tight text-white sm:text-2xl md:text-3xl">
-            {channel.headline}
-          </p>
-          {channel.support && <p className="text-sm text-fg/70 sm:text-base">{channel.support}</p>}
-        </div>
-      </div>
-    )
-  }
-
   return (
-    <div className="mx-auto flex w-full max-w-[320px] items-start gap-3 rounded-2xl border border-line bg-surface p-4">
-      <span className="mt-0.5 h-9 w-9 shrink-0 rounded-xl bg-gradient-to-br from-violet to-acid" />
-      <div className="flex flex-col gap-0.5">
-        <div className="flex items-baseline gap-2">
-          <span className="text-xs font-semibold">BFF</span>
-          <span className="font-mono text-[10px] text-fg-muted">now</span>
-        </div>
-        <p className="text-sm font-medium leading-snug text-fg">{channel.headline}</p>
-        {channel.support && <p className="text-xs text-fg-muted">{channel.support}</p>}
+    <div className="flex aspect-[16/9] w-full flex-col justify-between overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-violet-deep via-ink to-ink p-6 sm:p-8">
+      <span className="self-start rounded-full border border-fg/20 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-fg/60">
+        BFF
+      </span>
+      <div className="flex flex-col gap-2">
+        <p className="font-display text-xl font-semibold leading-tight text-white sm:text-2xl md:text-3xl">
+          {channel.headline}
+        </p>
+        {channel.support && <p className="text-sm text-fg/70 sm:text-base">{channel.support}</p>}
       </div>
     </div>
   )
@@ -95,7 +79,7 @@ export function ChannelExecutions({ channels }: { channels: Channel[] }) {
     <section className="px-6 py-10 sm:px-14 sm:py-16">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          kicker="One idea, five contexts"
+          kicker="One idea, four contexts"
           title="Same voice, different rooms."
           className="mb-12"
         />
