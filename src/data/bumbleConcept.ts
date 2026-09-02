@@ -44,11 +44,11 @@ export const bumbleConcept = {
       gallery: [
         {
           image: 'nashville-sarah',
-          caption: 'Sarah and me on the pig — our Nashville trip.',
+          caption: 'Sarah and me on the pig, our Nashville trip.',
         },
         {
           image: 'birthday',
-          caption: 'My birthday, surrounded by the friends Bumble BFF gave me — Sarah, Megan, Odessa, and Lexi.',
+          caption: 'My birthday, surrounded by the friends Bumble BFF gave me: Sarah, Megan, Odessa, and Lexi.',
         },
         {
           image: 'blockparty-megan',
@@ -69,17 +69,17 @@ export const bumbleConcept = {
         {
           number: '01',
           title: 'Making the first move',
-          body: 'Whoever matches has to message first. Usually framed as dating advice, but really it\'s about **who gets to start the conversation** — and BFF asks the same of you.',
+          body: "Whoever matches has to message first. Usually framed as dating advice, but really it's about **who gets to start the conversation**, and BFF asks the same of you.",
         },
         {
           number: '02',
           title: 'One mission, not just one kind of relationship',
-          body: "Their mission: a world where every relationship is healthy, not just romantic ones. **Not a side feature bolted onto a dating app** — the same mission, pointed at friendship.",
+          body: "Their mission: a world where every relationship is healthy, not just romantic ones. **Not a side feature bolted onto a dating app.** It's the same mission, pointed at friendship.",
         },
         {
           number: '03',
           title: 'Kindness is a feature, not a slogan',
-          body: '"Be Kind" prompts, blocking, reporting — none of it\'s just a values page. **It\'s built so people actually want to keep talking**, the exact tone I wanted for the campaign.',
+          body: '"Be Kind" prompts, blocking, reporting: none of it\'s just a values page. **It\'s built so people actually want to keep talking**, the exact tone I wanted for the campaign.',
         },
       ],
     },
@@ -131,7 +131,7 @@ export const bumbleConcept = {
         specs: [
           { label: 'Weight', value: '700 Bold' },
           { label: 'Tracking', value: '-3.5%' },
-          { label: 'Leading', value: '0.98x — tight, two lines max' },
+          { label: 'Leading', value: '0.98x, tight, two lines max' },
         ],
       },
       {
@@ -149,16 +149,16 @@ export const bumbleConcept = {
   channels: [
     {
       id: 'ooh-billboard',
-      channel: 'OOH — Billboard',
+      channel: 'OOH: Billboard',
       format: 'billboard' as const,
       image: 'bff-billboard.png',
       headline: 'Find your group chat IRL.',
       support: '',
-      why: "At OUTFRONT Media I learned that a commuter passing a billboard has about seven seconds to actually notice it, so the tagline has to stick immediately. That's why \"Find your group chat IRL.\" stays short and repeats across every execution. I used a real text thread instead of stock ad copy, so what someone catches in those seven seconds actually feels true.",
+      why: "From my professional experience, I learned that a commuter passing a billboard has about seven seconds to actually notice it, so the tagline has to stick immediately. That's why \"Find your group chat IRL.\" stays short and sticks fast. I used a real text thread instead of stock ad copy, so what someone catches in those seven seconds actually feels true.",
     },
     {
       id: 'ooh-buswrap',
-      channel: 'OOH — Bus wrap',
+      channel: 'OOH: Bus wrap',
       format: 'billboard' as const,
       image: 'bff-buswrap.png',
       headline: 'Find your group chat IRL.',
@@ -167,7 +167,7 @@ export const bumbleConcept = {
     },
     {
       id: 'ooh-transit-shelter',
-      channel: 'OOH — Transit shelter',
+      channel: 'OOH: Transit shelter',
       format: 'billboard' as const,
       image: 'bff-bus-poster.png',
       headline: 'wait... how did we just meet?',
@@ -176,7 +176,7 @@ export const bumbleConcept = {
     },
     {
       id: 'social',
-      channel: 'Social — Post',
+      channel: 'Social: Post',
       format: 'social' as const,
       image: 'bff-social.png',
       headline: 'Your next inside joke starts here.',

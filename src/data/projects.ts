@@ -210,7 +210,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'bumble-bff-concept',
-    title: 'Bumble BFF — Concept Campaign',
+    title: 'Bumble BFF Concept Campaign',
     tagline:
       "A self-initiated concept campaign for Bumble's BFF mode: one idea, adapted across OOH, social, and push. Not commissioned by Bumble.",
     category: ['Visual'],
