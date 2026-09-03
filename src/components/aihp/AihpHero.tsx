@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import type { Project } from '@/data/projects'
+import { imageFor } from '@/data/projects'
 import { aihp } from '@/data/aihp'
 import { Reveal } from '@/components/ui/Reveal'
 import { GradientBlob, NoiseOverlay } from '@/components/ui/GradientBlob'
 
 export function AihpHero({ project }: { project: Project }) {
+  const heroImage = imageFor('aihp', 'brochure-1-cover')
+
   return (
     <section className="relative overflow-hidden px-6 pb-10 pt-32 sm:px-10 sm:pb-14 sm:pt-40">
       <NoiseOverlay />
@@ -28,8 +31,21 @@ export function AihpHero({ project }: { project: Project }) {
           <p className="mt-6 max-w-2xl text-lg text-fg-muted sm:text-xl">{aihp.hero.subtitle}</p>
         </Reveal>
 
-        <Reveal delay={0.26}>
-          <div className="mt-8 flex flex-wrap gap-6 border-t border-line pt-6">
+        {heroImage && (
+          <Reveal delay={0.28}>
+            <div className="mt-10 overflow-hidden rounded-3xl border border-line shadow-[0_30px_80px_rgba(0,0,0,0.5)]">
+              <img
+                src={heroImage}
+                alt="AIHP brochure design, held open"
+                className="aspect-[763/457] w-full object-cover"
+                loading="eager"
+              />
+            </div>
+          </Reveal>
+        )}
+
+        <Reveal delay={0.34}>
+          <div className="mt-10 flex flex-wrap gap-6 border-t border-line pt-6">
             {aihp.hero.meta.map((item) => (
               <div key={item.label} className="flex flex-col gap-1">
                 <span className="font-mono text-xs uppercase tracking-wider text-fg-muted">{item.label}</span>

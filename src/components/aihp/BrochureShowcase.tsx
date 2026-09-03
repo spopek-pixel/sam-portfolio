@@ -16,7 +16,7 @@ export function BrochureShowcase() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="Brochure Design" title={aihp.brochure.heading} description={aihp.brochure.body} className="mb-12 max-w-2xl" />
 
-        <div className="grid grid-cols-1 gap-10 sm:max-w-3xl sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
           {brochures.map((brochure, index) => {
             const cover = imageFor('aihp', `${brochure.key}-cover`)
             const detail = imageFor('aihp', `${brochure.key}-detail-1`)

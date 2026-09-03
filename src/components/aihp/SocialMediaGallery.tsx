@@ -27,7 +27,7 @@ export function SocialMediaGallery() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading kicker="Social Media Design" title={aihp.social.heading} description={aihp.social.body} className="mb-12 max-w-2xl" />
 
-        <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 sm:max-w-2xl">
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3">
           {tiles.map((tile, index) => {
             const src = imageFor('aihp', tile.file)
             if (!src) return null
