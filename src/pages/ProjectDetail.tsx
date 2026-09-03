@@ -91,9 +91,7 @@ import { AboutAihp } from '@/components/aihp/AboutAihp'
 import { MyRole } from '@/components/aihp/MyRole'
 import { SocialMediaGallery } from '@/components/aihp/SocialMediaGallery'
 import { BrochureShowcase } from '@/components/aihp/BrochureShowcase'
-import { VisualSystemSection } from '@/components/aihp/VisualSystemSection'
 import { AihpTakeaway } from '@/components/aihp/AihpTakeaway'
-import { FinalGallery } from '@/components/aihp/FinalGallery'
 
 export default function ProjectDetail() {
   const { slug } = useParams()
@@ -210,9 +208,7 @@ export default function ProjectDetail() {
           <MyRole />
           <SocialMediaGallery />
           <BrochureShowcase />
-          <VisualSystemSection />
           <AihpTakeaway />
-          <FinalGallery />
         </AihpTheme>
         <NextProjectNav project={nextProject} />
       </div>

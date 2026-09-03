@@ -634,7 +634,7 @@ export const projects: Project[] = [
     tools: ['Adobe Photoshop', 'Adobe Illustrator', 'Adobe InDesign'],
     accent: 'violet',
     variant: 'gallery',
-    featured: true,
+    featured: false,
     problem:
       'The American Institute of the History of Pharmacy preserves and shares the history of pharmacy and pharmaceuticals through archival collections, publications, research, educational programming, and digital resources.',
     research: [],
@@ -644,7 +644,7 @@ export const projects: Project[] = [
       'As Communications Coordinator, I work across graphic design, content, and digital communications to help AIHP make historical information approachable and visually engaging, designing for different audiences and platforms while maintaining a consistent visual identity across the organization.',
     reflection:
       'Working with AIHP has challenged me to design for content that can be academic, archival, and highly detailed. Rather than simplifying the history itself, I focus on simplifying how people enter the story: using visual hierarchy, imagery, typography, and storytelling to make the material more inviting and easier to explore.',
-    images: imagesFor('aihp'),
+    images: imagesFor('aihp', 'social-1.png'),
     deliverables: [
       'Social Media',
       'Print Design',

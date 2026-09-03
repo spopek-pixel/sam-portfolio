@@ -1,13 +1,12 @@
 # AIHP images
 
-Drop files here with these names (.jpg/.png/.webp all work) and they show up on the
-project page automatically — no code changes needed.
+Currently used on the page:
 
-- `hero-1`, `hero-2`, `hero-3` — hero collage (hero-1 is the large tile; 2 and 3 stack beside it)
-- `social-1` through `social-10` — social media gallery tiles
-- `brochure-1-cover`, `brochure-1-detail-1`, `brochure-1-detail-2` (and `-2-`, `-3-` for the other two directions) — brochure showcase
-- `system-colors`, `system-type`, `system-elements`, `system-templates`, `system-layouts` — visual system section
-- `gallery-1` through `gallery-8` — closing gallery
+- `social-1`, `social-2`, `social-3`, `social-4`, `social-5`, `social-9` — social media gallery
+- `brochure-1-cover`, `brochure-1-detail-1` — Direction One
+- `brochure-2-cover`, `brochure-2-detail-1` — Direction Two
 
-Every slot works fine empty (it shows a placeholder with the expected filename), so add
-images in any order.
+If you add more graphics later (a hero image, a third brochure direction, visual
+system swatches, a closing gallery), just say so and I'll wire up new slots the
+same way — drop a file in here with a name I tell you and it appears automatically,
+no other code changes needed.
