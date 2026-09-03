@@ -97,6 +97,32 @@ function imagesFor(slug: string, primary?: string, exclude: string[] = []) {
     .map(([, mod]) => mod.default)
 }
 
+// Looks up a single image by filename (no extension needed) inside a project's folder,
+// so bespoke sections can offer named "slots" that light up the moment a matching file is added.
+export function imageFor(slug: string, name: string): string | undefined {
+  const target = name.toLowerCase()
+  const entry = Object.entries(modules).find(([path]) => {
+    if (!path.includes(`/projects/${slug}/`)) return false
+    const filename = path.split('/').pop() ?? ''
+    const base = filename.replace(/\.[^.]+$/, '').toLowerCase()
+    return base === target
+  })
+  return entry?.[1].default
+}
+
+// Returns every image in a project's folder whose filename starts with `prefix`, sorted alphabetically.
+export function imagesWithPrefix(slug: string, prefix: string): string[] {
+  const target = prefix.toLowerCase()
+  return Object.entries(modules)
+    .filter(([path]) => {
+      if (!path.includes(`/projects/${slug}/`)) return false
+      const filename = (path.split('/').pop() ?? '').toLowerCase()
+      return filename.startsWith(target)
+    })
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([, mod]) => mod.default)
+}
+
 export const projects: Project[] = [
   {
     slug: 'housingkind',
@@ -597,7 +623,38 @@ export const projects: Project[] = [
     images: imagesFor('outfront-media-graphics', 'outfront.jpg'),
     deliverables: ['Bus king ads', 'Bus rear king', 'Billboard', 'Animated liveboard', 'Bus wrap', 'Mobile ads'],
   },
-
+  {
+    slug: 'aihp',
+    title: 'American Institute of the History of Pharmacy',
+    tagline: 'Turning history, research, and archival collections into engaging visual stories.',
+    category: ['Visual'],
+    role: 'Communications Coordinator',
+    timeline: '2026',
+    team: 'American Institute of the History of Pharmacy (AIHP), University of Wisconsin–Madison',
+    tools: ['Adobe Photoshop', 'Adobe Illustrator', 'Adobe InDesign'],
+    accent: 'violet',
+    variant: 'gallery',
+    featured: true,
+    problem:
+      'The American Institute of the History of Pharmacy preserves and shares the history of pharmacy and pharmaceuticals through archival collections, publications, research, educational programming, and digital resources.',
+    research: [],
+    process: [],
+    decisions: [],
+    outcome:
+      'As Communications Coordinator, I work across graphic design, content, and digital communications to help AIHP make historical information approachable and visually engaging, designing for different audiences and platforms while maintaining a consistent visual identity across the organization.',
+    reflection:
+      'Working with AIHP has challenged me to design for content that can be academic, archival, and highly detailed. Rather than simplifying the history itself, I focus on simplifying how people enter the story: using visual hierarchy, imagery, typography, and storytelling to make the material more inviting and easier to explore.',
+    images: imagesFor('aihp'),
+    deliverables: [
+      'Social Media',
+      'Print Design',
+      'Editorial Design',
+      'Digital Communications',
+      'Web Design',
+      'Visual Storytelling',
+      'Brand Consistency',
+    ],
+  },
 ]
 
 export const visibleProjects = projects.filter((project) => !project.hidden)

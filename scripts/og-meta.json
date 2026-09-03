@@ -42,6 +42,12 @@
       "title": "OUTFRONT Media Graphics | Samantha Popek",
       "description": "Four brands, four out-of-home campaigns, one summer.",
       "image": "src/assets/images/projects/outfront-media-graphics/outfront.jpg"
+    },
+    {
+      "slug": "aihp",
+      "title": "American Institute of the History of Pharmacy | Samantha Popek",
+      "description": "Turning history, research, and archival collections into engaging visual stories.",
+      "image": "src/assets/images/projects/aihp/social-1.png"
     }
   ]
 }

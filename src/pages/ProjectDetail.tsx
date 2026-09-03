@@ -85,6 +85,15 @@ import { AivyEcosystem } from '@/components/aivy/AivyEcosystem'
 import { AivySitePreview } from '@/components/aivy/AivySitePreview'
 import { AivyInstallation } from '@/components/aivy/AivyInstallation'
 import { AivyStats } from '@/components/aivy/AivyStats'
+import { AihpTheme } from '@/components/aihp/AihpTheme'
+import { AihpHero } from '@/components/aihp/AihpHero'
+import { AboutAihp } from '@/components/aihp/AboutAihp'
+import { MyRole } from '@/components/aihp/MyRole'
+import { SocialMediaGallery } from '@/components/aihp/SocialMediaGallery'
+import { BrochureShowcase } from '@/components/aihp/BrochureShowcase'
+import { VisualSystemSection } from '@/components/aihp/VisualSystemSection'
+import { AihpTakeaway } from '@/components/aihp/AihpTakeaway'
+import { FinalGallery } from '@/components/aihp/FinalGallery'
 
 export default function ProjectDetail() {
   const { slug } = useParams()
@@ -187,6 +196,24 @@ export default function ProjectDetail() {
           <OutcomeSection outcome={project.outcome} />
           <ReflectionSection reflection={project.reflection} />
         </AivyTheme>
+        <NextProjectNav project={nextProject} />
+      </div>
+    )
+  }
+
+  if (project.slug === 'aihp') {
+    return (
+      <div>
+        <AihpTheme>
+          <AihpHero project={project} />
+          <AboutAihp />
+          <MyRole />
+          <SocialMediaGallery />
+          <BrochureShowcase />
+          <VisualSystemSection />
+          <AihpTakeaway />
+          <FinalGallery />
+        </AihpTheme>
         <NextProjectNav project={nextProject} />
       </div>
     )
