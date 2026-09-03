@@ -22,13 +22,13 @@ interface Tile {
 const tiles: Tile[] = [
   { file: 'social-1', label: 'Research & Publications', span: 'sm:col-span-7', aspect: 'aspect-[4/5]', tone: 'violet' },
   { file: 'social-2', label: 'Research & Publications', span: 'sm:col-span-5', aspect: 'aspect-[4/5]', tone: 'acid' },
-  { file: 'social-3', label: 'Staff Favorites', span: 'sm:col-span-4', aspect: 'aspect-square', tone: 'mint' },
-  { file: 'social-4', label: 'Research & Publications', span: 'sm:col-span-4', aspect: 'aspect-square', tone: 'violet' },
-  { file: 'social-5', label: 'Events', span: 'sm:col-span-4', aspect: 'aspect-square', tone: 'acid' },
+  { file: 'social-3', label: 'Research & Publications', span: 'sm:col-span-4', aspect: 'aspect-square', tone: 'mint' },
+  { file: 'social-4', label: 'Collection Highlights', span: 'sm:col-span-4', aspect: 'aspect-square', tone: 'violet' },
+  { file: 'social-5', label: 'Announcements', span: 'sm:col-span-4', aspect: 'aspect-square', tone: 'acid' },
   { file: 'social-6', label: 'Announcements', span: 'sm:col-span-12', aspect: 'aspect-[21/9]', tone: 'mint' },
   { file: 'social-7', label: 'History of Pharmacy', span: 'sm:col-span-6', aspect: 'aspect-[4/3]', tone: 'violet', offset: 'sm:mt-10' },
   { file: 'social-8', label: 'Events', span: 'sm:col-span-6', aspect: 'aspect-[4/3]', tone: 'acid' },
-  { file: 'social-9', label: 'Collection Highlights', span: 'sm:col-span-5', aspect: 'aspect-[3/4]', tone: 'mint' },
+  { file: 'social-9', label: 'Announcements', span: 'sm:col-span-5', aspect: 'aspect-square', tone: 'mint' },
   { file: 'social-10', label: 'Research & Publications', span: 'sm:col-span-7', aspect: 'aspect-[16/10]', tone: 'violet' },
 ]
 

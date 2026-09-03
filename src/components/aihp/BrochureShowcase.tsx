@@ -25,7 +25,7 @@ export function BrochureShowcase() {
                 label={brochure.name}
                 hint={`${brochure.key}-cover.jpg`}
                 tone={brochure.tone}
-                aspect="aspect-[3/4]"
+                aspect="aspect-[3/2]"
               />
               <div className="grid grid-cols-2 gap-3">
                 <ImageSlot
