@@ -14,7 +14,13 @@ export function BrochureShowcase() {
   return (
     <section className="px-6 py-10 sm:px-10 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading kicker="Brochure Design" title={aihp.brochure.heading} description={aihp.brochure.body} className="mb-12 max-w-2xl" />
+        <SectionHeading
+          kicker="Brochure Design"
+          title={aihp.brochure.heading}
+          description={aihp.brochure.body}
+          descriptionClassName="max-w-none"
+          className="mb-12"
+        />
 
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
           {brochures.map((brochure, index) => {
@@ -44,7 +50,7 @@ export function BrochureShowcase() {
         </div>
 
         <Reveal delay={0.3}>
-          <p className="mt-12 max-w-2xl text-base leading-relaxed text-fg-muted sm:text-lg">{aihp.brochure.explanation}</p>
+          <p className="mt-12 max-w-4xl text-base leading-relaxed text-fg-muted sm:text-lg">{aihp.brochure.explanation}</p>
         </Reveal>
       </div>
     </section>

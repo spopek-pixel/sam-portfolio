@@ -14,7 +14,13 @@ export function WebRedesigns() {
   return (
     <section className="px-6 py-10 sm:px-10 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading kicker="Web Design" title={aihp.webRedesign.heading} description={aihp.webRedesign.body} className="mb-12 max-w-2xl" />
+        <SectionHeading
+          kicker="Web Design"
+          title={aihp.webRedesign.heading}
+          description={aihp.webRedesign.body}
+          descriptionClassName="max-w-none"
+          className="mb-12"
+        />
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           {aihp.webRedesign.pieces.map((piece, index) => (

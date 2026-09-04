@@ -10,7 +10,7 @@ export function MyRole() {
   return (
     <section className="px-6 py-8 sm:px-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading kicker="My Role" title={aihp.role.heading} description={aihp.role.body} className="max-w-2xl" />
+        <SectionHeading kicker="My Role" title={aihp.role.heading} description={aihp.role.body} descriptionClassName="max-w-none" />
 
         <div className="mt-8 flex flex-wrap gap-2.5">
           {aihp.role.areas.map((item, index) => (

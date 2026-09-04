@@ -25,7 +25,24 @@ export function SocialMediaGallery() {
   return (
     <section className="px-6 py-10 sm:px-10 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading kicker="Social Media Design" title={aihp.social.heading} description={aihp.social.body} className="mb-12 max-w-2xl" />
+        <SectionHeading
+          kicker="Social Media Design"
+          title={aihp.social.heading}
+          description={aihp.social.body}
+          descriptionClassName="max-w-none"
+          className="mb-8"
+        />
+
+        <div className="mb-10 grid grid-cols-2 gap-4 rounded-2xl border border-line bg-surface/60 p-6 sm:max-w-md">
+          {aihp.social.stats.map((stat, index) => (
+            <Reveal key={stat.label} delay={index * 0.06}>
+              <div className="flex flex-col gap-1">
+                <span className="font-display text-3xl font-semibold text-violet-tint sm:text-4xl">{stat.value}</span>
+                <span className="text-xs text-fg-muted sm:text-sm">{stat.label}</span>
+              </div>
+            </Reveal>
+          ))}
+        </div>
 
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-3">
           {tiles.map((tile, index) => {

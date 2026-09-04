@@ -5,7 +5,7 @@ export function AboutAihp() {
   return (
     <section className="px-6 py-8 sm:px-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
-        <div className="flex flex-col gap-4 sm:max-w-3xl">
+        <div className="flex flex-col gap-4">
           <Reveal>
             <span className="kicker">About AIHP</span>
           </Reveal>

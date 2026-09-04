@@ -12,7 +12,7 @@ export function AihpTakeaway() {
           <h2 className="mt-5 max-w-3xl text-3xl sm:text-4xl md:text-5xl">{aihp.takeaway.heading}</h2>
         </Reveal>
         <Reveal delay={0.16}>
-          <p className="mt-6 max-w-2xl font-display text-xl leading-snug text-fg-muted sm:text-2xl">{aihp.takeaway.body}</p>
+          <p className="mt-6 max-w-4xl font-display text-xl leading-snug text-fg-muted sm:text-2xl">{aihp.takeaway.body}</p>
         </Reveal>
       </div>
     </section>

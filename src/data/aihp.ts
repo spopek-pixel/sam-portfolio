@@ -26,6 +26,10 @@ export const aihp = {
   social: {
     heading: 'Making History Scroll-Stopping',
     body: 'Historical collections and academic research can be information-heavy. My goal is to turn that material into visual content that feels approachable, contemporary, and easy to understand while still respecting the history behind it.',
+    stats: [
+      { label: 'Starting Followers', value: '980' },
+      { label: 'Current Followers', value: '1,500+' },
+    ],
   },
   brochure: {
     heading: 'Bringing AIHP Into Print',
