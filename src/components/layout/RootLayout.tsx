@@ -1,17 +1,40 @@
 import { Suspense, useEffect } from 'react'
-import { Outlet, useLocation } from 'react-router-dom'
+import { Outlet, useLocation, useParams } from 'react-router-dom'
 import { Navbar } from './Navbar'
 import { Footer } from './Footer'
 import { SmoothScrollProvider } from './SmoothScrollProvider'
 import { RouteErrorBoundary } from './RouteErrorBoundary'
 import { CursorDot } from '@/components/ui/CursorDot'
+import { getProject } from '@/data/projects'
+
+const SITE_TITLE = 'Samantha Popek: UX & Product Designer'
+
+const staticTitles: Record<string, string> = {
+  '/work': 'Work | Samantha Popek',
+  '/about': 'About | Samantha Popek',
+  '/contact': 'Contact | Samantha Popek',
+}
 
 export function RootLayout() {
   const location = useLocation()
+  const { slug } = useParams()
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [location.pathname])
+
+  useEffect(() => {
+    if (location.pathname === '/') {
+      document.title = SITE_TITLE
+      return
+    }
+    if (slug) {
+      const project = getProject(slug)
+      document.title = project ? `${project.title} | Samantha Popek` : SITE_TITLE
+      return
+    }
+    document.title = staticTitles[location.pathname] ?? SITE_TITLE
+  }, [location.pathname, slug])
 
   return (
     <SmoothScrollProvider>
