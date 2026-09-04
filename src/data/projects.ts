@@ -629,7 +629,7 @@ export const projects: Project[] = [
     tagline: 'Turning history, research, and archival collections into engaging visual stories.',
     category: ['Visual'],
     role: 'Communications Coordinator',
-    timeline: '2026',
+    timeline: 'May - September 2026',
     team: 'American Institute of the History of Pharmacy (AIHP), University of Wisconsin–Madison',
     tools: ['Adobe Photoshop', 'Adobe Illustrator', 'Adobe InDesign'],
     accent: 'violet',
@@ -644,7 +644,7 @@ export const projects: Project[] = [
       'As Communications Coordinator, I work across graphic design, content, and digital communications to help AIHP make historical information approachable and visually engaging, designing for different audiences and platforms while maintaining a consistent visual identity across the organization.',
     reflection:
       'Working with AIHP has challenged me to design for content that can be academic, archival, and highly detailed. Rather than simplifying the history itself, I focus on simplifying how people enter the story: using visual hierarchy, imagery, typography, and storytelling to make the material more inviting and easier to explore.',
-    images: imagesFor('aihp', 'social-1.png'),
+    images: imagesFor('aihp', 'brochure-1-cover.png'),
     deliverables: [
       'Social Media',
       'Print Design',

@@ -3,7 +3,7 @@ export const aihp = {
     meta: [
       { label: 'Role', value: 'Communications Coordinator' },
       { label: 'Organization', value: 'UW–Madison' },
-      { label: 'Year', value: '2026' },
+      { label: 'Timeline', value: 'May - September 2026' },
     ],
     subtitle: 'Turning history, research, and archival collections into engaging visual stories.',
   },
@@ -32,6 +32,22 @@ export const aihp = {
     body: 'I developed three brochure directions for AIHP, exploring how the organization could communicate its history, mission, collections, membership, and impact through a more approachable and contemporary print experience.',
     explanation:
       "The brochure concepts balance AIHP's academic and historical identity with a cleaner, more accessible visual system. I focused on information hierarchy, typography, archival imagery, color, and modular layouts that could organize a large amount of information without feeling overwhelming.",
+  },
+  webRedesign: {
+    heading: 'Giving the Website a Refresh',
+    body: "Beyond print and social, I've been redesigning individual pages on aihp.org: cleaning up layouts, adding clearer navigation, and making the site feel as current as the history it documents.",
+    pieces: [
+      {
+        title: 'Museum & Exhibit Directory',
+        body: 'Redesigned the directory of pharmacy museums and exhibits with interactive state maps and a cleaner, easier-to-scan layout for finding pharmacy history near you.',
+        video: 'museum-directory-redesign',
+      },
+      {
+        title: 'Flood Recovery Timeline',
+        body: "Built the scrolling timeline documenting AIHP's recovery after an August 2025 flood, and keep it updated as restoration work continues.",
+        video: 'flood-timeline-redesign',
+      },
+    ],
   },
   takeaway: {
     heading: 'Design as a Bridge Between History and People',

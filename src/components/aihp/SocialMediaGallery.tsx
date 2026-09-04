@@ -15,7 +15,7 @@ type Tile = {
 const tiles: Tile[] = [
   { file: 'social-1', label: 'Research & Publications', aspect: 'aspect-[4/5]' },
   { file: 'social-2', label: 'Research & Publications', aspect: 'aspect-[4/5]' },
-  { file: 'social-3', label: 'Research & Publications', aspect: 'aspect-square' },
+  { file: 'social-3', label: 'Research & Publications', aspect: 'aspect-[4/5]' },
   { file: 'social-4', label: 'Collection Highlights', aspect: 'aspect-square' },
   { file: 'social-5', label: 'Announcements', aspect: 'aspect-square' },
   { file: 'social-9', label: 'Announcements', aspect: 'aspect-square' },

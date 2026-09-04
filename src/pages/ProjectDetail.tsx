@@ -91,6 +91,7 @@ import { AboutAihp } from '@/components/aihp/AboutAihp'
 import { MyRole } from '@/components/aihp/MyRole'
 import { SocialMediaGallery } from '@/components/aihp/SocialMediaGallery'
 import { BrochureShowcase } from '@/components/aihp/BrochureShowcase'
+import { WebRedesigns } from '@/components/aihp/WebRedesigns'
 import { AihpTakeaway } from '@/components/aihp/AihpTakeaway'
 
 export default function ProjectDetail() {
@@ -208,6 +209,7 @@ export default function ProjectDetail() {
           <MyRole />
           <SocialMediaGallery />
           <BrochureShowcase />
+          <WebRedesigns />
           <AihpTakeaway />
         </AihpTheme>
         <NextProjectNav project={nextProject} />
