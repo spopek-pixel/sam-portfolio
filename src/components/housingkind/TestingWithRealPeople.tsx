@@ -19,7 +19,13 @@ export function TestingWithRealPeople() {
   return (
     <section className="px-6 py-10 sm:px-14 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading kicker="Testing with real people" title="Honest evidence, not a highlight reel." description={intro} className="mb-8 max-w-3xl" />
+        <SectionHeading
+          kicker="Testing with real people"
+          title="Honest evidence, not a highlight reel."
+          description={intro}
+          descriptionClassName="max-w-none"
+          className="mb-8 max-w-3xl"
+        />
 
         <div className="grid gap-4 sm:grid-cols-3">
           {stats.map((stat, index) => (
@@ -30,7 +36,7 @@ export function TestingWithRealPeople() {
         </div>
 
         <Reveal delay={0.16}>
-          <p className="mx-auto mt-6 max-w-2xl text-fg-muted">{scopeNote}</p>
+          <p className="mt-6 max-w-2xl text-fg-muted">{scopeNote}</p>
         </Reveal>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-3">

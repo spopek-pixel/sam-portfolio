@@ -37,22 +37,22 @@ export function BuildingItSection() {
         </div>
 
         <Reveal delay={0.14}>
-          <p className="mx-auto mt-12 max-w-2xl text-lg">
+          <p className="mt-12 max-w-2xl text-lg">
             <strong className="font-semibold">{decisionLede}</strong> {decisionRest}
           </p>
         </Reveal>
 
         <Reveal delay={0.2}>
-          <figure className="mx-auto mb-4 mt-8 max-w-3xl">
+          <figure className="mb-4 mt-8 max-w-3xl">
             <div className="overflow-hidden rounded-2xl border border-line bg-surface/60">
               <video src={houseVideo} autoPlay muted loop playsInline aria-label="Screen recording of the Housingkind website" className="h-auto w-full" />
             </div>
-            <figcaption className="mt-3 text-center text-sm text-fg-muted">{screenshotCaption}</figcaption>
+            <figcaption className="mt-3 text-sm text-fg-muted">{screenshotCaption}</figcaption>
           </figure>
         </Reveal>
 
         <Reveal delay={0.24}>
-          <div className="flex flex-wrap items-center justify-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-xs uppercase tracking-wider text-fg-muted">Tools used</span>
             {stack.map((tool) => (
               <span key={tool} className="rounded-full border border-line bg-surface/60 px-3 py-1 font-mono text-xs text-fg-muted">

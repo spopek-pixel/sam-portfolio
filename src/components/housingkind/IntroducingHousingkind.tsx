@@ -30,13 +30,13 @@ export function IntroducingHousingkind() {
         </div>
 
         <Reveal delay={0.3}>
-          <div className="mx-auto mt-10 max-w-4xl overflow-hidden rounded-3xl border border-line shadow-[0_30px_80px_rgba(0,0,0,0.5)]">
+          <div className="mt-10 max-w-4xl overflow-hidden rounded-3xl border border-line shadow-[0_30px_80px_rgba(0,0,0,0.5)]">
             <img src={houseFront} alt="The Housingkind interface, showing a real street with missing middle housing overlaid" className="aspect-[4/3] w-full object-cover" loading="lazy" />
           </div>
         </Reveal>
 
         <Reveal delay={0.36}>
-          <p className="mt-8 text-center text-fg-muted">{close}</p>
+          <p className="mt-6 max-w-2xl text-fg-muted">{close}</p>
         </Reveal>
       </div>
     </section>

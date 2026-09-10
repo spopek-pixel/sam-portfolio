@@ -14,7 +14,13 @@ export function WhatWeHeard() {
   return (
     <section className="px-6 py-10 sm:px-14 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <SectionHeading kicker="What we heard" title="Not opposition. A missing picture." description={lede} className="mb-10 max-w-3xl" />
+        <SectionHeading
+          kicker="What we heard"
+          title="Not opposition. A missing picture."
+          description={lede}
+          descriptionClassName="max-w-none"
+          className="mb-10 max-w-3xl"
+        />
 
         <div className="grid gap-4 sm:grid-cols-2">
           {quotes.map((item, index) => (
@@ -45,7 +51,7 @@ export function WhatWeHeard() {
         </div>
 
         <Reveal delay={0.1}>
-          <p className="mx-auto mt-10 max-w-2xl text-lg">{pivot}</p>
+          <p className="mt-10 max-w-2xl text-lg">{pivot}</p>
         </Reveal>
       </div>
     </section>

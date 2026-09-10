@@ -2,7 +2,9 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { housingkind } from '@/data/housingkind'
+import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
+import { Tag } from '@/components/ui/Tag'
 import { usePrefersReducedMotion } from '@/hooks/useReducedMotion'
 import { cn } from '@/lib/utils'
 import persona1 from '@/assets/images/projects/housingkind/persona1.png'
@@ -30,28 +32,43 @@ export function PeopleAndProblem() {
   return (
     <section className="px-6 py-10 sm:px-14 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <Reveal>
-          <span className="kicker">Where this starts</span>
-        </Reveal>
-        <Reveal delay={0.06}>
-          <p className="mt-5 max-w-3xl font-display text-2xl leading-snug sm:text-3xl">
-            <strong className="font-semibold">{lede}</strong> {ledeRest}
-          </p>
-        </Reveal>
-        <Reveal delay={0.12}>
-          <p className="mt-5 max-w-2xl text-lg text-fg-muted">{context}</p>
+        <SectionHeading
+          kicker="Where this starts"
+          title="A problem nobody can picture."
+          description={
+            <>
+              <strong className="font-semibold text-fg">{lede}</strong> {ledeRest}
+            </>
+          }
+          descriptionClassName="max-w-none"
+          className="mb-6"
+        />
+        <Reveal delay={0.14}>
+          <p className="max-w-2xl text-fg-muted">{context}</p>
         </Reveal>
 
-        <Reveal delay={0.18}>
-          <p className="mt-10 max-w-2xl text-fg-muted">{personaIntro}</p>
-        </Reveal>
+        <div className="mt-12">
+          <Reveal>
+            <span className="kicker">The stakeholders</span>
+          </Reveal>
+          <Reveal delay={0.06}>
+            <p className="mt-3 max-w-2xl text-fg-muted">{personaIntro}</p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {personaRoles.map((role) => (
+                <Tag key={role}>{role}</Tag>
+              ))}
+            </div>
+          </Reveal>
+        </div>
 
-        <Reveal delay={0.22}>
+        <Reveal delay={0.16}>
           <div
             role="region"
             aria-roledescription="carousel"
             aria-label="The three people at the center of this project"
-            className="mx-auto mt-6 max-w-4xl"
+            className="mt-6 max-w-3xl"
             onKeyDown={(event) => {
               if (event.key === 'ArrowLeft') goPrev()
               if (event.key === 'ArrowRight') goNext()
@@ -143,7 +160,7 @@ export function PeopleAndProblem() {
           </div>
         </Reveal>
 
-        <div className="mx-auto mt-10 flex max-w-2xl flex-col gap-5">
+        <div className="mt-12 flex max-w-2xl flex-col gap-4">
           <Reveal>
             <p className="text-fg-muted">{stakes}</p>
           </Reveal>
@@ -153,7 +170,7 @@ export function PeopleAndProblem() {
         </div>
 
         <Reveal delay={0.12}>
-          <blockquote className="mx-auto mt-10 max-w-2xl rounded-2xl border-l-4 border-acid bg-surface/60 p-6 lg:p-8">
+          <blockquote className="mt-8 max-w-2xl rounded-2xl border-l-4 border-acid bg-surface/60 p-6 lg:p-8">
             <p className="font-display text-xl leading-snug sm:text-2xl">"{hmw}"</p>
             <cite className="mt-3 block font-mono text-xs uppercase not-italic tracking-wider text-fg-muted">{hmwAttribution}</cite>
           </blockquote>

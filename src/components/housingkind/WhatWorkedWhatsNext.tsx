@@ -48,7 +48,7 @@ export function WhatWorkedWhatsNext() {
         </Reveal>
 
         <Reveal delay={0.2}>
-          <p className="mx-auto mt-10 max-w-3xl text-center font-display text-2xl leading-snug sm:text-3xl">"{highlight}"</p>
+          <p className="mt-10 max-w-2xl font-display text-2xl leading-snug sm:text-3xl">"{highlight}"</p>
         </Reveal>
       </div>
     </section>

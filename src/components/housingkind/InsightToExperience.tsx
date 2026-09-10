@@ -54,6 +54,7 @@ export function InsightToExperience() {
           kicker="From insight to experience"
           title="Every feature exists because of something we heard."
           description="Here's how three of the core ones came together."
+          descriptionClassName="max-w-none"
           className="mb-10 max-w-2xl"
         />
 
@@ -69,10 +70,10 @@ export function InsightToExperience() {
 
           <FeatureBlock feature={chat} index={1}>
             <figure className="mt-6 flex flex-col">
-              <div className="mx-auto w-full max-w-sm overflow-hidden rounded-2xl border border-violet-tint/30 bg-surface/60 shadow-[0_0_45px_rgba(124,92,255,0.28)]">
+              <div className="w-full max-w-sm overflow-hidden rounded-2xl border border-violet-tint/30 bg-surface/60 shadow-[0_0_45px_rgba(124,92,255,0.28)]">
                 <video src={chatBotVideo} autoPlay muted loop playsInline aria-label="Screen recording of the Housingkind AI chat assistant" className="h-auto w-full" />
               </div>
-              <figcaption className="mt-3 text-center text-sm text-fg-muted">{chat.demoCaption}</figcaption>
+              <figcaption className="mt-3 max-w-sm text-sm text-fg-muted">{chat.demoCaption}</figcaption>
             </figure>
           </FeatureBlock>
 
