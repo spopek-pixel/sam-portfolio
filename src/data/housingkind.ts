@@ -1,193 +1,168 @@
-export interface Stat {
-  value: string
-  label: string
-  percent?: number
-}
-
 export interface Quote {
   quote: string
   attribution?: string
 }
 
-export interface RoadmapStep {
+export interface Stat {
+  value: string
+  label: string
+}
+
+export interface Feature {
   title: string
-  body: string
-  aiNote?: string
-  status?: 'done' | 'in-progress'
+  research: string
+  realization: string
+  decision: string
+  myCall?: string
+  mockupCaption?: string
+  demoCaption?: string
 }
 
 export const housingkind = {
-  meta: {
-    title: 'Housingkind',
-    tagline: 'A digital visualization platform that helps communities understand how missing middle housing can fit into their neighborhoods.',
-    role: 'UX Design & Research',
-    timeline: 'Aug 2025 - Present',
-    team: 'Samantha Popek, Lucy Murdock, Jaden Radcliff, Obid Ochilov',
-    org: 'In partnership with ViaCDC, AARP & Startingblock',
-    tools: ['Figma', 'Figma Make', 'Systems Mapping', 'Stakeholder Interviews'],
-  },
-
-  atAGlance: {
-    challenge:
-      'Many communities support affordability and walkability but resist the housing needed to achieve them. Developers need better ways to communicate the value of Missing Middle housing.',
-    solution:
-      'Housingkind is a digital visualization platform designed to help communities visualize how missing middle and mixed-use housing could integrate into their real neighborhoods.',
-    deliverables: [
-      'Research & Strategy',
-      'UX Research',
-      'Systems Thinking',
-      'Design Strategy',
-      'Operations Management',
-      'Product Design',
-      'Cross-functional Collaboration',
-      'Figma Make',
-      'Artificial Intelligence',
-    ],
-  },
-
-  productStrategy: {
-    steps: [
-      {
-        label: 'Problem',
-        body: 'Communities support affordability and walkability in theory, but resist the housing that delivers them, because they can’t picture it on their own street.',
-      },
-      {
-        label: 'Solution',
-        body: 'A visualization platform that shows how missing middle housing actually fits into real neighborhoods, in plain language.',
-      },
-      {
-        label: 'Outcome',
-        body: 'A working product presented to developers, city alders, and advocates, and Best UX Design at the Transcend Competition.',
-      },
-    ],
-    goals: [
-      { title: 'Increase understanding', body: 'Turn abstract housing policy into visuals people can react to.' },
-      { title: 'Reduce misconceptions', body: 'Meet fear of density with real examples instead of statistics.' },
-      { title: 'Approachable education', body: 'Plain language and friendly visuals over planning jargon.' },
-      { title: 'Encourage exploration', body: 'Let people try scenarios instead of reading about them.' },
-    ],
-  },
-
-  designProcess: [
-    { title: 'Research', body: '15+ stakeholder interviews and field visits across Milwaukee.' },
-    { title: 'Ideation', body: 'Systems mapping, personas, and early concept exploration.' },
-    { title: 'Wireframes', body: 'Low-fidelity structure for the core visualize-and-learn flows.' },
-    { title: 'Prototyping', body: 'High-fidelity Figma prototype, accelerated with Figma Make.' },
-    { title: 'Testing', body: 'Stakeholder walkthroughs and usability sessions on the prototype.' },
-    { title: 'Development', body: 'Built for real in React + TypeScript and deployed on Vercel.' },
-  ],
-
-  originStory: {
-    body: [
-      "This project began in my Advanced Design Thinking for Transformation course, part of a year-long master's program project exploring challenges and opportunities within the housing crisis.",
-      "Through the team's research, we noticed a recurring pattern: many people admire vibrant, walkable neighborhoods with a mix of housing types, yet feel hesitant when similar developments are proposed in their own communities. This highlighted an important gap: housing conversations often happen in abstract terms, making it difficult for residents to clearly picture how new housing could realistically fit into the places they already know and care about.",
-    ],
+  problem: {
+    lede: "Nobody organizes against affordable housing because they've read the zoning code and disagree with it.",
+    ledeRest: "They organize because they can't picture what's being proposed, and the unknown defaults to scary.",
+    context:
+      "That's the pattern we kept running into researching Wisconsin's housing crisis: communities that say they want walkable, affordable neighborhoods, then show up to fight the very housing that would build one. The people below are who that actually happens to.",
+    personaIntro:
+      'Three perspectives sit inside this system, often talking past each other: the resident deciding whether to trust what’s being proposed, the developer trying to build it, and the advocate working the space between them.',
+    personaRoles: ['Resident', 'Developer', 'Community Advocate'],
+    stakes:
+      "When none of these three have a shared way to picture the same thing, the result isn't a debate, it's a stalemate. Residents show up to council meetings scared and uninformed. Developers face resistance no matter how strong their plan is. Advocates spend their time translating between two sides that don't trust each other. Every zoning meeting turns into a fight over imagination instead of a conversation about design.",
+    framing:
+      'So the problem we set out to solve was never "convince people density is good." It was: give someone a way to actually see what’s being proposed before they’re asked to have an opinion about it.',
     hmw: 'How might we design housing solutions that create greater access while supporting dignity and belonging across Wisconsin?',
     hmwAttribution: 'MD+I Design Horizon',
   },
 
-  researchMethods: {
-    methods: [
-      {
-        title: 'Stakeholder Interviews',
-        body: 'Spoke with developers, city council members, housing advocates, and residents to understand different perspectives within the housing system.',
-      },
-      {
-        title: 'Secondary Research',
-        body: 'Reviewed housing policies, planning documents, and existing research on gentle density and Missing Middle housing.',
-      },
-      {
-        title: 'Comparative Analysis',
-        body: 'Examined existing housing tools, visualization platforms, and community engagement methods to identify gaps and opportunities.',
-      },
-      {
-        title: 'Systems Mapping',
-        body: 'Analyzed how policy, community perception, and development processes interact within the housing ecosystem.',
-      },
-    ],
-    photoCaption: 'Sharing early creative ideas and exploring different concepts during the ideation phase.',
-  },
-
-  userQuotes: {
-    intro:
-      "Across 15+ interviews, residents kept describing the same gap in different words: not opposition to affordable housing, but a complete absence of information to picture it with. These quotes directly shaped the decision to build a visualization tool instead of another explainer page.",
+  whatWeHeard: {
+    lede: "Across 15+ interviews with residents, developers, city council members, and housing advocates, one thing surprised us. It wasn't opposition to affordable housing. It was a complete absence of information to picture it with.",
     quotes: [
       {
-        participant: 'Participant A',
         quote: "I know affordable housing exists, but I honestly have no idea where it's being built or what those developments actually look like.",
+        attribution: 'Participant A',
       },
       {
-        participant: 'Participant B',
-        quote: "Whenever I hear about a new housing project, I immediately wonder how it's going to affect the neighborhood because I don't have much information.",
-      },
-      {
-        participant: 'Participant C',
-        quote: 'I think people make assumptions because they never actually see what these communities are like.',
-      },
-      {
-        participant: 'Participant D',
-        quote: "If I could see the plans, photos, and progress, I'd probably feel a lot more comfortable supporting these projects.",
-      },
-      {
-        participant: 'Participant E',
-        quote: "Most of what I know comes from social media comments or word of mouth, and that's usually pretty negative.",
-      },
-      {
-        participant: 'Participant F',
-        quote: "There's a lack of transparency. It feels like decisions are made behind closed doors.",
-      },
-      {
-        participant: 'Participant G',
         quote: "I don't think people necessarily oppose affordable housing, they're just filling in the gaps with their own assumptions.",
+        attribution: 'Participant G',
       },
       {
-        participant: 'Participant H',
-        quote: "I've never visited one of these developments, so it's easy to imagine the worst.",
+        quote: "There's a lack of transparency. It feels like decisions are made behind closed doors.",
+        attribution: 'Participant F',
       },
-    ],
+      {
+        quote: "If I could see the plans, photos, and progress, I'd probably feel a lot more comfortable supporting these projects.",
+        attribution: 'Participant D',
+      },
+    ] satisfies Quote[],
+    field:
+      "We didn't want this to be desk research. We went to Milwaukee to see it: touring ViaCDC's work, the CR8TV House, and a church being converted into a community coffee shop, buildings that already exist, not slides in a deck.",
+    fieldCaption: 'Field visits to ViaCDC and the CR8TV House grounded the research in real places, not desk research.',
+    pivot:
+      "That challenged the assumption we'd started with: that better information would fix this. It wouldn't. People weren't short on facts, they were short on a way to see the thing being proposed. Before we could design anything, we needed to understand why that gap existed at a systems level, not just a personal one.",
   },
 
-  fieldResearch: {
-    body: [
-      'We prioritized real-world engagement to better understand the housing crisis beyond desk research. As part of the program, we traveled to Milwaukee to meet with organizations working directly in this space.',
-      'We spoke with VIA CDC, a key partner in our project, to learn about affordable housing development and community challenges. We also visited the CR8TV House, where we saw how housing and community-building come together in practice.',
-      'These experiences helped ground our work in real perspectives, shaping our design decisions and ensuring our solutions were rooted in actual needs.',
-    ],
-    photos: [
-      { caption: 'Got a tour of the CR8TV House and saw the space in action.' },
-      { caption: 'Program group photo after touring an abandoned church being transformed into a community coffee shop.' },
-      { caption: 'Visited VIA CDC and connected with the community they support.' },
-    ],
-  },
-
-  personas: {
-    intro:
-      'The user personas for Housingkind were created from research and stakeholder insights to represent the different people impacted by housing development: residents, developers, and the community advocates working between them. They highlight key goals, concerns, and perceptions around "missing middle" housing, helping uncover common fears and misunderstandings.',
-    roles: ['Resident', 'Developer', 'Community Advocate'],
-  },
-
-  systemsMap: {
-    caption:
-      'This map represents the housing ecosystem to better understand the relationships between stakeholders, including developers, policymakers, and community members. It helped us identify key tensions, gaps in communication, and opportunities where design could create meaningful impact.',
+  system: {
+    lede: "To understand why one resident's uncertainty turns into a packed, hostile city council meeting, we mapped the system around them: how developers, policymakers, and neighbors actually interact, not how the process is supposed to work on paper.",
     insights: [
-      'Housing resistance is often driven by perception, not just policy or cost',
-      'People struggle to visualize how new housing fits into their existing neighborhoods',
-      "There's a gap between what people say they want (walkability, density) and what they support locally",
-      'Trust and communication play a major role in housing acceptance',
-      'Real examples and lived experiences are more impactful than abstract explanations',
+      'Housing resistance is driven more by perception than by policy or cost.',
+      'People consistently struggle to picture how new housing fits into the neighborhoods they already know.',
+      'Real examples and lived experience move people more than abstract explanations ever do.',
     ],
-    opportunities: [
-      'Help communities visualize how missing middle housing fits into their neighborhoods',
-      'Make housing concepts and policies more clear and accessible',
-      'Create interactive tools to explore different development scenarios',
-      'Use immersive experiences to build understanding and reduce resistance',
-      'Support developers with better communication tools',
+    bridge:
+      'Every tension on this map traced back to the same root cause: nobody in the system, resident, developer, or advocate, had a shared, credible way to picture the same thing.',
+  },
+
+  turningPoint: {
+    quote: 'People fear what they cannot see.',
+    attribution: 'David Gordon, Accessible Housing Developer, stakeholder interview',
+    body: "That line reframed the entire project. We'd been treating this as an information problem, more facts, clearer policy language, more data, and none of it was moving the needle. What residents, developers, and advocates all actually needed wasn't more information. It was a way to see the thing being proposed, the way you'd see it if you already lived next door.",
+    bridgeCaption:
+      'Before anything went digital, a 3D model let us test whether showing gentle density physically actually changed how people reacted to it.',
+  },
+
+  intro: {
+    body: 'Housingkind is a visualization platform that shows how missing middle housing could actually fit into a real, specific street, grounded in real buildings, not an idealized rendering.',
+    forWhom: [
+      { who: 'For the resident', value: 'Opens it and sees their own kind of block, with the housing overlaid, instead of a zoning diagram.' },
+      { who: 'For the developer', value: 'Gets a shared visual language to bring into a room full of skeptical neighbors.' },
+      { who: 'For the city official', value: 'Gets something a resident will actually engage with, instead of ignore.' },
     ],
-    boardgamePhotoCaption: 'A 3D model of our boardgame, showing what gentle density could look like in a neighborhood.',
+    close: "That's the idea. What it looks like in practice is the next few features.",
+  },
+
+  features: [
+    {
+      title: 'Interactive Street Visualizations',
+      research:
+        '"I honestly have no idea what those developments actually look like." · "I’ve never visited one of these developments, so it’s easy to imagine the worst."',
+      realization: "People weren't rejecting density. They were rejecting the version of it in their head, because they'd never seen a real one.",
+      decision:
+        'Ground every visualization in real buildings from the Milwaukee site visits, and keep each screen light enough to scan in five seconds, not read like a policy brief.',
+      myCall:
+        "I used orange sparingly and deliberately, on the two or three ideas that actually needed to stick. A resident scanning this at 9pm after their kids are asleep isn't going to read paragraphs. If the design demanded more attention than that, it had already failed the person it was supposed to help.",
+      mockupCaption: '"We’re working to shift perception, not advocate for density": the mindset page that sets the tone for every visitor.',
+    },
+    {
+      title: 'AI Chat Assistant',
+      research: '"There’s a lack of transparency. It feels like decisions are made behind closed doors."',
+      realization:
+        "Residents didn't want to read policy. They wanted to ask a direct question and get a straight answer, without wading through zoning language to find it.",
+      decision:
+        'Built on Azure OpenAI, grounded only in Housingkind’s own content (retrieval-augmented, not the open web), tuned to answer in neutral, plain-language terms, informative, never preachy.',
+      myCall:
+        "I didn't want this to feel like the platform was trying to convince anyone of anything. If someone only reads the headline the assistant gives them, they should still walk away with an accurate idea, not a sales pitch.",
+      demoCaption: 'The in-product AI assistant answering a resident’s question in real time.',
+    },
+    {
+      title: 'Neighborhood Stories & Myths vs. Facts',
+      research:
+        '"I don’t think people necessarily oppose affordable housing, they’re just filling in the gaps with their own assumptions." · "I think people make assumptions because they never actually see what these communities are like."',
+      realization: "The gap wasn't going to close with more statistics. It needed real people's lived experience sitting right next to the data.",
+      decision:
+        'Paired first-person stories from people already living near gentle density with a plain myths-vs-facts reference, so the tool works whether someone wants a story or just a fast, specific answer.',
+    },
+  ] satisfies Feature[],
+
+  buildingIt: {
+    figmaMakeIntro:
+      'I started in Figma Make, using it to rapidly explore layout and interaction directions, a fast way to see five ideas instead of one before committing to any of them.',
+    comparison: {
+      before: { title: 'Before: AI-generated Figma Make concept', body: 'An early concept used to quickly explore possible layouts and interactions.' },
+      after: {
+        title: 'After: final design refined in Figma',
+        body: 'The final design, redesigned and refined by hand using research insights, feedback, and my own UX and visual design decisions.',
+      },
+    },
+    decisionLede: "I didn't want to stop at the Figma file.",
+    decisionRest:
+      'I was curious to learn new tools, so I brought the design into responsive, production code myself and built Housingkind as a real, working product instead of leaving it as a prototype.',
+    screenshotCaption: 'The Housingkind front-end running in the browser, designed and developed by me.',
+    stack: ['React', 'TypeScript', 'Tailwind CSS', 'Claude Code', 'Vercel'],
+  },
+
+  testing: {
+    intro:
+      "I walked residents, developers, and city stakeholders through the prototype directly, and watched where it worked and where it didn't. Of the people who walked through it during the program:",
+    stats: [
+      { value: '92%', label: 'Understood missing middle housing after one walkthrough' },
+      { value: '4.8/5', label: 'Average ease-of-use, navigating independently' },
+      { value: '91%', label: 'Felt less intimidated by density after seeing it visualized' },
+    ] satisfies Stat[],
+    scopeNote:
+      "That's a real signal, but a small and program-adjacent one: most of the people I tested with were already connected to the program in some way, not a broader public sample. Testing with residents outside that circle is the most important thing left to do before I'd call this validated.",
+    quotes: [
+      { quote: 'This could genuinely change how communities think about density.' },
+      { quote: "You've done a great job translating systems thinking into something residents can actually use." },
+      { quote: 'It feels like a real tool developers and communities could both stand behind.' },
+    ] satisfies Quote[],
+    recognition:
+      'The prototype was presented at Transcend, an annual showcase where graduate students pitch real-world solutions to a panel of CEOs and business leaders across Wisconsin. Out of every competing team, I was individually awarded Best User Experience Design.',
+    recognitionCaption: 'Presenting Housingkind at the Transcend Competition with my teammates.',
   },
 
   branding: {
-    body: 'The Housingkind brand uses a simple mark of two houses with a heart above them to represent community, trust, and a more human approach to housing. The two homes reflect different people coming together, while the heart emphasizes care and connection. A palette of layered blue tones was chosen to convey trust, clarity, and reliability, and clean, modern typography keeps the brand approachable and easy to understand.',
+    body: 'Once the concept had traction, it needed to look like one coherent product, not a research prototype. The mark is two houses with a heart above them, different people, coming together, with care at the center. A layered blue palette signals trust and clarity; clean, modern type keeps it approachable.',
     colors: [
       { name: 'White', hex: '#FFFFFF' },
       { name: 'Dark Blue', hex: '#2B3A8F' },
@@ -199,248 +174,22 @@ export const housingkind = {
       { name: 'Josefin Sans', usage: 'Page headings, section headers' },
       { name: 'Lato', usage: 'Body copy, UI text' },
     ],
-    system: [
-      { title: 'Components', body: 'Reusable cards, accordions, and section patterns keep every page consistent.' },
-      { title: 'Accessibility', body: 'Readable contrast, keyboard-friendly controls, and descriptive labels throughout.' },
-      { title: 'Responsive design', body: 'One layout system that adapts cleanly from phone to desktop.' },
-    ],
-  },
-
-  aiProcess: {
-    goal: 'Generate and evaluate multiple concepts quickly.',
-    usedFor: [
-      'Exploring layout variations',
-      'Testing visualization approaches',
-      'Rapid prototyping of housing comparison experiences',
-      'Generating interaction concepts for user feedback sessions',
-    ],
-    did: [
-      'Defined product requirements',
-      'Wrote prompts and directed the outputs',
-      'Evaluated concepts against user research',
-      'Selected, modified, and refined solutions',
-      'Created final UX flows and design decisions',
-    ],
-    flow: [
-      { title: 'Research', subtitle: 'Interviews' },
-      { title: 'AI exploration', subtitle: 'Figma Make concepts & layouts', highlighted: true },
-      { title: 'Iteration', subtitle: 'Refine & evaluate' },
-      { title: 'User feedback', subtitle: '' },
-      { title: 'Final prototype', subtitle: '' },
-    ],
-    comparisonNote:
-      'AI supported the early exploration. I evaluated the concepts against research, then redesigned and developed the final experience myself.',
-    comparison: {
-      before: {
-        title: 'Before: AI-generated Figma Make concept',
-        body: 'An early concept used to quickly explore possible layouts and interactions.',
-      },
-      after: {
-        title: 'After: Final design refined in Figma',
-        body: 'I redesigned and developed the experience using research insights, user feedback, and my own UX and visual design decisions.',
-      },
-    },
-  },
-
-  processRoadmap: [
-    {
-      title: 'Research & field engagement',
-      body: 'Stakeholder interviews, secondary research, field visits to ViaCDC and CR8TV House.',
-      aiNote: 'Synthesized interview themes and identified recurring patterns across sources with the help of Claude.',
-      status: 'done',
-    },
-    {
-      title: 'Systems mapping & personas',
-      body: 'Mapped the housing ecosystem and created personas for residents, developers, and advocates.',
-      aiNote: 'Pressure-tested persona assumptions and surfaced blind spots with the help of ChatGPT.',
-      status: 'done',
-    },
-    {
-      title: 'Ideation & concept exploration',
-      body: 'Explored layout variations and interaction concepts for housing comparison experiences.',
-      aiNote: 'Rapidly generated and evaluated interface concepts with the help of Figma Make (AI).',
-      status: 'done',
-    },
-    {
-      title: 'Branding & design direction',
-      body: "Defined Housingkind's visual identity: mark, blue palette, and typography.",
-      status: 'done',
-    },
-    {
-      title: 'Prototype & presentation',
-      body: 'Built the prototype and presented it to developers, city alders, and advocates at Transcend.',
-      status: 'done',
-    },
-    {
-      title: 'Final refinement & case study',
-      body: 'Refining the prototype and completing case study documentation for the portfolio.',
-      status: 'in-progress',
-    },
-  ] satisfies RoadmapStep[],
-
-  buildingIt: {
-    intro:
-      "I didn't stop at the prototype. I'm building Housingkind as a real, working product, bringing the Figma design into responsive, production code.",
-    whyLead: 'Curiosity pushed me beyond the prototype.',
-    whyRest:
-      'I wanted to challenge myself to learn modern development tools, work with AI, better communicate and collaborate with engineers, and experience what it takes to ship a real product, not just design one.',
-    stack: [
-      { name: 'React', body: 'Componentized UI mirroring the Figma design system' },
-      { name: 'TypeScript', body: 'Typed data models for projects, stories, and resources' },
-      { name: 'Tailwind CSS', body: 'A utility-driven styling system for consistent spacing and theming' },
-      { name: 'Responsive build', body: 'Every page designed and coded mobile-first' },
-      { name: 'GitHub', body: 'Version-controlled development with a clean commit history' },
-      { name: 'Claude Code', body: 'AI pair-programming to move faster from design to working code' },
-      { name: 'Vercel', body: 'Continuous deployment: every push ships to a live URL' },
-    ],
-    pipeline: ['Figma design', 'React + TypeScript', 'GitHub', 'Claude Code', 'Vercel deploy'],
-    screenshotCaption: 'The Housingkind front-end running in the browser, designed and developed by me.',
-  },
-
-  aiExperience: {
-    intro:
-      'Housingkind doesn’t just use AI in the design process. AI is part of the product. A built-in assistant, running on Microsoft’s Azure AI cloud platform, helps residents understand housing without reading policy documents.',
-    cards: [
-      {
-        title: 'Azure OpenAI integration',
-        body: 'Built on Microsoft’s Azure AI cloud platform, calling an Azure OpenAI large language model (LLM) directly from the Housingkind front-end.',
-      },
-      {
-        title: 'AI chatbot experience',
-        body: 'Residents ask plain-language questions about proposals instead of parsing zoning and policy text.',
-      },
-      {
-        title: 'Conversational interactions',
-        body: 'Follow-up questions keep the dialogue natural, so learning feels like a conversation, not a search.',
-      },
-      {
-        title: 'Prompt engineering',
-        body: 'System prompts tuned to answer in approachable, neutral housing language: informative, never preachy.',
-      },
-      {
-        title: 'Context-aware responses (RAG)',
-        body: 'Retrieval-augmented generation grounds every answer in Housingkind’s own content, so guidance stays accurate and on-topic.',
-      },
-      {
-        title: 'Future AI vision',
-        body: 'Toward personalized street visualizations and scenario simulation. Ask “How does Housingkind help communities?” and get an answer grounded in your own neighborhood.',
-      },
-    ],
-    chatCaption: 'The in-product AI assistant answering a resident’s question in real time.',
-  },
-
-  keyFeatures: [
-    { title: 'AI Chat Assistant', body: 'Plain-language answers to housing questions, powered by Azure OpenAI.' },
-    { title: 'Interactive Street Visualizations', body: 'See how missing middle housing fits into a real street.' },
-    { title: 'Neighborhood Stories', body: 'First-person stories and podcasts from people living near gentle density.' },
-    { title: 'Myths vs. Facts', body: 'Common fears about density, answered with evidence side by side.' },
-    { title: 'Resource Library', body: 'Glossaries, FAQs, and guides that make housing terms approachable.' },
-    { title: 'Responsive Experience', body: 'A full experience on any device, from council chamber to couch.' },
-  ],
-
-  decisionNarrative: {
-    body: [
-      "Taking on the design lead role for Housingkind meant sitting with a hard truth first: nobody organizes against housing because they've read the zoning code and disagree with it. They organize because they can't picture what's being proposed, and the unknown defaults to scary. So my real job wasn't decorating a website. It was building the shortest possible path from confusion to a clear mental picture, for someone who's never thought about \"missing middle\" housing in their life.",
-      "That reframing changed how I designed everything downstream. I used orange sparingly and deliberately, on the words that mattered and not the whole page, because a resident skimming this at 9pm after their kids are asleep isn't going to read paragraphs, they're going to scan for the two or three ideas that stick. If the design demanded more attention than that, it had already failed the person it was supposed to help.",
-    ],
-    questions: [
-      'Would my mom understand this without me explaining it?',
-      'Am I building empathy here, or just decorating a policy page?',
-      'If someone only reads the headline, do they still walk away with the right idea?',
-    ],
-    mockups: [
-      { caption: '"We\'re working to shift perception, not advocate for density": the mindset page that sets the tone for every visitor' },
-    ],
-  },
-
-  testingFeedback: {
-    intro:
-      'Feedback from residents, developers, and city stakeholders during walkthroughs was consistently positive. The biggest shift came from watching people see density before judging it.',
-    stats: [
-      {
-        value: '92%',
-        label: 'Understood missing middle housing after one walkthrough of the prototype.',
-        percent: 92,
-      },
-      {
-        value: '4.8/5',
-        label: 'Average ease-of-use rating from stakeholders navigating the prototype independently.',
-        percent: 96,
-      },
-      {
-        value: '91%',
-        label: 'Felt less intimidated by density after seeing the neighborhood visualizations.',
-        percent: 91,
-      },
-    ] satisfies Stat[],
-    quotes: [
-      { quote: 'This could genuinely change how communities think about density.' },
-      { quote: "You've done a great job translating systems thinking into something residents can actually use." },
-      { quote: 'It feels like a real tool developers and communities could both stand behind.' },
-    ] satisfies Quote[],
-  },
-
-  recognition: {
-    body: 'Housingkind was presented at the Transcend Competition, an annual showcase where graduate students pitch real-world design solutions to a panel of CEOs and business leaders across Wisconsin. Competing against teams from across the program, our solution stood out for its clarity, research depth, and real-world applicability. Out of all competing teams, I was individually awarded Best User Experience Design, recognized for delivering a design that was not only visually compelling but grounded in genuine community research and systems thinking.',
-    photoCaption: 'Presenting Housingkind at the Transcend Competition with my teammates.',
-  },
-
-  outcomes: {
-    synthesis:
-      "Across 15+ interviews and stakeholder sessions, three consistent themes emerged: people couldn't visualize density, abstract policy language created resistance, and real examples shifted perspective more than data ever could.",
-    infoCards: [
-      { label: 'Interviews', body: 'With residents, advocates, and developers' },
-      { label: 'Partner organizations', body: 'Including VIA CDC, AARP, and Startingblock' },
-      { label: 'Stakeholder groups', body: 'Residents, developers, city council, and advocates' },
-      { label: 'Recognition', body: 'Tool of its kind presented at the Transcend Competition' },
-    ],
-    quote: {
-      quote: 'People fear what they cannot see.',
-      attribution: 'David Gordon, Accessible Housing Developer, key insight from stakeholder interviews',
-    } satisfies Quote,
-    usersGained: [
-      'A way to see density before judging it',
-      'Plain-language answers to policy questions',
-      'Confidence to take part in local housing conversations',
-    ],
   },
 
   reflection: {
-    groups: [
-      {
-        title: 'Lessons learned',
-        items: [
-          'Design goes beyond the interface: systems, stakeholders, and trust shape every decision',
-          'Grounding decisions in research and real conversations beats designing from assumptions',
-          'AI speeds up exploration, but judgment decides what ships',
-        ],
-      },
-      {
-        title: "What I'd improve",
-        items: [
-          'Test earlier with residents outside the program, not just stakeholders',
-          'Replace placeholder metrics with measured outcomes from structured testing',
-          'Simplify the first-time experience so no one needs a walkthrough',
-        ],
-      },
-      {
-        title: 'Future opportunities',
-        items: [
-          'Deepen the AI assistant with neighborhood-specific context',
-          'Partner rollout with ViaCDC and community organizations',
-          'Street-level 3D and AR visualization of proposed housing',
-        ],
-      },
-      {
-        title: 'Next steps',
-        items: [
-          'Finish the current round of usability testing',
-          'Ship the remaining pages of the production build',
-          'Publish a public beta with partner feedback loops',
-        ],
-      },
+    changed: [
+      'A way to see density before judging it',
+      'Plain-language answers to policy questions, without reading a zoning document',
+      'Enough confidence to actually take part in a local housing conversation',
+    ],
+    limitation:
+      "The testing pool skewed toward people already inside the program. I'd want the next round to include residents who've never heard of Housingkind or this research at all, since that's exactly who the tool needs to work for.",
+    next: [
+      'A dedicated developer/advocate view, built for the room full of skeptical neighbors, not just the resident at home',
+      'Neighborhood-specific context in the AI assistant',
+      'Street-level 3D or AR visualization of proposed housing',
     ],
     highlight:
-      "Successful design is not just about creating interfaces. It's about using the right tools, research, and processes to help people better understand complex challenges and make informed decisions.",
+      "Successful design isn't just creating interfaces. It's using the right tools, research, and judgment to help people understand something complicated enough that they can actually make up their own mind about it.",
   },
 }

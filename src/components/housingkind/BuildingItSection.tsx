@@ -1,93 +1,66 @@
-import { ArrowRight, Smartphone } from 'lucide-react'
-import { SiClaudecode, SiGithub, SiReact, SiTailwindcss, SiTypescript, SiVercel } from 'react-icons/si'
-import type { IconType } from 'react-icons'
 import { housingkind } from '@/data/housingkind'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
 import houseVideo from '@/assets/images/projects/housingkind/house-video.mp4'
+import figmaMakeBefore from '@/assets/images/projects/housingkind/figma_make_before.png'
+import figmaAfter from '@/assets/images/projects/housingkind/figma_after.png'
 
-const stackIcons: (IconType | typeof Smartphone)[] = [
-  SiReact,
-  SiTypescript,
-  SiTailwindcss,
-  Smartphone,
-  SiGithub,
-  SiClaudecode,
-  SiVercel,
-]
+const comparisonImages = { before: figmaMakeBefore, after: figmaAfter }
 
 export function BuildingItSection() {
-  const { intro, whyLead, whyRest, stack, pipeline, screenshotCaption } = housingkind.buildingIt
+  const { figmaMakeIntro, comparison, decisionLede, decisionRest, screenshotCaption, stack } = housingkind.buildingIt
 
   return (
     <section className="px-6 py-10 sm:px-14 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-10 grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-12">
-          <SectionHeading kicker="Beyond the prototype" title="Designed it. Then built it." description={intro} />
-          <Reveal delay={0.1} className="h-full">
-            <aside className="relative flex h-full flex-col justify-center rounded-2xl rounded-bl-none border border-acid/30 bg-acid/5 p-6 lg:p-8">
-              <span className="kicker mb-3 text-acid">Why I built it</span>
-              <p className="text-sm leading-relaxed text-fg-muted sm:text-base">
-                <span className="font-semibold text-fg">{whyLead}</span> {whyRest}
-              </p>
-            </aside>
-          </Reveal>
+        <SectionHeading kicker="Building it for real" title="Figma Make, then me." className="mb-8 max-w-2xl" />
+
+        <Reveal>
+          <p className="max-w-2xl text-lg text-fg-muted">{figmaMakeIntro}</p>
+        </Reveal>
+
+        <div className="mt-6 grid gap-8 sm:grid-cols-2">
+          {(['before', 'after'] as const).map((stage, stageIndex) => (
+            <Reveal key={stage} delay={0.06 + stageIndex * 0.06}>
+              <figure>
+                <div className="mb-3 flex items-start gap-2.5">
+                  <span className={stage === 'before' ? 'mt-2 h-2 w-2 shrink-0 rounded-full bg-violet-tint' : 'mt-2 h-2 w-2 shrink-0 rounded-full bg-acid'} />
+                  <span className="font-medium">{comparison[stage].title}</span>
+                </div>
+                <div className="overflow-hidden rounded-2xl border border-line">
+                  <img src={comparisonImages[stage]} alt={comparison[stage].title} className="aspect-[7/8] w-full object-cover object-top" loading="lazy" />
+                </div>
+                <figcaption className="mt-3 text-sm text-fg-muted">{comparison[stage].body}</figcaption>
+              </figure>
+            </Reveal>
+          ))}
         </div>
 
-        <Reveal delay={0.08}>
-          <figure className="mx-auto mb-10 max-w-3xl">
+        <Reveal delay={0.14}>
+          <p className="mx-auto mt-12 max-w-2xl text-lg">
+            <strong className="font-semibold">{decisionLede}</strong> {decisionRest}
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.2}>
+          <figure className="mx-auto mb-4 mt-8 max-w-3xl">
             <div className="overflow-hidden rounded-2xl border border-line bg-surface/60">
-              <video
-                src={houseVideo}
-                autoPlay
-                muted
-                loop
-                playsInline
-                aria-label="Screen recording of the Housingkind website"
-                className="h-auto w-full"
-              />
+              <video src={houseVideo} autoPlay muted loop playsInline aria-label="Screen recording of the Housingkind website" className="h-auto w-full" />
             </div>
             <figcaption className="mt-3 text-center text-sm text-fg-muted">{screenshotCaption}</figcaption>
           </figure>
         </Reveal>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {stack.map((tech, index) => {
-            const Icon = stackIcons[index]
-            return (
-              <Reveal key={tech.name} delay={index * 0.05} className="h-full">
-                <div className="flex h-full flex-col gap-2.5 rounded-2xl border border-line bg-surface/60 p-5">
-                  <Icon size={22} className="text-violet-tint" />
-                  <h3 className="text-sm font-medium">{tech.name}</h3>
-                  <p className="text-xs leading-relaxed text-fg-muted">{tech.body}</p>
-                </div>
-              </Reveal>
-            )
-          })}
-
-          <Reveal delay={stack.length * 0.05} className="h-full sm:col-span-2 lg:col-span-1">
-            <div className="flex h-full flex-col justify-center gap-1 rounded-2xl border border-acid/40 bg-acid/5 p-5">
-              <span className="font-display text-2xl text-acid">Shipped</span>
-              <p className="text-xs leading-relaxed text-fg-muted">
-                Not a concept: a live, deployed front-end that anyone can open.
-              </p>
-            </div>
-          </Reveal>
-        </div>
-
-        <Reveal delay={0.2}>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-2">
-            {pipeline.map((stage, index) => (
-              <div key={stage} className="flex items-center gap-2">
-                <span className="rounded-full border border-line bg-surface/60 px-4 py-2 font-mono text-xs uppercase tracking-wider text-fg-muted">
-                  {stage}
-                </span>
-                {index < pipeline.length - 1 && <ArrowRight size={14} className="shrink-0 text-fg-muted/70" />}
-              </div>
+        <Reveal delay={0.24}>
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <span className="font-mono text-xs uppercase tracking-wider text-fg-muted">Tools used</span>
+            {stack.map((tool) => (
+              <span key={tool} className="rounded-full border border-line bg-surface/60 px-3 py-1 font-mono text-xs text-fg-muted">
+                {tool}
+              </span>
             ))}
           </div>
         </Reveal>
-
       </div>
     </section>
   )

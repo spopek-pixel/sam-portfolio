@@ -1,14 +1,10 @@
-import { Accessibility, Component, MonitorSmartphone } from 'lucide-react'
 import { housingkind } from '@/data/housingkind'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
-import brandLockups from '@/assets/images/projects/housingkind/Housingkind-Brand-Identity.png'
 import brandKit from '@/assets/images/projects/housingkind/Housingkind-Brand-Identity- Kit.png'
 
-const systemIcons = [Component, Accessibility, MonitorSmartphone]
-
 export function BrandShowcase() {
-  const { body, colors, typography, system } = housingkind.branding
+  const { body, colors, typography } = housingkind.branding
 
   return (
     <section className="px-6 py-10 sm:px-14 sm:py-16">
@@ -20,73 +16,42 @@ export function BrandShowcase() {
           </Reveal>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-[1.2fr_1fr]">
           <Reveal>
             <figure className="aspect-[4/3] overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-[#e9eef9] via-[#dde7f6] to-[#c9d9ef]">
-              <img
-                src={brandLockups}
-                alt="Housingkind logo lockups in primary, light, and reversed color variants"
-                className="h-full w-full object-contain p-6"
-              />
+              <img src={brandKit} alt="Housingkind monogram badges and mark variants" className="h-full w-full object-contain p-6" />
             </figure>
           </Reveal>
-          <Reveal delay={0.06}>
-            <figure className="aspect-[4/3] overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-[#e9eef9] via-[#dde7f6] to-[#c9d9ef]">
-              <img
-                src={brandKit}
-                alt="Housingkind monogram badges and mark variants"
-                className="h-full w-full object-contain p-6"
-              />
-            </figure>
-          </Reveal>
-        </div>
 
-        <div className="mt-6 grid gap-6 sm:grid-cols-2">
-          <Reveal delay={0.1}>
-            <div className="flex h-full flex-col gap-4 rounded-2xl border border-line bg-surface/60 p-6">
-              <h3 className="kicker">Color palette</h3>
-              <div className="flex gap-4">
-                {colors.map((color) => (
-                  <div key={color.name} className="flex flex-col items-center gap-2">
-                    <span
-                      className="h-14 w-14 rounded-full border border-line"
-                      style={{ backgroundColor: color.hex }}
-                    />
-                    <span className="text-xs text-fg-muted">{color.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.16}>
-            <div className="flex h-full flex-col gap-4 rounded-2xl border border-line bg-surface/60 p-6">
-              <h3 className="kicker">Typography</h3>
-              <div className="flex flex-col gap-4">
-                {typography.map((type) => (
-                  <div key={type.name}>
-                    <p className="font-display text-2xl">Aa {type.name}</p>
-                    <p className="text-xs text-fg-muted">{type.usage}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-        </div>
-
-        <div className="mt-6 grid gap-6 sm:grid-cols-3">
-          {system.map((item, index) => {
-            const Icon = systemIcons[index]
-            return (
-              <Reveal key={item.title} delay={0.2 + index * 0.06} className="h-full">
-                <div className="flex h-full flex-col gap-2.5 rounded-2xl border border-line bg-surface/60 p-6">
-                  <Icon size={20} className="text-violet-tint" />
-                  <h3 className="text-sm font-medium">{item.title}</h3>
-                  <p className="text-sm text-fg-muted">{item.body}</p>
+          <div className="flex flex-col gap-6">
+            <Reveal delay={0.06}>
+              <div className="flex h-full flex-col gap-4 rounded-2xl border border-line bg-surface/60 p-6">
+                <h3 className="kicker">Color palette</h3>
+                <div className="flex flex-wrap gap-4">
+                  {colors.map((color) => (
+                    <div key={color.name} className="flex flex-col items-center gap-2">
+                      <span className="h-12 w-12 rounded-full border border-line" style={{ backgroundColor: color.hex }} />
+                      <span className="text-xs text-fg-muted">{color.name}</span>
+                    </div>
+                  ))}
                 </div>
-              </Reveal>
-            )
-          })}
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.1}>
+              <div className="flex h-full flex-col gap-4 rounded-2xl border border-line bg-surface/60 p-6">
+                <h3 className="kicker">Typography</h3>
+                <div className="flex flex-col gap-3">
+                  {typography.map((type) => (
+                    <div key={type.name}>
+                      <p className="font-display text-xl">Aa {type.name}</p>
+                      <p className="text-xs text-fg-muted">{type.usage}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </div>
     </section>

@@ -24,24 +24,16 @@ import { UserStoriesSection } from '@/components/work/UserStoriesSection'
 import { VisualGallery } from '@/components/work/VisualGallery'
 import { NextProjectNav } from '@/components/work/NextProjectNav'
 import { Deliverables } from '@/components/work/Deliverables'
-import { ProductStrategy } from '@/components/housingkind/ProductStrategy'
-import { DesignProcessFlow } from '@/components/housingkind/DesignProcessFlow'
-import { BuildingWithAI } from '@/components/housingkind/BuildingWithAI'
-import { KeyFeatures } from '@/components/housingkind/KeyFeatures'
-import { OriginStory } from '@/components/housingkind/OriginStory'
-import { ResearchMethods } from '@/components/housingkind/ResearchMethods'
-import { UserQuotes } from '@/components/housingkind/UserQuotes'
-import { FieldResearch } from '@/components/housingkind/FieldResearch'
-import { Personas } from '@/components/housingkind/Personas'
-import { SystemsMap } from '@/components/housingkind/SystemsMap'
-import { BrandShowcase } from '@/components/housingkind/BrandShowcase'
-import { AIProcessSection } from '@/components/housingkind/AIProcessSection'
+import { PeopleAndProblem } from '@/components/housingkind/PeopleAndProblem'
+import { WhatWeHeard } from '@/components/housingkind/WhatWeHeard'
+import { SeeingTheSystem } from '@/components/housingkind/SeeingTheSystem'
+import { TurningPoint } from '@/components/housingkind/TurningPoint'
+import { IntroducingHousingkind } from '@/components/housingkind/IntroducingHousingkind'
+import { InsightToExperience } from '@/components/housingkind/InsightToExperience'
 import { BuildingItSection } from '@/components/housingkind/BuildingItSection'
-import { DecisionNarrative } from '@/components/housingkind/DecisionNarrative'
-import { TestingFeedback } from '@/components/housingkind/TestingFeedback'
-import { Recognition } from '@/components/housingkind/Recognition'
-import { ProjectOutcomes } from '@/components/housingkind/ProjectOutcomes'
-import { HousingkindReflection } from '@/components/housingkind/HousingkindReflection'
+import { TestingWithRealPeople } from '@/components/housingkind/TestingWithRealPeople'
+import { BrandShowcase } from '@/components/housingkind/BrandShowcase'
+import { WhatWorkedWhatsNext } from '@/components/housingkind/WhatWorkedWhatsNext'
 import { DragonflyTheme } from '@/components/dragonfly/DragonflyTheme'
 import { DragonflyHero } from '@/components/dragonfly/DragonflyHero'
 import { Overview } from '@/components/dragonfly/Overview'
@@ -106,26 +98,16 @@ export default function ProjectDetail() {
     return (
       <div>
         <CaseStudyHero project={project} />
-        {project.summary && <ProblemChallengeSolution summary={project.summary} />}
-        <ProductStrategy />
-        <DesignProcessFlow />
-        <OriginStory />
-        <ResearchMethods />
-        <UserQuotes />
-        <FieldResearch />
-        <Personas />
-        <SystemsMap />
-        <BrandShowcase />
-        <AIProcessSection />
+        <PeopleAndProblem />
+        <WhatWeHeard />
+        <SeeingTheSystem />
+        <TurningPoint />
+        <IntroducingHousingkind />
+        <InsightToExperience />
         <BuildingItSection />
-        <BuildingWithAI />
-        <KeyFeatures />
-        <DecisionNarrative />
-        <TestingFeedback />
-        <Recognition />
-        <ProjectOutcomes />
-        {project.deliverables && <Deliverables items={project.deliverables} />}
-        <HousingkindReflection />
+        <TestingWithRealPeople />
+        <BrandShowcase />
+        <WhatWorkedWhatsNext />
         <NextProjectNav project={nextProject} />
       </div>
     )
