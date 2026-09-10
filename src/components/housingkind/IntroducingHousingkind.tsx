@@ -18,25 +18,32 @@ export function IntroducingHousingkind() {
           <p className="mt-6 max-w-2xl text-lg text-fg-muted">{body}</p>
         </Reveal>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
-          {forWhom.map((item, index) => (
-            <Reveal key={item.who} delay={0.16 + index * 0.06} className="h-full">
-              <div className="flex h-full flex-col gap-2 rounded-2xl border border-line bg-surface/60 p-5">
-                <span className="kicker">{item.who}</span>
-                <p className="text-sm text-fg-muted">{item.value}</p>
-              </div>
-            </Reveal>
-          ))}
+        <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:items-stretch">
+          <div className="flex flex-col gap-4">
+            {forWhom.map((item, index) => (
+              <Reveal key={item.who} delay={0.16 + index * 0.06} className="h-full">
+                <div className="flex h-full flex-col justify-center gap-2 rounded-2xl border border-line bg-surface/60 p-5">
+                  <span className="kicker">{item.who}</span>
+                  <p className="text-sm text-fg-muted">{item.value}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={0.3} className="h-full">
+            <div className="h-full min-h-[320px] overflow-hidden rounded-3xl border border-line shadow-[0_30px_80px_rgba(0,0,0,0.5)]">
+              <img
+                src={houseFront}
+                alt="The Housingkind interface, showing a real street with missing middle housing overlaid"
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </Reveal>
         </div>
 
-        <Reveal delay={0.3}>
-          <div className="mt-10 max-w-4xl overflow-hidden rounded-3xl border border-line shadow-[0_30px_80px_rgba(0,0,0,0.5)]">
-            <img src={houseFront} alt="The Housingkind interface, showing a real street with missing middle housing overlaid" className="aspect-[4/3] w-full object-cover" loading="lazy" />
-          </div>
-        </Reveal>
-
         <Reveal delay={0.36}>
-          <p className="mt-6 max-w-2xl text-fg-muted">{close}</p>
+          <p className="mt-8 max-w-2xl text-fg-muted">{close}</p>
         </Reveal>
       </div>
     </section>

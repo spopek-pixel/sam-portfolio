@@ -41,11 +41,11 @@ export function BrandShowcase() {
             <Reveal delay={0.1}>
               <div className="flex h-full flex-col gap-4 rounded-2xl border border-line bg-surface/60 p-6">
                 <h3 className="kicker">Typography</h3>
-                <div className="flex flex-col gap-3">
-                  {typography.map((type) => (
+                <div className="flex flex-col gap-4">
+                  {typography.map((type, index) => (
                     <div key={type.name}>
-                      <p className="font-display text-xl">Aa {type.name}</p>
-                      <p className="text-xs text-fg-muted">{type.usage}</p>
+                      <p className={index === 0 ? 'font-display text-4xl leading-none' : 'font-sans text-base'}>Aa {type.name}</p>
+                      <p className="mt-1.5 text-xs text-fg-muted">{type.usage}</p>
                     </div>
                   ))}
                 </div>

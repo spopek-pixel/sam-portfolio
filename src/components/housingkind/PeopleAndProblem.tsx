@@ -44,7 +44,7 @@ export function PeopleAndProblem() {
           className="mb-6"
         />
         <Reveal delay={0.14}>
-          <p className="max-w-2xl text-fg-muted">{context}</p>
+          <p className="max-w-none text-fg-muted">{context}</p>
         </Reveal>
 
         <div className="mt-12">
@@ -52,7 +52,7 @@ export function PeopleAndProblem() {
             <span className="kicker">The stakeholders</span>
           </Reveal>
           <Reveal delay={0.06}>
-            <p className="mt-3 max-w-2xl text-fg-muted">{personaIntro}</p>
+            <p className="mt-3 max-w-none text-fg-muted">{personaIntro}</p>
           </Reveal>
           <Reveal delay={0.1}>
             <div className="mt-4 flex flex-wrap gap-2">
@@ -68,7 +68,7 @@ export function PeopleAndProblem() {
             role="region"
             aria-roledescription="carousel"
             aria-label="The three people at the center of this project"
-            className="mt-6 max-w-3xl"
+            className="mx-auto mt-6 max-w-3xl"
             onKeyDown={(event) => {
               if (event.key === 'ArrowLeft') goPrev()
               if (event.key === 'ArrowRight') goNext()
@@ -160,21 +160,21 @@ export function PeopleAndProblem() {
           </div>
         </Reveal>
 
-        <div className="mt-12 flex max-w-2xl flex-col gap-4">
+        <Reveal delay={0.2}>
+          <p className="mt-12 max-w-none text-fg-muted">{stakes}</p>
+        </Reveal>
+
+        <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
           <Reveal>
-            <p className="text-fg-muted">{stakes}</p>
-          </Reveal>
-          <Reveal delay={0.06}>
             <p className="text-lg">{framing}</p>
           </Reveal>
+          <Reveal delay={0.06} className="h-full">
+            <blockquote className="flex h-full flex-col justify-center rounded-2xl border-l-4 border-acid bg-surface/60 p-6 lg:p-8">
+              <p className="font-display text-xl leading-snug sm:text-2xl">"{hmw}"</p>
+              <cite className="mt-3 block font-mono text-xs uppercase not-italic tracking-wider text-fg-muted">{hmwAttribution}</cite>
+            </blockquote>
+          </Reveal>
         </div>
-
-        <Reveal delay={0.12}>
-          <blockquote className="mt-8 max-w-2xl rounded-2xl border-l-4 border-acid bg-surface/60 p-6 lg:p-8">
-            <p className="font-display text-xl leading-snug sm:text-2xl">"{hmw}"</p>
-            <cite className="mt-3 block font-mono text-xs uppercase not-italic tracking-wider text-fg-muted">{hmwAttribution}</cite>
-          </blockquote>
-        </Reveal>
       </div>
     </section>
   )

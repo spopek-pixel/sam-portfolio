@@ -16,11 +16,11 @@ export function SeeingTheSystem() {
           title="Seeing the whole system."
           description={lede}
           descriptionClassName="max-w-none"
-          className="mb-8 max-w-3xl"
+          className="mb-8"
         />
 
         <Reveal>
-          <figure className="max-w-3xl">
+          <figure className="mx-auto max-w-3xl">
             <ArtifactPlaceholder
               image={systemMappingDiagram}
               label="Systems map diagram: Balancing Loop of the Missing Middle"
@@ -32,7 +32,7 @@ export function SeeingTheSystem() {
           </figure>
         </Reveal>
 
-        <div className="mt-8 max-w-3xl">
+        <div className="mt-8">
           <ul className="flex flex-col gap-3">
             {insights.map((insight) => (
               <li key={insight} className="flex gap-3 text-fg-muted">
@@ -44,7 +44,7 @@ export function SeeingTheSystem() {
         </div>
 
         <Reveal delay={0.08}>
-          <p className="mt-8 max-w-2xl text-lg">{bridge}</p>
+          <p className="mt-8 max-w-none text-lg">{bridge}</p>
         </Reveal>
       </div>
     </section>

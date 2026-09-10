@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { housingkind } from '@/data/housingkind'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
+import { ArtifactPlaceholder } from './ArtifactPlaceholder'
 import housingAboutMockup from '@/assets/images/projects/housingkind/housing_about.png'
 import chatBotVideo from '@/assets/images/projects/housingkind/chat-bot.mp4'
 
@@ -10,13 +11,29 @@ const beatLabels = ['Research', 'Realization', 'Decision', 'My call'] as const
 function FeatureBlock({
   feature,
   index,
-  children,
+  media,
+  mediaPosition = 'below',
 }: {
   feature: (typeof housingkind.features)[number]
   index: number
-  children?: ReactNode
+  media?: ReactNode
+  mediaPosition?: 'below' | 'right'
 }) {
   const rows = [feature.research, feature.realization, feature.decision, feature.myCall].filter(Boolean) as string[]
+
+  const beats = (
+    <div className="flex flex-col gap-4 border-l-2 border-line pl-5">
+      {rows.map((row, rowIndex) => {
+        const isVoice = beatLabels[rowIndex] === 'My call'
+        return (
+          <div key={rowIndex}>
+            <span className={isVoice ? 'kicker text-acid' : 'kicker'}>{beatLabels[rowIndex]}</span>
+            <p className={isVoice ? 'mt-1 font-display text-lg italic leading-snug' : 'mt-1 text-fg-muted'}>{row}</p>
+          </div>
+        )
+      })}
+    </div>
+  )
 
   return (
     <Reveal delay={index * 0.08}>
@@ -26,19 +43,17 @@ function FeatureBlock({
         </span>
         <h3 className="mt-2 text-2xl font-medium sm:text-3xl">{feature.title}</h3>
 
-        <div className="mt-6 flex flex-col gap-4 border-l-2 border-line pl-5">
-          {rows.map((row, rowIndex) => {
-            const isVoice = beatLabels[rowIndex] === 'My call'
-            return (
-              <div key={rowIndex}>
-                <span className={isVoice ? 'kicker text-acid' : 'kicker'}>{beatLabels[rowIndex]}</span>
-                <p className={isVoice ? 'mt-1 font-display text-lg italic leading-snug' : 'mt-1 text-fg-muted'}>{row}</p>
-              </div>
-            )
-          })}
-        </div>
-
-        {children}
+        {mediaPosition === 'right' ? (
+          <div className="mt-6 grid gap-6 lg:grid-cols-2 lg:items-center">
+            {beats}
+            {media}
+          </div>
+        ) : (
+          <>
+            <div className="mt-6">{beats}</div>
+            {media}
+          </>
+        )}
       </div>
     </Reveal>
   )
@@ -59,25 +74,42 @@ export function InsightToExperience() {
         />
 
         <div className="flex flex-col gap-8">
-          <FeatureBlock feature={visualize} index={0}>
-            <figure className="mt-6 flex flex-col">
-              <div className="flex max-h-[480px] items-center justify-center overflow-hidden rounded-2xl bg-ink">
-                <img src={housingAboutMockup} alt={visualize.mockupCaption} className="max-h-full max-w-full object-contain" loading="lazy" />
-              </div>
-              <figcaption className="mt-3 text-sm text-fg-muted">{visualize.mockupCaption}</figcaption>
-            </figure>
-          </FeatureBlock>
+          <FeatureBlock
+            feature={visualize}
+            index={0}
+            media={
+              <figure className="mt-6 flex flex-col">
+                <div className="flex max-h-[480px] items-center justify-center overflow-hidden rounded-2xl bg-ink">
+                  <img src={housingAboutMockup} alt={visualize.mockupCaption} className="max-h-full max-w-full object-contain" loading="lazy" />
+                </div>
+                <figcaption className="mt-3 text-sm text-fg-muted">{visualize.mockupCaption}</figcaption>
+              </figure>
+            }
+          />
 
-          <FeatureBlock feature={chat} index={1}>
-            <figure className="mt-6 flex flex-col">
-              <div className="w-full max-w-sm overflow-hidden rounded-2xl border border-violet-tint/30 bg-surface/60 shadow-[0_0_45px_rgba(124,92,255,0.28)]">
-                <video src={chatBotVideo} autoPlay muted loop playsInline aria-label="Screen recording of the Housingkind AI chat assistant" className="h-auto w-full" />
-              </div>
-              <figcaption className="mt-3 max-w-sm text-sm text-fg-muted">{chat.demoCaption}</figcaption>
-            </figure>
-          </FeatureBlock>
+          <FeatureBlock
+            feature={chat}
+            index={1}
+            mediaPosition="right"
+            media={
+              <figure className="flex flex-col">
+                <div className="mx-auto w-full max-w-sm overflow-hidden rounded-2xl border border-violet-tint/30 bg-surface/60 shadow-[0_0_45px_rgba(124,92,255,0.28)]">
+                  <video src={chatBotVideo} autoPlay muted loop playsInline aria-label="Screen recording of the Housingkind AI chat assistant" className="h-auto w-full" />
+                </div>
+                <figcaption className="mx-auto mt-3 max-w-sm text-center text-sm text-fg-muted">{chat.demoCaption}</figcaption>
+              </figure>
+            }
+          />
 
-          <FeatureBlock feature={stories} index={2} />
+          <FeatureBlock
+            feature={stories}
+            index={2}
+            media={
+              <figure className="mt-6 flex flex-col">
+                <ArtifactPlaceholder label="Neighborhood Stories & Myths vs. Facts screenshot" className="aspect-[16/9] w-full" />
+              </figure>
+            }
+          />
         </div>
 
         <Reveal delay={0.2}>

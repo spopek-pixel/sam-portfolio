@@ -36,7 +36,8 @@ export const housingkind = {
   },
 
   whatWeHeard: {
-    lede: "Across 15+ interviews with residents, developers, city council members, and housing advocates, one thing surprised us. It wasn't opposition to affordable housing. It was a complete absence of information to picture it with.",
+    ledeHighlight: 'Across 15+ interviews with residents, developers, city council members, and housing advocates, one thing surprised us.',
+    ledeRest: "It wasn't opposition to affordable housing. It was a complete absence of information to picture it with.",
     quotes: [
       {
         quote: "I know affordable housing exists, but I honestly have no idea where it's being built or what those developments actually look like.",
@@ -55,6 +56,9 @@ export const housingkind = {
         attribution: 'Participant D',
       },
     ] satisfies Quote[],
+    fieldTitle: 'Getting out from behind the desk.',
+    fieldChallenge:
+      'The challenge we were chasing: give residents, developers, and city officials a shared, credible way to visualize housing options grounded in real buildings, not idealized renderings, understandable with zero policy background in five seconds.',
     field:
       "We didn't want this to be desk research. We went to Milwaukee to see it: touring ViaCDC's work, the CR8TV House, and a church being converted into a community coffee shop, buildings that already exist, not slides in a deck.",
     fieldCaption: 'Field visits to ViaCDC and the CR8TV House grounded the research in real places, not desk research.',

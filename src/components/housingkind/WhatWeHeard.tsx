@@ -9,7 +9,7 @@ import tour3 from '@/assets/images/projects/housingkind/tour3.png'
 const fieldImages = [tour1, tour3]
 
 export function WhatWeHeard() {
-  const { lede, quotes, field, fieldCaption, pivot } = housingkind.whatWeHeard
+  const { ledeHighlight, ledeRest, quotes, fieldTitle, fieldChallenge, field, fieldCaption, pivot } = housingkind.whatWeHeard
 
   return (
     <section className="px-6 py-10 sm:px-14 sm:py-16">
@@ -17,9 +17,13 @@ export function WhatWeHeard() {
         <SectionHeading
           kicker="What we heard"
           title="Not opposition. A missing picture."
-          description={lede}
+          description={
+            <>
+              <strong className="font-semibold text-fg">{ledeHighlight}</strong> {ledeRest}
+            </>
+          }
           descriptionClassName="max-w-none"
-          className="mb-10 max-w-3xl"
+          className="mb-10"
         />
 
         <div className="grid gap-4 sm:grid-cols-2">
@@ -34,10 +38,21 @@ export function WhatWeHeard() {
           ))}
         </div>
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-center lg:gap-12">
+        <div className="mt-12">
           <Reveal>
-            <p className="text-fg-muted">{field}</p>
+            <h3 className="text-2xl font-medium sm:text-3xl">{fieldTitle}</h3>
           </Reveal>
+        </div>
+
+        <div className="mt-6 grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-center lg:gap-12">
+          <div className="flex flex-col gap-4">
+            <Reveal>
+              <p className="text-fg-muted">{fieldChallenge}</p>
+            </Reveal>
+            <Reveal delay={0.04}>
+              <p className="text-fg-muted">{field}</p>
+            </Reveal>
+          </div>
           <Reveal delay={0.08}>
             <figure>
               <div className="grid grid-cols-2 gap-4">
