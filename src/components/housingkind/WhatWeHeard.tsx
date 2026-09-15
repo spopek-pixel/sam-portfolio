@@ -38,13 +38,11 @@ export function WhatWeHeard() {
           ))}
         </div>
 
-        <div className="mt-12">
-          <Reveal>
-            <h3 className="text-2xl font-medium sm:text-3xl">{fieldTitle}</h3>
-          </Reveal>
-        </div>
+        <Reveal>
+          <h3 className="mt-12 text-2xl font-medium sm:text-3xl">{fieldTitle}</h3>
+        </Reveal>
 
-        <div className="mt-6 grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-center lg:gap-12">
+        <div className="mt-6 grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-start lg:gap-12">
           <div className="flex flex-col gap-4">
             <Reveal>
               <p className="text-fg-muted">{fieldChallenge}</p>

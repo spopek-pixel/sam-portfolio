@@ -32,7 +32,7 @@ export function SeeingTheSystem() {
           </figure>
         </Reveal>
 
-        <div className="mt-8">
+        <div className="mx-auto mt-8 max-w-3xl">
           <ul className="flex flex-col gap-3">
             {insights.map((insight) => (
               <li key={insight} className="flex gap-3 text-fg-muted">

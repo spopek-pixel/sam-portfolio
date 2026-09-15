@@ -16,6 +16,22 @@ const personaImages = [persona1, persona2, persona3]
 const arrowButtonClasses =
   'rounded-full border border-line bg-surface/60 p-2.5 text-fg transition-colors hover:border-violet-tint hover:bg-surface-raised'
 
+// Wraps whichever of `phrases` appear in `text` in the accent color, so key words pop
+// without hand-authoring JSX for every sentence.
+function highlight(text: string, phrases: string[]) {
+  const escaped = phrases.map((p) => p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+  const pattern = new RegExp(`(${escaped.join('|')})`, 'gi')
+  return text.split(pattern).map((part, i) =>
+    phrases.some((p) => p.toLowerCase() === part.toLowerCase()) ? (
+      <span key={i} className="text-violet-tint">
+        {part}
+      </span>
+    ) : (
+      part
+    ),
+  )
+}
+
 export function PeopleAndProblem() {
   const { lede, ledeRest, context, personaIntro, personaRoles, stakes, framing, hmw, hmwAttribution } = housingkind.problem
   const [index, setIndex] = useState(0)
@@ -34,17 +50,21 @@ export function PeopleAndProblem() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           kicker="Where this starts"
-          title="A problem nobody can picture."
+          title={
+            <>
+              A problem nobody can <span className="text-violet-tint">picture</span>.
+            </>
+          }
           description={
             <>
-              <strong className="font-semibold text-fg">{lede}</strong> {ledeRest}
+              <strong className="font-semibold text-fg">{lede}</strong> {highlight(ledeRest, ["can't picture what's being proposed"])}
             </>
           }
           descriptionClassName="max-w-none"
           className="mb-6"
         />
         <Reveal delay={0.14}>
-          <p className="max-w-none text-fg-muted">{context}</p>
+          <p className="max-w-none text-fg-muted">{highlight(context, ['fight the very housing that would build one'])}</p>
         </Reveal>
 
         <div className="mt-12">
@@ -161,12 +181,12 @@ export function PeopleAndProblem() {
         </Reveal>
 
         <Reveal delay={0.2}>
-          <p className="mt-12 max-w-none text-fg-muted">{stakes}</p>
+          <p className="mt-12 max-w-none text-fg-muted">{highlight(stakes, ['a fight over imagination'])}</p>
         </Reveal>
 
         <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
           <Reveal>
-            <p className="text-lg">{framing}</p>
+            <p className="text-lg">{highlight(framing, ['actually see what’s being proposed'])}</p>
           </Reveal>
           <Reveal delay={0.06} className="h-full">
             <blockquote className="flex h-full flex-col justify-center rounded-2xl border-l-4 border-acid bg-surface/60 p-6 lg:p-8">

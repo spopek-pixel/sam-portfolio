@@ -1,4 +1,4 @@
-import { Award, Quote } from 'lucide-react'
+import { Quote } from 'lucide-react'
 import { housingkind } from '@/data/housingkind'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Reveal } from '@/components/ui/Reveal'
@@ -50,20 +50,18 @@ export function TestingWithRealPeople() {
           ))}
         </div>
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:items-stretch">
-          <Reveal className="h-full">
-            <div className="flex h-full flex-col justify-center gap-3 rounded-2xl border border-acid/30 bg-acid/5 p-6 lg:p-8">
-              <Award size={24} className="shrink-0 text-acid" />
-              <p className="text-fg-muted">{recognition}</p>
+        <div className="mt-10 grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
+          <Reveal>
+            <div className="overflow-hidden rounded-2xl border border-line">
+              <img src={transcendGroupPhoto} alt="Sam and her teammates at the Transcend Competition" className="aspect-[4/3] w-full object-cover" loading="lazy" />
             </div>
           </Reveal>
-          <Reveal delay={0.08} className="h-full">
-            <figure className="flex h-full flex-col">
-              <div className="min-h-0 flex-1 overflow-hidden rounded-2xl border border-line bg-surface/60">
-                <img src={transcendGroupPhoto} alt="Sam and her teammates at the Transcend Competition" className="h-full w-full object-cover" loading="lazy" />
-              </div>
-              <figcaption className="mt-3 shrink-0 text-sm text-fg-muted">{recognitionCaption}</figcaption>
-            </figure>
+          <Reveal delay={0.08}>
+            <div className="flex flex-col gap-3">
+              <span className="kicker">Recognition</span>
+              <p className="text-fg-muted">{recognition}</p>
+              <p className="text-sm text-fg-muted/70">{recognitionCaption}</p>
+            </div>
           </Reveal>
         </div>
       </div>
